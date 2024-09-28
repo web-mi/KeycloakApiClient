@@ -1,0 +1,120 @@
+openapi: 3.0.0
+info:
+  title: Keycloak Rest API
+  description: This is a REST API reference for the Keycloak Admin REST API.
+  version: "1.0"
+tags:
+  - name: Custom
+paths:
+  /realms/{realm}/protocol/openid-connect/token:
+    parameters:
+      - name: realm
+        in: path
+        description: realm name (not id!)
+        required: true
+        schema:
+          type: string
+    post:
+      tags:
+        - Custom
+      summary: Oidc Login
+      description: Realm name must be unique.
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+                  description: Username
+                  example: username1
+                password:
+                  type: string
+                  description: User Password
+                  example: password1234
+                client_id:
+                  type: string
+                  description: Client id
+                  example: app
+                grant_type:
+                  type: string
+                  description: Grant Type
+                  example: password
+              required:
+                - username
+                - password
+                - client_id
+                - grant_type
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                  expires_in:
+                    type: integer
+                  refresh_expires_in:
+                    type: integer
+                  refresh_token:
+                    type: string
+                  token_type:
+                    type: string
+                  not-before-policy:
+                    type: integer
+                  session_state:
+                    type: string
+                  scope:
+                    type: string
+              examples:
+                Example:
+                  value:
+                    accessToken: "eyJhbGciOiJSUzI1NiIsInR5cCIgO..."
+                    expires_in: 300
+                    refresh_expires_in: 1800
+                    refresh_token: "eyJhbGciOiJIUzUxMiIsInR5cC..."
+                    token_type: "Bearer"
+                    not-before-policy: 0
+                    session_state: "46c58dff-7faa-4d0f-8d54-03e105e8c669"
+                    scope: "email profile openid"
+        400:
+          description: Bad Request
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  error_description:
+                    type: string
+              examples:
+                Invalid client:
+                  value:
+                    error: "invalid_client"
+                    error_description: "Invalid client or Invalid client credentials"
+                Unsupported grant type:
+                  value:
+                    error: "unsupported_grant_type"
+                    error_description: "Unsupported grant_type"
+        401:
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                  error_description:
+                    type: string
+              examples:
+                Invalid user:
+                  value:
+                    error: "invalid_grant"
+                    error_description: "Invalid user credentials"
+
