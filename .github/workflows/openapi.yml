@@ -20,15 +20,15 @@ jobs:
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: php
-          openapi-file: './openapi.yaml'
-          #openapi-url: https://www.keycloak.org/docs-api/latest/rest-api/openapi.yaml
-          command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\KeycloakApi" -o ./KeycloakApi
+          #openapi-file: './openapi.yaml'
+          openapi-url: https://www.keycloak.org/docs-api/latest/rest-api/openapi.yaml
+          command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\KeycloakApi" --additional-properties variableNamingConvention=snake_case -o ./KeycloakApi
       - name: Generate Custom API
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: php
           openapi-file: './custom.yaml'
-          command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\CustomApi" -o ./CustomApi
+          command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\CustomApi" --additional-properties variableNamingConvention=snake_case -o ./CustomApi
       - name: Commit APIs
         run: |
           git add .
