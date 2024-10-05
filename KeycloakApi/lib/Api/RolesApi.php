@@ -170,7 +170,7 @@ class RolesApi
         $hostIndex = 0
     ) {
         $this->client = $client ?: new Client();
-        $this->config = $config ?: new Configuration();
+        $this->config = $config ?: Configuration::getDefaultConfiguration();
         $this->headerSelector = $selector ?: new HeaderSelector();
         $this->hostIndex = $hostIndex;
     }
@@ -4462,6 +4462,7 @@ class RolesApi
      * @param  string $realm realm name (not id!) (required)
      * @param  string $client_uuid id of client (not client-id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -4470,9 +4471,9 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]
      */
-    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet($realm, $client_uuid, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet($realm, $client_uuid, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
     {
-        list($response) = $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetWithHttpInfo($realm, $client_uuid, $role_name, $first, $max, $contentType);
+        list($response) = $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetWithHttpInfo($realm, $client_uuid, $role_name, $brief_representation, $first, $max, $contentType);
         return $response;
     }
 
@@ -4484,6 +4485,7 @@ class RolesApi
      * @param  string $realm realm name (not id!) (required)
      * @param  string $client_uuid id of client (not client-id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -4492,9 +4494,9 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetWithHttpInfo($realm, $client_uuid, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetWithHttpInfo($realm, $client_uuid, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
     {
-        $request = $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetRequest($realm, $client_uuid, $role_name, $first, $max, $contentType);
+        $request = $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetRequest($realm, $client_uuid, $role_name, $brief_representation, $first, $max, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4612,6 +4614,7 @@ class RolesApi
      * @param  string $realm realm name (not id!) (required)
      * @param  string $client_uuid id of client (not client-id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -4619,9 +4622,9 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetAsync($realm, $client_uuid, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetAsync($realm, $client_uuid, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
     {
-        return $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $client_uuid, $role_name, $first, $max, $contentType)
+        return $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $client_uuid, $role_name, $brief_representation, $first, $max, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4637,6 +4640,7 @@ class RolesApi
      * @param  string $realm realm name (not id!) (required)
      * @param  string $client_uuid id of client (not client-id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -4644,10 +4648,10 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $client_uuid, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $client_uuid, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
     {
         $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]';
-        $request = $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetRequest($realm, $client_uuid, $role_name, $first, $max, $contentType);
+        $request = $this->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetRequest($realm, $client_uuid, $role_name, $brief_representation, $first, $max, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4691,6 +4695,7 @@ class RolesApi
      * @param  string $realm realm name (not id!) (required)
      * @param  string $client_uuid id of client (not client-id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -4698,7 +4703,7 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetRequest($realm, $client_uuid, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmClientsClientUuidRolesRoleNameUsersGetRequest($realm, $client_uuid, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet'][0])
     {
 
         // verify the required parameter 'realm' is set
@@ -4725,6 +4730,7 @@ class RolesApi
 
 
 
+
         $resourcePath = '/admin/realms/{realm}/clients/{client-uuid}/roles/{role-name}/users';
         $formParams = [];
         $queryParams = [];
@@ -4732,6 +4738,15 @@ class RolesApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $brief_representation,
+            'briefRepresentation', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $first,
@@ -8849,6 +8864,7 @@ class RolesApi
      *
      * @param  string $realm realm name (not id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -8857,9 +8873,9 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]
      */
-    public function adminRealmsRealmRolesRoleNameUsersGet($realm, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmRolesRoleNameUsersGet($realm, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
     {
-        list($response) = $this->adminRealmsRealmRolesRoleNameUsersGetWithHttpInfo($realm, $role_name, $first, $max, $contentType);
+        list($response) = $this->adminRealmsRealmRolesRoleNameUsersGetWithHttpInfo($realm, $role_name, $brief_representation, $first, $max, $contentType);
         return $response;
     }
 
@@ -8870,6 +8886,7 @@ class RolesApi
      *
      * @param  string $realm realm name (not id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -8878,9 +8895,9 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmRolesRoleNameUsersGetWithHttpInfo($realm, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmRolesRoleNameUsersGetWithHttpInfo($realm, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
     {
-        $request = $this->adminRealmsRealmRolesRoleNameUsersGetRequest($realm, $role_name, $first, $max, $contentType);
+        $request = $this->adminRealmsRealmRolesRoleNameUsersGetRequest($realm, $role_name, $brief_representation, $first, $max, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -8997,6 +9014,7 @@ class RolesApi
      *
      * @param  string $realm realm name (not id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -9004,9 +9022,9 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmRolesRoleNameUsersGetAsync($realm, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmRolesRoleNameUsersGetAsync($realm, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
     {
-        return $this->adminRealmsRealmRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $role_name, $first, $max, $contentType)
+        return $this->adminRealmsRealmRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $role_name, $brief_representation, $first, $max, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9021,6 +9039,7 @@ class RolesApi
      *
      * @param  string $realm realm name (not id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -9028,10 +9047,10 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmRolesRoleNameUsersGetAsyncWithHttpInfo($realm, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
     {
         $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]';
-        $request = $this->adminRealmsRealmRolesRoleNameUsersGetRequest($realm, $role_name, $first, $max, $contentType);
+        $request = $this->adminRealmsRealmRolesRoleNameUsersGetRequest($realm, $role_name, $brief_representation, $first, $max, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9074,6 +9093,7 @@ class RolesApi
      *
      * @param  string $realm realm name (not id!) (required)
      * @param  string $role_name the role name. (required)
+     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first first result to return. Ignored if negative or {@code null}. (optional)
      * @param  int $max maximum number of results to return. Ignored if negative or {@code null}. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'] to see the possible values for this operation
@@ -9081,7 +9101,7 @@ class RolesApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmRolesRoleNameUsersGetRequest($realm, $role_name, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
+    public function adminRealmsRealmRolesRoleNameUsersGetRequest($realm, $role_name, $brief_representation = null, $first = null, $max = null, string $contentType = self::contentTypes['adminRealmsRealmRolesRoleNameUsersGet'][0])
     {
 
         // verify the required parameter 'realm' is set
@@ -9101,6 +9121,7 @@ class RolesApi
 
 
 
+
         $resourcePath = '/admin/realms/{realm}/roles/{role-name}/users';
         $formParams = [];
         $queryParams = [];
@@ -9108,6 +9129,15 @@ class RolesApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $brief_representation,
+            'briefRepresentation', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
         // query params
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $first,

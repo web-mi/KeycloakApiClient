@@ -822,7 +822,7 @@ No authorization required
 ## `adminRealmsRealmIdentityProviderInstancesGet()`
 
 ```php
-adminRealmsRealmIdentityProviderInstancesGet($realm, $brief_representation, $first, $max, $search): \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]
+adminRealmsRealmIdentityProviderInstancesGet($realm, $brief_representation, $first, $max, $realm_only, $search): \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]
 ```
 
 List identity providers
@@ -844,10 +844,11 @@ $realm = 'realm_example'; // string | realm name (not id!)
 $brief_representation = True; // bool | Boolean which defines whether brief representations are returned (default: false)
 $first = 56; // int | Pagination offset
 $max = 56; // int | Maximum results size (defaults to 100)
+$realm_only = True; // bool | Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false)
 $search = 'search_example'; // string | Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\"name\"). Default prefixed.
 
 try {
-    $result = $apiInstance->adminRealmsRealmIdentityProviderInstancesGet($realm, $brief_representation, $first, $max, $search);
+    $result = $apiInstance->adminRealmsRealmIdentityProviderInstancesGet($realm, $brief_representation, $first, $max, $realm_only, $search);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling IdentityProvidersApi->adminRealmsRealmIdentityProviderInstancesGet: ', $e->getMessage(), PHP_EOL;
@@ -862,6 +863,7 @@ try {
 | **brief_representation** | **bool**| Boolean which defines whether brief representations are returned (default: false) | [optional] |
 | **first** | **int**| Pagination offset | [optional] |
 | **max** | **int**| Maximum results size (defaults to 100) | [optional] |
+| **realm_only** | **bool**| Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) | [optional] |
 | **search** | **string**| Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. | [optional] |
 
 ### Return type

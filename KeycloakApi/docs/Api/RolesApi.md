@@ -806,7 +806,7 @@ No authorization required
 ## `adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet()`
 
 ```php
-adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet($realm, $client_uuid, $role_name, $first, $max): \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]
+adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet($realm, $client_uuid, $role_name, $brief_representation, $first, $max): \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]
 ```
 
 Returns a stream of users that have the specified role name.
@@ -827,11 +827,12 @@ $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesApi(
 $realm = 'realm_example'; // string | realm name (not id!)
 $client_uuid = 'client_uuid_example'; // string | id of client (not client-id!)
 $role_name = 'role_name_example'; // string | the role name.
+$brief_representation = True; // bool | Boolean which defines whether brief representations are returned (default: false)
 $first = 56; // int | first result to return. Ignored if negative or {@code null}.
 $max = 56; // int | maximum number of results to return. Ignored if negative or {@code null}.
 
 try {
-    $result = $apiInstance->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet($realm, $client_uuid, $role_name, $first, $max);
+    $result = $apiInstance->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet($realm, $client_uuid, $role_name, $brief_representation, $first, $max);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RolesApi->adminRealmsRealmClientsClientUuidRolesRoleNameUsersGet: ', $e->getMessage(), PHP_EOL;
@@ -845,6 +846,7 @@ try {
 | **realm** | **string**| realm name (not id!) | |
 | **client_uuid** | **string**| id of client (not client-id!) | |
 | **role_name** | **string**| the role name. | |
+| **brief_representation** | **bool**| Boolean which defines whether brief representations are returned (default: false) | [optional] |
 | **first** | **int**| first result to return. Ignored if negative or {@code null}. | [optional] |
 | **max** | **int**| maximum number of results to return. Ignored if negative or {@code null}. | [optional] |
 
@@ -1613,7 +1615,7 @@ No authorization required
 ## `adminRealmsRealmRolesRoleNameUsersGet()`
 
 ```php
-adminRealmsRealmRolesRoleNameUsersGet($realm, $role_name, $first, $max): \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]
+adminRealmsRealmRolesRoleNameUsersGet($realm, $role_name, $brief_representation, $first, $max): \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]
 ```
 
 Returns a stream of users that have the specified role name.
@@ -1633,11 +1635,12 @@ $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesApi(
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_name = 'role_name_example'; // string | the role name.
+$brief_representation = True; // bool | Boolean which defines whether brief representations are returned (default: false)
 $first = 56; // int | first result to return. Ignored if negative or {@code null}.
 $max = 56; // int | maximum number of results to return. Ignored if negative or {@code null}.
 
 try {
-    $result = $apiInstance->adminRealmsRealmRolesRoleNameUsersGet($realm, $role_name, $first, $max);
+    $result = $apiInstance->adminRealmsRealmRolesRoleNameUsersGet($realm, $role_name, $brief_representation, $first, $max);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling RolesApi->adminRealmsRealmRolesRoleNameUsersGet: ', $e->getMessage(), PHP_EOL;
@@ -1650,6 +1653,7 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **realm** | **string**| realm name (not id!) | |
 | **role_name** | **string**| the role name. | |
+| **brief_representation** | **bool**| Boolean which defines whether brief representations are returned (default: false) | [optional] |
 | **first** | **int**| first result to return. Ignored if negative or {@code null}. | [optional] |
 | **max** | **int**| maximum number of results to return. Ignored if negative or {@code null}. | [optional] |
 

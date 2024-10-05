@@ -15,8 +15,10 @@ Name | Type | Description | Notes
 **add_read_token_role_on_create** | **bool** |  | [optional]
 **authenticate_by_default** | **bool** |  | [optional]
 **link_only** | **bool** |  | [optional]
+**hide_on_login** | **bool** |  | [optional]
 **first_broker_login_flow_alias** | **string** |  | [optional]
 **post_broker_login_flow_alias** | **string** |  | [optional]
+**organization_id** | **string** |  | [optional]
 **config** | **array<string,string>** |  | [optional]
 **update_profile_first_login** | **bool** |  | [optional]
 

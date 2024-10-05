@@ -137,7 +137,7 @@ class IdentityProvidersApi
         $hostIndex = 0
     ) {
         $this->client = $client ?: new Client();
-        $this->config = $config ?: new Configuration();
+        $this->config = $config ?: Configuration::getDefaultConfiguration();
         $this->headerSelector = $selector ?: new HeaderSelector();
         $this->hostIndex = $hostIndex;
     }
@@ -4409,6 +4409,7 @@ class IdentityProvidersApi
      * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first Pagination offset (optional)
      * @param  int $max Maximum results size (defaults to 100) (optional)
+     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
      * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
      *
@@ -4416,9 +4417,9 @@ class IdentityProvidersApi
      * @throws \InvalidArgumentException
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]
      */
-    public function adminRealmsRealmIdentityProviderInstancesGet($realm, $brief_representation = null, $first = null, $max = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmIdentityProviderInstancesGet($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
     {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesGetWithHttpInfo($realm, $brief_representation, $first, $max, $search, $contentType);
+        list($response) = $this->adminRealmsRealmIdentityProviderInstancesGetWithHttpInfo($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType);
         return $response;
     }
 
@@ -4431,6 +4432,7 @@ class IdentityProvidersApi
      * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first Pagination offset (optional)
      * @param  int $max Maximum results size (defaults to 100) (optional)
+     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
      * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
      *
@@ -4438,9 +4440,9 @@ class IdentityProvidersApi
      * @throws \InvalidArgumentException
      * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetWithHttpInfo($realm, $brief_representation = null, $first = null, $max = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmIdentityProviderInstancesGetWithHttpInfo($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
     {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation, $first, $max, $search, $contentType);
+        $request = $this->adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4559,15 +4561,16 @@ class IdentityProvidersApi
      * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first Pagination offset (optional)
      * @param  int $max Maximum results size (defaults to 100) (optional)
+     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
      * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetAsync($realm, $brief_representation = null, $first = null, $max = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmIdentityProviderInstancesGetAsync($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
     {
-        return $this->adminRealmsRealmIdentityProviderInstancesGetAsyncWithHttpInfo($realm, $brief_representation, $first, $max, $search, $contentType)
+        return $this->adminRealmsRealmIdentityProviderInstancesGetAsyncWithHttpInfo($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4584,16 +4587,17 @@ class IdentityProvidersApi
      * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first Pagination offset (optional)
      * @param  int $max Maximum results size (defaults to 100) (optional)
+     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
      * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetAsyncWithHttpInfo($realm, $brief_representation = null, $first = null, $max = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmIdentityProviderInstancesGetAsyncWithHttpInfo($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
     {
         $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation, $first, $max, $search, $contentType);
+        $request = $this->adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4638,13 +4642,14 @@ class IdentityProvidersApi
      * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
      * @param  int $first Pagination offset (optional)
      * @param  int $max Maximum results size (defaults to 100) (optional)
+     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
      * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation = null, $first = null, $max = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
     {
 
         // verify the required parameter 'realm' is set
@@ -4653,6 +4658,7 @@ class IdentityProvidersApi
                 'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesGet'
             );
         }
+
 
 
 
@@ -4689,6 +4695,15 @@ class IdentityProvidersApi
             $max,
             'max', // param base name
             'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $realm_only,
+            'realmOnly', // param base name
+            'boolean', // openApiType
             'form', // style
             true, // explode
             false // required

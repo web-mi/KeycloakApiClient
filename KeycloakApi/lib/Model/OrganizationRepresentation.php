@@ -59,11 +59,13 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPITypes = [
         'id' => 'string',
         'name' => 'string',
+        'alias' => 'string',
         'enabled' => 'bool',
         'description' => 'string',
+        'redirect_url' => 'string',
         'attributes' => 'array<string,string[]>',
         'domains' => '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationDomainRepresentation[]',
-        'members' => '\WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]',
+        'members' => '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]',
         'identity_providers' => '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]'
     ];
 
@@ -77,8 +79,10 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     protected static $openAPIFormats = [
         'id' => null,
         'name' => null,
+        'alias' => null,
         'enabled' => null,
         'description' => null,
+        'redirect_url' => null,
         'attributes' => null,
         'domains' => null,
         'members' => null,
@@ -93,8 +97,10 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     protected static array $openAPINullables = [
         'id' => false,
         'name' => false,
+        'alias' => false,
         'enabled' => false,
         'description' => false,
+        'redirect_url' => false,
         'attributes' => false,
         'domains' => false,
         'members' => false,
@@ -189,8 +195,10 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     protected static $attributeMap = [
         'id' => 'id',
         'name' => 'name',
+        'alias' => 'alias',
         'enabled' => 'enabled',
         'description' => 'description',
+        'redirect_url' => 'redirectUrl',
         'attributes' => 'attributes',
         'domains' => 'domains',
         'members' => 'members',
@@ -205,8 +213,10 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     protected static $setters = [
         'id' => 'setId',
         'name' => 'setName',
+        'alias' => 'setAlias',
         'enabled' => 'setEnabled',
         'description' => 'setDescription',
+        'redirect_url' => 'setRedirectUrl',
         'attributes' => 'setAttributes',
         'domains' => 'setDomains',
         'members' => 'setMembers',
@@ -221,8 +231,10 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     protected static $getters = [
         'id' => 'getId',
         'name' => 'getName',
+        'alias' => 'getAlias',
         'enabled' => 'getEnabled',
         'description' => 'getDescription',
+        'redirect_url' => 'getRedirectUrl',
         'attributes' => 'getAttributes',
         'domains' => 'getDomains',
         'members' => 'getMembers',
@@ -288,8 +300,10 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     {
         $this->setIfExists('id', $data ?? [], null);
         $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('alias', $data ?? [], null);
         $this->setIfExists('enabled', $data ?? [], null);
         $this->setIfExists('description', $data ?? [], null);
+        $this->setIfExists('redirect_url', $data ?? [], null);
         $this->setIfExists('attributes', $data ?? [], null);
         $this->setIfExists('domains', $data ?? [], null);
         $this->setIfExists('members', $data ?? [], null);
@@ -393,6 +407,33 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     }
 
     /**
+     * Gets alias
+     *
+     * @return string|null
+     */
+    public function getAlias()
+    {
+        return $this->container['alias'];
+    }
+
+    /**
+     * Sets alias
+     *
+     * @param string|null $alias alias
+     *
+     * @return self
+     */
+    public function setAlias($alias)
+    {
+        if (is_null($alias)) {
+            throw new \InvalidArgumentException('non-nullable alias cannot be null');
+        }
+        $this->container['alias'] = $alias;
+
+        return $this;
+    }
+
+    /**
      * Gets enabled
      *
      * @return bool|null
@@ -442,6 +483,33 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
             throw new \InvalidArgumentException('non-nullable description cannot be null');
         }
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_url
+     *
+     * @return string|null
+     */
+    public function getRedirectUrl()
+    {
+        return $this->container['redirect_url'];
+    }
+
+    /**
+     * Sets redirect_url
+     *
+     * @param string|null $redirect_url redirect_url
+     *
+     * @return self
+     */
+    public function setRedirectUrl($redirect_url)
+    {
+        if (is_null($redirect_url)) {
+            throw new \InvalidArgumentException('non-nullable redirect_url cannot be null');
+        }
+        $this->container['redirect_url'] = $redirect_url;
 
         return $this;
     }
@@ -505,7 +573,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Gets members
      *
-     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]|null
+     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]|null
      */
     public function getMembers()
     {
@@ -515,7 +583,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
     /**
      * Sets members
      *
-     * @param \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]|null $members members
+     * @param \WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]|null $members members
      *
      * @return self
      */

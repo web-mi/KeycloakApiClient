@@ -68,8 +68,10 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
         'add_read_token_role_on_create' => 'bool',
         'authenticate_by_default' => 'bool',
         'link_only' => 'bool',
+        'hide_on_login' => 'bool',
         'first_broker_login_flow_alias' => 'string',
         'post_broker_login_flow_alias' => 'string',
+        'organization_id' => 'string',
         'config' => 'array<string,string>',
         'update_profile_first_login' => 'bool'
     ];
@@ -93,8 +95,10 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
         'add_read_token_role_on_create' => null,
         'authenticate_by_default' => null,
         'link_only' => null,
+        'hide_on_login' => null,
         'first_broker_login_flow_alias' => null,
         'post_broker_login_flow_alias' => null,
+        'organization_id' => null,
         'config' => null,
         'update_profile_first_login' => null
     ];
@@ -116,8 +120,10 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
         'add_read_token_role_on_create' => false,
         'authenticate_by_default' => false,
         'link_only' => false,
+        'hide_on_login' => false,
         'first_broker_login_flow_alias' => false,
         'post_broker_login_flow_alias' => false,
+        'organization_id' => false,
         'config' => false,
         'update_profile_first_login' => false
     ];
@@ -219,8 +225,10 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
         'add_read_token_role_on_create' => 'addReadTokenRoleOnCreate',
         'authenticate_by_default' => 'authenticateByDefault',
         'link_only' => 'linkOnly',
+        'hide_on_login' => 'hideOnLogin',
         'first_broker_login_flow_alias' => 'firstBrokerLoginFlowAlias',
         'post_broker_login_flow_alias' => 'postBrokerLoginFlowAlias',
+        'organization_id' => 'organizationId',
         'config' => 'config',
         'update_profile_first_login' => 'updateProfileFirstLogin'
     ];
@@ -242,8 +250,10 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
         'add_read_token_role_on_create' => 'setAddReadTokenRoleOnCreate',
         'authenticate_by_default' => 'setAuthenticateByDefault',
         'link_only' => 'setLinkOnly',
+        'hide_on_login' => 'setHideOnLogin',
         'first_broker_login_flow_alias' => 'setFirstBrokerLoginFlowAlias',
         'post_broker_login_flow_alias' => 'setPostBrokerLoginFlowAlias',
+        'organization_id' => 'setOrganizationId',
         'config' => 'setConfig',
         'update_profile_first_login' => 'setUpdateProfileFirstLogin'
     ];
@@ -265,8 +275,10 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
         'add_read_token_role_on_create' => 'getAddReadTokenRoleOnCreate',
         'authenticate_by_default' => 'getAuthenticateByDefault',
         'link_only' => 'getLinkOnly',
+        'hide_on_login' => 'getHideOnLogin',
         'first_broker_login_flow_alias' => 'getFirstBrokerLoginFlowAlias',
         'post_broker_login_flow_alias' => 'getPostBrokerLoginFlowAlias',
+        'organization_id' => 'getOrganizationId',
         'config' => 'getConfig',
         'update_profile_first_login' => 'getUpdateProfileFirstLogin'
     ];
@@ -339,8 +351,10 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
         $this->setIfExists('add_read_token_role_on_create', $data ?? [], null);
         $this->setIfExists('authenticate_by_default', $data ?? [], null);
         $this->setIfExists('link_only', $data ?? [], null);
+        $this->setIfExists('hide_on_login', $data ?? [], null);
         $this->setIfExists('first_broker_login_flow_alias', $data ?? [], null);
         $this->setIfExists('post_broker_login_flow_alias', $data ?? [], null);
+        $this->setIfExists('organization_id', $data ?? [], null);
         $this->setIfExists('config', $data ?? [], null);
         $this->setIfExists('update_profile_first_login', $data ?? [], null);
     }
@@ -687,6 +701,33 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
     }
 
     /**
+     * Gets hide_on_login
+     *
+     * @return bool|null
+     */
+    public function getHideOnLogin()
+    {
+        return $this->container['hide_on_login'];
+    }
+
+    /**
+     * Sets hide_on_login
+     *
+     * @param bool|null $hide_on_login hide_on_login
+     *
+     * @return self
+     */
+    public function setHideOnLogin($hide_on_login)
+    {
+        if (is_null($hide_on_login)) {
+            throw new \InvalidArgumentException('non-nullable hide_on_login cannot be null');
+        }
+        $this->container['hide_on_login'] = $hide_on_login;
+
+        return $this;
+    }
+
+    /**
      * Gets first_broker_login_flow_alias
      *
      * @return string|null
@@ -736,6 +777,33 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
             throw new \InvalidArgumentException('non-nullable post_broker_login_flow_alias cannot be null');
         }
         $this->container['post_broker_login_flow_alias'] = $post_broker_login_flow_alias;
+
+        return $this;
+    }
+
+    /**
+     * Gets organization_id
+     *
+     * @return string|null
+     */
+    public function getOrganizationId()
+    {
+        return $this->container['organization_id'];
+    }
+
+    /**
+     * Sets organization_id
+     *
+     * @param string|null $organization_id organization_id
+     *
+     * @return self
+     */
+    public function setOrganizationId($organization_id)
+    {
+        if (is_null($organization_id)) {
+            throw new \InvalidArgumentException('non-nullable organization_id cannot be null');
+        }
+        $this->container['organization_id'] = $organization_id;
 
         return $this;
     }

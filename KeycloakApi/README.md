@@ -486,6 +486,8 @@ Class | Method | HTTP request | Description
 - [Logic](docs/Model/Logic.md)
 - [ManagementPermissionReference](docs/Model/ManagementPermissionReference.md)
 - [MappingsRepresentation](docs/Model/MappingsRepresentation.md)
+- [MemberRepresentation](docs/Model/MemberRepresentation.md)
+- [MembershipType](docs/Model/MembershipType.md)
 - [MethodConfig](docs/Model/MethodConfig.md)
 - [OAuthClientRepresentation](docs/Model/OAuthClientRepresentation.md)
 - [OrganizationDomainRepresentation](docs/Model/OrganizationDomainRepresentation.md)

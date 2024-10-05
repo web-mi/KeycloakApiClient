@@ -59,6 +59,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPITypes = [
         'name' => 'string',
         'provider' => 'string',
+        'parent' => 'string',
         'config' => 'array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\PropertyConfig>'
     ];
 
@@ -72,6 +73,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $openAPIFormats = [
         'name' => null,
         'provider' => null,
+        'parent' => null,
         'config' => null
     ];
 
@@ -83,6 +85,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
     protected static array $openAPINullables = [
         'name' => false,
         'provider' => false,
+        'parent' => false,
         'config' => false
     ];
 
@@ -174,6 +177,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $attributeMap = [
         'name' => 'name',
         'provider' => 'provider',
+        'parent' => 'parent',
         'config' => 'config'
     ];
 
@@ -185,6 +189,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $setters = [
         'name' => 'setName',
         'provider' => 'setProvider',
+        'parent' => 'setParent',
         'config' => 'setConfig'
     ];
 
@@ -196,6 +201,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
     protected static $getters = [
         'name' => 'getName',
         'provider' => 'getProvider',
+        'parent' => 'getParent',
         'config' => 'getConfig'
     ];
 
@@ -258,6 +264,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
     {
         $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('provider', $data ?? [], null);
+        $this->setIfExists('parent', $data ?? [], null);
         $this->setIfExists('config', $data ?? [], null);
     }
 
@@ -353,6 +360,33 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
             throw new \InvalidArgumentException('non-nullable provider cannot be null');
         }
         $this->container['provider'] = $provider;
+
+        return $this;
+    }
+
+    /**
+     * Gets parent
+     *
+     * @return string|null
+     */
+    public function getParent()
+    {
+        return $this->container['parent'];
+    }
+
+    /**
+     * Sets parent
+     *
+     * @param string|null $parent parent
+     *
+     * @return self
+     */
+    public function setParent($parent)
+    {
+        if (is_null($parent)) {
+            throw new \InvalidArgumentException('non-nullable parent cannot be null');
+        }
+        $this->container['parent'] = $parent;
 
         return $this;
     }
