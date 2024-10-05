@@ -16,11 +16,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Generate Authentication API
         uses: openapi-generators/openapitools-generator-action@v1
         with:
           generator: php
-          openapi-url: https://www.keycloak.org/docs-api/latest/rest-api/openapi.json
+          openapi-url: https://www.keycloak.org/docs-api/latest/rest-api/openapi.yaml
           command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\KeycloakApi" -o ./KeycloakApi
       - name: Commit APIs
         run: |
