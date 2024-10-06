@@ -33,12 +33,14 @@
     },
     "autoload": {
         "psr-4": {
-            "WebMI\\KeycloakApiClient\\KeycloakApi\\" : "KeycloakApi/lib/"
+            "WebMI\\KeycloakApiClient\\KeycloakApi\\" : "KeycloakApi/lib/",
+            "WebMI\\KeycloakApiClient\\CustomApi\\" : "CustomApi/lib/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "WebMI\\KeycloakApiClient\\KeycloakApi\\Test\\" : "KeycloakApi/test/"
+            "WebMI\\KeycloakApiClient\\KeycloakApi\\Test\\" : "KeycloakApi/test/",
+            "WebMI\\KeycloakApiClient\\CustomApi\\Test\\" : "CustomApi/test/"
         }
     }
 }

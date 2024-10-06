@@ -33,7 +33,7 @@ jobs:
       #    generator: php
       #    openapi-file: './custom.yaml'
       #    command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\CustomApi",methodNamingConvention=snake_case -o ./CustomApi
-      
+
       #- name: Commit APIs
       #  run: |
       #    git add .
