@@ -179,8 +179,8 @@ class ClientInitialAccessCreatePresentation implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'expiration' => 'setExpiration',
-        'count' => 'setCount'
+        'expiration' => 'set_expiration',
+        'count' => 'set_count'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ClientInitialAccessCreatePresentation implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'expiration' => 'getExpiration',
-        'count' => 'getCount'
+        'expiration' => 'get_expiration',
+        'count' => 'get_count'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ClientInitialAccessCreatePresentation implements ModelInterface, ArrayAcce
      *
      * @return int|null
      */
-    public function getExpiration()
+    public function get_expiration()
     {
         return $this->container['expiration'];
     }
@@ -313,7 +313,7 @@ class ClientInitialAccessCreatePresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setExpiration($expiration)
+    public function set_expiration($expiration)
     {
         if (is_null($expiration)) {
             throw new \InvalidArgumentException('non-nullable expiration cannot be null');
@@ -328,7 +328,7 @@ class ClientInitialAccessCreatePresentation implements ModelInterface, ArrayAcce
      *
      * @return int|null
      */
-    public function getCount()
+    public function get_count()
     {
         return $this->container['count'];
     }
@@ -340,7 +340,7 @@ class ClientInitialAccessCreatePresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setCount($count)
+    public function set_count($count)
     {
         if (is_null($count)) {
             throw new \InvalidArgumentException('non-nullable count cannot be null');

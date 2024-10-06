@@ -183,9 +183,9 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'realm' => 'setRealm',
-        'client' => 'setClient',
-        'application' => 'setApplication'
+        'realm' => 'set_realm',
+        'client' => 'set_client',
+        'application' => 'set_application'
     ];
 
     /**
@@ -194,9 +194,9 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'realm' => 'getRealm',
-        'client' => 'getClient',
-        'application' => 'getApplication'
+        'realm' => 'get_realm',
+        'client' => 'get_client',
+        'application' => 'get_application'
     ];
 
     /**
@@ -308,7 +308,7 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\RoleRepresentation[]|null
      */
-    public function getRealm()
+    public function get_realm()
     {
         return $this->container['realm'];
     }
@@ -320,7 +320,7 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRealm($realm)
+    public function set_realm($realm)
     {
         if (is_null($realm)) {
             throw new \InvalidArgumentException('non-nullable realm cannot be null');
@@ -335,7 +335,7 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\RoleRepresentation[]>|null
      */
-    public function getClient()
+    public function get_client()
     {
         return $this->container['client'];
     }
@@ -347,7 +347,7 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClient($client)
+    public function set_client($client)
     {
         if (is_null($client)) {
             throw new \InvalidArgumentException('non-nullable client cannot be null');
@@ -363,7 +363,7 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\RoleRepresentation[]>|null
      * @deprecated
      */
-    public function getApplication()
+    public function get_application()
     {
         return $this->container['application'];
     }
@@ -376,7 +376,7 @@ class RolesRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setApplication($application)
+    public function set_application($application)
     {
         if (is_null($application)) {
             throw new \InvalidArgumentException('non-nullable application cannot be null');

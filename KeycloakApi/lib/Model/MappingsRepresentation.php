@@ -179,8 +179,8 @@ class MappingsRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'realm_mappings' => 'setRealmMappings',
-        'client_mappings' => 'setClientMappings'
+        'realm_mappings' => 'set_realm_mappings',
+        'client_mappings' => 'set_client_mappings'
     ];
 
     /**
@@ -189,8 +189,8 @@ class MappingsRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'realm_mappings' => 'getRealmMappings',
-        'client_mappings' => 'getClientMappings'
+        'realm_mappings' => 'get_realm_mappings',
+        'client_mappings' => 'get_client_mappings'
     ];
 
     /**
@@ -301,7 +301,7 @@ class MappingsRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\RoleRepresentation[]|null
      */
-    public function getRealmMappings()
+    public function get_realm_mappings()
     {
         return $this->container['realm_mappings'];
     }
@@ -313,7 +313,7 @@ class MappingsRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setRealmMappings($realm_mappings)
+    public function set_realm_mappings($realm_mappings)
     {
         if (is_null($realm_mappings)) {
             throw new \InvalidArgumentException('non-nullable realm_mappings cannot be null');
@@ -328,7 +328,7 @@ class MappingsRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\ClientMappingsRepresentation>|null
      */
-    public function getClientMappings()
+    public function get_client_mappings()
     {
         return $this->container['client_mappings'];
     }
@@ -340,7 +340,7 @@ class MappingsRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setClientMappings($client_mappings)
+    public function set_client_mappings($client_mappings)
     {
         if (is_null($client_mappings)) {
             throw new \InvalidArgumentException('non-nullable client_mappings cannot be null');

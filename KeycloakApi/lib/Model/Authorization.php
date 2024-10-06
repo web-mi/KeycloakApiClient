@@ -175,7 +175,7 @@ class Authorization implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'permissions' => 'setPermissions'
+        'permissions' => 'set_permissions'
     ];
 
     /**
@@ -184,7 +184,7 @@ class Authorization implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'permissions' => 'getPermissions'
+        'permissions' => 'get_permissions'
     ];
 
     /**
@@ -294,7 +294,7 @@ class Authorization implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\Permission[]|null
      */
-    public function getPermissions()
+    public function get_permissions()
     {
         return $this->container['permissions'];
     }
@@ -306,7 +306,7 @@ class Authorization implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPermissions($permissions)
+    public function set_permissions($permissions)
     {
         if (is_null($permissions)) {
             throw new \InvalidArgumentException('non-nullable permissions cannot be null');

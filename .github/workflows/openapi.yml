@@ -16,23 +16,28 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Generate Authentication API
-        uses: openapi-generators/openapitools-generator-action@v1
-        with:
-          generator: php
-          #openapi-file: './openapi.yaml'
-          openapi-url: https://www.keycloak.org/docs-api/latest/rest-api/openapi.yaml
-          command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\KeycloakApi" --additional-properties variableNamingConvention=snake_case -o ./KeycloakApi
-      - name: Generate Custom API
-        uses: openapi-generators/openapitools-generator-action@v1
-        with:
-          generator: php
-          openapi-file: './custom.yaml'
-          command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\CustomApi" --additional-properties variableNamingConvention=snake_case -o ./CustomApi
-      - name: Commit APIs
-        run: |
-          git add .
-          git config --global user.name 'Web-MI'
-          git config --global user.email 'info@web-mi.de'
-          git commit -am "Updated APIs"
-          git push
+      # Commented because it was generated locally with a fixed version of openapi generator
+
+      ## Tmp local command: docker run --rm -v "${PWD}:/local" openapi-generator:snake_case generate -g php -o /local/KeycloakApi -i https://www.keycloak.org/docs-api/latest/rest-api/openapi.yaml --skip-validate-spec --additional-properties invokerPackage=WebMI\\KeycloakApiClient\\KeycloakApi,methodNamingConvention=snake_case
+      #- name: Generate Authentication API
+      #  uses: openapi-generators/openapitools-generator-action@v1
+      #  with:
+      #    generator: php
+      #    openapi-url: https://www.keycloak.org/docs-api/latest/rest-api/openapi.yaml
+      #    command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\KeycloakApi",methodNamingConvention=snake_case -o ./KeycloakApi
+
+      ## Tmp local command: docker run --rm -v "${PWD}:/local" openapi-generator:snake_case generate -g php -o /local/CustomApi -i /local/custom.yaml --skip-validate-spec --additional-properties invokerPackage=WebMI\\KeycloakApiClient\\CustomApi,methodNamingConvention=snake_case
+      #- name: Generate Custom API
+      #  uses: openapi-generators/openapitools-generator-action@v1
+      #  with:
+      #    generator: php
+      #    openapi-file: './custom.yaml'
+      #    command-args: --skip-validate-spec --additional-properties invokerPackage="WebMI\\\\KeycloakApiClient\\\\CustomApi",methodNamingConvention=snake_case -o ./CustomApi
+      
+      #- name: Commit APIs
+      #  run: |
+      #    git add .
+      #    git config --global user.name 'Web-MI'
+      #    git config --global user.email 'info@web-mi.de'
+      #    git commit -am "Updated APIs"
+      #    git push

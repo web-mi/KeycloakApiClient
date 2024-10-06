@@ -183,9 +183,9 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'identity_provider' => 'setIdentityProvider',
-        'user_id' => 'setUserId',
-        'user_name' => 'setUserName'
+        'identity_provider' => 'set_identity_provider',
+        'user_id' => 'set_user_id',
+        'user_name' => 'set_user_name'
     ];
 
     /**
@@ -194,9 +194,9 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'identity_provider' => 'getIdentityProvider',
-        'user_id' => 'getUserId',
-        'user_name' => 'getUserName'
+        'identity_provider' => 'get_identity_provider',
+        'user_id' => 'get_user_id',
+        'user_name' => 'get_user_name'
     ];
 
     /**
@@ -308,7 +308,7 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return string|null
      */
-    public function getIdentityProvider()
+    public function get_identity_provider()
     {
         return $this->container['identity_provider'];
     }
@@ -320,7 +320,7 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setIdentityProvider($identity_provider)
+    public function set_identity_provider($identity_provider)
     {
         if (is_null($identity_provider)) {
             throw new \InvalidArgumentException('non-nullable identity_provider cannot be null');
@@ -335,7 +335,7 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return string|null
      */
-    public function getUserId()
+    public function get_user_id()
     {
         return $this->container['user_id'];
     }
@@ -347,7 +347,7 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function set_user_id($user_id)
     {
         if (is_null($user_id)) {
             throw new \InvalidArgumentException('non-nullable user_id cannot be null');
@@ -362,7 +362,7 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return string|null
      */
-    public function getUserName()
+    public function get_user_name()
     {
         return $this->container['user_name'];
     }
@@ -374,7 +374,7 @@ class FederatedIdentityRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setUserName($user_name)
+    public function set_user_name($user_name)
     {
         if (is_null($user_name)) {
             throw new \InvalidArgumentException('non-nullable user_name cannot be null');

@@ -219,18 +219,18 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        '_id' => 'setId',
-        'name' => 'setName',
-        'uris' => 'setUris',
-        'type' => 'setType',
-        'scopes' => 'setScopes',
-        'icon_uri' => 'setIconUri',
-        'owner' => 'setOwner',
-        'owner_managed_access' => 'setOwnerManagedAccess',
-        'display_name' => 'setDisplayName',
-        'attributes' => 'setAttributes',
-        'uri' => 'setUri',
-        'scopes_uma' => 'setScopesUma'
+        '_id' => 'set__id',
+        'name' => 'set_name',
+        'uris' => 'set_uris',
+        'type' => 'set_type',
+        'scopes' => 'set_scopes',
+        'icon_uri' => 'set_icon_uri',
+        'owner' => 'set_owner',
+        'owner_managed_access' => 'set_owner_managed_access',
+        'display_name' => 'set_display_name',
+        'attributes' => 'set_attributes',
+        'uri' => 'set_uri',
+        'scopes_uma' => 'set_scopes_uma'
     ];
 
     /**
@@ -239,18 +239,18 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        '_id' => 'getId',
-        'name' => 'getName',
-        'uris' => 'getUris',
-        'type' => 'getType',
-        'scopes' => 'getScopes',
-        'icon_uri' => 'getIconUri',
-        'owner' => 'getOwner',
-        'owner_managed_access' => 'getOwnerManagedAccess',
-        'display_name' => 'getDisplayName',
-        'attributes' => 'getAttributes',
-        'uri' => 'getUri',
-        'scopes_uma' => 'getScopesUma'
+        '_id' => 'get__id',
+        'name' => 'get_name',
+        'uris' => 'get_uris',
+        'type' => 'get_type',
+        'scopes' => 'get_scopes',
+        'icon_uri' => 'get_icon_uri',
+        'owner' => 'get_owner',
+        'owner_managed_access' => 'get_owner_managed_access',
+        'display_name' => 'get_display_name',
+        'attributes' => 'get_attributes',
+        'uri' => 'get_uri',
+        'scopes_uma' => 'get_scopes_uma'
     ];
 
     /**
@@ -371,7 +371,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string|null
      */
-    public function getId()
+    public function get__id()
     {
         return $this->container['_id'];
     }
@@ -383,7 +383,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setId($_id)
+    public function set__id($_id)
     {
         if (is_null($_id)) {
             throw new \InvalidArgumentException('non-nullable _id cannot be null');
@@ -398,7 +398,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -410,7 +410,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -425,7 +425,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string[]|null
      */
-    public function getUris()
+    public function get_uris()
     {
         return $this->container['uris'];
     }
@@ -437,7 +437,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setUris($uris)
+    public function set_uris($uris)
     {
         if (is_null($uris)) {
             throw new \InvalidArgumentException('non-nullable uris cannot be null');
@@ -454,7 +454,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -466,7 +466,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -481,7 +481,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeRepresentation[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -493,7 +493,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
@@ -510,7 +510,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string|null
      */
-    public function getIconUri()
+    public function get_icon_uri()
     {
         return $this->container['icon_uri'];
     }
@@ -522,7 +522,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setIconUri($icon_uri)
+    public function set_icon_uri($icon_uri)
     {
         if (is_null($icon_uri)) {
             throw new \InvalidArgumentException('non-nullable icon_uri cannot be null');
@@ -537,7 +537,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ResourceOwnerRepresentation|null
      */
-    public function getOwner()
+    public function get_owner()
     {
         return $this->container['owner'];
     }
@@ -549,7 +549,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setOwner($owner)
+    public function set_owner($owner)
     {
         if (is_null($owner)) {
             throw new \InvalidArgumentException('non-nullable owner cannot be null');
@@ -564,7 +564,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return bool|null
      */
-    public function getOwnerManagedAccess()
+    public function get_owner_managed_access()
     {
         return $this->container['owner_managed_access'];
     }
@@ -576,7 +576,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setOwnerManagedAccess($owner_managed_access)
+    public function set_owner_managed_access($owner_managed_access)
     {
         if (is_null($owner_managed_access)) {
             throw new \InvalidArgumentException('non-nullable owner_managed_access cannot be null');
@@ -591,7 +591,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -603,7 +603,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
@@ -618,7 +618,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return array<string,string[]>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -630,7 +630,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -646,7 +646,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      * @return string|null
      * @deprecated
      */
-    public function getUri()
+    public function get_uri()
     {
         return $this->container['uri'];
     }
@@ -659,7 +659,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      * @return self
      * @deprecated
      */
-    public function setUri($uri)
+    public function set_uri($uri)
     {
         if (is_null($uri)) {
             throw new \InvalidArgumentException('non-nullable uri cannot be null');
@@ -674,7 +674,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeRepresentation[]|null
      */
-    public function getScopesUma()
+    public function get_scopes_uma()
     {
         return $this->container['scopes_uma'];
     }
@@ -686,7 +686,7 @@ class ResourceRepresentation implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setScopesUma($scopes_uma)
+    public function set_scopes_uma($scopes_uma)
     {
         if (is_null($scopes_uma)) {
             throw new \InvalidArgumentException('non-nullable scopes_uma cannot be null');

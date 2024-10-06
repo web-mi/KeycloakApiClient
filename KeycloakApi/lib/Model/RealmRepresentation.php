@@ -759,153 +759,153 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'realm' => 'setRealm',
-        'display_name' => 'setDisplayName',
-        'display_name_html' => 'setDisplayNameHtml',
-        'not_before' => 'setNotBefore',
-        'default_signature_algorithm' => 'setDefaultSignatureAlgorithm',
-        'revoke_refresh_token' => 'setRevokeRefreshToken',
-        'refresh_token_max_reuse' => 'setRefreshTokenMaxReuse',
-        'access_token_lifespan' => 'setAccessTokenLifespan',
-        'access_token_lifespan_for_implicit_flow' => 'setAccessTokenLifespanForImplicitFlow',
-        'sso_session_idle_timeout' => 'setSsoSessionIdleTimeout',
-        'sso_session_max_lifespan' => 'setSsoSessionMaxLifespan',
-        'sso_session_idle_timeout_remember_me' => 'setSsoSessionIdleTimeoutRememberMe',
-        'sso_session_max_lifespan_remember_me' => 'setSsoSessionMaxLifespanRememberMe',
-        'offline_session_idle_timeout' => 'setOfflineSessionIdleTimeout',
-        'offline_session_max_lifespan_enabled' => 'setOfflineSessionMaxLifespanEnabled',
-        'offline_session_max_lifespan' => 'setOfflineSessionMaxLifespan',
-        'client_session_idle_timeout' => 'setClientSessionIdleTimeout',
-        'client_session_max_lifespan' => 'setClientSessionMaxLifespan',
-        'client_offline_session_idle_timeout' => 'setClientOfflineSessionIdleTimeout',
-        'client_offline_session_max_lifespan' => 'setClientOfflineSessionMaxLifespan',
-        'access_code_lifespan' => 'setAccessCodeLifespan',
-        'access_code_lifespan_user_action' => 'setAccessCodeLifespanUserAction',
-        'access_code_lifespan_login' => 'setAccessCodeLifespanLogin',
-        'action_token_generated_by_admin_lifespan' => 'setActionTokenGeneratedByAdminLifespan',
-        'action_token_generated_by_user_lifespan' => 'setActionTokenGeneratedByUserLifespan',
-        'oauth2_device_code_lifespan' => 'setOauth2DeviceCodeLifespan',
-        'oauth2_device_polling_interval' => 'setOauth2DevicePollingInterval',
-        'enabled' => 'setEnabled',
-        'ssl_required' => 'setSslRequired',
-        'password_credential_grant_allowed' => 'setPasswordCredentialGrantAllowed',
-        'registration_allowed' => 'setRegistrationAllowed',
-        'registration_email_as_username' => 'setRegistrationEmailAsUsername',
-        'remember_me' => 'setRememberMe',
-        'verify_email' => 'setVerifyEmail',
-        'login_with_email_allowed' => 'setLoginWithEmailAllowed',
-        'duplicate_emails_allowed' => 'setDuplicateEmailsAllowed',
-        'reset_password_allowed' => 'setResetPasswordAllowed',
-        'edit_username_allowed' => 'setEditUsernameAllowed',
-        'user_cache_enabled' => 'setUserCacheEnabled',
-        'realm_cache_enabled' => 'setRealmCacheEnabled',
-        'brute_force_protected' => 'setBruteForceProtected',
-        'permanent_lockout' => 'setPermanentLockout',
-        'max_temporary_lockouts' => 'setMaxTemporaryLockouts',
-        'max_failure_wait_seconds' => 'setMaxFailureWaitSeconds',
-        'minimum_quick_login_wait_seconds' => 'setMinimumQuickLoginWaitSeconds',
-        'wait_increment_seconds' => 'setWaitIncrementSeconds',
-        'quick_login_check_milli_seconds' => 'setQuickLoginCheckMilliSeconds',
-        'max_delta_time_seconds' => 'setMaxDeltaTimeSeconds',
-        'failure_factor' => 'setFailureFactor',
-        'private_key' => 'setPrivateKey',
-        'public_key' => 'setPublicKey',
-        'certificate' => 'setCertificate',
-        'code_secret' => 'setCodeSecret',
-        'roles' => 'setRoles',
-        'groups' => 'setGroups',
-        'default_roles' => 'setDefaultRoles',
-        'default_role' => 'setDefaultRole',
-        'default_groups' => 'setDefaultGroups',
-        'required_credentials' => 'setRequiredCredentials',
-        'password_policy' => 'setPasswordPolicy',
-        'otp_policy_type' => 'setOtpPolicyType',
-        'otp_policy_algorithm' => 'setOtpPolicyAlgorithm',
-        'otp_policy_initial_counter' => 'setOtpPolicyInitialCounter',
-        'otp_policy_digits' => 'setOtpPolicyDigits',
-        'otp_policy_look_ahead_window' => 'setOtpPolicyLookAheadWindow',
-        'otp_policy_period' => 'setOtpPolicyPeriod',
-        'otp_policy_code_reusable' => 'setOtpPolicyCodeReusable',
-        'otp_supported_applications' => 'setOtpSupportedApplications',
-        'localization_texts' => 'setLocalizationTexts',
-        'web_authn_policy_rp_entity_name' => 'setWebAuthnPolicyRpEntityName',
-        'web_authn_policy_signature_algorithms' => 'setWebAuthnPolicySignatureAlgorithms',
-        'web_authn_policy_rp_id' => 'setWebAuthnPolicyRpId',
-        'web_authn_policy_attestation_conveyance_preference' => 'setWebAuthnPolicyAttestationConveyancePreference',
-        'web_authn_policy_authenticator_attachment' => 'setWebAuthnPolicyAuthenticatorAttachment',
-        'web_authn_policy_require_resident_key' => 'setWebAuthnPolicyRequireResidentKey',
-        'web_authn_policy_user_verification_requirement' => 'setWebAuthnPolicyUserVerificationRequirement',
-        'web_authn_policy_create_timeout' => 'setWebAuthnPolicyCreateTimeout',
-        'web_authn_policy_avoid_same_authenticator_register' => 'setWebAuthnPolicyAvoidSameAuthenticatorRegister',
-        'web_authn_policy_acceptable_aaguids' => 'setWebAuthnPolicyAcceptableAaguids',
-        'web_authn_policy_extra_origins' => 'setWebAuthnPolicyExtraOrigins',
-        'web_authn_policy_passwordless_rp_entity_name' => 'setWebAuthnPolicyPasswordlessRpEntityName',
-        'web_authn_policy_passwordless_signature_algorithms' => 'setWebAuthnPolicyPasswordlessSignatureAlgorithms',
-        'web_authn_policy_passwordless_rp_id' => 'setWebAuthnPolicyPasswordlessRpId',
-        'web_authn_policy_passwordless_attestation_conveyance_preference' => 'setWebAuthnPolicyPasswordlessAttestationConveyancePreference',
-        'web_authn_policy_passwordless_authenticator_attachment' => 'setWebAuthnPolicyPasswordlessAuthenticatorAttachment',
-        'web_authn_policy_passwordless_require_resident_key' => 'setWebAuthnPolicyPasswordlessRequireResidentKey',
-        'web_authn_policy_passwordless_user_verification_requirement' => 'setWebAuthnPolicyPasswordlessUserVerificationRequirement',
-        'web_authn_policy_passwordless_create_timeout' => 'setWebAuthnPolicyPasswordlessCreateTimeout',
-        'web_authn_policy_passwordless_avoid_same_authenticator_register' => 'setWebAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister',
-        'web_authn_policy_passwordless_acceptable_aaguids' => 'setWebAuthnPolicyPasswordlessAcceptableAaguids',
-        'web_authn_policy_passwordless_extra_origins' => 'setWebAuthnPolicyPasswordlessExtraOrigins',
-        'client_profiles' => 'setClientProfiles',
-        'client_policies' => 'setClientPolicies',
-        'users' => 'setUsers',
-        'federated_users' => 'setFederatedUsers',
-        'scope_mappings' => 'setScopeMappings',
-        'client_scope_mappings' => 'setClientScopeMappings',
-        'clients' => 'setClients',
-        'client_scopes' => 'setClientScopes',
-        'default_default_client_scopes' => 'setDefaultDefaultClientScopes',
-        'default_optional_client_scopes' => 'setDefaultOptionalClientScopes',
-        'browser_security_headers' => 'setBrowserSecurityHeaders',
-        'smtp_server' => 'setSmtpServer',
-        'user_federation_providers' => 'setUserFederationProviders',
-        'user_federation_mappers' => 'setUserFederationMappers',
-        'login_theme' => 'setLoginTheme',
-        'account_theme' => 'setAccountTheme',
-        'admin_theme' => 'setAdminTheme',
-        'email_theme' => 'setEmailTheme',
-        'events_enabled' => 'setEventsEnabled',
-        'events_expiration' => 'setEventsExpiration',
-        'events_listeners' => 'setEventsListeners',
-        'enabled_event_types' => 'setEnabledEventTypes',
-        'admin_events_enabled' => 'setAdminEventsEnabled',
-        'admin_events_details_enabled' => 'setAdminEventsDetailsEnabled',
-        'identity_providers' => 'setIdentityProviders',
-        'identity_provider_mappers' => 'setIdentityProviderMappers',
-        'protocol_mappers' => 'setProtocolMappers',
-        'components' => 'setComponents',
-        'internationalization_enabled' => 'setInternationalizationEnabled',
-        'supported_locales' => 'setSupportedLocales',
-        'default_locale' => 'setDefaultLocale',
-        'authentication_flows' => 'setAuthenticationFlows',
-        'authenticator_config' => 'setAuthenticatorConfig',
-        'required_actions' => 'setRequiredActions',
-        'browser_flow' => 'setBrowserFlow',
-        'registration_flow' => 'setRegistrationFlow',
-        'direct_grant_flow' => 'setDirectGrantFlow',
-        'reset_credentials_flow' => 'setResetCredentialsFlow',
-        'client_authentication_flow' => 'setClientAuthenticationFlow',
-        'docker_authentication_flow' => 'setDockerAuthenticationFlow',
-        'first_broker_login_flow' => 'setFirstBrokerLoginFlow',
-        'attributes' => 'setAttributes',
-        'keycloak_version' => 'setKeycloakVersion',
-        'user_managed_access_allowed' => 'setUserManagedAccessAllowed',
-        'organizations_enabled' => 'setOrganizationsEnabled',
-        'organizations' => 'setOrganizations',
-        'social' => 'setSocial',
-        'update_profile_on_initial_social_login' => 'setUpdateProfileOnInitialSocialLogin',
-        'social_providers' => 'setSocialProviders',
-        'application_scope_mappings' => 'setApplicationScopeMappings',
-        'applications' => 'setApplications',
-        'oauth_clients' => 'setOauthClients',
-        'client_templates' => 'setClientTemplates',
-        'o_auth2_device_code_lifespan' => 'setOAuth2DeviceCodeLifespan',
-        'o_auth2_device_polling_interval' => 'setOAuth2DevicePollingInterval'
+        'id' => 'set_id',
+        'realm' => 'set_realm',
+        'display_name' => 'set_display_name',
+        'display_name_html' => 'set_display_name_html',
+        'not_before' => 'set_not_before',
+        'default_signature_algorithm' => 'set_default_signature_algorithm',
+        'revoke_refresh_token' => 'set_revoke_refresh_token',
+        'refresh_token_max_reuse' => 'set_refresh_token_max_reuse',
+        'access_token_lifespan' => 'set_access_token_lifespan',
+        'access_token_lifespan_for_implicit_flow' => 'set_access_token_lifespan_for_implicit_flow',
+        'sso_session_idle_timeout' => 'set_sso_session_idle_timeout',
+        'sso_session_max_lifespan' => 'set_sso_session_max_lifespan',
+        'sso_session_idle_timeout_remember_me' => 'set_sso_session_idle_timeout_remember_me',
+        'sso_session_max_lifespan_remember_me' => 'set_sso_session_max_lifespan_remember_me',
+        'offline_session_idle_timeout' => 'set_offline_session_idle_timeout',
+        'offline_session_max_lifespan_enabled' => 'set_offline_session_max_lifespan_enabled',
+        'offline_session_max_lifespan' => 'set_offline_session_max_lifespan',
+        'client_session_idle_timeout' => 'set_client_session_idle_timeout',
+        'client_session_max_lifespan' => 'set_client_session_max_lifespan',
+        'client_offline_session_idle_timeout' => 'set_client_offline_session_idle_timeout',
+        'client_offline_session_max_lifespan' => 'set_client_offline_session_max_lifespan',
+        'access_code_lifespan' => 'set_access_code_lifespan',
+        'access_code_lifespan_user_action' => 'set_access_code_lifespan_user_action',
+        'access_code_lifespan_login' => 'set_access_code_lifespan_login',
+        'action_token_generated_by_admin_lifespan' => 'set_action_token_generated_by_admin_lifespan',
+        'action_token_generated_by_user_lifespan' => 'set_action_token_generated_by_user_lifespan',
+        'oauth2_device_code_lifespan' => 'set_oauth2_device_code_lifespan',
+        'oauth2_device_polling_interval' => 'set_oauth2_device_polling_interval',
+        'enabled' => 'set_enabled',
+        'ssl_required' => 'set_ssl_required',
+        'password_credential_grant_allowed' => 'set_password_credential_grant_allowed',
+        'registration_allowed' => 'set_registration_allowed',
+        'registration_email_as_username' => 'set_registration_email_as_username',
+        'remember_me' => 'set_remember_me',
+        'verify_email' => 'set_verify_email',
+        'login_with_email_allowed' => 'set_login_with_email_allowed',
+        'duplicate_emails_allowed' => 'set_duplicate_emails_allowed',
+        'reset_password_allowed' => 'set_reset_password_allowed',
+        'edit_username_allowed' => 'set_edit_username_allowed',
+        'user_cache_enabled' => 'set_user_cache_enabled',
+        'realm_cache_enabled' => 'set_realm_cache_enabled',
+        'brute_force_protected' => 'set_brute_force_protected',
+        'permanent_lockout' => 'set_permanent_lockout',
+        'max_temporary_lockouts' => 'set_max_temporary_lockouts',
+        'max_failure_wait_seconds' => 'set_max_failure_wait_seconds',
+        'minimum_quick_login_wait_seconds' => 'set_minimum_quick_login_wait_seconds',
+        'wait_increment_seconds' => 'set_wait_increment_seconds',
+        'quick_login_check_milli_seconds' => 'set_quick_login_check_milli_seconds',
+        'max_delta_time_seconds' => 'set_max_delta_time_seconds',
+        'failure_factor' => 'set_failure_factor',
+        'private_key' => 'set_private_key',
+        'public_key' => 'set_public_key',
+        'certificate' => 'set_certificate',
+        'code_secret' => 'set_code_secret',
+        'roles' => 'set_roles',
+        'groups' => 'set_groups',
+        'default_roles' => 'set_default_roles',
+        'default_role' => 'set_default_role',
+        'default_groups' => 'set_default_groups',
+        'required_credentials' => 'set_required_credentials',
+        'password_policy' => 'set_password_policy',
+        'otp_policy_type' => 'set_otp_policy_type',
+        'otp_policy_algorithm' => 'set_otp_policy_algorithm',
+        'otp_policy_initial_counter' => 'set_otp_policy_initial_counter',
+        'otp_policy_digits' => 'set_otp_policy_digits',
+        'otp_policy_look_ahead_window' => 'set_otp_policy_look_ahead_window',
+        'otp_policy_period' => 'set_otp_policy_period',
+        'otp_policy_code_reusable' => 'set_otp_policy_code_reusable',
+        'otp_supported_applications' => 'set_otp_supported_applications',
+        'localization_texts' => 'set_localization_texts',
+        'web_authn_policy_rp_entity_name' => 'set_web_authn_policy_rp_entity_name',
+        'web_authn_policy_signature_algorithms' => 'set_web_authn_policy_signature_algorithms',
+        'web_authn_policy_rp_id' => 'set_web_authn_policy_rp_id',
+        'web_authn_policy_attestation_conveyance_preference' => 'set_web_authn_policy_attestation_conveyance_preference',
+        'web_authn_policy_authenticator_attachment' => 'set_web_authn_policy_authenticator_attachment',
+        'web_authn_policy_require_resident_key' => 'set_web_authn_policy_require_resident_key',
+        'web_authn_policy_user_verification_requirement' => 'set_web_authn_policy_user_verification_requirement',
+        'web_authn_policy_create_timeout' => 'set_web_authn_policy_create_timeout',
+        'web_authn_policy_avoid_same_authenticator_register' => 'set_web_authn_policy_avoid_same_authenticator_register',
+        'web_authn_policy_acceptable_aaguids' => 'set_web_authn_policy_acceptable_aaguids',
+        'web_authn_policy_extra_origins' => 'set_web_authn_policy_extra_origins',
+        'web_authn_policy_passwordless_rp_entity_name' => 'set_web_authn_policy_passwordless_rp_entity_name',
+        'web_authn_policy_passwordless_signature_algorithms' => 'set_web_authn_policy_passwordless_signature_algorithms',
+        'web_authn_policy_passwordless_rp_id' => 'set_web_authn_policy_passwordless_rp_id',
+        'web_authn_policy_passwordless_attestation_conveyance_preference' => 'set_web_authn_policy_passwordless_attestation_conveyance_preference',
+        'web_authn_policy_passwordless_authenticator_attachment' => 'set_web_authn_policy_passwordless_authenticator_attachment',
+        'web_authn_policy_passwordless_require_resident_key' => 'set_web_authn_policy_passwordless_require_resident_key',
+        'web_authn_policy_passwordless_user_verification_requirement' => 'set_web_authn_policy_passwordless_user_verification_requirement',
+        'web_authn_policy_passwordless_create_timeout' => 'set_web_authn_policy_passwordless_create_timeout',
+        'web_authn_policy_passwordless_avoid_same_authenticator_register' => 'set_web_authn_policy_passwordless_avoid_same_authenticator_register',
+        'web_authn_policy_passwordless_acceptable_aaguids' => 'set_web_authn_policy_passwordless_acceptable_aaguids',
+        'web_authn_policy_passwordless_extra_origins' => 'set_web_authn_policy_passwordless_extra_origins',
+        'client_profiles' => 'set_client_profiles',
+        'client_policies' => 'set_client_policies',
+        'users' => 'set_users',
+        'federated_users' => 'set_federated_users',
+        'scope_mappings' => 'set_scope_mappings',
+        'client_scope_mappings' => 'set_client_scope_mappings',
+        'clients' => 'set_clients',
+        'client_scopes' => 'set_client_scopes',
+        'default_default_client_scopes' => 'set_default_default_client_scopes',
+        'default_optional_client_scopes' => 'set_default_optional_client_scopes',
+        'browser_security_headers' => 'set_browser_security_headers',
+        'smtp_server' => 'set_smtp_server',
+        'user_federation_providers' => 'set_user_federation_providers',
+        'user_federation_mappers' => 'set_user_federation_mappers',
+        'login_theme' => 'set_login_theme',
+        'account_theme' => 'set_account_theme',
+        'admin_theme' => 'set_admin_theme',
+        'email_theme' => 'set_email_theme',
+        'events_enabled' => 'set_events_enabled',
+        'events_expiration' => 'set_events_expiration',
+        'events_listeners' => 'set_events_listeners',
+        'enabled_event_types' => 'set_enabled_event_types',
+        'admin_events_enabled' => 'set_admin_events_enabled',
+        'admin_events_details_enabled' => 'set_admin_events_details_enabled',
+        'identity_providers' => 'set_identity_providers',
+        'identity_provider_mappers' => 'set_identity_provider_mappers',
+        'protocol_mappers' => 'set_protocol_mappers',
+        'components' => 'set_components',
+        'internationalization_enabled' => 'set_internationalization_enabled',
+        'supported_locales' => 'set_supported_locales',
+        'default_locale' => 'set_default_locale',
+        'authentication_flows' => 'set_authentication_flows',
+        'authenticator_config' => 'set_authenticator_config',
+        'required_actions' => 'set_required_actions',
+        'browser_flow' => 'set_browser_flow',
+        'registration_flow' => 'set_registration_flow',
+        'direct_grant_flow' => 'set_direct_grant_flow',
+        'reset_credentials_flow' => 'set_reset_credentials_flow',
+        'client_authentication_flow' => 'set_client_authentication_flow',
+        'docker_authentication_flow' => 'set_docker_authentication_flow',
+        'first_broker_login_flow' => 'set_first_broker_login_flow',
+        'attributes' => 'set_attributes',
+        'keycloak_version' => 'set_keycloak_version',
+        'user_managed_access_allowed' => 'set_user_managed_access_allowed',
+        'organizations_enabled' => 'set_organizations_enabled',
+        'organizations' => 'set_organizations',
+        'social' => 'set_social',
+        'update_profile_on_initial_social_login' => 'set_update_profile_on_initial_social_login',
+        'social_providers' => 'set_social_providers',
+        'application_scope_mappings' => 'set_application_scope_mappings',
+        'applications' => 'set_applications',
+        'oauth_clients' => 'set_oauth_clients',
+        'client_templates' => 'set_client_templates',
+        'o_auth2_device_code_lifespan' => 'set_o_auth2_device_code_lifespan',
+        'o_auth2_device_polling_interval' => 'set_o_auth2_device_polling_interval'
     ];
 
     /**
@@ -914,153 +914,153 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'realm' => 'getRealm',
-        'display_name' => 'getDisplayName',
-        'display_name_html' => 'getDisplayNameHtml',
-        'not_before' => 'getNotBefore',
-        'default_signature_algorithm' => 'getDefaultSignatureAlgorithm',
-        'revoke_refresh_token' => 'getRevokeRefreshToken',
-        'refresh_token_max_reuse' => 'getRefreshTokenMaxReuse',
-        'access_token_lifespan' => 'getAccessTokenLifespan',
-        'access_token_lifespan_for_implicit_flow' => 'getAccessTokenLifespanForImplicitFlow',
-        'sso_session_idle_timeout' => 'getSsoSessionIdleTimeout',
-        'sso_session_max_lifespan' => 'getSsoSessionMaxLifespan',
-        'sso_session_idle_timeout_remember_me' => 'getSsoSessionIdleTimeoutRememberMe',
-        'sso_session_max_lifespan_remember_me' => 'getSsoSessionMaxLifespanRememberMe',
-        'offline_session_idle_timeout' => 'getOfflineSessionIdleTimeout',
-        'offline_session_max_lifespan_enabled' => 'getOfflineSessionMaxLifespanEnabled',
-        'offline_session_max_lifespan' => 'getOfflineSessionMaxLifespan',
-        'client_session_idle_timeout' => 'getClientSessionIdleTimeout',
-        'client_session_max_lifespan' => 'getClientSessionMaxLifespan',
-        'client_offline_session_idle_timeout' => 'getClientOfflineSessionIdleTimeout',
-        'client_offline_session_max_lifespan' => 'getClientOfflineSessionMaxLifespan',
-        'access_code_lifespan' => 'getAccessCodeLifespan',
-        'access_code_lifespan_user_action' => 'getAccessCodeLifespanUserAction',
-        'access_code_lifespan_login' => 'getAccessCodeLifespanLogin',
-        'action_token_generated_by_admin_lifespan' => 'getActionTokenGeneratedByAdminLifespan',
-        'action_token_generated_by_user_lifespan' => 'getActionTokenGeneratedByUserLifespan',
-        'oauth2_device_code_lifespan' => 'getOauth2DeviceCodeLifespan',
-        'oauth2_device_polling_interval' => 'getOauth2DevicePollingInterval',
-        'enabled' => 'getEnabled',
-        'ssl_required' => 'getSslRequired',
-        'password_credential_grant_allowed' => 'getPasswordCredentialGrantAllowed',
-        'registration_allowed' => 'getRegistrationAllowed',
-        'registration_email_as_username' => 'getRegistrationEmailAsUsername',
-        'remember_me' => 'getRememberMe',
-        'verify_email' => 'getVerifyEmail',
-        'login_with_email_allowed' => 'getLoginWithEmailAllowed',
-        'duplicate_emails_allowed' => 'getDuplicateEmailsAllowed',
-        'reset_password_allowed' => 'getResetPasswordAllowed',
-        'edit_username_allowed' => 'getEditUsernameAllowed',
-        'user_cache_enabled' => 'getUserCacheEnabled',
-        'realm_cache_enabled' => 'getRealmCacheEnabled',
-        'brute_force_protected' => 'getBruteForceProtected',
-        'permanent_lockout' => 'getPermanentLockout',
-        'max_temporary_lockouts' => 'getMaxTemporaryLockouts',
-        'max_failure_wait_seconds' => 'getMaxFailureWaitSeconds',
-        'minimum_quick_login_wait_seconds' => 'getMinimumQuickLoginWaitSeconds',
-        'wait_increment_seconds' => 'getWaitIncrementSeconds',
-        'quick_login_check_milli_seconds' => 'getQuickLoginCheckMilliSeconds',
-        'max_delta_time_seconds' => 'getMaxDeltaTimeSeconds',
-        'failure_factor' => 'getFailureFactor',
-        'private_key' => 'getPrivateKey',
-        'public_key' => 'getPublicKey',
-        'certificate' => 'getCertificate',
-        'code_secret' => 'getCodeSecret',
-        'roles' => 'getRoles',
-        'groups' => 'getGroups',
-        'default_roles' => 'getDefaultRoles',
-        'default_role' => 'getDefaultRole',
-        'default_groups' => 'getDefaultGroups',
-        'required_credentials' => 'getRequiredCredentials',
-        'password_policy' => 'getPasswordPolicy',
-        'otp_policy_type' => 'getOtpPolicyType',
-        'otp_policy_algorithm' => 'getOtpPolicyAlgorithm',
-        'otp_policy_initial_counter' => 'getOtpPolicyInitialCounter',
-        'otp_policy_digits' => 'getOtpPolicyDigits',
-        'otp_policy_look_ahead_window' => 'getOtpPolicyLookAheadWindow',
-        'otp_policy_period' => 'getOtpPolicyPeriod',
-        'otp_policy_code_reusable' => 'getOtpPolicyCodeReusable',
-        'otp_supported_applications' => 'getOtpSupportedApplications',
-        'localization_texts' => 'getLocalizationTexts',
-        'web_authn_policy_rp_entity_name' => 'getWebAuthnPolicyRpEntityName',
-        'web_authn_policy_signature_algorithms' => 'getWebAuthnPolicySignatureAlgorithms',
-        'web_authn_policy_rp_id' => 'getWebAuthnPolicyRpId',
-        'web_authn_policy_attestation_conveyance_preference' => 'getWebAuthnPolicyAttestationConveyancePreference',
-        'web_authn_policy_authenticator_attachment' => 'getWebAuthnPolicyAuthenticatorAttachment',
-        'web_authn_policy_require_resident_key' => 'getWebAuthnPolicyRequireResidentKey',
-        'web_authn_policy_user_verification_requirement' => 'getWebAuthnPolicyUserVerificationRequirement',
-        'web_authn_policy_create_timeout' => 'getWebAuthnPolicyCreateTimeout',
-        'web_authn_policy_avoid_same_authenticator_register' => 'getWebAuthnPolicyAvoidSameAuthenticatorRegister',
-        'web_authn_policy_acceptable_aaguids' => 'getWebAuthnPolicyAcceptableAaguids',
-        'web_authn_policy_extra_origins' => 'getWebAuthnPolicyExtraOrigins',
-        'web_authn_policy_passwordless_rp_entity_name' => 'getWebAuthnPolicyPasswordlessRpEntityName',
-        'web_authn_policy_passwordless_signature_algorithms' => 'getWebAuthnPolicyPasswordlessSignatureAlgorithms',
-        'web_authn_policy_passwordless_rp_id' => 'getWebAuthnPolicyPasswordlessRpId',
-        'web_authn_policy_passwordless_attestation_conveyance_preference' => 'getWebAuthnPolicyPasswordlessAttestationConveyancePreference',
-        'web_authn_policy_passwordless_authenticator_attachment' => 'getWebAuthnPolicyPasswordlessAuthenticatorAttachment',
-        'web_authn_policy_passwordless_require_resident_key' => 'getWebAuthnPolicyPasswordlessRequireResidentKey',
-        'web_authn_policy_passwordless_user_verification_requirement' => 'getWebAuthnPolicyPasswordlessUserVerificationRequirement',
-        'web_authn_policy_passwordless_create_timeout' => 'getWebAuthnPolicyPasswordlessCreateTimeout',
-        'web_authn_policy_passwordless_avoid_same_authenticator_register' => 'getWebAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister',
-        'web_authn_policy_passwordless_acceptable_aaguids' => 'getWebAuthnPolicyPasswordlessAcceptableAaguids',
-        'web_authn_policy_passwordless_extra_origins' => 'getWebAuthnPolicyPasswordlessExtraOrigins',
-        'client_profiles' => 'getClientProfiles',
-        'client_policies' => 'getClientPolicies',
-        'users' => 'getUsers',
-        'federated_users' => 'getFederatedUsers',
-        'scope_mappings' => 'getScopeMappings',
-        'client_scope_mappings' => 'getClientScopeMappings',
-        'clients' => 'getClients',
-        'client_scopes' => 'getClientScopes',
-        'default_default_client_scopes' => 'getDefaultDefaultClientScopes',
-        'default_optional_client_scopes' => 'getDefaultOptionalClientScopes',
-        'browser_security_headers' => 'getBrowserSecurityHeaders',
-        'smtp_server' => 'getSmtpServer',
-        'user_federation_providers' => 'getUserFederationProviders',
-        'user_federation_mappers' => 'getUserFederationMappers',
-        'login_theme' => 'getLoginTheme',
-        'account_theme' => 'getAccountTheme',
-        'admin_theme' => 'getAdminTheme',
-        'email_theme' => 'getEmailTheme',
-        'events_enabled' => 'getEventsEnabled',
-        'events_expiration' => 'getEventsExpiration',
-        'events_listeners' => 'getEventsListeners',
-        'enabled_event_types' => 'getEnabledEventTypes',
-        'admin_events_enabled' => 'getAdminEventsEnabled',
-        'admin_events_details_enabled' => 'getAdminEventsDetailsEnabled',
-        'identity_providers' => 'getIdentityProviders',
-        'identity_provider_mappers' => 'getIdentityProviderMappers',
-        'protocol_mappers' => 'getProtocolMappers',
-        'components' => 'getComponents',
-        'internationalization_enabled' => 'getInternationalizationEnabled',
-        'supported_locales' => 'getSupportedLocales',
-        'default_locale' => 'getDefaultLocale',
-        'authentication_flows' => 'getAuthenticationFlows',
-        'authenticator_config' => 'getAuthenticatorConfig',
-        'required_actions' => 'getRequiredActions',
-        'browser_flow' => 'getBrowserFlow',
-        'registration_flow' => 'getRegistrationFlow',
-        'direct_grant_flow' => 'getDirectGrantFlow',
-        'reset_credentials_flow' => 'getResetCredentialsFlow',
-        'client_authentication_flow' => 'getClientAuthenticationFlow',
-        'docker_authentication_flow' => 'getDockerAuthenticationFlow',
-        'first_broker_login_flow' => 'getFirstBrokerLoginFlow',
-        'attributes' => 'getAttributes',
-        'keycloak_version' => 'getKeycloakVersion',
-        'user_managed_access_allowed' => 'getUserManagedAccessAllowed',
-        'organizations_enabled' => 'getOrganizationsEnabled',
-        'organizations' => 'getOrganizations',
-        'social' => 'getSocial',
-        'update_profile_on_initial_social_login' => 'getUpdateProfileOnInitialSocialLogin',
-        'social_providers' => 'getSocialProviders',
-        'application_scope_mappings' => 'getApplicationScopeMappings',
-        'applications' => 'getApplications',
-        'oauth_clients' => 'getOauthClients',
-        'client_templates' => 'getClientTemplates',
-        'o_auth2_device_code_lifespan' => 'getOAuth2DeviceCodeLifespan',
-        'o_auth2_device_polling_interval' => 'getOAuth2DevicePollingInterval'
+        'id' => 'get_id',
+        'realm' => 'get_realm',
+        'display_name' => 'get_display_name',
+        'display_name_html' => 'get_display_name_html',
+        'not_before' => 'get_not_before',
+        'default_signature_algorithm' => 'get_default_signature_algorithm',
+        'revoke_refresh_token' => 'get_revoke_refresh_token',
+        'refresh_token_max_reuse' => 'get_refresh_token_max_reuse',
+        'access_token_lifespan' => 'get_access_token_lifespan',
+        'access_token_lifespan_for_implicit_flow' => 'get_access_token_lifespan_for_implicit_flow',
+        'sso_session_idle_timeout' => 'get_sso_session_idle_timeout',
+        'sso_session_max_lifespan' => 'get_sso_session_max_lifespan',
+        'sso_session_idle_timeout_remember_me' => 'get_sso_session_idle_timeout_remember_me',
+        'sso_session_max_lifespan_remember_me' => 'get_sso_session_max_lifespan_remember_me',
+        'offline_session_idle_timeout' => 'get_offline_session_idle_timeout',
+        'offline_session_max_lifespan_enabled' => 'get_offline_session_max_lifespan_enabled',
+        'offline_session_max_lifespan' => 'get_offline_session_max_lifespan',
+        'client_session_idle_timeout' => 'get_client_session_idle_timeout',
+        'client_session_max_lifespan' => 'get_client_session_max_lifespan',
+        'client_offline_session_idle_timeout' => 'get_client_offline_session_idle_timeout',
+        'client_offline_session_max_lifespan' => 'get_client_offline_session_max_lifespan',
+        'access_code_lifespan' => 'get_access_code_lifespan',
+        'access_code_lifespan_user_action' => 'get_access_code_lifespan_user_action',
+        'access_code_lifespan_login' => 'get_access_code_lifespan_login',
+        'action_token_generated_by_admin_lifespan' => 'get_action_token_generated_by_admin_lifespan',
+        'action_token_generated_by_user_lifespan' => 'get_action_token_generated_by_user_lifespan',
+        'oauth2_device_code_lifespan' => 'get_oauth2_device_code_lifespan',
+        'oauth2_device_polling_interval' => 'get_oauth2_device_polling_interval',
+        'enabled' => 'get_enabled',
+        'ssl_required' => 'get_ssl_required',
+        'password_credential_grant_allowed' => 'get_password_credential_grant_allowed',
+        'registration_allowed' => 'get_registration_allowed',
+        'registration_email_as_username' => 'get_registration_email_as_username',
+        'remember_me' => 'get_remember_me',
+        'verify_email' => 'get_verify_email',
+        'login_with_email_allowed' => 'get_login_with_email_allowed',
+        'duplicate_emails_allowed' => 'get_duplicate_emails_allowed',
+        'reset_password_allowed' => 'get_reset_password_allowed',
+        'edit_username_allowed' => 'get_edit_username_allowed',
+        'user_cache_enabled' => 'get_user_cache_enabled',
+        'realm_cache_enabled' => 'get_realm_cache_enabled',
+        'brute_force_protected' => 'get_brute_force_protected',
+        'permanent_lockout' => 'get_permanent_lockout',
+        'max_temporary_lockouts' => 'get_max_temporary_lockouts',
+        'max_failure_wait_seconds' => 'get_max_failure_wait_seconds',
+        'minimum_quick_login_wait_seconds' => 'get_minimum_quick_login_wait_seconds',
+        'wait_increment_seconds' => 'get_wait_increment_seconds',
+        'quick_login_check_milli_seconds' => 'get_quick_login_check_milli_seconds',
+        'max_delta_time_seconds' => 'get_max_delta_time_seconds',
+        'failure_factor' => 'get_failure_factor',
+        'private_key' => 'get_private_key',
+        'public_key' => 'get_public_key',
+        'certificate' => 'get_certificate',
+        'code_secret' => 'get_code_secret',
+        'roles' => 'get_roles',
+        'groups' => 'get_groups',
+        'default_roles' => 'get_default_roles',
+        'default_role' => 'get_default_role',
+        'default_groups' => 'get_default_groups',
+        'required_credentials' => 'get_required_credentials',
+        'password_policy' => 'get_password_policy',
+        'otp_policy_type' => 'get_otp_policy_type',
+        'otp_policy_algorithm' => 'get_otp_policy_algorithm',
+        'otp_policy_initial_counter' => 'get_otp_policy_initial_counter',
+        'otp_policy_digits' => 'get_otp_policy_digits',
+        'otp_policy_look_ahead_window' => 'get_otp_policy_look_ahead_window',
+        'otp_policy_period' => 'get_otp_policy_period',
+        'otp_policy_code_reusable' => 'get_otp_policy_code_reusable',
+        'otp_supported_applications' => 'get_otp_supported_applications',
+        'localization_texts' => 'get_localization_texts',
+        'web_authn_policy_rp_entity_name' => 'get_web_authn_policy_rp_entity_name',
+        'web_authn_policy_signature_algorithms' => 'get_web_authn_policy_signature_algorithms',
+        'web_authn_policy_rp_id' => 'get_web_authn_policy_rp_id',
+        'web_authn_policy_attestation_conveyance_preference' => 'get_web_authn_policy_attestation_conveyance_preference',
+        'web_authn_policy_authenticator_attachment' => 'get_web_authn_policy_authenticator_attachment',
+        'web_authn_policy_require_resident_key' => 'get_web_authn_policy_require_resident_key',
+        'web_authn_policy_user_verification_requirement' => 'get_web_authn_policy_user_verification_requirement',
+        'web_authn_policy_create_timeout' => 'get_web_authn_policy_create_timeout',
+        'web_authn_policy_avoid_same_authenticator_register' => 'get_web_authn_policy_avoid_same_authenticator_register',
+        'web_authn_policy_acceptable_aaguids' => 'get_web_authn_policy_acceptable_aaguids',
+        'web_authn_policy_extra_origins' => 'get_web_authn_policy_extra_origins',
+        'web_authn_policy_passwordless_rp_entity_name' => 'get_web_authn_policy_passwordless_rp_entity_name',
+        'web_authn_policy_passwordless_signature_algorithms' => 'get_web_authn_policy_passwordless_signature_algorithms',
+        'web_authn_policy_passwordless_rp_id' => 'get_web_authn_policy_passwordless_rp_id',
+        'web_authn_policy_passwordless_attestation_conveyance_preference' => 'get_web_authn_policy_passwordless_attestation_conveyance_preference',
+        'web_authn_policy_passwordless_authenticator_attachment' => 'get_web_authn_policy_passwordless_authenticator_attachment',
+        'web_authn_policy_passwordless_require_resident_key' => 'get_web_authn_policy_passwordless_require_resident_key',
+        'web_authn_policy_passwordless_user_verification_requirement' => 'get_web_authn_policy_passwordless_user_verification_requirement',
+        'web_authn_policy_passwordless_create_timeout' => 'get_web_authn_policy_passwordless_create_timeout',
+        'web_authn_policy_passwordless_avoid_same_authenticator_register' => 'get_web_authn_policy_passwordless_avoid_same_authenticator_register',
+        'web_authn_policy_passwordless_acceptable_aaguids' => 'get_web_authn_policy_passwordless_acceptable_aaguids',
+        'web_authn_policy_passwordless_extra_origins' => 'get_web_authn_policy_passwordless_extra_origins',
+        'client_profiles' => 'get_client_profiles',
+        'client_policies' => 'get_client_policies',
+        'users' => 'get_users',
+        'federated_users' => 'get_federated_users',
+        'scope_mappings' => 'get_scope_mappings',
+        'client_scope_mappings' => 'get_client_scope_mappings',
+        'clients' => 'get_clients',
+        'client_scopes' => 'get_client_scopes',
+        'default_default_client_scopes' => 'get_default_default_client_scopes',
+        'default_optional_client_scopes' => 'get_default_optional_client_scopes',
+        'browser_security_headers' => 'get_browser_security_headers',
+        'smtp_server' => 'get_smtp_server',
+        'user_federation_providers' => 'get_user_federation_providers',
+        'user_federation_mappers' => 'get_user_federation_mappers',
+        'login_theme' => 'get_login_theme',
+        'account_theme' => 'get_account_theme',
+        'admin_theme' => 'get_admin_theme',
+        'email_theme' => 'get_email_theme',
+        'events_enabled' => 'get_events_enabled',
+        'events_expiration' => 'get_events_expiration',
+        'events_listeners' => 'get_events_listeners',
+        'enabled_event_types' => 'get_enabled_event_types',
+        'admin_events_enabled' => 'get_admin_events_enabled',
+        'admin_events_details_enabled' => 'get_admin_events_details_enabled',
+        'identity_providers' => 'get_identity_providers',
+        'identity_provider_mappers' => 'get_identity_provider_mappers',
+        'protocol_mappers' => 'get_protocol_mappers',
+        'components' => 'get_components',
+        'internationalization_enabled' => 'get_internationalization_enabled',
+        'supported_locales' => 'get_supported_locales',
+        'default_locale' => 'get_default_locale',
+        'authentication_flows' => 'get_authentication_flows',
+        'authenticator_config' => 'get_authenticator_config',
+        'required_actions' => 'get_required_actions',
+        'browser_flow' => 'get_browser_flow',
+        'registration_flow' => 'get_registration_flow',
+        'direct_grant_flow' => 'get_direct_grant_flow',
+        'reset_credentials_flow' => 'get_reset_credentials_flow',
+        'client_authentication_flow' => 'get_client_authentication_flow',
+        'docker_authentication_flow' => 'get_docker_authentication_flow',
+        'first_broker_login_flow' => 'get_first_broker_login_flow',
+        'attributes' => 'get_attributes',
+        'keycloak_version' => 'get_keycloak_version',
+        'user_managed_access_allowed' => 'get_user_managed_access_allowed',
+        'organizations_enabled' => 'get_organizations_enabled',
+        'organizations' => 'get_organizations',
+        'social' => 'get_social',
+        'update_profile_on_initial_social_login' => 'get_update_profile_on_initial_social_login',
+        'social_providers' => 'get_social_providers',
+        'application_scope_mappings' => 'get_application_scope_mappings',
+        'applications' => 'get_applications',
+        'oauth_clients' => 'get_oauth_clients',
+        'client_templates' => 'get_client_templates',
+        'o_auth2_device_code_lifespan' => 'get_o_auth2_device_code_lifespan',
+        'o_auth2_device_polling_interval' => 'get_o_auth2_device_polling_interval'
     ];
 
     /**
@@ -1316,7 +1316,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -1328,7 +1328,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -1343,7 +1343,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getRealm()
+    public function get_realm()
     {
         return $this->container['realm'];
     }
@@ -1355,7 +1355,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRealm($realm)
+    public function set_realm($realm)
     {
         if (is_null($realm)) {
             throw new \InvalidArgumentException('non-nullable realm cannot be null');
@@ -1370,7 +1370,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -1382,7 +1382,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
@@ -1397,7 +1397,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getDisplayNameHtml()
+    public function get_display_name_html()
     {
         return $this->container['display_name_html'];
     }
@@ -1409,7 +1409,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDisplayNameHtml($display_name_html)
+    public function set_display_name_html($display_name_html)
     {
         if (is_null($display_name_html)) {
             throw new \InvalidArgumentException('non-nullable display_name_html cannot be null');
@@ -1424,7 +1424,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getNotBefore()
+    public function get_not_before()
     {
         return $this->container['not_before'];
     }
@@ -1436,7 +1436,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setNotBefore($not_before)
+    public function set_not_before($not_before)
     {
         if (is_null($not_before)) {
             throw new \InvalidArgumentException('non-nullable not_before cannot be null');
@@ -1451,7 +1451,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getDefaultSignatureAlgorithm()
+    public function get_default_signature_algorithm()
     {
         return $this->container['default_signature_algorithm'];
     }
@@ -1463,7 +1463,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDefaultSignatureAlgorithm($default_signature_algorithm)
+    public function set_default_signature_algorithm($default_signature_algorithm)
     {
         if (is_null($default_signature_algorithm)) {
             throw new \InvalidArgumentException('non-nullable default_signature_algorithm cannot be null');
@@ -1478,7 +1478,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getRevokeRefreshToken()
+    public function get_revoke_refresh_token()
     {
         return $this->container['revoke_refresh_token'];
     }
@@ -1490,7 +1490,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRevokeRefreshToken($revoke_refresh_token)
+    public function set_revoke_refresh_token($revoke_refresh_token)
     {
         if (is_null($revoke_refresh_token)) {
             throw new \InvalidArgumentException('non-nullable revoke_refresh_token cannot be null');
@@ -1505,7 +1505,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getRefreshTokenMaxReuse()
+    public function get_refresh_token_max_reuse()
     {
         return $this->container['refresh_token_max_reuse'];
     }
@@ -1517,7 +1517,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRefreshTokenMaxReuse($refresh_token_max_reuse)
+    public function set_refresh_token_max_reuse($refresh_token_max_reuse)
     {
         if (is_null($refresh_token_max_reuse)) {
             throw new \InvalidArgumentException('non-nullable refresh_token_max_reuse cannot be null');
@@ -1532,7 +1532,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getAccessTokenLifespan()
+    public function get_access_token_lifespan()
     {
         return $this->container['access_token_lifespan'];
     }
@@ -1544,7 +1544,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAccessTokenLifespan($access_token_lifespan)
+    public function set_access_token_lifespan($access_token_lifespan)
     {
         if (is_null($access_token_lifespan)) {
             throw new \InvalidArgumentException('non-nullable access_token_lifespan cannot be null');
@@ -1559,7 +1559,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getAccessTokenLifespanForImplicitFlow()
+    public function get_access_token_lifespan_for_implicit_flow()
     {
         return $this->container['access_token_lifespan_for_implicit_flow'];
     }
@@ -1571,7 +1571,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAccessTokenLifespanForImplicitFlow($access_token_lifespan_for_implicit_flow)
+    public function set_access_token_lifespan_for_implicit_flow($access_token_lifespan_for_implicit_flow)
     {
         if (is_null($access_token_lifespan_for_implicit_flow)) {
             throw new \InvalidArgumentException('non-nullable access_token_lifespan_for_implicit_flow cannot be null');
@@ -1586,7 +1586,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getSsoSessionIdleTimeout()
+    public function get_sso_session_idle_timeout()
     {
         return $this->container['sso_session_idle_timeout'];
     }
@@ -1598,7 +1598,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSsoSessionIdleTimeout($sso_session_idle_timeout)
+    public function set_sso_session_idle_timeout($sso_session_idle_timeout)
     {
         if (is_null($sso_session_idle_timeout)) {
             throw new \InvalidArgumentException('non-nullable sso_session_idle_timeout cannot be null');
@@ -1613,7 +1613,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getSsoSessionMaxLifespan()
+    public function get_sso_session_max_lifespan()
     {
         return $this->container['sso_session_max_lifespan'];
     }
@@ -1625,7 +1625,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSsoSessionMaxLifespan($sso_session_max_lifespan)
+    public function set_sso_session_max_lifespan($sso_session_max_lifespan)
     {
         if (is_null($sso_session_max_lifespan)) {
             throw new \InvalidArgumentException('non-nullable sso_session_max_lifespan cannot be null');
@@ -1640,7 +1640,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getSsoSessionIdleTimeoutRememberMe()
+    public function get_sso_session_idle_timeout_remember_me()
     {
         return $this->container['sso_session_idle_timeout_remember_me'];
     }
@@ -1652,7 +1652,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSsoSessionIdleTimeoutRememberMe($sso_session_idle_timeout_remember_me)
+    public function set_sso_session_idle_timeout_remember_me($sso_session_idle_timeout_remember_me)
     {
         if (is_null($sso_session_idle_timeout_remember_me)) {
             throw new \InvalidArgumentException('non-nullable sso_session_idle_timeout_remember_me cannot be null');
@@ -1667,7 +1667,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getSsoSessionMaxLifespanRememberMe()
+    public function get_sso_session_max_lifespan_remember_me()
     {
         return $this->container['sso_session_max_lifespan_remember_me'];
     }
@@ -1679,7 +1679,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSsoSessionMaxLifespanRememberMe($sso_session_max_lifespan_remember_me)
+    public function set_sso_session_max_lifespan_remember_me($sso_session_max_lifespan_remember_me)
     {
         if (is_null($sso_session_max_lifespan_remember_me)) {
             throw new \InvalidArgumentException('non-nullable sso_session_max_lifespan_remember_me cannot be null');
@@ -1694,7 +1694,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOfflineSessionIdleTimeout()
+    public function get_offline_session_idle_timeout()
     {
         return $this->container['offline_session_idle_timeout'];
     }
@@ -1706,7 +1706,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOfflineSessionIdleTimeout($offline_session_idle_timeout)
+    public function set_offline_session_idle_timeout($offline_session_idle_timeout)
     {
         if (is_null($offline_session_idle_timeout)) {
             throw new \InvalidArgumentException('non-nullable offline_session_idle_timeout cannot be null');
@@ -1721,7 +1721,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getOfflineSessionMaxLifespanEnabled()
+    public function get_offline_session_max_lifespan_enabled()
     {
         return $this->container['offline_session_max_lifespan_enabled'];
     }
@@ -1733,7 +1733,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOfflineSessionMaxLifespanEnabled($offline_session_max_lifespan_enabled)
+    public function set_offline_session_max_lifespan_enabled($offline_session_max_lifespan_enabled)
     {
         if (is_null($offline_session_max_lifespan_enabled)) {
             throw new \InvalidArgumentException('non-nullable offline_session_max_lifespan_enabled cannot be null');
@@ -1748,7 +1748,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOfflineSessionMaxLifespan()
+    public function get_offline_session_max_lifespan()
     {
         return $this->container['offline_session_max_lifespan'];
     }
@@ -1760,7 +1760,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOfflineSessionMaxLifespan($offline_session_max_lifespan)
+    public function set_offline_session_max_lifespan($offline_session_max_lifespan)
     {
         if (is_null($offline_session_max_lifespan)) {
             throw new \InvalidArgumentException('non-nullable offline_session_max_lifespan cannot be null');
@@ -1775,7 +1775,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getClientSessionIdleTimeout()
+    public function get_client_session_idle_timeout()
     {
         return $this->container['client_session_idle_timeout'];
     }
@@ -1787,7 +1787,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientSessionIdleTimeout($client_session_idle_timeout)
+    public function set_client_session_idle_timeout($client_session_idle_timeout)
     {
         if (is_null($client_session_idle_timeout)) {
             throw new \InvalidArgumentException('non-nullable client_session_idle_timeout cannot be null');
@@ -1802,7 +1802,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getClientSessionMaxLifespan()
+    public function get_client_session_max_lifespan()
     {
         return $this->container['client_session_max_lifespan'];
     }
@@ -1814,7 +1814,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientSessionMaxLifespan($client_session_max_lifespan)
+    public function set_client_session_max_lifespan($client_session_max_lifespan)
     {
         if (is_null($client_session_max_lifespan)) {
             throw new \InvalidArgumentException('non-nullable client_session_max_lifespan cannot be null');
@@ -1829,7 +1829,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getClientOfflineSessionIdleTimeout()
+    public function get_client_offline_session_idle_timeout()
     {
         return $this->container['client_offline_session_idle_timeout'];
     }
@@ -1841,7 +1841,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientOfflineSessionIdleTimeout($client_offline_session_idle_timeout)
+    public function set_client_offline_session_idle_timeout($client_offline_session_idle_timeout)
     {
         if (is_null($client_offline_session_idle_timeout)) {
             throw new \InvalidArgumentException('non-nullable client_offline_session_idle_timeout cannot be null');
@@ -1856,7 +1856,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getClientOfflineSessionMaxLifespan()
+    public function get_client_offline_session_max_lifespan()
     {
         return $this->container['client_offline_session_max_lifespan'];
     }
@@ -1868,7 +1868,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientOfflineSessionMaxLifespan($client_offline_session_max_lifespan)
+    public function set_client_offline_session_max_lifespan($client_offline_session_max_lifespan)
     {
         if (is_null($client_offline_session_max_lifespan)) {
             throw new \InvalidArgumentException('non-nullable client_offline_session_max_lifespan cannot be null');
@@ -1883,7 +1883,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getAccessCodeLifespan()
+    public function get_access_code_lifespan()
     {
         return $this->container['access_code_lifespan'];
     }
@@ -1895,7 +1895,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAccessCodeLifespan($access_code_lifespan)
+    public function set_access_code_lifespan($access_code_lifespan)
     {
         if (is_null($access_code_lifespan)) {
             throw new \InvalidArgumentException('non-nullable access_code_lifespan cannot be null');
@@ -1910,7 +1910,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getAccessCodeLifespanUserAction()
+    public function get_access_code_lifespan_user_action()
     {
         return $this->container['access_code_lifespan_user_action'];
     }
@@ -1922,7 +1922,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAccessCodeLifespanUserAction($access_code_lifespan_user_action)
+    public function set_access_code_lifespan_user_action($access_code_lifespan_user_action)
     {
         if (is_null($access_code_lifespan_user_action)) {
             throw new \InvalidArgumentException('non-nullable access_code_lifespan_user_action cannot be null');
@@ -1937,7 +1937,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getAccessCodeLifespanLogin()
+    public function get_access_code_lifespan_login()
     {
         return $this->container['access_code_lifespan_login'];
     }
@@ -1949,7 +1949,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAccessCodeLifespanLogin($access_code_lifespan_login)
+    public function set_access_code_lifespan_login($access_code_lifespan_login)
     {
         if (is_null($access_code_lifespan_login)) {
             throw new \InvalidArgumentException('non-nullable access_code_lifespan_login cannot be null');
@@ -1964,7 +1964,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getActionTokenGeneratedByAdminLifespan()
+    public function get_action_token_generated_by_admin_lifespan()
     {
         return $this->container['action_token_generated_by_admin_lifespan'];
     }
@@ -1976,7 +1976,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setActionTokenGeneratedByAdminLifespan($action_token_generated_by_admin_lifespan)
+    public function set_action_token_generated_by_admin_lifespan($action_token_generated_by_admin_lifespan)
     {
         if (is_null($action_token_generated_by_admin_lifespan)) {
             throw new \InvalidArgumentException('non-nullable action_token_generated_by_admin_lifespan cannot be null');
@@ -1991,7 +1991,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getActionTokenGeneratedByUserLifespan()
+    public function get_action_token_generated_by_user_lifespan()
     {
         return $this->container['action_token_generated_by_user_lifespan'];
     }
@@ -2003,7 +2003,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setActionTokenGeneratedByUserLifespan($action_token_generated_by_user_lifespan)
+    public function set_action_token_generated_by_user_lifespan($action_token_generated_by_user_lifespan)
     {
         if (is_null($action_token_generated_by_user_lifespan)) {
             throw new \InvalidArgumentException('non-nullable action_token_generated_by_user_lifespan cannot be null');
@@ -2018,7 +2018,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOauth2DeviceCodeLifespan()
+    public function get_oauth2_device_code_lifespan()
     {
         return $this->container['oauth2_device_code_lifespan'];
     }
@@ -2030,7 +2030,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOauth2DeviceCodeLifespan($oauth2_device_code_lifespan)
+    public function set_oauth2_device_code_lifespan($oauth2_device_code_lifespan)
     {
         if (is_null($oauth2_device_code_lifespan)) {
             throw new \InvalidArgumentException('non-nullable oauth2_device_code_lifespan cannot be null');
@@ -2045,7 +2045,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOauth2DevicePollingInterval()
+    public function get_oauth2_device_polling_interval()
     {
         return $this->container['oauth2_device_polling_interval'];
     }
@@ -2057,7 +2057,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOauth2DevicePollingInterval($oauth2_device_polling_interval)
+    public function set_oauth2_device_polling_interval($oauth2_device_polling_interval)
     {
         if (is_null($oauth2_device_polling_interval)) {
             throw new \InvalidArgumentException('non-nullable oauth2_device_polling_interval cannot be null');
@@ -2072,7 +2072,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -2084,7 +2084,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -2099,7 +2099,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getSslRequired()
+    public function get_ssl_required()
     {
         return $this->container['ssl_required'];
     }
@@ -2111,7 +2111,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSslRequired($ssl_required)
+    public function set_ssl_required($ssl_required)
     {
         if (is_null($ssl_required)) {
             throw new \InvalidArgumentException('non-nullable ssl_required cannot be null');
@@ -2127,7 +2127,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return bool|null
      * @deprecated
      */
-    public function getPasswordCredentialGrantAllowed()
+    public function get_password_credential_grant_allowed()
     {
         return $this->container['password_credential_grant_allowed'];
     }
@@ -2140,7 +2140,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setPasswordCredentialGrantAllowed($password_credential_grant_allowed)
+    public function set_password_credential_grant_allowed($password_credential_grant_allowed)
     {
         if (is_null($password_credential_grant_allowed)) {
             throw new \InvalidArgumentException('non-nullable password_credential_grant_allowed cannot be null');
@@ -2155,7 +2155,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getRegistrationAllowed()
+    public function get_registration_allowed()
     {
         return $this->container['registration_allowed'];
     }
@@ -2167,7 +2167,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRegistrationAllowed($registration_allowed)
+    public function set_registration_allowed($registration_allowed)
     {
         if (is_null($registration_allowed)) {
             throw new \InvalidArgumentException('non-nullable registration_allowed cannot be null');
@@ -2182,7 +2182,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getRegistrationEmailAsUsername()
+    public function get_registration_email_as_username()
     {
         return $this->container['registration_email_as_username'];
     }
@@ -2194,7 +2194,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRegistrationEmailAsUsername($registration_email_as_username)
+    public function set_registration_email_as_username($registration_email_as_username)
     {
         if (is_null($registration_email_as_username)) {
             throw new \InvalidArgumentException('non-nullable registration_email_as_username cannot be null');
@@ -2209,7 +2209,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getRememberMe()
+    public function get_remember_me()
     {
         return $this->container['remember_me'];
     }
@@ -2221,7 +2221,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRememberMe($remember_me)
+    public function set_remember_me($remember_me)
     {
         if (is_null($remember_me)) {
             throw new \InvalidArgumentException('non-nullable remember_me cannot be null');
@@ -2236,7 +2236,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getVerifyEmail()
+    public function get_verify_email()
     {
         return $this->container['verify_email'];
     }
@@ -2248,7 +2248,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setVerifyEmail($verify_email)
+    public function set_verify_email($verify_email)
     {
         if (is_null($verify_email)) {
             throw new \InvalidArgumentException('non-nullable verify_email cannot be null');
@@ -2263,7 +2263,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getLoginWithEmailAllowed()
+    public function get_login_with_email_allowed()
     {
         return $this->container['login_with_email_allowed'];
     }
@@ -2275,7 +2275,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setLoginWithEmailAllowed($login_with_email_allowed)
+    public function set_login_with_email_allowed($login_with_email_allowed)
     {
         if (is_null($login_with_email_allowed)) {
             throw new \InvalidArgumentException('non-nullable login_with_email_allowed cannot be null');
@@ -2290,7 +2290,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getDuplicateEmailsAllowed()
+    public function get_duplicate_emails_allowed()
     {
         return $this->container['duplicate_emails_allowed'];
     }
@@ -2302,7 +2302,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDuplicateEmailsAllowed($duplicate_emails_allowed)
+    public function set_duplicate_emails_allowed($duplicate_emails_allowed)
     {
         if (is_null($duplicate_emails_allowed)) {
             throw new \InvalidArgumentException('non-nullable duplicate_emails_allowed cannot be null');
@@ -2317,7 +2317,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getResetPasswordAllowed()
+    public function get_reset_password_allowed()
     {
         return $this->container['reset_password_allowed'];
     }
@@ -2329,7 +2329,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setResetPasswordAllowed($reset_password_allowed)
+    public function set_reset_password_allowed($reset_password_allowed)
     {
         if (is_null($reset_password_allowed)) {
             throw new \InvalidArgumentException('non-nullable reset_password_allowed cannot be null');
@@ -2344,7 +2344,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getEditUsernameAllowed()
+    public function get_edit_username_allowed()
     {
         return $this->container['edit_username_allowed'];
     }
@@ -2356,7 +2356,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEditUsernameAllowed($edit_username_allowed)
+    public function set_edit_username_allowed($edit_username_allowed)
     {
         if (is_null($edit_username_allowed)) {
             throw new \InvalidArgumentException('non-nullable edit_username_allowed cannot be null');
@@ -2372,7 +2372,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return bool|null
      * @deprecated
      */
-    public function getUserCacheEnabled()
+    public function get_user_cache_enabled()
     {
         return $this->container['user_cache_enabled'];
     }
@@ -2385,7 +2385,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setUserCacheEnabled($user_cache_enabled)
+    public function set_user_cache_enabled($user_cache_enabled)
     {
         if (is_null($user_cache_enabled)) {
             throw new \InvalidArgumentException('non-nullable user_cache_enabled cannot be null');
@@ -2401,7 +2401,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return bool|null
      * @deprecated
      */
-    public function getRealmCacheEnabled()
+    public function get_realm_cache_enabled()
     {
         return $this->container['realm_cache_enabled'];
     }
@@ -2414,7 +2414,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setRealmCacheEnabled($realm_cache_enabled)
+    public function set_realm_cache_enabled($realm_cache_enabled)
     {
         if (is_null($realm_cache_enabled)) {
             throw new \InvalidArgumentException('non-nullable realm_cache_enabled cannot be null');
@@ -2429,7 +2429,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getBruteForceProtected()
+    public function get_brute_force_protected()
     {
         return $this->container['brute_force_protected'];
     }
@@ -2441,7 +2441,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setBruteForceProtected($brute_force_protected)
+    public function set_brute_force_protected($brute_force_protected)
     {
         if (is_null($brute_force_protected)) {
             throw new \InvalidArgumentException('non-nullable brute_force_protected cannot be null');
@@ -2456,7 +2456,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getPermanentLockout()
+    public function get_permanent_lockout()
     {
         return $this->container['permanent_lockout'];
     }
@@ -2468,7 +2468,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setPermanentLockout($permanent_lockout)
+    public function set_permanent_lockout($permanent_lockout)
     {
         if (is_null($permanent_lockout)) {
             throw new \InvalidArgumentException('non-nullable permanent_lockout cannot be null');
@@ -2483,7 +2483,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getMaxTemporaryLockouts()
+    public function get_max_temporary_lockouts()
     {
         return $this->container['max_temporary_lockouts'];
     }
@@ -2495,7 +2495,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setMaxTemporaryLockouts($max_temporary_lockouts)
+    public function set_max_temporary_lockouts($max_temporary_lockouts)
     {
         if (is_null($max_temporary_lockouts)) {
             throw new \InvalidArgumentException('non-nullable max_temporary_lockouts cannot be null');
@@ -2510,7 +2510,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getMaxFailureWaitSeconds()
+    public function get_max_failure_wait_seconds()
     {
         return $this->container['max_failure_wait_seconds'];
     }
@@ -2522,7 +2522,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setMaxFailureWaitSeconds($max_failure_wait_seconds)
+    public function set_max_failure_wait_seconds($max_failure_wait_seconds)
     {
         if (is_null($max_failure_wait_seconds)) {
             throw new \InvalidArgumentException('non-nullable max_failure_wait_seconds cannot be null');
@@ -2537,7 +2537,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getMinimumQuickLoginWaitSeconds()
+    public function get_minimum_quick_login_wait_seconds()
     {
         return $this->container['minimum_quick_login_wait_seconds'];
     }
@@ -2549,7 +2549,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setMinimumQuickLoginWaitSeconds($minimum_quick_login_wait_seconds)
+    public function set_minimum_quick_login_wait_seconds($minimum_quick_login_wait_seconds)
     {
         if (is_null($minimum_quick_login_wait_seconds)) {
             throw new \InvalidArgumentException('non-nullable minimum_quick_login_wait_seconds cannot be null');
@@ -2564,7 +2564,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getWaitIncrementSeconds()
+    public function get_wait_increment_seconds()
     {
         return $this->container['wait_increment_seconds'];
     }
@@ -2576,7 +2576,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWaitIncrementSeconds($wait_increment_seconds)
+    public function set_wait_increment_seconds($wait_increment_seconds)
     {
         if (is_null($wait_increment_seconds)) {
             throw new \InvalidArgumentException('non-nullable wait_increment_seconds cannot be null');
@@ -2591,7 +2591,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getQuickLoginCheckMilliSeconds()
+    public function get_quick_login_check_milli_seconds()
     {
         return $this->container['quick_login_check_milli_seconds'];
     }
@@ -2603,7 +2603,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setQuickLoginCheckMilliSeconds($quick_login_check_milli_seconds)
+    public function set_quick_login_check_milli_seconds($quick_login_check_milli_seconds)
     {
         if (is_null($quick_login_check_milli_seconds)) {
             throw new \InvalidArgumentException('non-nullable quick_login_check_milli_seconds cannot be null');
@@ -2618,7 +2618,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getMaxDeltaTimeSeconds()
+    public function get_max_delta_time_seconds()
     {
         return $this->container['max_delta_time_seconds'];
     }
@@ -2630,7 +2630,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setMaxDeltaTimeSeconds($max_delta_time_seconds)
+    public function set_max_delta_time_seconds($max_delta_time_seconds)
     {
         if (is_null($max_delta_time_seconds)) {
             throw new \InvalidArgumentException('non-nullable max_delta_time_seconds cannot be null');
@@ -2645,7 +2645,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getFailureFactor()
+    public function get_failure_factor()
     {
         return $this->container['failure_factor'];
     }
@@ -2657,7 +2657,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setFailureFactor($failure_factor)
+    public function set_failure_factor($failure_factor)
     {
         if (is_null($failure_factor)) {
             throw new \InvalidArgumentException('non-nullable failure_factor cannot be null');
@@ -2673,7 +2673,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return string|null
      * @deprecated
      */
-    public function getPrivateKey()
+    public function get_private_key()
     {
         return $this->container['private_key'];
     }
@@ -2686,7 +2686,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setPrivateKey($private_key)
+    public function set_private_key($private_key)
     {
         if (is_null($private_key)) {
             throw new \InvalidArgumentException('non-nullable private_key cannot be null');
@@ -2702,7 +2702,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return string|null
      * @deprecated
      */
-    public function getPublicKey()
+    public function get_public_key()
     {
         return $this->container['public_key'];
     }
@@ -2715,7 +2715,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setPublicKey($public_key)
+    public function set_public_key($public_key)
     {
         if (is_null($public_key)) {
             throw new \InvalidArgumentException('non-nullable public_key cannot be null');
@@ -2731,7 +2731,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return string|null
      * @deprecated
      */
-    public function getCertificate()
+    public function get_certificate()
     {
         return $this->container['certificate'];
     }
@@ -2744,7 +2744,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setCertificate($certificate)
+    public function set_certificate($certificate)
     {
         if (is_null($certificate)) {
             throw new \InvalidArgumentException('non-nullable certificate cannot be null');
@@ -2760,7 +2760,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return string|null
      * @deprecated
      */
-    public function getCodeSecret()
+    public function get_code_secret()
     {
         return $this->container['code_secret'];
     }
@@ -2773,7 +2773,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setCodeSecret($code_secret)
+    public function set_code_secret($code_secret)
     {
         if (is_null($code_secret)) {
             throw new \InvalidArgumentException('non-nullable code_secret cannot be null');
@@ -2788,7 +2788,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\RolesRepresentation|null
      */
-    public function getRoles()
+    public function get_roles()
     {
         return $this->container['roles'];
     }
@@ -2800,7 +2800,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRoles($roles)
+    public function set_roles($roles)
     {
         if (is_null($roles)) {
             throw new \InvalidArgumentException('non-nullable roles cannot be null');
@@ -2815,7 +2815,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\GroupRepresentation[]|null
      */
-    public function getGroups()
+    public function get_groups()
     {
         return $this->container['groups'];
     }
@@ -2827,7 +2827,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setGroups($groups)
+    public function set_groups($groups)
     {
         if (is_null($groups)) {
             throw new \InvalidArgumentException('non-nullable groups cannot be null');
@@ -2843,7 +2843,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return string[]|null
      * @deprecated
      */
-    public function getDefaultRoles()
+    public function get_default_roles()
     {
         return $this->container['default_roles'];
     }
@@ -2856,7 +2856,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setDefaultRoles($default_roles)
+    public function set_default_roles($default_roles)
     {
         if (is_null($default_roles)) {
             throw new \InvalidArgumentException('non-nullable default_roles cannot be null');
@@ -2871,7 +2871,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\RoleRepresentation|null
      */
-    public function getDefaultRole()
+    public function get_default_role()
     {
         return $this->container['default_role'];
     }
@@ -2883,7 +2883,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDefaultRole($default_role)
+    public function set_default_role($default_role)
     {
         if (is_null($default_role)) {
             throw new \InvalidArgumentException('non-nullable default_role cannot be null');
@@ -2898,7 +2898,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getDefaultGroups()
+    public function get_default_groups()
     {
         return $this->container['default_groups'];
     }
@@ -2910,7 +2910,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDefaultGroups($default_groups)
+    public function set_default_groups($default_groups)
     {
         if (is_null($default_groups)) {
             throw new \InvalidArgumentException('non-nullable default_groups cannot be null');
@@ -2926,7 +2926,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return string[]|null
      * @deprecated
      */
-    public function getRequiredCredentials()
+    public function get_required_credentials()
     {
         return $this->container['required_credentials'];
     }
@@ -2939,7 +2939,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setRequiredCredentials($required_credentials)
+    public function set_required_credentials($required_credentials)
     {
         if (is_null($required_credentials)) {
             throw new \InvalidArgumentException('non-nullable required_credentials cannot be null');
@@ -2956,7 +2956,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getPasswordPolicy()
+    public function get_password_policy()
     {
         return $this->container['password_policy'];
     }
@@ -2968,7 +2968,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setPasswordPolicy($password_policy)
+    public function set_password_policy($password_policy)
     {
         if (is_null($password_policy)) {
             throw new \InvalidArgumentException('non-nullable password_policy cannot be null');
@@ -2983,7 +2983,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getOtpPolicyType()
+    public function get_otp_policy_type()
     {
         return $this->container['otp_policy_type'];
     }
@@ -2995,7 +2995,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpPolicyType($otp_policy_type)
+    public function set_otp_policy_type($otp_policy_type)
     {
         if (is_null($otp_policy_type)) {
             throw new \InvalidArgumentException('non-nullable otp_policy_type cannot be null');
@@ -3010,7 +3010,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getOtpPolicyAlgorithm()
+    public function get_otp_policy_algorithm()
     {
         return $this->container['otp_policy_algorithm'];
     }
@@ -3022,7 +3022,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpPolicyAlgorithm($otp_policy_algorithm)
+    public function set_otp_policy_algorithm($otp_policy_algorithm)
     {
         if (is_null($otp_policy_algorithm)) {
             throw new \InvalidArgumentException('non-nullable otp_policy_algorithm cannot be null');
@@ -3037,7 +3037,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOtpPolicyInitialCounter()
+    public function get_otp_policy_initial_counter()
     {
         return $this->container['otp_policy_initial_counter'];
     }
@@ -3049,7 +3049,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpPolicyInitialCounter($otp_policy_initial_counter)
+    public function set_otp_policy_initial_counter($otp_policy_initial_counter)
     {
         if (is_null($otp_policy_initial_counter)) {
             throw new \InvalidArgumentException('non-nullable otp_policy_initial_counter cannot be null');
@@ -3064,7 +3064,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOtpPolicyDigits()
+    public function get_otp_policy_digits()
     {
         return $this->container['otp_policy_digits'];
     }
@@ -3076,7 +3076,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpPolicyDigits($otp_policy_digits)
+    public function set_otp_policy_digits($otp_policy_digits)
     {
         if (is_null($otp_policy_digits)) {
             throw new \InvalidArgumentException('non-nullable otp_policy_digits cannot be null');
@@ -3091,7 +3091,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOtpPolicyLookAheadWindow()
+    public function get_otp_policy_look_ahead_window()
     {
         return $this->container['otp_policy_look_ahead_window'];
     }
@@ -3103,7 +3103,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpPolicyLookAheadWindow($otp_policy_look_ahead_window)
+    public function set_otp_policy_look_ahead_window($otp_policy_look_ahead_window)
     {
         if (is_null($otp_policy_look_ahead_window)) {
             throw new \InvalidArgumentException('non-nullable otp_policy_look_ahead_window cannot be null');
@@ -3118,7 +3118,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOtpPolicyPeriod()
+    public function get_otp_policy_period()
     {
         return $this->container['otp_policy_period'];
     }
@@ -3130,7 +3130,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpPolicyPeriod($otp_policy_period)
+    public function set_otp_policy_period($otp_policy_period)
     {
         if (is_null($otp_policy_period)) {
             throw new \InvalidArgumentException('non-nullable otp_policy_period cannot be null');
@@ -3145,7 +3145,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getOtpPolicyCodeReusable()
+    public function get_otp_policy_code_reusable()
     {
         return $this->container['otp_policy_code_reusable'];
     }
@@ -3157,7 +3157,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpPolicyCodeReusable($otp_policy_code_reusable)
+    public function set_otp_policy_code_reusable($otp_policy_code_reusable)
     {
         if (is_null($otp_policy_code_reusable)) {
             throw new \InvalidArgumentException('non-nullable otp_policy_code_reusable cannot be null');
@@ -3172,7 +3172,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getOtpSupportedApplications()
+    public function get_otp_supported_applications()
     {
         return $this->container['otp_supported_applications'];
     }
@@ -3184,7 +3184,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOtpSupportedApplications($otp_supported_applications)
+    public function set_otp_supported_applications($otp_supported_applications)
     {
         if (is_null($otp_supported_applications)) {
             throw new \InvalidArgumentException('non-nullable otp_supported_applications cannot be null');
@@ -3199,7 +3199,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,array<string,string>>|null
      */
-    public function getLocalizationTexts()
+    public function get_localization_texts()
     {
         return $this->container['localization_texts'];
     }
@@ -3211,7 +3211,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setLocalizationTexts($localization_texts)
+    public function set_localization_texts($localization_texts)
     {
         if (is_null($localization_texts)) {
             throw new \InvalidArgumentException('non-nullable localization_texts cannot be null');
@@ -3226,7 +3226,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyRpEntityName()
+    public function get_web_authn_policy_rp_entity_name()
     {
         return $this->container['web_authn_policy_rp_entity_name'];
     }
@@ -3238,7 +3238,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyRpEntityName($web_authn_policy_rp_entity_name)
+    public function set_web_authn_policy_rp_entity_name($web_authn_policy_rp_entity_name)
     {
         if (is_null($web_authn_policy_rp_entity_name)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_rp_entity_name cannot be null');
@@ -3253,7 +3253,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getWebAuthnPolicySignatureAlgorithms()
+    public function get_web_authn_policy_signature_algorithms()
     {
         return $this->container['web_authn_policy_signature_algorithms'];
     }
@@ -3265,7 +3265,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicySignatureAlgorithms($web_authn_policy_signature_algorithms)
+    public function set_web_authn_policy_signature_algorithms($web_authn_policy_signature_algorithms)
     {
         if (is_null($web_authn_policy_signature_algorithms)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_signature_algorithms cannot be null');
@@ -3280,7 +3280,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyRpId()
+    public function get_web_authn_policy_rp_id()
     {
         return $this->container['web_authn_policy_rp_id'];
     }
@@ -3292,7 +3292,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyRpId($web_authn_policy_rp_id)
+    public function set_web_authn_policy_rp_id($web_authn_policy_rp_id)
     {
         if (is_null($web_authn_policy_rp_id)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_rp_id cannot be null');
@@ -3307,7 +3307,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyAttestationConveyancePreference()
+    public function get_web_authn_policy_attestation_conveyance_preference()
     {
         return $this->container['web_authn_policy_attestation_conveyance_preference'];
     }
@@ -3319,7 +3319,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyAttestationConveyancePreference($web_authn_policy_attestation_conveyance_preference)
+    public function set_web_authn_policy_attestation_conveyance_preference($web_authn_policy_attestation_conveyance_preference)
     {
         if (is_null($web_authn_policy_attestation_conveyance_preference)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_attestation_conveyance_preference cannot be null');
@@ -3334,7 +3334,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyAuthenticatorAttachment()
+    public function get_web_authn_policy_authenticator_attachment()
     {
         return $this->container['web_authn_policy_authenticator_attachment'];
     }
@@ -3346,7 +3346,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyAuthenticatorAttachment($web_authn_policy_authenticator_attachment)
+    public function set_web_authn_policy_authenticator_attachment($web_authn_policy_authenticator_attachment)
     {
         if (is_null($web_authn_policy_authenticator_attachment)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_authenticator_attachment cannot be null');
@@ -3361,7 +3361,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyRequireResidentKey()
+    public function get_web_authn_policy_require_resident_key()
     {
         return $this->container['web_authn_policy_require_resident_key'];
     }
@@ -3373,7 +3373,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyRequireResidentKey($web_authn_policy_require_resident_key)
+    public function set_web_authn_policy_require_resident_key($web_authn_policy_require_resident_key)
     {
         if (is_null($web_authn_policy_require_resident_key)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_require_resident_key cannot be null');
@@ -3388,7 +3388,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyUserVerificationRequirement()
+    public function get_web_authn_policy_user_verification_requirement()
     {
         return $this->container['web_authn_policy_user_verification_requirement'];
     }
@@ -3400,7 +3400,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyUserVerificationRequirement($web_authn_policy_user_verification_requirement)
+    public function set_web_authn_policy_user_verification_requirement($web_authn_policy_user_verification_requirement)
     {
         if (is_null($web_authn_policy_user_verification_requirement)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_user_verification_requirement cannot be null');
@@ -3415,7 +3415,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getWebAuthnPolicyCreateTimeout()
+    public function get_web_authn_policy_create_timeout()
     {
         return $this->container['web_authn_policy_create_timeout'];
     }
@@ -3427,7 +3427,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyCreateTimeout($web_authn_policy_create_timeout)
+    public function set_web_authn_policy_create_timeout($web_authn_policy_create_timeout)
     {
         if (is_null($web_authn_policy_create_timeout)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_create_timeout cannot be null');
@@ -3442,7 +3442,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getWebAuthnPolicyAvoidSameAuthenticatorRegister()
+    public function get_web_authn_policy_avoid_same_authenticator_register()
     {
         return $this->container['web_authn_policy_avoid_same_authenticator_register'];
     }
@@ -3454,7 +3454,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyAvoidSameAuthenticatorRegister($web_authn_policy_avoid_same_authenticator_register)
+    public function set_web_authn_policy_avoid_same_authenticator_register($web_authn_policy_avoid_same_authenticator_register)
     {
         if (is_null($web_authn_policy_avoid_same_authenticator_register)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_avoid_same_authenticator_register cannot be null');
@@ -3469,7 +3469,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getWebAuthnPolicyAcceptableAaguids()
+    public function get_web_authn_policy_acceptable_aaguids()
     {
         return $this->container['web_authn_policy_acceptable_aaguids'];
     }
@@ -3481,7 +3481,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyAcceptableAaguids($web_authn_policy_acceptable_aaguids)
+    public function set_web_authn_policy_acceptable_aaguids($web_authn_policy_acceptable_aaguids)
     {
         if (is_null($web_authn_policy_acceptable_aaguids)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_acceptable_aaguids cannot be null');
@@ -3496,7 +3496,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getWebAuthnPolicyExtraOrigins()
+    public function get_web_authn_policy_extra_origins()
     {
         return $this->container['web_authn_policy_extra_origins'];
     }
@@ -3508,7 +3508,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyExtraOrigins($web_authn_policy_extra_origins)
+    public function set_web_authn_policy_extra_origins($web_authn_policy_extra_origins)
     {
         if (is_null($web_authn_policy_extra_origins)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_extra_origins cannot be null');
@@ -3523,7 +3523,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyPasswordlessRpEntityName()
+    public function get_web_authn_policy_passwordless_rp_entity_name()
     {
         return $this->container['web_authn_policy_passwordless_rp_entity_name'];
     }
@@ -3535,7 +3535,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessRpEntityName($web_authn_policy_passwordless_rp_entity_name)
+    public function set_web_authn_policy_passwordless_rp_entity_name($web_authn_policy_passwordless_rp_entity_name)
     {
         if (is_null($web_authn_policy_passwordless_rp_entity_name)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_rp_entity_name cannot be null');
@@ -3550,7 +3550,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getWebAuthnPolicyPasswordlessSignatureAlgorithms()
+    public function get_web_authn_policy_passwordless_signature_algorithms()
     {
         return $this->container['web_authn_policy_passwordless_signature_algorithms'];
     }
@@ -3562,7 +3562,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessSignatureAlgorithms($web_authn_policy_passwordless_signature_algorithms)
+    public function set_web_authn_policy_passwordless_signature_algorithms($web_authn_policy_passwordless_signature_algorithms)
     {
         if (is_null($web_authn_policy_passwordless_signature_algorithms)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_signature_algorithms cannot be null');
@@ -3577,7 +3577,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyPasswordlessRpId()
+    public function get_web_authn_policy_passwordless_rp_id()
     {
         return $this->container['web_authn_policy_passwordless_rp_id'];
     }
@@ -3589,7 +3589,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessRpId($web_authn_policy_passwordless_rp_id)
+    public function set_web_authn_policy_passwordless_rp_id($web_authn_policy_passwordless_rp_id)
     {
         if (is_null($web_authn_policy_passwordless_rp_id)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_rp_id cannot be null');
@@ -3604,7 +3604,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyPasswordlessAttestationConveyancePreference()
+    public function get_web_authn_policy_passwordless_attestation_conveyance_preference()
     {
         return $this->container['web_authn_policy_passwordless_attestation_conveyance_preference'];
     }
@@ -3616,7 +3616,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessAttestationConveyancePreference($web_authn_policy_passwordless_attestation_conveyance_preference)
+    public function set_web_authn_policy_passwordless_attestation_conveyance_preference($web_authn_policy_passwordless_attestation_conveyance_preference)
     {
         if (is_null($web_authn_policy_passwordless_attestation_conveyance_preference)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_attestation_conveyance_preference cannot be null');
@@ -3631,7 +3631,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyPasswordlessAuthenticatorAttachment()
+    public function get_web_authn_policy_passwordless_authenticator_attachment()
     {
         return $this->container['web_authn_policy_passwordless_authenticator_attachment'];
     }
@@ -3643,7 +3643,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessAuthenticatorAttachment($web_authn_policy_passwordless_authenticator_attachment)
+    public function set_web_authn_policy_passwordless_authenticator_attachment($web_authn_policy_passwordless_authenticator_attachment)
     {
         if (is_null($web_authn_policy_passwordless_authenticator_attachment)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_authenticator_attachment cannot be null');
@@ -3658,7 +3658,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyPasswordlessRequireResidentKey()
+    public function get_web_authn_policy_passwordless_require_resident_key()
     {
         return $this->container['web_authn_policy_passwordless_require_resident_key'];
     }
@@ -3670,7 +3670,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessRequireResidentKey($web_authn_policy_passwordless_require_resident_key)
+    public function set_web_authn_policy_passwordless_require_resident_key($web_authn_policy_passwordless_require_resident_key)
     {
         if (is_null($web_authn_policy_passwordless_require_resident_key)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_require_resident_key cannot be null');
@@ -3685,7 +3685,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getWebAuthnPolicyPasswordlessUserVerificationRequirement()
+    public function get_web_authn_policy_passwordless_user_verification_requirement()
     {
         return $this->container['web_authn_policy_passwordless_user_verification_requirement'];
     }
@@ -3697,7 +3697,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessUserVerificationRequirement($web_authn_policy_passwordless_user_verification_requirement)
+    public function set_web_authn_policy_passwordless_user_verification_requirement($web_authn_policy_passwordless_user_verification_requirement)
     {
         if (is_null($web_authn_policy_passwordless_user_verification_requirement)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_user_verification_requirement cannot be null');
@@ -3712,7 +3712,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getWebAuthnPolicyPasswordlessCreateTimeout()
+    public function get_web_authn_policy_passwordless_create_timeout()
     {
         return $this->container['web_authn_policy_passwordless_create_timeout'];
     }
@@ -3724,7 +3724,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessCreateTimeout($web_authn_policy_passwordless_create_timeout)
+    public function set_web_authn_policy_passwordless_create_timeout($web_authn_policy_passwordless_create_timeout)
     {
         if (is_null($web_authn_policy_passwordless_create_timeout)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_create_timeout cannot be null');
@@ -3739,7 +3739,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getWebAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister()
+    public function get_web_authn_policy_passwordless_avoid_same_authenticator_register()
     {
         return $this->container['web_authn_policy_passwordless_avoid_same_authenticator_register'];
     }
@@ -3751,7 +3751,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessAvoidSameAuthenticatorRegister($web_authn_policy_passwordless_avoid_same_authenticator_register)
+    public function set_web_authn_policy_passwordless_avoid_same_authenticator_register($web_authn_policy_passwordless_avoid_same_authenticator_register)
     {
         if (is_null($web_authn_policy_passwordless_avoid_same_authenticator_register)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_avoid_same_authenticator_register cannot be null');
@@ -3766,7 +3766,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getWebAuthnPolicyPasswordlessAcceptableAaguids()
+    public function get_web_authn_policy_passwordless_acceptable_aaguids()
     {
         return $this->container['web_authn_policy_passwordless_acceptable_aaguids'];
     }
@@ -3778,7 +3778,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessAcceptableAaguids($web_authn_policy_passwordless_acceptable_aaguids)
+    public function set_web_authn_policy_passwordless_acceptable_aaguids($web_authn_policy_passwordless_acceptable_aaguids)
     {
         if (is_null($web_authn_policy_passwordless_acceptable_aaguids)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_acceptable_aaguids cannot be null');
@@ -3793,7 +3793,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getWebAuthnPolicyPasswordlessExtraOrigins()
+    public function get_web_authn_policy_passwordless_extra_origins()
     {
         return $this->container['web_authn_policy_passwordless_extra_origins'];
     }
@@ -3805,7 +3805,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebAuthnPolicyPasswordlessExtraOrigins($web_authn_policy_passwordless_extra_origins)
+    public function set_web_authn_policy_passwordless_extra_origins($web_authn_policy_passwordless_extra_origins)
     {
         if (is_null($web_authn_policy_passwordless_extra_origins)) {
             throw new \InvalidArgumentException('non-nullable web_authn_policy_passwordless_extra_origins cannot be null');
@@ -3820,7 +3820,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientProfilesRepresentation|null
      */
-    public function getClientProfiles()
+    public function get_client_profiles()
     {
         return $this->container['client_profiles'];
     }
@@ -3832,7 +3832,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientProfiles($client_profiles)
+    public function set_client_profiles($client_profiles)
     {
         if (is_null($client_profiles)) {
             throw new \InvalidArgumentException('non-nullable client_profiles cannot be null');
@@ -3847,7 +3847,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientPoliciesRepresentation|null
      */
-    public function getClientPolicies()
+    public function get_client_policies()
     {
         return $this->container['client_policies'];
     }
@@ -3859,7 +3859,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientPolicies($client_policies)
+    public function set_client_policies($client_policies)
     {
         if (is_null($client_policies)) {
             throw new \InvalidArgumentException('non-nullable client_policies cannot be null');
@@ -3874,7 +3874,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]|null
      */
-    public function getUsers()
+    public function get_users()
     {
         return $this->container['users'];
     }
@@ -3886,7 +3886,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setUsers($users)
+    public function set_users($users)
     {
         if (is_null($users)) {
             throw new \InvalidArgumentException('non-nullable users cannot be null');
@@ -3901,7 +3901,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserRepresentation[]|null
      */
-    public function getFederatedUsers()
+    public function get_federated_users()
     {
         return $this->container['federated_users'];
     }
@@ -3913,7 +3913,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setFederatedUsers($federated_users)
+    public function set_federated_users($federated_users)
     {
         if (is_null($federated_users)) {
             throw new \InvalidArgumentException('non-nullable federated_users cannot be null');
@@ -3928,7 +3928,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeMappingRepresentation[]|null
      */
-    public function getScopeMappings()
+    public function get_scope_mappings()
     {
         return $this->container['scope_mappings'];
     }
@@ -3940,7 +3940,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setScopeMappings($scope_mappings)
+    public function set_scope_mappings($scope_mappings)
     {
         if (is_null($scope_mappings)) {
             throw new \InvalidArgumentException('non-nullable scope_mappings cannot be null');
@@ -3955,7 +3955,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeMappingRepresentation[]>|null
      */
-    public function getClientScopeMappings()
+    public function get_client_scope_mappings()
     {
         return $this->container['client_scope_mappings'];
     }
@@ -3967,7 +3967,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientScopeMappings($client_scope_mappings)
+    public function set_client_scope_mappings($client_scope_mappings)
     {
         if (is_null($client_scope_mappings)) {
             throw new \InvalidArgumentException('non-nullable client_scope_mappings cannot be null');
@@ -3982,7 +3982,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientRepresentation[]|null
      */
-    public function getClients()
+    public function get_clients()
     {
         return $this->container['clients'];
     }
@@ -3994,7 +3994,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClients($clients)
+    public function set_clients($clients)
     {
         if (is_null($clients)) {
             throw new \InvalidArgumentException('non-nullable clients cannot be null');
@@ -4009,7 +4009,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientScopeRepresentation[]|null
      */
-    public function getClientScopes()
+    public function get_client_scopes()
     {
         return $this->container['client_scopes'];
     }
@@ -4021,7 +4021,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientScopes($client_scopes)
+    public function set_client_scopes($client_scopes)
     {
         if (is_null($client_scopes)) {
             throw new \InvalidArgumentException('non-nullable client_scopes cannot be null');
@@ -4036,7 +4036,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getDefaultDefaultClientScopes()
+    public function get_default_default_client_scopes()
     {
         return $this->container['default_default_client_scopes'];
     }
@@ -4048,7 +4048,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDefaultDefaultClientScopes($default_default_client_scopes)
+    public function set_default_default_client_scopes($default_default_client_scopes)
     {
         if (is_null($default_default_client_scopes)) {
             throw new \InvalidArgumentException('non-nullable default_default_client_scopes cannot be null');
@@ -4063,7 +4063,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getDefaultOptionalClientScopes()
+    public function get_default_optional_client_scopes()
     {
         return $this->container['default_optional_client_scopes'];
     }
@@ -4075,7 +4075,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDefaultOptionalClientScopes($default_optional_client_scopes)
+    public function set_default_optional_client_scopes($default_optional_client_scopes)
     {
         if (is_null($default_optional_client_scopes)) {
             throw new \InvalidArgumentException('non-nullable default_optional_client_scopes cannot be null');
@@ -4090,7 +4090,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,string>|null
      */
-    public function getBrowserSecurityHeaders()
+    public function get_browser_security_headers()
     {
         return $this->container['browser_security_headers'];
     }
@@ -4102,7 +4102,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setBrowserSecurityHeaders($browser_security_headers)
+    public function set_browser_security_headers($browser_security_headers)
     {
         if (is_null($browser_security_headers)) {
             throw new \InvalidArgumentException('non-nullable browser_security_headers cannot be null');
@@ -4117,7 +4117,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,string>|null
      */
-    public function getSmtpServer()
+    public function get_smtp_server()
     {
         return $this->container['smtp_server'];
     }
@@ -4129,7 +4129,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSmtpServer($smtp_server)
+    public function set_smtp_server($smtp_server)
     {
         if (is_null($smtp_server)) {
             throw new \InvalidArgumentException('non-nullable smtp_server cannot be null');
@@ -4144,7 +4144,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserFederationProviderRepresentation[]|null
      */
-    public function getUserFederationProviders()
+    public function get_user_federation_providers()
     {
         return $this->container['user_federation_providers'];
     }
@@ -4156,7 +4156,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setUserFederationProviders($user_federation_providers)
+    public function set_user_federation_providers($user_federation_providers)
     {
         if (is_null($user_federation_providers)) {
             throw new \InvalidArgumentException('non-nullable user_federation_providers cannot be null');
@@ -4171,7 +4171,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserFederationMapperRepresentation[]|null
      */
-    public function getUserFederationMappers()
+    public function get_user_federation_mappers()
     {
         return $this->container['user_federation_mappers'];
     }
@@ -4183,7 +4183,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setUserFederationMappers($user_federation_mappers)
+    public function set_user_federation_mappers($user_federation_mappers)
     {
         if (is_null($user_federation_mappers)) {
             throw new \InvalidArgumentException('non-nullable user_federation_mappers cannot be null');
@@ -4198,7 +4198,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getLoginTheme()
+    public function get_login_theme()
     {
         return $this->container['login_theme'];
     }
@@ -4210,7 +4210,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setLoginTheme($login_theme)
+    public function set_login_theme($login_theme)
     {
         if (is_null($login_theme)) {
             throw new \InvalidArgumentException('non-nullable login_theme cannot be null');
@@ -4225,7 +4225,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getAccountTheme()
+    public function get_account_theme()
     {
         return $this->container['account_theme'];
     }
@@ -4237,7 +4237,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAccountTheme($account_theme)
+    public function set_account_theme($account_theme)
     {
         if (is_null($account_theme)) {
             throw new \InvalidArgumentException('non-nullable account_theme cannot be null');
@@ -4252,7 +4252,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getAdminTheme()
+    public function get_admin_theme()
     {
         return $this->container['admin_theme'];
     }
@@ -4264,7 +4264,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAdminTheme($admin_theme)
+    public function set_admin_theme($admin_theme)
     {
         if (is_null($admin_theme)) {
             throw new \InvalidArgumentException('non-nullable admin_theme cannot be null');
@@ -4279,7 +4279,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getEmailTheme()
+    public function get_email_theme()
     {
         return $this->container['email_theme'];
     }
@@ -4291,7 +4291,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEmailTheme($email_theme)
+    public function set_email_theme($email_theme)
     {
         if (is_null($email_theme)) {
             throw new \InvalidArgumentException('non-nullable email_theme cannot be null');
@@ -4306,7 +4306,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getEventsEnabled()
+    public function get_events_enabled()
     {
         return $this->container['events_enabled'];
     }
@@ -4318,7 +4318,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEventsEnabled($events_enabled)
+    public function set_events_enabled($events_enabled)
     {
         if (is_null($events_enabled)) {
             throw new \InvalidArgumentException('non-nullable events_enabled cannot be null');
@@ -4333,7 +4333,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getEventsExpiration()
+    public function get_events_expiration()
     {
         return $this->container['events_expiration'];
     }
@@ -4345,7 +4345,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEventsExpiration($events_expiration)
+    public function set_events_expiration($events_expiration)
     {
         if (is_null($events_expiration)) {
             throw new \InvalidArgumentException('non-nullable events_expiration cannot be null');
@@ -4360,7 +4360,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getEventsListeners()
+    public function get_events_listeners()
     {
         return $this->container['events_listeners'];
     }
@@ -4372,7 +4372,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEventsListeners($events_listeners)
+    public function set_events_listeners($events_listeners)
     {
         if (is_null($events_listeners)) {
             throw new \InvalidArgumentException('non-nullable events_listeners cannot be null');
@@ -4387,7 +4387,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getEnabledEventTypes()
+    public function get_enabled_event_types()
     {
         return $this->container['enabled_event_types'];
     }
@@ -4399,7 +4399,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEnabledEventTypes($enabled_event_types)
+    public function set_enabled_event_types($enabled_event_types)
     {
         if (is_null($enabled_event_types)) {
             throw new \InvalidArgumentException('non-nullable enabled_event_types cannot be null');
@@ -4414,7 +4414,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getAdminEventsEnabled()
+    public function get_admin_events_enabled()
     {
         return $this->container['admin_events_enabled'];
     }
@@ -4426,7 +4426,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAdminEventsEnabled($admin_events_enabled)
+    public function set_admin_events_enabled($admin_events_enabled)
     {
         if (is_null($admin_events_enabled)) {
             throw new \InvalidArgumentException('non-nullable admin_events_enabled cannot be null');
@@ -4441,7 +4441,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getAdminEventsDetailsEnabled()
+    public function get_admin_events_details_enabled()
     {
         return $this->container['admin_events_details_enabled'];
     }
@@ -4453,7 +4453,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAdminEventsDetailsEnabled($admin_events_details_enabled)
+    public function set_admin_events_details_enabled($admin_events_details_enabled)
     {
         if (is_null($admin_events_details_enabled)) {
             throw new \InvalidArgumentException('non-nullable admin_events_details_enabled cannot be null');
@@ -4468,7 +4468,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]|null
      */
-    public function getIdentityProviders()
+    public function get_identity_providers()
     {
         return $this->container['identity_providers'];
     }
@@ -4480,7 +4480,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setIdentityProviders($identity_providers)
+    public function set_identity_providers($identity_providers)
     {
         if (is_null($identity_providers)) {
             throw new \InvalidArgumentException('non-nullable identity_providers cannot be null');
@@ -4495,7 +4495,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]|null
      */
-    public function getIdentityProviderMappers()
+    public function get_identity_provider_mappers()
     {
         return $this->container['identity_provider_mappers'];
     }
@@ -4507,7 +4507,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setIdentityProviderMappers($identity_provider_mappers)
+    public function set_identity_provider_mappers($identity_provider_mappers)
     {
         if (is_null($identity_provider_mappers)) {
             throw new \InvalidArgumentException('non-nullable identity_provider_mappers cannot be null');
@@ -4522,7 +4522,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ProtocolMapperRepresentation[]|null
      */
-    public function getProtocolMappers()
+    public function get_protocol_mappers()
     {
         return $this->container['protocol_mappers'];
     }
@@ -4534,7 +4534,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setProtocolMappers($protocol_mappers)
+    public function set_protocol_mappers($protocol_mappers)
     {
         if (is_null($protocol_mappers)) {
             throw new \InvalidArgumentException('non-nullable protocol_mappers cannot be null');
@@ -4549,7 +4549,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\ComponentExportRepresentation[]>|null
      */
-    public function getComponents()
+    public function get_components()
     {
         return $this->container['components'];
     }
@@ -4561,7 +4561,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setComponents($components)
+    public function set_components($components)
     {
         if (is_null($components)) {
             throw new \InvalidArgumentException('non-nullable components cannot be null');
@@ -4576,7 +4576,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getInternationalizationEnabled()
+    public function get_internationalization_enabled()
     {
         return $this->container['internationalization_enabled'];
     }
@@ -4588,7 +4588,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setInternationalizationEnabled($internationalization_enabled)
+    public function set_internationalization_enabled($internationalization_enabled)
     {
         if (is_null($internationalization_enabled)) {
             throw new \InvalidArgumentException('non-nullable internationalization_enabled cannot be null');
@@ -4603,7 +4603,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getSupportedLocales()
+    public function get_supported_locales()
     {
         return $this->container['supported_locales'];
     }
@@ -4615,7 +4615,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSupportedLocales($supported_locales)
+    public function set_supported_locales($supported_locales)
     {
         if (is_null($supported_locales)) {
             throw new \InvalidArgumentException('non-nullable supported_locales cannot be null');
@@ -4632,7 +4632,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getDefaultLocale()
+    public function get_default_locale()
     {
         return $this->container['default_locale'];
     }
@@ -4644,7 +4644,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDefaultLocale($default_locale)
+    public function set_default_locale($default_locale)
     {
         if (is_null($default_locale)) {
             throw new \InvalidArgumentException('non-nullable default_locale cannot be null');
@@ -4659,7 +4659,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\AuthenticationFlowRepresentation[]|null
      */
-    public function getAuthenticationFlows()
+    public function get_authentication_flows()
     {
         return $this->container['authentication_flows'];
     }
@@ -4671,7 +4671,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAuthenticationFlows($authentication_flows)
+    public function set_authentication_flows($authentication_flows)
     {
         if (is_null($authentication_flows)) {
             throw new \InvalidArgumentException('non-nullable authentication_flows cannot be null');
@@ -4686,7 +4686,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\AuthenticatorConfigRepresentation[]|null
      */
-    public function getAuthenticatorConfig()
+    public function get_authenticator_config()
     {
         return $this->container['authenticator_config'];
     }
@@ -4698,7 +4698,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAuthenticatorConfig($authenticator_config)
+    public function set_authenticator_config($authenticator_config)
     {
         if (is_null($authenticator_config)) {
             throw new \InvalidArgumentException('non-nullable authenticator_config cannot be null');
@@ -4713,7 +4713,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\RequiredActionProviderRepresentation[]|null
      */
-    public function getRequiredActions()
+    public function get_required_actions()
     {
         return $this->container['required_actions'];
     }
@@ -4725,7 +4725,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRequiredActions($required_actions)
+    public function set_required_actions($required_actions)
     {
         if (is_null($required_actions)) {
             throw new \InvalidArgumentException('non-nullable required_actions cannot be null');
@@ -4740,7 +4740,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getBrowserFlow()
+    public function get_browser_flow()
     {
         return $this->container['browser_flow'];
     }
@@ -4752,7 +4752,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setBrowserFlow($browser_flow)
+    public function set_browser_flow($browser_flow)
     {
         if (is_null($browser_flow)) {
             throw new \InvalidArgumentException('non-nullable browser_flow cannot be null');
@@ -4767,7 +4767,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getRegistrationFlow()
+    public function get_registration_flow()
     {
         return $this->container['registration_flow'];
     }
@@ -4779,7 +4779,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRegistrationFlow($registration_flow)
+    public function set_registration_flow($registration_flow)
     {
         if (is_null($registration_flow)) {
             throw new \InvalidArgumentException('non-nullable registration_flow cannot be null');
@@ -4794,7 +4794,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getDirectGrantFlow()
+    public function get_direct_grant_flow()
     {
         return $this->container['direct_grant_flow'];
     }
@@ -4806,7 +4806,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDirectGrantFlow($direct_grant_flow)
+    public function set_direct_grant_flow($direct_grant_flow)
     {
         if (is_null($direct_grant_flow)) {
             throw new \InvalidArgumentException('non-nullable direct_grant_flow cannot be null');
@@ -4821,7 +4821,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getResetCredentialsFlow()
+    public function get_reset_credentials_flow()
     {
         return $this->container['reset_credentials_flow'];
     }
@@ -4833,7 +4833,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setResetCredentialsFlow($reset_credentials_flow)
+    public function set_reset_credentials_flow($reset_credentials_flow)
     {
         if (is_null($reset_credentials_flow)) {
             throw new \InvalidArgumentException('non-nullable reset_credentials_flow cannot be null');
@@ -4848,7 +4848,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getClientAuthenticationFlow()
+    public function get_client_authentication_flow()
     {
         return $this->container['client_authentication_flow'];
     }
@@ -4860,7 +4860,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientAuthenticationFlow($client_authentication_flow)
+    public function set_client_authentication_flow($client_authentication_flow)
     {
         if (is_null($client_authentication_flow)) {
             throw new \InvalidArgumentException('non-nullable client_authentication_flow cannot be null');
@@ -4875,7 +4875,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getDockerAuthenticationFlow()
+    public function get_docker_authentication_flow()
     {
         return $this->container['docker_authentication_flow'];
     }
@@ -4887,7 +4887,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDockerAuthenticationFlow($docker_authentication_flow)
+    public function set_docker_authentication_flow($docker_authentication_flow)
     {
         if (is_null($docker_authentication_flow)) {
             throw new \InvalidArgumentException('non-nullable docker_authentication_flow cannot be null');
@@ -4902,7 +4902,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getFirstBrokerLoginFlow()
+    public function get_first_broker_login_flow()
     {
         return $this->container['first_broker_login_flow'];
     }
@@ -4914,7 +4914,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setFirstBrokerLoginFlow($first_broker_login_flow)
+    public function set_first_broker_login_flow($first_broker_login_flow)
     {
         if (is_null($first_broker_login_flow)) {
             throw new \InvalidArgumentException('non-nullable first_broker_login_flow cannot be null');
@@ -4929,7 +4929,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,string>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -4941,7 +4941,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -4956,7 +4956,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getKeycloakVersion()
+    public function get_keycloak_version()
     {
         return $this->container['keycloak_version'];
     }
@@ -4968,7 +4968,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setKeycloakVersion($keycloak_version)
+    public function set_keycloak_version($keycloak_version)
     {
         if (is_null($keycloak_version)) {
             throw new \InvalidArgumentException('non-nullable keycloak_version cannot be null');
@@ -4983,7 +4983,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getUserManagedAccessAllowed()
+    public function get_user_managed_access_allowed()
     {
         return $this->container['user_managed_access_allowed'];
     }
@@ -4995,7 +4995,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setUserManagedAccessAllowed($user_managed_access_allowed)
+    public function set_user_managed_access_allowed($user_managed_access_allowed)
     {
         if (is_null($user_managed_access_allowed)) {
             throw new \InvalidArgumentException('non-nullable user_managed_access_allowed cannot be null');
@@ -5010,7 +5010,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getOrganizationsEnabled()
+    public function get_organizations_enabled()
     {
         return $this->container['organizations_enabled'];
     }
@@ -5022,7 +5022,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOrganizationsEnabled($organizations_enabled)
+    public function set_organizations_enabled($organizations_enabled)
     {
         if (is_null($organizations_enabled)) {
             throw new \InvalidArgumentException('non-nullable organizations_enabled cannot be null');
@@ -5037,7 +5037,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]|null
      */
-    public function getOrganizations()
+    public function get_organizations()
     {
         return $this->container['organizations'];
     }
@@ -5049,7 +5049,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOrganizations($organizations)
+    public function set_organizations($organizations)
     {
         if (is_null($organizations)) {
             throw new \InvalidArgumentException('non-nullable organizations cannot be null');
@@ -5065,7 +5065,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return bool|null
      * @deprecated
      */
-    public function getSocial()
+    public function get_social()
     {
         return $this->container['social'];
     }
@@ -5078,7 +5078,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setSocial($social)
+    public function set_social($social)
     {
         if (is_null($social)) {
             throw new \InvalidArgumentException('non-nullable social cannot be null');
@@ -5094,7 +5094,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return bool|null
      * @deprecated
      */
-    public function getUpdateProfileOnInitialSocialLogin()
+    public function get_update_profile_on_initial_social_login()
     {
         return $this->container['update_profile_on_initial_social_login'];
     }
@@ -5107,7 +5107,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setUpdateProfileOnInitialSocialLogin($update_profile_on_initial_social_login)
+    public function set_update_profile_on_initial_social_login($update_profile_on_initial_social_login)
     {
         if (is_null($update_profile_on_initial_social_login)) {
             throw new \InvalidArgumentException('non-nullable update_profile_on_initial_social_login cannot be null');
@@ -5123,7 +5123,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return array<string,string>|null
      * @deprecated
      */
-    public function getSocialProviders()
+    public function get_social_providers()
     {
         return $this->container['social_providers'];
     }
@@ -5136,7 +5136,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setSocialProviders($social_providers)
+    public function set_social_providers($social_providers)
     {
         if (is_null($social_providers)) {
             throw new \InvalidArgumentException('non-nullable social_providers cannot be null');
@@ -5152,7 +5152,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeMappingRepresentation[]>|null
      * @deprecated
      */
-    public function getApplicationScopeMappings()
+    public function get_application_scope_mappings()
     {
         return $this->container['application_scope_mappings'];
     }
@@ -5165,7 +5165,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setApplicationScopeMappings($application_scope_mappings)
+    public function set_application_scope_mappings($application_scope_mappings)
     {
         if (is_null($application_scope_mappings)) {
             throw new \InvalidArgumentException('non-nullable application_scope_mappings cannot be null');
@@ -5181,7 +5181,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ApplicationRepresentation[]|null
      * @deprecated
      */
-    public function getApplications()
+    public function get_applications()
     {
         return $this->container['applications'];
     }
@@ -5194,7 +5194,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setApplications($applications)
+    public function set_applications($applications)
     {
         if (is_null($applications)) {
             throw new \InvalidArgumentException('non-nullable applications cannot be null');
@@ -5210,7 +5210,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\OAuthClientRepresentation[]|null
      * @deprecated
      */
-    public function getOauthClients()
+    public function get_oauth_clients()
     {
         return $this->container['oauth_clients'];
     }
@@ -5223,7 +5223,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setOauthClients($oauth_clients)
+    public function set_oauth_clients($oauth_clients)
     {
         if (is_null($oauth_clients)) {
             throw new \InvalidArgumentException('non-nullable oauth_clients cannot be null');
@@ -5239,7 +5239,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientTemplateRepresentation[]|null
      * @deprecated
      */
-    public function getClientTemplates()
+    public function get_client_templates()
     {
         return $this->container['client_templates'];
     }
@@ -5252,7 +5252,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @return self
      * @deprecated
      */
-    public function setClientTemplates($client_templates)
+    public function set_client_templates($client_templates)
     {
         if (is_null($client_templates)) {
             throw new \InvalidArgumentException('non-nullable client_templates cannot be null');
@@ -5267,7 +5267,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOAuth2DeviceCodeLifespan()
+    public function get_o_auth2_device_code_lifespan()
     {
         return $this->container['o_auth2_device_code_lifespan'];
     }
@@ -5279,7 +5279,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOAuth2DeviceCodeLifespan($o_auth2_device_code_lifespan)
+    public function set_o_auth2_device_code_lifespan($o_auth2_device_code_lifespan)
     {
         if (is_null($o_auth2_device_code_lifespan)) {
             throw new \InvalidArgumentException('non-nullable o_auth2_device_code_lifespan cannot be null');
@@ -5294,7 +5294,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getOAuth2DevicePollingInterval()
+    public function get_o_auth2_device_polling_interval()
     {
         return $this->container['o_auth2_device_polling_interval'];
     }
@@ -5306,7 +5306,7 @@ class RealmRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setOAuth2DevicePollingInterval($o_auth2_device_polling_interval)
+    public function set_o_auth2_device_polling_interval($o_auth2_device_polling_interval)
     {
         if (is_null($o_auth2_device_polling_interval)) {
             throw new \InvalidArgumentException('non-nullable o_auth2_device_polling_interval cannot be null');

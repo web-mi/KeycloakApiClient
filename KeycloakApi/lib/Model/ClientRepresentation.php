@@ -347,50 +347,50 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'client_id' => 'setClientId',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'type' => 'setType',
-        'root_url' => 'setRootUrl',
-        'admin_url' => 'setAdminUrl',
-        'base_url' => 'setBaseUrl',
-        'surrogate_auth_required' => 'setSurrogateAuthRequired',
-        'enabled' => 'setEnabled',
-        'always_display_in_console' => 'setAlwaysDisplayInConsole',
-        'client_authenticator_type' => 'setClientAuthenticatorType',
-        'secret' => 'setSecret',
-        'registration_access_token' => 'setRegistrationAccessToken',
-        'default_roles' => 'setDefaultRoles',
-        'redirect_uris' => 'setRedirectUris',
-        'web_origins' => 'setWebOrigins',
-        'not_before' => 'setNotBefore',
-        'bearer_only' => 'setBearerOnly',
-        'consent_required' => 'setConsentRequired',
-        'standard_flow_enabled' => 'setStandardFlowEnabled',
-        'implicit_flow_enabled' => 'setImplicitFlowEnabled',
-        'direct_access_grants_enabled' => 'setDirectAccessGrantsEnabled',
-        'service_accounts_enabled' => 'setServiceAccountsEnabled',
-        'authorization_services_enabled' => 'setAuthorizationServicesEnabled',
-        'direct_grants_only' => 'setDirectGrantsOnly',
-        'public_client' => 'setPublicClient',
-        'frontchannel_logout' => 'setFrontchannelLogout',
-        'protocol' => 'setProtocol',
-        'attributes' => 'setAttributes',
-        'authentication_flow_binding_overrides' => 'setAuthenticationFlowBindingOverrides',
-        'full_scope_allowed' => 'setFullScopeAllowed',
-        'node_re_registration_timeout' => 'setNodeReRegistrationTimeout',
-        'registered_nodes' => 'setRegisteredNodes',
-        'protocol_mappers' => 'setProtocolMappers',
-        'client_template' => 'setClientTemplate',
-        'use_template_config' => 'setUseTemplateConfig',
-        'use_template_scope' => 'setUseTemplateScope',
-        'use_template_mappers' => 'setUseTemplateMappers',
-        'default_client_scopes' => 'setDefaultClientScopes',
-        'optional_client_scopes' => 'setOptionalClientScopes',
-        'authorization_settings' => 'setAuthorizationSettings',
-        'access' => 'setAccess',
-        'origin' => 'setOrigin'
+        'id' => 'set_id',
+        'client_id' => 'set_client_id',
+        'name' => 'set_name',
+        'description' => 'set_description',
+        'type' => 'set_type',
+        'root_url' => 'set_root_url',
+        'admin_url' => 'set_admin_url',
+        'base_url' => 'set_base_url',
+        'surrogate_auth_required' => 'set_surrogate_auth_required',
+        'enabled' => 'set_enabled',
+        'always_display_in_console' => 'set_always_display_in_console',
+        'client_authenticator_type' => 'set_client_authenticator_type',
+        'secret' => 'set_secret',
+        'registration_access_token' => 'set_registration_access_token',
+        'default_roles' => 'set_default_roles',
+        'redirect_uris' => 'set_redirect_uris',
+        'web_origins' => 'set_web_origins',
+        'not_before' => 'set_not_before',
+        'bearer_only' => 'set_bearer_only',
+        'consent_required' => 'set_consent_required',
+        'standard_flow_enabled' => 'set_standard_flow_enabled',
+        'implicit_flow_enabled' => 'set_implicit_flow_enabled',
+        'direct_access_grants_enabled' => 'set_direct_access_grants_enabled',
+        'service_accounts_enabled' => 'set_service_accounts_enabled',
+        'authorization_services_enabled' => 'set_authorization_services_enabled',
+        'direct_grants_only' => 'set_direct_grants_only',
+        'public_client' => 'set_public_client',
+        'frontchannel_logout' => 'set_frontchannel_logout',
+        'protocol' => 'set_protocol',
+        'attributes' => 'set_attributes',
+        'authentication_flow_binding_overrides' => 'set_authentication_flow_binding_overrides',
+        'full_scope_allowed' => 'set_full_scope_allowed',
+        'node_re_registration_timeout' => 'set_node_re_registration_timeout',
+        'registered_nodes' => 'set_registered_nodes',
+        'protocol_mappers' => 'set_protocol_mappers',
+        'client_template' => 'set_client_template',
+        'use_template_config' => 'set_use_template_config',
+        'use_template_scope' => 'set_use_template_scope',
+        'use_template_mappers' => 'set_use_template_mappers',
+        'default_client_scopes' => 'set_default_client_scopes',
+        'optional_client_scopes' => 'set_optional_client_scopes',
+        'authorization_settings' => 'set_authorization_settings',
+        'access' => 'set_access',
+        'origin' => 'set_origin'
     ];
 
     /**
@@ -399,50 +399,50 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'client_id' => 'getClientId',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'type' => 'getType',
-        'root_url' => 'getRootUrl',
-        'admin_url' => 'getAdminUrl',
-        'base_url' => 'getBaseUrl',
-        'surrogate_auth_required' => 'getSurrogateAuthRequired',
-        'enabled' => 'getEnabled',
-        'always_display_in_console' => 'getAlwaysDisplayInConsole',
-        'client_authenticator_type' => 'getClientAuthenticatorType',
-        'secret' => 'getSecret',
-        'registration_access_token' => 'getRegistrationAccessToken',
-        'default_roles' => 'getDefaultRoles',
-        'redirect_uris' => 'getRedirectUris',
-        'web_origins' => 'getWebOrigins',
-        'not_before' => 'getNotBefore',
-        'bearer_only' => 'getBearerOnly',
-        'consent_required' => 'getConsentRequired',
-        'standard_flow_enabled' => 'getStandardFlowEnabled',
-        'implicit_flow_enabled' => 'getImplicitFlowEnabled',
-        'direct_access_grants_enabled' => 'getDirectAccessGrantsEnabled',
-        'service_accounts_enabled' => 'getServiceAccountsEnabled',
-        'authorization_services_enabled' => 'getAuthorizationServicesEnabled',
-        'direct_grants_only' => 'getDirectGrantsOnly',
-        'public_client' => 'getPublicClient',
-        'frontchannel_logout' => 'getFrontchannelLogout',
-        'protocol' => 'getProtocol',
-        'attributes' => 'getAttributes',
-        'authentication_flow_binding_overrides' => 'getAuthenticationFlowBindingOverrides',
-        'full_scope_allowed' => 'getFullScopeAllowed',
-        'node_re_registration_timeout' => 'getNodeReRegistrationTimeout',
-        'registered_nodes' => 'getRegisteredNodes',
-        'protocol_mappers' => 'getProtocolMappers',
-        'client_template' => 'getClientTemplate',
-        'use_template_config' => 'getUseTemplateConfig',
-        'use_template_scope' => 'getUseTemplateScope',
-        'use_template_mappers' => 'getUseTemplateMappers',
-        'default_client_scopes' => 'getDefaultClientScopes',
-        'optional_client_scopes' => 'getOptionalClientScopes',
-        'authorization_settings' => 'getAuthorizationSettings',
-        'access' => 'getAccess',
-        'origin' => 'getOrigin'
+        'id' => 'get_id',
+        'client_id' => 'get_client_id',
+        'name' => 'get_name',
+        'description' => 'get_description',
+        'type' => 'get_type',
+        'root_url' => 'get_root_url',
+        'admin_url' => 'get_admin_url',
+        'base_url' => 'get_base_url',
+        'surrogate_auth_required' => 'get_surrogate_auth_required',
+        'enabled' => 'get_enabled',
+        'always_display_in_console' => 'get_always_display_in_console',
+        'client_authenticator_type' => 'get_client_authenticator_type',
+        'secret' => 'get_secret',
+        'registration_access_token' => 'get_registration_access_token',
+        'default_roles' => 'get_default_roles',
+        'redirect_uris' => 'get_redirect_uris',
+        'web_origins' => 'get_web_origins',
+        'not_before' => 'get_not_before',
+        'bearer_only' => 'get_bearer_only',
+        'consent_required' => 'get_consent_required',
+        'standard_flow_enabled' => 'get_standard_flow_enabled',
+        'implicit_flow_enabled' => 'get_implicit_flow_enabled',
+        'direct_access_grants_enabled' => 'get_direct_access_grants_enabled',
+        'service_accounts_enabled' => 'get_service_accounts_enabled',
+        'authorization_services_enabled' => 'get_authorization_services_enabled',
+        'direct_grants_only' => 'get_direct_grants_only',
+        'public_client' => 'get_public_client',
+        'frontchannel_logout' => 'get_frontchannel_logout',
+        'protocol' => 'get_protocol',
+        'attributes' => 'get_attributes',
+        'authentication_flow_binding_overrides' => 'get_authentication_flow_binding_overrides',
+        'full_scope_allowed' => 'get_full_scope_allowed',
+        'node_re_registration_timeout' => 'get_node_re_registration_timeout',
+        'registered_nodes' => 'get_registered_nodes',
+        'protocol_mappers' => 'get_protocol_mappers',
+        'client_template' => 'get_client_template',
+        'use_template_config' => 'get_use_template_config',
+        'use_template_scope' => 'get_use_template_scope',
+        'use_template_mappers' => 'get_use_template_mappers',
+        'default_client_scopes' => 'get_default_client_scopes',
+        'optional_client_scopes' => 'get_optional_client_scopes',
+        'authorization_settings' => 'get_authorization_settings',
+        'access' => 'get_access',
+        'origin' => 'get_origin'
     ];
 
     /**
@@ -595,7 +595,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -607,7 +607,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -622,7 +622,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getClientId()
+    public function get_client_id()
     {
         return $this->container['client_id'];
     }
@@ -634,7 +634,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setClientId($client_id)
+    public function set_client_id($client_id)
     {
         if (is_null($client_id)) {
             throw new \InvalidArgumentException('non-nullable client_id cannot be null');
@@ -649,7 +649,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -661,7 +661,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -676,7 +676,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -688,7 +688,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -703,7 +703,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -715,7 +715,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -730,7 +730,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getRootUrl()
+    public function get_root_url()
     {
         return $this->container['root_url'];
     }
@@ -742,7 +742,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setRootUrl($root_url)
+    public function set_root_url($root_url)
     {
         if (is_null($root_url)) {
             throw new \InvalidArgumentException('non-nullable root_url cannot be null');
@@ -757,7 +757,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getAdminUrl()
+    public function get_admin_url()
     {
         return $this->container['admin_url'];
     }
@@ -769,7 +769,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAdminUrl($admin_url)
+    public function set_admin_url($admin_url)
     {
         if (is_null($admin_url)) {
             throw new \InvalidArgumentException('non-nullable admin_url cannot be null');
@@ -784,7 +784,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getBaseUrl()
+    public function get_base_url()
     {
         return $this->container['base_url'];
     }
@@ -796,7 +796,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setBaseUrl($base_url)
+    public function set_base_url($base_url)
     {
         if (is_null($base_url)) {
             throw new \InvalidArgumentException('non-nullable base_url cannot be null');
@@ -811,7 +811,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getSurrogateAuthRequired()
+    public function get_surrogate_auth_required()
     {
         return $this->container['surrogate_auth_required'];
     }
@@ -823,7 +823,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setSurrogateAuthRequired($surrogate_auth_required)
+    public function set_surrogate_auth_required($surrogate_auth_required)
     {
         if (is_null($surrogate_auth_required)) {
             throw new \InvalidArgumentException('non-nullable surrogate_auth_required cannot be null');
@@ -838,7 +838,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -850,7 +850,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -865,7 +865,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getAlwaysDisplayInConsole()
+    public function get_always_display_in_console()
     {
         return $this->container['always_display_in_console'];
     }
@@ -877,7 +877,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAlwaysDisplayInConsole($always_display_in_console)
+    public function set_always_display_in_console($always_display_in_console)
     {
         if (is_null($always_display_in_console)) {
             throw new \InvalidArgumentException('non-nullable always_display_in_console cannot be null');
@@ -892,7 +892,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getClientAuthenticatorType()
+    public function get_client_authenticator_type()
     {
         return $this->container['client_authenticator_type'];
     }
@@ -904,7 +904,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setClientAuthenticatorType($client_authenticator_type)
+    public function set_client_authenticator_type($client_authenticator_type)
     {
         if (is_null($client_authenticator_type)) {
             throw new \InvalidArgumentException('non-nullable client_authenticator_type cannot be null');
@@ -919,7 +919,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getSecret()
+    public function get_secret()
     {
         return $this->container['secret'];
     }
@@ -931,7 +931,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setSecret($secret)
+    public function set_secret($secret)
     {
         if (is_null($secret)) {
             throw new \InvalidArgumentException('non-nullable secret cannot be null');
@@ -946,7 +946,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getRegistrationAccessToken()
+    public function get_registration_access_token()
     {
         return $this->container['registration_access_token'];
     }
@@ -958,7 +958,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setRegistrationAccessToken($registration_access_token)
+    public function set_registration_access_token($registration_access_token)
     {
         if (is_null($registration_access_token)) {
             throw new \InvalidArgumentException('non-nullable registration_access_token cannot be null');
@@ -974,7 +974,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return string[]|null
      * @deprecated
      */
-    public function getDefaultRoles()
+    public function get_default_roles()
     {
         return $this->container['default_roles'];
     }
@@ -987,7 +987,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setDefaultRoles($default_roles)
+    public function set_default_roles($default_roles)
     {
         if (is_null($default_roles)) {
             throw new \InvalidArgumentException('non-nullable default_roles cannot be null');
@@ -1002,7 +1002,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getRedirectUris()
+    public function get_redirect_uris()
     {
         return $this->container['redirect_uris'];
     }
@@ -1014,7 +1014,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setRedirectUris($redirect_uris)
+    public function set_redirect_uris($redirect_uris)
     {
         if (is_null($redirect_uris)) {
             throw new \InvalidArgumentException('non-nullable redirect_uris cannot be null');
@@ -1029,7 +1029,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getWebOrigins()
+    public function get_web_origins()
     {
         return $this->container['web_origins'];
     }
@@ -1041,7 +1041,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setWebOrigins($web_origins)
+    public function set_web_origins($web_origins)
     {
         if (is_null($web_origins)) {
             throw new \InvalidArgumentException('non-nullable web_origins cannot be null');
@@ -1056,7 +1056,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return int|null
      */
-    public function getNotBefore()
+    public function get_not_before()
     {
         return $this->container['not_before'];
     }
@@ -1068,7 +1068,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setNotBefore($not_before)
+    public function set_not_before($not_before)
     {
         if (is_null($not_before)) {
             throw new \InvalidArgumentException('non-nullable not_before cannot be null');
@@ -1083,7 +1083,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getBearerOnly()
+    public function get_bearer_only()
     {
         return $this->container['bearer_only'];
     }
@@ -1095,7 +1095,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setBearerOnly($bearer_only)
+    public function set_bearer_only($bearer_only)
     {
         if (is_null($bearer_only)) {
             throw new \InvalidArgumentException('non-nullable bearer_only cannot be null');
@@ -1110,7 +1110,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getConsentRequired()
+    public function get_consent_required()
     {
         return $this->container['consent_required'];
     }
@@ -1122,7 +1122,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setConsentRequired($consent_required)
+    public function set_consent_required($consent_required)
     {
         if (is_null($consent_required)) {
             throw new \InvalidArgumentException('non-nullable consent_required cannot be null');
@@ -1137,7 +1137,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getStandardFlowEnabled()
+    public function get_standard_flow_enabled()
     {
         return $this->container['standard_flow_enabled'];
     }
@@ -1149,7 +1149,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setStandardFlowEnabled($standard_flow_enabled)
+    public function set_standard_flow_enabled($standard_flow_enabled)
     {
         if (is_null($standard_flow_enabled)) {
             throw new \InvalidArgumentException('non-nullable standard_flow_enabled cannot be null');
@@ -1164,7 +1164,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getImplicitFlowEnabled()
+    public function get_implicit_flow_enabled()
     {
         return $this->container['implicit_flow_enabled'];
     }
@@ -1176,7 +1176,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setImplicitFlowEnabled($implicit_flow_enabled)
+    public function set_implicit_flow_enabled($implicit_flow_enabled)
     {
         if (is_null($implicit_flow_enabled)) {
             throw new \InvalidArgumentException('non-nullable implicit_flow_enabled cannot be null');
@@ -1191,7 +1191,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getDirectAccessGrantsEnabled()
+    public function get_direct_access_grants_enabled()
     {
         return $this->container['direct_access_grants_enabled'];
     }
@@ -1203,7 +1203,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setDirectAccessGrantsEnabled($direct_access_grants_enabled)
+    public function set_direct_access_grants_enabled($direct_access_grants_enabled)
     {
         if (is_null($direct_access_grants_enabled)) {
             throw new \InvalidArgumentException('non-nullable direct_access_grants_enabled cannot be null');
@@ -1218,7 +1218,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getServiceAccountsEnabled()
+    public function get_service_accounts_enabled()
     {
         return $this->container['service_accounts_enabled'];
     }
@@ -1230,7 +1230,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setServiceAccountsEnabled($service_accounts_enabled)
+    public function set_service_accounts_enabled($service_accounts_enabled)
     {
         if (is_null($service_accounts_enabled)) {
             throw new \InvalidArgumentException('non-nullable service_accounts_enabled cannot be null');
@@ -1245,7 +1245,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getAuthorizationServicesEnabled()
+    public function get_authorization_services_enabled()
     {
         return $this->container['authorization_services_enabled'];
     }
@@ -1257,7 +1257,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAuthorizationServicesEnabled($authorization_services_enabled)
+    public function set_authorization_services_enabled($authorization_services_enabled)
     {
         if (is_null($authorization_services_enabled)) {
             throw new \InvalidArgumentException('non-nullable authorization_services_enabled cannot be null');
@@ -1273,7 +1273,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return bool|null
      * @deprecated
      */
-    public function getDirectGrantsOnly()
+    public function get_direct_grants_only()
     {
         return $this->container['direct_grants_only'];
     }
@@ -1286,7 +1286,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setDirectGrantsOnly($direct_grants_only)
+    public function set_direct_grants_only($direct_grants_only)
     {
         if (is_null($direct_grants_only)) {
             throw new \InvalidArgumentException('non-nullable direct_grants_only cannot be null');
@@ -1301,7 +1301,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getPublicClient()
+    public function get_public_client()
     {
         return $this->container['public_client'];
     }
@@ -1313,7 +1313,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setPublicClient($public_client)
+    public function set_public_client($public_client)
     {
         if (is_null($public_client)) {
             throw new \InvalidArgumentException('non-nullable public_client cannot be null');
@@ -1328,7 +1328,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getFrontchannelLogout()
+    public function get_frontchannel_logout()
     {
         return $this->container['frontchannel_logout'];
     }
@@ -1340,7 +1340,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setFrontchannelLogout($frontchannel_logout)
+    public function set_frontchannel_logout($frontchannel_logout)
     {
         if (is_null($frontchannel_logout)) {
             throw new \InvalidArgumentException('non-nullable frontchannel_logout cannot be null');
@@ -1355,7 +1355,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getProtocol()
+    public function get_protocol()
     {
         return $this->container['protocol'];
     }
@@ -1367,7 +1367,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setProtocol($protocol)
+    public function set_protocol($protocol)
     {
         if (is_null($protocol)) {
             throw new \InvalidArgumentException('non-nullable protocol cannot be null');
@@ -1382,7 +1382,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,string>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -1394,7 +1394,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -1409,7 +1409,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,string>|null
      */
-    public function getAuthenticationFlowBindingOverrides()
+    public function get_authentication_flow_binding_overrides()
     {
         return $this->container['authentication_flow_binding_overrides'];
     }
@@ -1421,7 +1421,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAuthenticationFlowBindingOverrides($authentication_flow_binding_overrides)
+    public function set_authentication_flow_binding_overrides($authentication_flow_binding_overrides)
     {
         if (is_null($authentication_flow_binding_overrides)) {
             throw new \InvalidArgumentException('non-nullable authentication_flow_binding_overrides cannot be null');
@@ -1436,7 +1436,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getFullScopeAllowed()
+    public function get_full_scope_allowed()
     {
         return $this->container['full_scope_allowed'];
     }
@@ -1448,7 +1448,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setFullScopeAllowed($full_scope_allowed)
+    public function set_full_scope_allowed($full_scope_allowed)
     {
         if (is_null($full_scope_allowed)) {
             throw new \InvalidArgumentException('non-nullable full_scope_allowed cannot be null');
@@ -1463,7 +1463,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return int|null
      */
-    public function getNodeReRegistrationTimeout()
+    public function get_node_re_registration_timeout()
     {
         return $this->container['node_re_registration_timeout'];
     }
@@ -1475,7 +1475,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setNodeReRegistrationTimeout($node_re_registration_timeout)
+    public function set_node_re_registration_timeout($node_re_registration_timeout)
     {
         if (is_null($node_re_registration_timeout)) {
             throw new \InvalidArgumentException('non-nullable node_re_registration_timeout cannot be null');
@@ -1490,7 +1490,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,int>|null
      */
-    public function getRegisteredNodes()
+    public function get_registered_nodes()
     {
         return $this->container['registered_nodes'];
     }
@@ -1502,7 +1502,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setRegisteredNodes($registered_nodes)
+    public function set_registered_nodes($registered_nodes)
     {
         if (is_null($registered_nodes)) {
             throw new \InvalidArgumentException('non-nullable registered_nodes cannot be null');
@@ -1517,7 +1517,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ProtocolMapperRepresentation[]|null
      */
-    public function getProtocolMappers()
+    public function get_protocol_mappers()
     {
         return $this->container['protocol_mappers'];
     }
@@ -1529,7 +1529,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setProtocolMappers($protocol_mappers)
+    public function set_protocol_mappers($protocol_mappers)
     {
         if (is_null($protocol_mappers)) {
             throw new \InvalidArgumentException('non-nullable protocol_mappers cannot be null');
@@ -1545,7 +1545,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return string|null
      * @deprecated
      */
-    public function getClientTemplate()
+    public function get_client_template()
     {
         return $this->container['client_template'];
     }
@@ -1558,7 +1558,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setClientTemplate($client_template)
+    public function set_client_template($client_template)
     {
         if (is_null($client_template)) {
             throw new \InvalidArgumentException('non-nullable client_template cannot be null');
@@ -1574,7 +1574,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return bool|null
      * @deprecated
      */
-    public function getUseTemplateConfig()
+    public function get_use_template_config()
     {
         return $this->container['use_template_config'];
     }
@@ -1587,7 +1587,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setUseTemplateConfig($use_template_config)
+    public function set_use_template_config($use_template_config)
     {
         if (is_null($use_template_config)) {
             throw new \InvalidArgumentException('non-nullable use_template_config cannot be null');
@@ -1603,7 +1603,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return bool|null
      * @deprecated
      */
-    public function getUseTemplateScope()
+    public function get_use_template_scope()
     {
         return $this->container['use_template_scope'];
     }
@@ -1616,7 +1616,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setUseTemplateScope($use_template_scope)
+    public function set_use_template_scope($use_template_scope)
     {
         if (is_null($use_template_scope)) {
             throw new \InvalidArgumentException('non-nullable use_template_scope cannot be null');
@@ -1632,7 +1632,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return bool|null
      * @deprecated
      */
-    public function getUseTemplateMappers()
+    public function get_use_template_mappers()
     {
         return $this->container['use_template_mappers'];
     }
@@ -1645,7 +1645,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setUseTemplateMappers($use_template_mappers)
+    public function set_use_template_mappers($use_template_mappers)
     {
         if (is_null($use_template_mappers)) {
             throw new \InvalidArgumentException('non-nullable use_template_mappers cannot be null');
@@ -1660,7 +1660,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getDefaultClientScopes()
+    public function get_default_client_scopes()
     {
         return $this->container['default_client_scopes'];
     }
@@ -1672,7 +1672,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setDefaultClientScopes($default_client_scopes)
+    public function set_default_client_scopes($default_client_scopes)
     {
         if (is_null($default_client_scopes)) {
             throw new \InvalidArgumentException('non-nullable default_client_scopes cannot be null');
@@ -1687,7 +1687,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getOptionalClientScopes()
+    public function get_optional_client_scopes()
     {
         return $this->container['optional_client_scopes'];
     }
@@ -1699,7 +1699,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setOptionalClientScopes($optional_client_scopes)
+    public function set_optional_client_scopes($optional_client_scopes)
     {
         if (is_null($optional_client_scopes)) {
             throw new \InvalidArgumentException('non-nullable optional_client_scopes cannot be null');
@@ -1714,7 +1714,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ResourceServerRepresentation|null
      */
-    public function getAuthorizationSettings()
+    public function get_authorization_settings()
     {
         return $this->container['authorization_settings'];
     }
@@ -1726,7 +1726,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAuthorizationSettings($authorization_settings)
+    public function set_authorization_settings($authorization_settings)
     {
         if (is_null($authorization_settings)) {
             throw new \InvalidArgumentException('non-nullable authorization_settings cannot be null');
@@ -1741,7 +1741,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,bool>|null
      */
-    public function getAccess()
+    public function get_access()
     {
         return $this->container['access'];
     }
@@ -1753,7 +1753,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAccess($access)
+    public function set_access($access)
     {
         if (is_null($access)) {
             throw new \InvalidArgumentException('non-nullable access cannot be null');
@@ -1768,7 +1768,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getOrigin()
+    public function get_origin()
     {
         return $this->container['origin'];
     }
@@ -1780,7 +1780,7 @@ class ClientRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setOrigin($origin)
+    public function set_origin($origin)
     {
         if (is_null($origin)) {
             throw new \InvalidArgumentException('non-nullable origin cannot be null');

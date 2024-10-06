@@ -187,10 +187,10 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'provider' => 'setProvider',
-        'parent' => 'setParent',
-        'config' => 'setConfig'
+        'name' => 'set_name',
+        'provider' => 'set_provider',
+        'parent' => 'set_parent',
+        'config' => 'set_config'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'provider' => 'getProvider',
-        'parent' => 'getParent',
-        'config' => 'getConfig'
+        'name' => 'get_name',
+        'provider' => 'get_provider',
+        'parent' => 'get_parent',
+        'config' => 'get_config'
     ];
 
     /**
@@ -315,7 +315,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -327,7 +327,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -342,7 +342,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getProvider()
+    public function get_provider()
     {
         return $this->container['provider'];
     }
@@ -354,7 +354,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setProvider($provider)
+    public function set_provider($provider)
     {
         if (is_null($provider)) {
             throw new \InvalidArgumentException('non-nullable provider cannot be null');
@@ -369,7 +369,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getParent()
+    public function get_parent()
     {
         return $this->container['parent'];
     }
@@ -381,7 +381,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setParent($parent)
+    public function set_parent($parent)
     {
         if (is_null($parent)) {
             throw new \InvalidArgumentException('non-nullable parent cannot be null');
@@ -396,7 +396,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\PropertyConfig>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -408,7 +408,7 @@ class ClientTypeRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

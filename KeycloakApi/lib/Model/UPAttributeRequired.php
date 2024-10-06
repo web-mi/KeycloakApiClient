@@ -179,8 +179,8 @@ class UPAttributeRequired implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'roles' => 'setRoles',
-        'scopes' => 'setScopes'
+        'roles' => 'set_roles',
+        'scopes' => 'set_scopes'
     ];
 
     /**
@@ -189,8 +189,8 @@ class UPAttributeRequired implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'roles' => 'getRoles',
-        'scopes' => 'getScopes'
+        'roles' => 'get_roles',
+        'scopes' => 'get_scopes'
     ];
 
     /**
@@ -301,7 +301,7 @@ class UPAttributeRequired implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getRoles()
+    public function get_roles()
     {
         return $this->container['roles'];
     }
@@ -313,7 +313,7 @@ class UPAttributeRequired implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRoles($roles)
+    public function set_roles($roles)
     {
         if (is_null($roles)) {
             throw new \InvalidArgumentException('non-nullable roles cannot be null');
@@ -330,7 +330,7 @@ class UPAttributeRequired implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -342,7 +342,7 @@ class UPAttributeRequired implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');

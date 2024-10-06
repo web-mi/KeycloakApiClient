@@ -183,9 +183,9 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'attributes' => 'setAttributes',
-        'groups' => 'setGroups',
-        'unmanaged_attribute_policy' => 'setUnmanagedAttributePolicy'
+        'attributes' => 'set_attributes',
+        'groups' => 'set_groups',
+        'unmanaged_attribute_policy' => 'set_unmanaged_attribute_policy'
     ];
 
     /**
@@ -194,9 +194,9 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'attributes' => 'getAttributes',
-        'groups' => 'getGroups',
-        'unmanaged_attribute_policy' => 'getUnmanagedAttributePolicy'
+        'attributes' => 'get_attributes',
+        'groups' => 'get_groups',
+        'unmanaged_attribute_policy' => 'get_unmanaged_attribute_policy'
     ];
 
     /**
@@ -308,7 +308,7 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UPAttribute[]|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -320,7 +320,7 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -335,7 +335,7 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UPGroup[]|null
      */
-    public function getGroups()
+    public function get_groups()
     {
         return $this->container['groups'];
     }
@@ -347,7 +347,7 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setGroups($groups)
+    public function set_groups($groups)
     {
         if (is_null($groups)) {
             throw new \InvalidArgumentException('non-nullable groups cannot be null');
@@ -362,7 +362,7 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UnmanagedAttributePolicy|null
      */
-    public function getUnmanagedAttributePolicy()
+    public function get_unmanaged_attribute_policy()
     {
         return $this->container['unmanaged_attribute_policy'];
     }
@@ -374,7 +374,7 @@ class UPConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setUnmanagedAttributePolicy($unmanaged_attribute_policy)
+    public function set_unmanaged_attribute_policy($unmanaged_attribute_policy)
     {
         if (is_null($unmanaged_attribute_policy)) {
             throw new \InvalidArgumentException('non-nullable unmanaged_attribute_policy cannot be null');

@@ -211,16 +211,16 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'provider_id' => 'setProviderId',
-        'provider_priority' => 'setProviderPriority',
-        'kid' => 'setKid',
-        'status' => 'setStatus',
-        'type' => 'setType',
-        'algorithm' => 'setAlgorithm',
-        'public_key' => 'setPublicKey',
-        'certificate' => 'setCertificate',
-        'use' => 'setUse',
-        'valid_to' => 'setValidTo'
+        'provider_id' => 'set_provider_id',
+        'provider_priority' => 'set_provider_priority',
+        'kid' => 'set_kid',
+        'status' => 'set_status',
+        'type' => 'set_type',
+        'algorithm' => 'set_algorithm',
+        'public_key' => 'set_public_key',
+        'certificate' => 'set_certificate',
+        'use' => 'set_use',
+        'valid_to' => 'set_valid_to'
     ];
 
     /**
@@ -229,16 +229,16 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'provider_id' => 'getProviderId',
-        'provider_priority' => 'getProviderPriority',
-        'kid' => 'getKid',
-        'status' => 'getStatus',
-        'type' => 'getType',
-        'algorithm' => 'getAlgorithm',
-        'public_key' => 'getPublicKey',
-        'certificate' => 'getCertificate',
-        'use' => 'getUse',
-        'valid_to' => 'getValidTo'
+        'provider_id' => 'get_provider_id',
+        'provider_priority' => 'get_provider_priority',
+        'kid' => 'get_kid',
+        'status' => 'get_status',
+        'type' => 'get_type',
+        'algorithm' => 'get_algorithm',
+        'public_key' => 'get_public_key',
+        'certificate' => 'get_certificate',
+        'use' => 'get_use',
+        'valid_to' => 'get_valid_to'
     ];
 
     /**
@@ -357,7 +357,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -369,7 +369,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -384,7 +384,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return int|null
      */
-    public function getProviderPriority()
+    public function get_provider_priority()
     {
         return $this->container['provider_priority'];
     }
@@ -396,7 +396,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setProviderPriority($provider_priority)
+    public function set_provider_priority($provider_priority)
     {
         if (is_null($provider_priority)) {
             throw new \InvalidArgumentException('non-nullable provider_priority cannot be null');
@@ -411,7 +411,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getKid()
+    public function get_kid()
     {
         return $this->container['kid'];
     }
@@ -423,7 +423,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setKid($kid)
+    public function set_kid($kid)
     {
         if (is_null($kid)) {
             throw new \InvalidArgumentException('non-nullable kid cannot be null');
@@ -438,7 +438,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getStatus()
+    public function get_status()
     {
         return $this->container['status'];
     }
@@ -450,7 +450,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setStatus($status)
+    public function set_status($status)
     {
         if (is_null($status)) {
             throw new \InvalidArgumentException('non-nullable status cannot be null');
@@ -465,7 +465,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -477,7 +477,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -492,7 +492,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getAlgorithm()
+    public function get_algorithm()
     {
         return $this->container['algorithm'];
     }
@@ -504,7 +504,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setAlgorithm($algorithm)
+    public function set_algorithm($algorithm)
     {
         if (is_null($algorithm)) {
             throw new \InvalidArgumentException('non-nullable algorithm cannot be null');
@@ -519,7 +519,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getPublicKey()
+    public function get_public_key()
     {
         return $this->container['public_key'];
     }
@@ -531,7 +531,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setPublicKey($public_key)
+    public function set_public_key($public_key)
     {
         if (is_null($public_key)) {
             throw new \InvalidArgumentException('non-nullable public_key cannot be null');
@@ -546,7 +546,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getCertificate()
+    public function get_certificate()
     {
         return $this->container['certificate'];
     }
@@ -558,7 +558,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setCertificate($certificate)
+    public function set_certificate($certificate)
     {
         if (is_null($certificate)) {
             throw new \InvalidArgumentException('non-nullable certificate cannot be null');
@@ -573,7 +573,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\KeyUse|null
      */
-    public function getUse()
+    public function get_use()
     {
         return $this->container['use'];
     }
@@ -585,7 +585,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setUse($use)
+    public function set_use($use)
     {
         if (is_null($use)) {
             throw new \InvalidArgumentException('non-nullable use cannot be null');
@@ -600,7 +600,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return int|null
      */
-    public function getValidTo()
+    public function get_valid_to()
     {
         return $this->container['valid_to'];
     }
@@ -612,7 +612,7 @@ class KeyMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setValidTo($valid_to)
+    public function set_valid_to($valid_to)
     {
         if (is_null($valid_to)) {
             throw new \InvalidArgumentException('non-nullable valid_to cannot be null');

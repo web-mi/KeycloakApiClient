@@ -179,8 +179,8 @@ class ResourceOwnerRepresentation implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName'
+        'id' => 'set_id',
+        'name' => 'set_name'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ResourceOwnerRepresentation implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName'
+        'id' => 'get_id',
+        'name' => 'get_name'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ResourceOwnerRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -313,7 +313,7 @@ class ResourceOwnerRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -328,7 +328,7 @@ class ResourceOwnerRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -340,7 +340,7 @@ class ResourceOwnerRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');

@@ -179,8 +179,8 @@ class OrganizationDomainRepresentation implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'verified' => 'setVerified'
+        'name' => 'set_name',
+        'verified' => 'set_verified'
     ];
 
     /**
@@ -189,8 +189,8 @@ class OrganizationDomainRepresentation implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'verified' => 'getVerified'
+        'name' => 'get_name',
+        'verified' => 'get_verified'
     ];
 
     /**
@@ -301,7 +301,7 @@ class OrganizationDomainRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -313,7 +313,7 @@ class OrganizationDomainRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -328,7 +328,7 @@ class OrganizationDomainRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return bool|null
      */
-    public function getVerified()
+    public function get_verified()
     {
         return $this->container['verified'];
     }
@@ -340,7 +340,7 @@ class OrganizationDomainRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setVerified($verified)
+    public function set_verified($verified)
     {
         if (is_null($verified)) {
             throw new \InvalidArgumentException('non-nullable verified cannot be null');

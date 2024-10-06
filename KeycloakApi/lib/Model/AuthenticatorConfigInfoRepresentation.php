@@ -187,10 +187,10 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'provider_id' => 'setProviderId',
-        'help_text' => 'setHelpText',
-        'properties' => 'setProperties'
+        'name' => 'set_name',
+        'provider_id' => 'set_provider_id',
+        'help_text' => 'set_help_text',
+        'properties' => 'set_properties'
     ];
 
     /**
@@ -199,10 +199,10 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'provider_id' => 'getProviderId',
-        'help_text' => 'getHelpText',
-        'properties' => 'getProperties'
+        'name' => 'get_name',
+        'provider_id' => 'get_provider_id',
+        'help_text' => 'get_help_text',
+        'properties' => 'get_properties'
     ];
 
     /**
@@ -315,7 +315,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -327,7 +327,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -342,7 +342,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -354,7 +354,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -369,7 +369,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getHelpText()
+    public function get_help_text()
     {
         return $this->container['help_text'];
     }
@@ -381,7 +381,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setHelpText($help_text)
+    public function set_help_text($help_text)
     {
         if (is_null($help_text)) {
             throw new \InvalidArgumentException('non-nullable help_text cannot be null');
@@ -396,7 +396,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ConfigPropertyRepresentation[]|null
      */
-    public function getProperties()
+    public function get_properties()
     {
         return $this->container['properties'];
     }
@@ -408,7 +408,7 @@ class AuthenticatorConfigInfoRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setProperties($properties)
+    public function set_properties($properties)
     {
         if (is_null($properties)) {
             throw new \InvalidArgumentException('non-nullable properties cannot be null');

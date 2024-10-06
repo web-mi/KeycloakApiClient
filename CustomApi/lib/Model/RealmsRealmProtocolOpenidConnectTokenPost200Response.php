@@ -203,14 +203,14 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      * @var string[]
      */
     protected static $setters = [
-        'access_token' => 'setAccessToken',
-        'expires_in' => 'setExpiresIn',
-        'refresh_expires_in' => 'setRefreshExpiresIn',
-        'refresh_token' => 'setRefreshToken',
-        'token_type' => 'setTokenType',
-        'not_before_policy' => 'setNotBeforePolicy',
-        'session_state' => 'setSessionState',
-        'scope' => 'setScope'
+        'access_token' => 'set_access_token',
+        'expires_in' => 'set_expires_in',
+        'refresh_expires_in' => 'set_refresh_expires_in',
+        'refresh_token' => 'set_refresh_token',
+        'token_type' => 'set_token_type',
+        'not_before_policy' => 'set_not_before_policy',
+        'session_state' => 'set_session_state',
+        'scope' => 'set_scope'
     ];
 
     /**
@@ -219,14 +219,14 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      * @var string[]
      */
     protected static $getters = [
-        'access_token' => 'getAccessToken',
-        'expires_in' => 'getExpiresIn',
-        'refresh_expires_in' => 'getRefreshExpiresIn',
-        'refresh_token' => 'getRefreshToken',
-        'token_type' => 'getTokenType',
-        'not_before_policy' => 'getNotBeforePolicy',
-        'session_state' => 'getSessionState',
-        'scope' => 'getScope'
+        'access_token' => 'get_access_token',
+        'expires_in' => 'get_expires_in',
+        'refresh_expires_in' => 'get_refresh_expires_in',
+        'refresh_token' => 'get_refresh_token',
+        'token_type' => 'get_token_type',
+        'not_before_policy' => 'get_not_before_policy',
+        'session_state' => 'get_session_state',
+        'scope' => 'get_scope'
     ];
 
     /**
@@ -343,7 +343,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return string|null
      */
-    public function getAccessToken()
+    public function get_access_token()
     {
         return $this->container['access_token'];
     }
@@ -355,7 +355,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setAccessToken($access_token)
+    public function set_access_token($access_token)
     {
         if (is_null($access_token)) {
             throw new \InvalidArgumentException('non-nullable access_token cannot be null');
@@ -370,7 +370,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return int|null
      */
-    public function getExpiresIn()
+    public function get_expires_in()
     {
         return $this->container['expires_in'];
     }
@@ -382,7 +382,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setExpiresIn($expires_in)
+    public function set_expires_in($expires_in)
     {
         if (is_null($expires_in)) {
             throw new \InvalidArgumentException('non-nullable expires_in cannot be null');
@@ -397,7 +397,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return int|null
      */
-    public function getRefreshExpiresIn()
+    public function get_refresh_expires_in()
     {
         return $this->container['refresh_expires_in'];
     }
@@ -409,7 +409,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setRefreshExpiresIn($refresh_expires_in)
+    public function set_refresh_expires_in($refresh_expires_in)
     {
         if (is_null($refresh_expires_in)) {
             throw new \InvalidArgumentException('non-nullable refresh_expires_in cannot be null');
@@ -424,7 +424,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return string|null
      */
-    public function getRefreshToken()
+    public function get_refresh_token()
     {
         return $this->container['refresh_token'];
     }
@@ -436,7 +436,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setRefreshToken($refresh_token)
+    public function set_refresh_token($refresh_token)
     {
         if (is_null($refresh_token)) {
             throw new \InvalidArgumentException('non-nullable refresh_token cannot be null');
@@ -451,7 +451,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return string|null
      */
-    public function getTokenType()
+    public function get_token_type()
     {
         return $this->container['token_type'];
     }
@@ -463,7 +463,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setTokenType($token_type)
+    public function set_token_type($token_type)
     {
         if (is_null($token_type)) {
             throw new \InvalidArgumentException('non-nullable token_type cannot be null');
@@ -478,7 +478,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return int|null
      */
-    public function getNotBeforePolicy()
+    public function get_not_before_policy()
     {
         return $this->container['not_before_policy'];
     }
@@ -490,7 +490,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setNotBeforePolicy($not_before_policy)
+    public function set_not_before_policy($not_before_policy)
     {
         if (is_null($not_before_policy)) {
             throw new \InvalidArgumentException('non-nullable not_before_policy cannot be null');
@@ -505,7 +505,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return string|null
      */
-    public function getSessionState()
+    public function get_session_state()
     {
         return $this->container['session_state'];
     }
@@ -517,7 +517,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setSessionState($session_state)
+    public function set_session_state($session_state)
     {
         if (is_null($session_state)) {
             throw new \InvalidArgumentException('non-nullable session_state cannot be null');
@@ -532,7 +532,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return string|null
      */
-    public function getScope()
+    public function get_scope()
     {
         return $this->container['scope'];
     }
@@ -544,7 +544,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost200Response implements ModelInter
      *
      * @return self
      */
-    public function setScope($scope)
+    public function set_scope($scope)
     {
         if (is_null($scope)) {
             throw new \InvalidArgumentException('non-nullable scope cannot be null');

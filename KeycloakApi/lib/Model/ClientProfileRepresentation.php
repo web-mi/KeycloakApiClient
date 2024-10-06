@@ -183,9 +183,9 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'executors' => 'setExecutors'
+        'name' => 'set_name',
+        'description' => 'set_description',
+        'executors' => 'set_executors'
     ];
 
     /**
@@ -194,9 +194,9 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'executors' => 'getExecutors'
+        'name' => 'get_name',
+        'description' => 'get_description',
+        'executors' => 'get_executors'
     ];
 
     /**
@@ -308,7 +308,7 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -320,7 +320,7 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -335,7 +335,7 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -347,7 +347,7 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -362,7 +362,7 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientPolicyExecutorRepresentation[]|null
      */
-    public function getExecutors()
+    public function get_executors()
     {
         return $this->container['executors'];
     }
@@ -374,7 +374,7 @@ class ClientProfileRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setExecutors($executors)
+    public function set_executors($executors)
     {
         if (is_null($executors)) {
             throw new \InvalidArgumentException('non-nullable executors cannot be null');

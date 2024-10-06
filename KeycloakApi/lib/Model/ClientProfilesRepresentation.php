@@ -179,8 +179,8 @@ class ClientProfilesRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'profiles' => 'setProfiles',
-        'global_profiles' => 'setGlobalProfiles'
+        'profiles' => 'set_profiles',
+        'global_profiles' => 'set_global_profiles'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ClientProfilesRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'profiles' => 'getProfiles',
-        'global_profiles' => 'getGlobalProfiles'
+        'profiles' => 'get_profiles',
+        'global_profiles' => 'get_global_profiles'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ClientProfilesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientProfileRepresentation[]|null
      */
-    public function getProfiles()
+    public function get_profiles()
     {
         return $this->container['profiles'];
     }
@@ -313,7 +313,7 @@ class ClientProfilesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setProfiles($profiles)
+    public function set_profiles($profiles)
     {
         if (is_null($profiles)) {
             throw new \InvalidArgumentException('non-nullable profiles cannot be null');
@@ -328,7 +328,7 @@ class ClientProfilesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientProfileRepresentation[]|null
      */
-    public function getGlobalProfiles()
+    public function get_global_profiles()
     {
         return $this->container['global_profiles'];
     }
@@ -340,7 +340,7 @@ class ClientProfilesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setGlobalProfiles($global_profiles)
+    public function set_global_profiles($global_profiles)
     {
         if (is_null($global_profiles)) {
             throw new \InvalidArgumentException('non-nullable global_profiles cannot be null');

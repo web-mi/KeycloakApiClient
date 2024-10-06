@@ -183,9 +183,9 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'social_provider' => 'setSocialProvider',
-        'social_user_id' => 'setSocialUserId',
-        'social_username' => 'setSocialUsername'
+        'social_provider' => 'set_social_provider',
+        'social_user_id' => 'set_social_user_id',
+        'social_username' => 'set_social_username'
     ];
 
     /**
@@ -194,9 +194,9 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'social_provider' => 'getSocialProvider',
-        'social_user_id' => 'getSocialUserId',
-        'social_username' => 'getSocialUsername'
+        'social_provider' => 'get_social_provider',
+        'social_user_id' => 'get_social_user_id',
+        'social_username' => 'get_social_username'
     ];
 
     /**
@@ -308,7 +308,7 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getSocialProvider()
+    public function get_social_provider()
     {
         return $this->container['social_provider'];
     }
@@ -320,7 +320,7 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setSocialProvider($social_provider)
+    public function set_social_provider($social_provider)
     {
         if (is_null($social_provider)) {
             throw new \InvalidArgumentException('non-nullable social_provider cannot be null');
@@ -335,7 +335,7 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getSocialUserId()
+    public function get_social_user_id()
     {
         return $this->container['social_user_id'];
     }
@@ -347,7 +347,7 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setSocialUserId($social_user_id)
+    public function set_social_user_id($social_user_id)
     {
         if (is_null($social_user_id)) {
             throw new \InvalidArgumentException('non-nullable social_user_id cannot be null');
@@ -362,7 +362,7 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getSocialUsername()
+    public function get_social_username()
     {
         return $this->container['social_username'];
     }
@@ -374,7 +374,7 @@ class SocialLinkRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setSocialUsername($social_username)
+    public function set_social_username($social_username)
     {
         if (is_null($social_username)) {
             throw new \InvalidArgumentException('non-nullable social_username cannot be null');

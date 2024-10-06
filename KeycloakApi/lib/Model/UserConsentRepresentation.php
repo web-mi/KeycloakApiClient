@@ -191,11 +191,11 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'client_id' => 'setClientId',
-        'granted_client_scopes' => 'setGrantedClientScopes',
-        'created_date' => 'setCreatedDate',
-        'last_updated_date' => 'setLastUpdatedDate',
-        'granted_realm_roles' => 'setGrantedRealmRoles'
+        'client_id' => 'set_client_id',
+        'granted_client_scopes' => 'set_granted_client_scopes',
+        'created_date' => 'set_created_date',
+        'last_updated_date' => 'set_last_updated_date',
+        'granted_realm_roles' => 'set_granted_realm_roles'
     ];
 
     /**
@@ -204,11 +204,11 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'client_id' => 'getClientId',
-        'granted_client_scopes' => 'getGrantedClientScopes',
-        'created_date' => 'getCreatedDate',
-        'last_updated_date' => 'getLastUpdatedDate',
-        'granted_realm_roles' => 'getGrantedRealmRoles'
+        'client_id' => 'get_client_id',
+        'granted_client_scopes' => 'get_granted_client_scopes',
+        'created_date' => 'get_created_date',
+        'last_updated_date' => 'get_last_updated_date',
+        'granted_realm_roles' => 'get_granted_realm_roles'
     ];
 
     /**
@@ -322,7 +322,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getClientId()
+    public function get_client_id()
     {
         return $this->container['client_id'];
     }
@@ -334,7 +334,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setClientId($client_id)
+    public function set_client_id($client_id)
     {
         if (is_null($client_id)) {
             throw new \InvalidArgumentException('non-nullable client_id cannot be null');
@@ -349,7 +349,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string[]|null
      */
-    public function getGrantedClientScopes()
+    public function get_granted_client_scopes()
     {
         return $this->container['granted_client_scopes'];
     }
@@ -361,7 +361,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setGrantedClientScopes($granted_client_scopes)
+    public function set_granted_client_scopes($granted_client_scopes)
     {
         if (is_null($granted_client_scopes)) {
             throw new \InvalidArgumentException('non-nullable granted_client_scopes cannot be null');
@@ -376,7 +376,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return int|null
      */
-    public function getCreatedDate()
+    public function get_created_date()
     {
         return $this->container['created_date'];
     }
@@ -388,7 +388,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setCreatedDate($created_date)
+    public function set_created_date($created_date)
     {
         if (is_null($created_date)) {
             throw new \InvalidArgumentException('non-nullable created_date cannot be null');
@@ -403,7 +403,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return int|null
      */
-    public function getLastUpdatedDate()
+    public function get_last_updated_date()
     {
         return $this->container['last_updated_date'];
     }
@@ -415,7 +415,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setLastUpdatedDate($last_updated_date)
+    public function set_last_updated_date($last_updated_date)
     {
         if (is_null($last_updated_date)) {
             throw new \InvalidArgumentException('non-nullable last_updated_date cannot be null');
@@ -431,7 +431,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @return string[]|null
      * @deprecated
      */
-    public function getGrantedRealmRoles()
+    public function get_granted_realm_roles()
     {
         return $this->container['granted_realm_roles'];
     }
@@ -444,7 +444,7 @@ class UserConsentRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @return self
      * @deprecated
      */
-    public function setGrantedRealmRoles($granted_realm_roles)
+    public function set_granted_realm_roles($granted_realm_roles)
     {
         if (is_null($granted_realm_roles)) {
             throw new \InvalidArgumentException('non-nullable granted_realm_roles cannot be null');

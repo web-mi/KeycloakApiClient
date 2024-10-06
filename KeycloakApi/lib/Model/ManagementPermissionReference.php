@@ -183,9 +183,9 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'enabled' => 'setEnabled',
-        'resource' => 'setResource',
-        'scope_permissions' => 'setScopePermissions'
+        'enabled' => 'set_enabled',
+        'resource' => 'set_resource',
+        'scope_permissions' => 'set_scope_permissions'
     ];
 
     /**
@@ -194,9 +194,9 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'enabled' => 'getEnabled',
-        'resource' => 'getResource',
-        'scope_permissions' => 'getScopePermissions'
+        'enabled' => 'get_enabled',
+        'resource' => 'get_resource',
+        'scope_permissions' => 'get_scope_permissions'
     ];
 
     /**
@@ -308,7 +308,7 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -320,7 +320,7 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -335,7 +335,7 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      *
      * @return string|null
      */
-    public function getResource()
+    public function get_resource()
     {
         return $this->container['resource'];
     }
@@ -347,7 +347,7 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setResource($resource)
+    public function set_resource($resource)
     {
         if (is_null($resource)) {
             throw new \InvalidArgumentException('non-nullable resource cannot be null');
@@ -362,7 +362,7 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      *
      * @return array<string,string>|null
      */
-    public function getScopePermissions()
+    public function get_scope_permissions()
     {
         return $this->container['scope_permissions'];
     }
@@ -374,7 +374,7 @@ class ManagementPermissionReference implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setScopePermissions($scope_permissions)
+    public function set_scope_permissions($scope_permissions)
     {
         if (is_null($scope_permissions)) {
             throw new \InvalidArgumentException('non-nullable scope_permissions cannot be null');

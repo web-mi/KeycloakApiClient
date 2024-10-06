@@ -207,15 +207,15 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'authenticator_config' => 'setAuthenticatorConfig',
-        'authenticator' => 'setAuthenticator',
-        'authenticator_flow' => 'setAuthenticatorFlow',
-        'requirement' => 'setRequirement',
-        'priority' => 'setPriority',
-        'autheticator_flow' => 'setAutheticatorFlow',
-        'id' => 'setId',
-        'flow_id' => 'setFlowId',
-        'parent_flow' => 'setParentFlow'
+        'authenticator_config' => 'set_authenticator_config',
+        'authenticator' => 'set_authenticator',
+        'authenticator_flow' => 'set_authenticator_flow',
+        'requirement' => 'set_requirement',
+        'priority' => 'set_priority',
+        'autheticator_flow' => 'set_autheticator_flow',
+        'id' => 'set_id',
+        'flow_id' => 'set_flow_id',
+        'parent_flow' => 'set_parent_flow'
     ];
 
     /**
@@ -224,15 +224,15 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'authenticator_config' => 'getAuthenticatorConfig',
-        'authenticator' => 'getAuthenticator',
-        'authenticator_flow' => 'getAuthenticatorFlow',
-        'requirement' => 'getRequirement',
-        'priority' => 'getPriority',
-        'autheticator_flow' => 'getAutheticatorFlow',
-        'id' => 'getId',
-        'flow_id' => 'getFlowId',
-        'parent_flow' => 'getParentFlow'
+        'authenticator_config' => 'get_authenticator_config',
+        'authenticator' => 'get_authenticator',
+        'authenticator_flow' => 'get_authenticator_flow',
+        'requirement' => 'get_requirement',
+        'priority' => 'get_priority',
+        'autheticator_flow' => 'get_autheticator_flow',
+        'id' => 'get_id',
+        'flow_id' => 'get_flow_id',
+        'parent_flow' => 'get_parent_flow'
     ];
 
     /**
@@ -350,7 +350,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getAuthenticatorConfig()
+    public function get_authenticator_config()
     {
         return $this->container['authenticator_config'];
     }
@@ -362,7 +362,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setAuthenticatorConfig($authenticator_config)
+    public function set_authenticator_config($authenticator_config)
     {
         if (is_null($authenticator_config)) {
             throw new \InvalidArgumentException('non-nullable authenticator_config cannot be null');
@@ -377,7 +377,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getAuthenticator()
+    public function get_authenticator()
     {
         return $this->container['authenticator'];
     }
@@ -389,7 +389,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setAuthenticator($authenticator)
+    public function set_authenticator($authenticator)
     {
         if (is_null($authenticator)) {
             throw new \InvalidArgumentException('non-nullable authenticator cannot be null');
@@ -404,7 +404,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return bool|null
      */
-    public function getAuthenticatorFlow()
+    public function get_authenticator_flow()
     {
         return $this->container['authenticator_flow'];
     }
@@ -416,7 +416,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setAuthenticatorFlow($authenticator_flow)
+    public function set_authenticator_flow($authenticator_flow)
     {
         if (is_null($authenticator_flow)) {
             throw new \InvalidArgumentException('non-nullable authenticator_flow cannot be null');
@@ -431,7 +431,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getRequirement()
+    public function get_requirement()
     {
         return $this->container['requirement'];
     }
@@ -443,7 +443,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setRequirement($requirement)
+    public function set_requirement($requirement)
     {
         if (is_null($requirement)) {
             throw new \InvalidArgumentException('non-nullable requirement cannot be null');
@@ -458,7 +458,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return int|null
      */
-    public function getPriority()
+    public function get_priority()
     {
         return $this->container['priority'];
     }
@@ -470,7 +470,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setPriority($priority)
+    public function set_priority($priority)
     {
         if (is_null($priority)) {
             throw new \InvalidArgumentException('non-nullable priority cannot be null');
@@ -486,7 +486,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      * @return bool|null
      * @deprecated
      */
-    public function getAutheticatorFlow()
+    public function get_autheticator_flow()
     {
         return $this->container['autheticator_flow'];
     }
@@ -499,7 +499,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      * @return self
      * @deprecated
      */
-    public function setAutheticatorFlow($autheticator_flow)
+    public function set_autheticator_flow($autheticator_flow)
     {
         if (is_null($autheticator_flow)) {
             throw new \InvalidArgumentException('non-nullable autheticator_flow cannot be null');
@@ -514,7 +514,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -526,7 +526,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -541,7 +541,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getFlowId()
+    public function get_flow_id()
     {
         return $this->container['flow_id'];
     }
@@ -553,7 +553,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setFlowId($flow_id)
+    public function set_flow_id($flow_id)
     {
         if (is_null($flow_id)) {
             throw new \InvalidArgumentException('non-nullable flow_id cannot be null');
@@ -568,7 +568,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return string|null
      */
-    public function getParentFlow()
+    public function get_parent_flow()
     {
         return $this->container['parent_flow'];
     }
@@ -580,7 +580,7 @@ class AuthenticationExecutionRepresentation implements ModelInterface, ArrayAcce
      *
      * @return self
      */
-    public function setParentFlow($parent_flow)
+    public function set_parent_flow($parent_flow)
     {
         if (is_null($parent_flow)) {
             throw new \InvalidArgumentException('non-nullable parent_flow cannot be null');

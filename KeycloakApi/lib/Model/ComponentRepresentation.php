@@ -199,13 +199,13 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'provider_id' => 'setProviderId',
-        'provider_type' => 'setProviderType',
-        'parent_id' => 'setParentId',
-        'sub_type' => 'setSubType',
-        'config' => 'setConfig'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'provider_id' => 'set_provider_id',
+        'provider_type' => 'set_provider_type',
+        'parent_id' => 'set_parent_id',
+        'sub_type' => 'set_sub_type',
+        'config' => 'set_config'
     ];
 
     /**
@@ -214,13 +214,13 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'provider_id' => 'getProviderId',
-        'provider_type' => 'getProviderType',
-        'parent_id' => 'getParentId',
-        'sub_type' => 'getSubType',
-        'config' => 'getConfig'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'provider_id' => 'get_provider_id',
+        'provider_type' => 'get_provider_type',
+        'parent_id' => 'get_parent_id',
+        'sub_type' => 'get_sub_type',
+        'config' => 'get_config'
     ];
 
     /**
@@ -336,7 +336,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -348,7 +348,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -363,7 +363,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -375,7 +375,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -390,7 +390,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -402,7 +402,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -417,7 +417,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getProviderType()
+    public function get_provider_type()
     {
         return $this->container['provider_type'];
     }
@@ -429,7 +429,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setProviderType($provider_type)
+    public function set_provider_type($provider_type)
     {
         if (is_null($provider_type)) {
             throw new \InvalidArgumentException('non-nullable provider_type cannot be null');
@@ -444,7 +444,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getParentId()
+    public function get_parent_id()
     {
         return $this->container['parent_id'];
     }
@@ -456,7 +456,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setParentId($parent_id)
+    public function set_parent_id($parent_id)
     {
         if (is_null($parent_id)) {
             throw new \InvalidArgumentException('non-nullable parent_id cannot be null');
@@ -471,7 +471,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getSubType()
+    public function get_sub_type()
     {
         return $this->container['sub_type'];
     }
@@ -483,7 +483,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setSubType($sub_type)
+    public function set_sub_type($sub_type)
     {
         if (is_null($sub_type)) {
             throw new \InvalidArgumentException('non-nullable sub_type cannot be null');
@@ -498,7 +498,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return array<string,string[]>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -510,7 +510,7 @@ class ComponentRepresentation implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

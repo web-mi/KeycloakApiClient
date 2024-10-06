@@ -187,10 +187,10 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'private_key' => 'setPrivateKey',
-        'public_key' => 'setPublicKey',
-        'certificate' => 'setCertificate',
-        'kid' => 'setKid'
+        'private_key' => 'set_private_key',
+        'public_key' => 'set_public_key',
+        'certificate' => 'set_certificate',
+        'kid' => 'set_kid'
     ];
 
     /**
@@ -199,10 +199,10 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'private_key' => 'getPrivateKey',
-        'public_key' => 'getPublicKey',
-        'certificate' => 'getCertificate',
-        'kid' => 'getKid'
+        'private_key' => 'get_private_key',
+        'public_key' => 'get_public_key',
+        'certificate' => 'get_certificate',
+        'kid' => 'get_kid'
     ];
 
     /**
@@ -315,7 +315,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getPrivateKey()
+    public function get_private_key()
     {
         return $this->container['private_key'];
     }
@@ -327,7 +327,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setPrivateKey($private_key)
+    public function set_private_key($private_key)
     {
         if (is_null($private_key)) {
             throw new \InvalidArgumentException('non-nullable private_key cannot be null');
@@ -342,7 +342,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getPublicKey()
+    public function get_public_key()
     {
         return $this->container['public_key'];
     }
@@ -354,7 +354,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setPublicKey($public_key)
+    public function set_public_key($public_key)
     {
         if (is_null($public_key)) {
             throw new \InvalidArgumentException('non-nullable public_key cannot be null');
@@ -369,7 +369,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getCertificate()
+    public function get_certificate()
     {
         return $this->container['certificate'];
     }
@@ -381,7 +381,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setCertificate($certificate)
+    public function set_certificate($certificate)
     {
         if (is_null($certificate)) {
             throw new \InvalidArgumentException('non-nullable certificate cannot be null');
@@ -396,7 +396,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getKid()
+    public function get_kid()
     {
         return $this->container['kid'];
     }
@@ -408,7 +408,7 @@ class CertificateRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setKid($kid)
+    public function set_kid($kid)
     {
         if (is_null($kid)) {
             throw new \InvalidArgumentException('non-nullable kid cannot be null');

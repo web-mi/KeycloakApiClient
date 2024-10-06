@@ -199,13 +199,13 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'alias' => 'setAlias',
-        'name' => 'setName',
-        'provider_id' => 'setProviderId',
-        'enabled' => 'setEnabled',
-        'default_action' => 'setDefaultAction',
-        'priority' => 'setPriority',
-        'config' => 'setConfig'
+        'alias' => 'set_alias',
+        'name' => 'set_name',
+        'provider_id' => 'set_provider_id',
+        'enabled' => 'set_enabled',
+        'default_action' => 'set_default_action',
+        'priority' => 'set_priority',
+        'config' => 'set_config'
     ];
 
     /**
@@ -214,13 +214,13 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'alias' => 'getAlias',
-        'name' => 'getName',
-        'provider_id' => 'getProviderId',
-        'enabled' => 'getEnabled',
-        'default_action' => 'getDefaultAction',
-        'priority' => 'getPriority',
-        'config' => 'getConfig'
+        'alias' => 'get_alias',
+        'name' => 'get_name',
+        'provider_id' => 'get_provider_id',
+        'enabled' => 'get_enabled',
+        'default_action' => 'get_default_action',
+        'priority' => 'get_priority',
+        'config' => 'get_config'
     ];
 
     /**
@@ -336,7 +336,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getAlias()
+    public function get_alias()
     {
         return $this->container['alias'];
     }
@@ -348,7 +348,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setAlias($alias)
+    public function set_alias($alias)
     {
         if (is_null($alias)) {
             throw new \InvalidArgumentException('non-nullable alias cannot be null');
@@ -363,7 +363,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -375,7 +375,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -390,7 +390,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -402,7 +402,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -417,7 +417,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -429,7 +429,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -444,7 +444,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return bool|null
      */
-    public function getDefaultAction()
+    public function get_default_action()
     {
         return $this->container['default_action'];
     }
@@ -456,7 +456,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setDefaultAction($default_action)
+    public function set_default_action($default_action)
     {
         if (is_null($default_action)) {
             throw new \InvalidArgumentException('non-nullable default_action cannot be null');
@@ -471,7 +471,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return int|null
      */
-    public function getPriority()
+    public function get_priority()
     {
         return $this->container['priority'];
     }
@@ -483,7 +483,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setPriority($priority)
+    public function set_priority($priority)
     {
         if (is_null($priority)) {
             throw new \InvalidArgumentException('non-nullable priority cannot be null');
@@ -498,7 +498,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -510,7 +510,7 @@ class RequiredActionProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

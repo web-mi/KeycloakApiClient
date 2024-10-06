@@ -239,23 +239,23 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'alias' => 'setAlias',
-        'display_name' => 'setDisplayName',
-        'internal_id' => 'setInternalId',
-        'provider_id' => 'setProviderId',
-        'enabled' => 'setEnabled',
-        'update_profile_first_login_mode' => 'setUpdateProfileFirstLoginMode',
-        'trust_email' => 'setTrustEmail',
-        'store_token' => 'setStoreToken',
-        'add_read_token_role_on_create' => 'setAddReadTokenRoleOnCreate',
-        'authenticate_by_default' => 'setAuthenticateByDefault',
-        'link_only' => 'setLinkOnly',
-        'hide_on_login' => 'setHideOnLogin',
-        'first_broker_login_flow_alias' => 'setFirstBrokerLoginFlowAlias',
-        'post_broker_login_flow_alias' => 'setPostBrokerLoginFlowAlias',
-        'organization_id' => 'setOrganizationId',
-        'config' => 'setConfig',
-        'update_profile_first_login' => 'setUpdateProfileFirstLogin'
+        'alias' => 'set_alias',
+        'display_name' => 'set_display_name',
+        'internal_id' => 'set_internal_id',
+        'provider_id' => 'set_provider_id',
+        'enabled' => 'set_enabled',
+        'update_profile_first_login_mode' => 'set_update_profile_first_login_mode',
+        'trust_email' => 'set_trust_email',
+        'store_token' => 'set_store_token',
+        'add_read_token_role_on_create' => 'set_add_read_token_role_on_create',
+        'authenticate_by_default' => 'set_authenticate_by_default',
+        'link_only' => 'set_link_only',
+        'hide_on_login' => 'set_hide_on_login',
+        'first_broker_login_flow_alias' => 'set_first_broker_login_flow_alias',
+        'post_broker_login_flow_alias' => 'set_post_broker_login_flow_alias',
+        'organization_id' => 'set_organization_id',
+        'config' => 'set_config',
+        'update_profile_first_login' => 'set_update_profile_first_login'
     ];
 
     /**
@@ -264,23 +264,23 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'alias' => 'getAlias',
-        'display_name' => 'getDisplayName',
-        'internal_id' => 'getInternalId',
-        'provider_id' => 'getProviderId',
-        'enabled' => 'getEnabled',
-        'update_profile_first_login_mode' => 'getUpdateProfileFirstLoginMode',
-        'trust_email' => 'getTrustEmail',
-        'store_token' => 'getStoreToken',
-        'add_read_token_role_on_create' => 'getAddReadTokenRoleOnCreate',
-        'authenticate_by_default' => 'getAuthenticateByDefault',
-        'link_only' => 'getLinkOnly',
-        'hide_on_login' => 'getHideOnLogin',
-        'first_broker_login_flow_alias' => 'getFirstBrokerLoginFlowAlias',
-        'post_broker_login_flow_alias' => 'getPostBrokerLoginFlowAlias',
-        'organization_id' => 'getOrganizationId',
-        'config' => 'getConfig',
-        'update_profile_first_login' => 'getUpdateProfileFirstLogin'
+        'alias' => 'get_alias',
+        'display_name' => 'get_display_name',
+        'internal_id' => 'get_internal_id',
+        'provider_id' => 'get_provider_id',
+        'enabled' => 'get_enabled',
+        'update_profile_first_login_mode' => 'get_update_profile_first_login_mode',
+        'trust_email' => 'get_trust_email',
+        'store_token' => 'get_store_token',
+        'add_read_token_role_on_create' => 'get_add_read_token_role_on_create',
+        'authenticate_by_default' => 'get_authenticate_by_default',
+        'link_only' => 'get_link_only',
+        'hide_on_login' => 'get_hide_on_login',
+        'first_broker_login_flow_alias' => 'get_first_broker_login_flow_alias',
+        'post_broker_login_flow_alias' => 'get_post_broker_login_flow_alias',
+        'organization_id' => 'get_organization_id',
+        'config' => 'get_config',
+        'update_profile_first_login' => 'get_update_profile_first_login'
     ];
 
     /**
@@ -406,7 +406,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return string|null
      */
-    public function getAlias()
+    public function get_alias()
     {
         return $this->container['alias'];
     }
@@ -418,7 +418,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setAlias($alias)
+    public function set_alias($alias)
     {
         if (is_null($alias)) {
             throw new \InvalidArgumentException('non-nullable alias cannot be null');
@@ -433,7 +433,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -445,7 +445,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
@@ -460,7 +460,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return string|null
      */
-    public function getInternalId()
+    public function get_internal_id()
     {
         return $this->container['internal_id'];
     }
@@ -472,7 +472,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setInternalId($internal_id)
+    public function set_internal_id($internal_id)
     {
         if (is_null($internal_id)) {
             throw new \InvalidArgumentException('non-nullable internal_id cannot be null');
@@ -487,7 +487,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -499,7 +499,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -514,7 +514,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -526,7 +526,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -542,7 +542,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      * @return string|null
      * @deprecated
      */
-    public function getUpdateProfileFirstLoginMode()
+    public function get_update_profile_first_login_mode()
     {
         return $this->container['update_profile_first_login_mode'];
     }
@@ -555,7 +555,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      * @return self
      * @deprecated
      */
-    public function setUpdateProfileFirstLoginMode($update_profile_first_login_mode)
+    public function set_update_profile_first_login_mode($update_profile_first_login_mode)
     {
         if (is_null($update_profile_first_login_mode)) {
             throw new \InvalidArgumentException('non-nullable update_profile_first_login_mode cannot be null');
@@ -570,7 +570,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return bool|null
      */
-    public function getTrustEmail()
+    public function get_trust_email()
     {
         return $this->container['trust_email'];
     }
@@ -582,7 +582,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setTrustEmail($trust_email)
+    public function set_trust_email($trust_email)
     {
         if (is_null($trust_email)) {
             throw new \InvalidArgumentException('non-nullable trust_email cannot be null');
@@ -597,7 +597,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return bool|null
      */
-    public function getStoreToken()
+    public function get_store_token()
     {
         return $this->container['store_token'];
     }
@@ -609,7 +609,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setStoreToken($store_token)
+    public function set_store_token($store_token)
     {
         if (is_null($store_token)) {
             throw new \InvalidArgumentException('non-nullable store_token cannot be null');
@@ -624,7 +624,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return bool|null
      */
-    public function getAddReadTokenRoleOnCreate()
+    public function get_add_read_token_role_on_create()
     {
         return $this->container['add_read_token_role_on_create'];
     }
@@ -636,7 +636,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setAddReadTokenRoleOnCreate($add_read_token_role_on_create)
+    public function set_add_read_token_role_on_create($add_read_token_role_on_create)
     {
         if (is_null($add_read_token_role_on_create)) {
             throw new \InvalidArgumentException('non-nullable add_read_token_role_on_create cannot be null');
@@ -651,7 +651,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return bool|null
      */
-    public function getAuthenticateByDefault()
+    public function get_authenticate_by_default()
     {
         return $this->container['authenticate_by_default'];
     }
@@ -663,7 +663,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setAuthenticateByDefault($authenticate_by_default)
+    public function set_authenticate_by_default($authenticate_by_default)
     {
         if (is_null($authenticate_by_default)) {
             throw new \InvalidArgumentException('non-nullable authenticate_by_default cannot be null');
@@ -678,7 +678,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return bool|null
      */
-    public function getLinkOnly()
+    public function get_link_only()
     {
         return $this->container['link_only'];
     }
@@ -690,7 +690,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setLinkOnly($link_only)
+    public function set_link_only($link_only)
     {
         if (is_null($link_only)) {
             throw new \InvalidArgumentException('non-nullable link_only cannot be null');
@@ -705,7 +705,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return bool|null
      */
-    public function getHideOnLogin()
+    public function get_hide_on_login()
     {
         return $this->container['hide_on_login'];
     }
@@ -717,7 +717,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setHideOnLogin($hide_on_login)
+    public function set_hide_on_login($hide_on_login)
     {
         if (is_null($hide_on_login)) {
             throw new \InvalidArgumentException('non-nullable hide_on_login cannot be null');
@@ -732,7 +732,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return string|null
      */
-    public function getFirstBrokerLoginFlowAlias()
+    public function get_first_broker_login_flow_alias()
     {
         return $this->container['first_broker_login_flow_alias'];
     }
@@ -744,7 +744,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setFirstBrokerLoginFlowAlias($first_broker_login_flow_alias)
+    public function set_first_broker_login_flow_alias($first_broker_login_flow_alias)
     {
         if (is_null($first_broker_login_flow_alias)) {
             throw new \InvalidArgumentException('non-nullable first_broker_login_flow_alias cannot be null');
@@ -759,7 +759,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return string|null
      */
-    public function getPostBrokerLoginFlowAlias()
+    public function get_post_broker_login_flow_alias()
     {
         return $this->container['post_broker_login_flow_alias'];
     }
@@ -771,7 +771,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setPostBrokerLoginFlowAlias($post_broker_login_flow_alias)
+    public function set_post_broker_login_flow_alias($post_broker_login_flow_alias)
     {
         if (is_null($post_broker_login_flow_alias)) {
             throw new \InvalidArgumentException('non-nullable post_broker_login_flow_alias cannot be null');
@@ -786,7 +786,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return string|null
      */
-    public function getOrganizationId()
+    public function get_organization_id()
     {
         return $this->container['organization_id'];
     }
@@ -798,7 +798,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setOrganizationId($organization_id)
+    public function set_organization_id($organization_id)
     {
         if (is_null($organization_id)) {
             throw new \InvalidArgumentException('non-nullable organization_id cannot be null');
@@ -813,7 +813,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -825,7 +825,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');
@@ -841,7 +841,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      * @return bool|null
      * @deprecated
      */
-    public function getUpdateProfileFirstLogin()
+    public function get_update_profile_first_login()
     {
         return $this->container['update_profile_first_login'];
     }
@@ -854,7 +854,7 @@ class IdentityProviderRepresentation implements ModelInterface, ArrayAccess, \Js
      * @return self
      * @deprecated
      */
-    public function setUpdateProfileFirstLogin($update_profile_first_login)
+    public function set_update_profile_first_login($update_profile_first_login)
     {
         if (is_null($update_profile_first_login)) {
             throw new \InvalidArgumentException('non-nullable update_profile_first_login cannot be null');

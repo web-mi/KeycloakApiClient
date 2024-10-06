@@ -343,49 +343,49 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'jti' => 'setJti',
-        'exp' => 'setExp',
-        'nbf' => 'setNbf',
-        'iat' => 'setIat',
-        'iss' => 'setIss',
-        'sub' => 'setSub',
-        'typ' => 'setTyp',
-        'azp' => 'setAzp',
-        'other_claims' => 'setOtherClaims',
-        'nonce' => 'setNonce',
-        'auth_time' => 'setAuthTime',
-        'sid' => 'setSid',
-        'at_hash' => 'setAtHash',
-        'c_hash' => 'setCHash',
-        'name' => 'setName',
-        'given_name' => 'setGivenName',
-        'family_name' => 'setFamilyName',
-        'middle_name' => 'setMiddleName',
-        'nickname' => 'setNickname',
-        'preferred_username' => 'setPreferredUsername',
-        'profile' => 'setProfile',
-        'picture' => 'setPicture',
-        'website' => 'setWebsite',
-        'email' => 'setEmail',
-        'email_verified' => 'setEmailVerified',
-        'gender' => 'setGender',
-        'birthdate' => 'setBirthdate',
-        'zoneinfo' => 'setZoneinfo',
-        'locale' => 'setLocale',
-        'phone_number' => 'setPhoneNumber',
-        'phone_number_verified' => 'setPhoneNumberVerified',
-        'address' => 'setAddress',
-        'updated_at' => 'setUpdatedAt',
-        'claims_locales' => 'setClaimsLocales',
-        'acr' => 'setAcr',
-        's_hash' => 'setSHash',
-        'trusted_certs' => 'setTrustedCerts',
-        'allowed_origins' => 'setAllowedOrigins',
-        'realm_access' => 'setRealmAccess',
-        'resource_access' => 'setResourceAccess',
-        'authorization' => 'setAuthorization',
-        'cnf' => 'setCnf',
-        'scope' => 'setScope'
+        'jti' => 'set_jti',
+        'exp' => 'set_exp',
+        'nbf' => 'set_nbf',
+        'iat' => 'set_iat',
+        'iss' => 'set_iss',
+        'sub' => 'set_sub',
+        'typ' => 'set_typ',
+        'azp' => 'set_azp',
+        'other_claims' => 'set_other_claims',
+        'nonce' => 'set_nonce',
+        'auth_time' => 'set_auth_time',
+        'sid' => 'set_sid',
+        'at_hash' => 'set_at_hash',
+        'c_hash' => 'set_c_hash',
+        'name' => 'set_name',
+        'given_name' => 'set_given_name',
+        'family_name' => 'set_family_name',
+        'middle_name' => 'set_middle_name',
+        'nickname' => 'set_nickname',
+        'preferred_username' => 'set_preferred_username',
+        'profile' => 'set_profile',
+        'picture' => 'set_picture',
+        'website' => 'set_website',
+        'email' => 'set_email',
+        'email_verified' => 'set_email_verified',
+        'gender' => 'set_gender',
+        'birthdate' => 'set_birthdate',
+        'zoneinfo' => 'set_zoneinfo',
+        'locale' => 'set_locale',
+        'phone_number' => 'set_phone_number',
+        'phone_number_verified' => 'set_phone_number_verified',
+        'address' => 'set_address',
+        'updated_at' => 'set_updated_at',
+        'claims_locales' => 'set_claims_locales',
+        'acr' => 'set_acr',
+        's_hash' => 'set_s_hash',
+        'trusted_certs' => 'set_trusted_certs',
+        'allowed_origins' => 'set_allowed_origins',
+        'realm_access' => 'set_realm_access',
+        'resource_access' => 'set_resource_access',
+        'authorization' => 'set_authorization',
+        'cnf' => 'set_cnf',
+        'scope' => 'set_scope'
     ];
 
     /**
@@ -394,49 +394,49 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'jti' => 'getJti',
-        'exp' => 'getExp',
-        'nbf' => 'getNbf',
-        'iat' => 'getIat',
-        'iss' => 'getIss',
-        'sub' => 'getSub',
-        'typ' => 'getTyp',
-        'azp' => 'getAzp',
-        'other_claims' => 'getOtherClaims',
-        'nonce' => 'getNonce',
-        'auth_time' => 'getAuthTime',
-        'sid' => 'getSid',
-        'at_hash' => 'getAtHash',
-        'c_hash' => 'getCHash',
-        'name' => 'getName',
-        'given_name' => 'getGivenName',
-        'family_name' => 'getFamilyName',
-        'middle_name' => 'getMiddleName',
-        'nickname' => 'getNickname',
-        'preferred_username' => 'getPreferredUsername',
-        'profile' => 'getProfile',
-        'picture' => 'getPicture',
-        'website' => 'getWebsite',
-        'email' => 'getEmail',
-        'email_verified' => 'getEmailVerified',
-        'gender' => 'getGender',
-        'birthdate' => 'getBirthdate',
-        'zoneinfo' => 'getZoneinfo',
-        'locale' => 'getLocale',
-        'phone_number' => 'getPhoneNumber',
-        'phone_number_verified' => 'getPhoneNumberVerified',
-        'address' => 'getAddress',
-        'updated_at' => 'getUpdatedAt',
-        'claims_locales' => 'getClaimsLocales',
-        'acr' => 'getAcr',
-        's_hash' => 'getSHash',
-        'trusted_certs' => 'getTrustedCerts',
-        'allowed_origins' => 'getAllowedOrigins',
-        'realm_access' => 'getRealmAccess',
-        'resource_access' => 'getResourceAccess',
-        'authorization' => 'getAuthorization',
-        'cnf' => 'getCnf',
-        'scope' => 'getScope'
+        'jti' => 'get_jti',
+        'exp' => 'get_exp',
+        'nbf' => 'get_nbf',
+        'iat' => 'get_iat',
+        'iss' => 'get_iss',
+        'sub' => 'get_sub',
+        'typ' => 'get_typ',
+        'azp' => 'get_azp',
+        'other_claims' => 'get_other_claims',
+        'nonce' => 'get_nonce',
+        'auth_time' => 'get_auth_time',
+        'sid' => 'get_sid',
+        'at_hash' => 'get_at_hash',
+        'c_hash' => 'get_c_hash',
+        'name' => 'get_name',
+        'given_name' => 'get_given_name',
+        'family_name' => 'get_family_name',
+        'middle_name' => 'get_middle_name',
+        'nickname' => 'get_nickname',
+        'preferred_username' => 'get_preferred_username',
+        'profile' => 'get_profile',
+        'picture' => 'get_picture',
+        'website' => 'get_website',
+        'email' => 'get_email',
+        'email_verified' => 'get_email_verified',
+        'gender' => 'get_gender',
+        'birthdate' => 'get_birthdate',
+        'zoneinfo' => 'get_zoneinfo',
+        'locale' => 'get_locale',
+        'phone_number' => 'get_phone_number',
+        'phone_number_verified' => 'get_phone_number_verified',
+        'address' => 'get_address',
+        'updated_at' => 'get_updated_at',
+        'claims_locales' => 'get_claims_locales',
+        'acr' => 'get_acr',
+        's_hash' => 'get_s_hash',
+        'trusted_certs' => 'get_trusted_certs',
+        'allowed_origins' => 'get_allowed_origins',
+        'realm_access' => 'get_realm_access',
+        'resource_access' => 'get_resource_access',
+        'authorization' => 'get_authorization',
+        'cnf' => 'get_cnf',
+        'scope' => 'get_scope'
     ];
 
     /**
@@ -588,7 +588,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getJti()
+    public function get_jti()
     {
         return $this->container['jti'];
     }
@@ -600,7 +600,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setJti($jti)
+    public function set_jti($jti)
     {
         if (is_null($jti)) {
             throw new \InvalidArgumentException('non-nullable jti cannot be null');
@@ -615,7 +615,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return int|null
      */
-    public function getExp()
+    public function get_exp()
     {
         return $this->container['exp'];
     }
@@ -627,7 +627,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setExp($exp)
+    public function set_exp($exp)
     {
         if (is_null($exp)) {
             throw new \InvalidArgumentException('non-nullable exp cannot be null');
@@ -642,7 +642,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return int|null
      */
-    public function getNbf()
+    public function get_nbf()
     {
         return $this->container['nbf'];
     }
@@ -654,7 +654,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setNbf($nbf)
+    public function set_nbf($nbf)
     {
         if (is_null($nbf)) {
             throw new \InvalidArgumentException('non-nullable nbf cannot be null');
@@ -669,7 +669,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return int|null
      */
-    public function getIat()
+    public function get_iat()
     {
         return $this->container['iat'];
     }
@@ -681,7 +681,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setIat($iat)
+    public function set_iat($iat)
     {
         if (is_null($iat)) {
             throw new \InvalidArgumentException('non-nullable iat cannot be null');
@@ -696,7 +696,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getIss()
+    public function get_iss()
     {
         return $this->container['iss'];
     }
@@ -708,7 +708,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setIss($iss)
+    public function set_iss($iss)
     {
         if (is_null($iss)) {
             throw new \InvalidArgumentException('non-nullable iss cannot be null');
@@ -723,7 +723,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getSub()
+    public function get_sub()
     {
         return $this->container['sub'];
     }
@@ -735,7 +735,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setSub($sub)
+    public function set_sub($sub)
     {
         if (is_null($sub)) {
             throw new \InvalidArgumentException('non-nullable sub cannot be null');
@@ -750,7 +750,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getTyp()
+    public function get_typ()
     {
         return $this->container['typ'];
     }
@@ -762,7 +762,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setTyp($typ)
+    public function set_typ($typ)
     {
         if (is_null($typ)) {
             throw new \InvalidArgumentException('non-nullable typ cannot be null');
@@ -777,7 +777,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getAzp()
+    public function get_azp()
     {
         return $this->container['azp'];
     }
@@ -789,7 +789,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAzp($azp)
+    public function set_azp($azp)
     {
         if (is_null($azp)) {
             throw new \InvalidArgumentException('non-nullable azp cannot be null');
@@ -804,7 +804,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return array<string,mixed>|null
      */
-    public function getOtherClaims()
+    public function get_other_claims()
     {
         return $this->container['other_claims'];
     }
@@ -816,7 +816,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setOtherClaims($other_claims)
+    public function set_other_claims($other_claims)
     {
         if (is_null($other_claims)) {
             throw new \InvalidArgumentException('non-nullable other_claims cannot be null');
@@ -831,7 +831,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getNonce()
+    public function get_nonce()
     {
         return $this->container['nonce'];
     }
@@ -843,7 +843,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setNonce($nonce)
+    public function set_nonce($nonce)
     {
         if (is_null($nonce)) {
             throw new \InvalidArgumentException('non-nullable nonce cannot be null');
@@ -858,7 +858,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return int|null
      */
-    public function getAuthTime()
+    public function get_auth_time()
     {
         return $this->container['auth_time'];
     }
@@ -870,7 +870,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAuthTime($auth_time)
+    public function set_auth_time($auth_time)
     {
         if (is_null($auth_time)) {
             throw new \InvalidArgumentException('non-nullable auth_time cannot be null');
@@ -885,7 +885,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getSid()
+    public function get_sid()
     {
         return $this->container['sid'];
     }
@@ -897,7 +897,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setSid($sid)
+    public function set_sid($sid)
     {
         if (is_null($sid)) {
             throw new \InvalidArgumentException('non-nullable sid cannot be null');
@@ -912,7 +912,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getAtHash()
+    public function get_at_hash()
     {
         return $this->container['at_hash'];
     }
@@ -924,7 +924,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAtHash($at_hash)
+    public function set_at_hash($at_hash)
     {
         if (is_null($at_hash)) {
             throw new \InvalidArgumentException('non-nullable at_hash cannot be null');
@@ -939,7 +939,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getCHash()
+    public function get_c_hash()
     {
         return $this->container['c_hash'];
     }
@@ -951,7 +951,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setCHash($c_hash)
+    public function set_c_hash($c_hash)
     {
         if (is_null($c_hash)) {
             throw new \InvalidArgumentException('non-nullable c_hash cannot be null');
@@ -966,7 +966,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -978,7 +978,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -993,7 +993,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getGivenName()
+    public function get_given_name()
     {
         return $this->container['given_name'];
     }
@@ -1005,7 +1005,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setGivenName($given_name)
+    public function set_given_name($given_name)
     {
         if (is_null($given_name)) {
             throw new \InvalidArgumentException('non-nullable given_name cannot be null');
@@ -1020,7 +1020,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getFamilyName()
+    public function get_family_name()
     {
         return $this->container['family_name'];
     }
@@ -1032,7 +1032,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setFamilyName($family_name)
+    public function set_family_name($family_name)
     {
         if (is_null($family_name)) {
             throw new \InvalidArgumentException('non-nullable family_name cannot be null');
@@ -1047,7 +1047,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getMiddleName()
+    public function get_middle_name()
     {
         return $this->container['middle_name'];
     }
@@ -1059,7 +1059,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setMiddleName($middle_name)
+    public function set_middle_name($middle_name)
     {
         if (is_null($middle_name)) {
             throw new \InvalidArgumentException('non-nullable middle_name cannot be null');
@@ -1074,7 +1074,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getNickname()
+    public function get_nickname()
     {
         return $this->container['nickname'];
     }
@@ -1086,7 +1086,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setNickname($nickname)
+    public function set_nickname($nickname)
     {
         if (is_null($nickname)) {
             throw new \InvalidArgumentException('non-nullable nickname cannot be null');
@@ -1101,7 +1101,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getPreferredUsername()
+    public function get_preferred_username()
     {
         return $this->container['preferred_username'];
     }
@@ -1113,7 +1113,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPreferredUsername($preferred_username)
+    public function set_preferred_username($preferred_username)
     {
         if (is_null($preferred_username)) {
             throw new \InvalidArgumentException('non-nullable preferred_username cannot be null');
@@ -1128,7 +1128,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getProfile()
+    public function get_profile()
     {
         return $this->container['profile'];
     }
@@ -1140,7 +1140,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setProfile($profile)
+    public function set_profile($profile)
     {
         if (is_null($profile)) {
             throw new \InvalidArgumentException('non-nullable profile cannot be null');
@@ -1155,7 +1155,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getPicture()
+    public function get_picture()
     {
         return $this->container['picture'];
     }
@@ -1167,7 +1167,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPicture($picture)
+    public function set_picture($picture)
     {
         if (is_null($picture)) {
             throw new \InvalidArgumentException('non-nullable picture cannot be null');
@@ -1182,7 +1182,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getWebsite()
+    public function get_website()
     {
         return $this->container['website'];
     }
@@ -1194,7 +1194,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setWebsite($website)
+    public function set_website($website)
     {
         if (is_null($website)) {
             throw new \InvalidArgumentException('non-nullable website cannot be null');
@@ -1209,7 +1209,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getEmail()
+    public function get_email()
     {
         return $this->container['email'];
     }
@@ -1221,7 +1221,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setEmail($email)
+    public function set_email($email)
     {
         if (is_null($email)) {
             throw new \InvalidArgumentException('non-nullable email cannot be null');
@@ -1236,7 +1236,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getEmailVerified()
+    public function get_email_verified()
     {
         return $this->container['email_verified'];
     }
@@ -1248,7 +1248,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setEmailVerified($email_verified)
+    public function set_email_verified($email_verified)
     {
         if (is_null($email_verified)) {
             throw new \InvalidArgumentException('non-nullable email_verified cannot be null');
@@ -1263,7 +1263,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getGender()
+    public function get_gender()
     {
         return $this->container['gender'];
     }
@@ -1275,7 +1275,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setGender($gender)
+    public function set_gender($gender)
     {
         if (is_null($gender)) {
             throw new \InvalidArgumentException('non-nullable gender cannot be null');
@@ -1290,7 +1290,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getBirthdate()
+    public function get_birthdate()
     {
         return $this->container['birthdate'];
     }
@@ -1302,7 +1302,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setBirthdate($birthdate)
+    public function set_birthdate($birthdate)
     {
         if (is_null($birthdate)) {
             throw new \InvalidArgumentException('non-nullable birthdate cannot be null');
@@ -1317,7 +1317,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getZoneinfo()
+    public function get_zoneinfo()
     {
         return $this->container['zoneinfo'];
     }
@@ -1329,7 +1329,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setZoneinfo($zoneinfo)
+    public function set_zoneinfo($zoneinfo)
     {
         if (is_null($zoneinfo)) {
             throw new \InvalidArgumentException('non-nullable zoneinfo cannot be null');
@@ -1344,7 +1344,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getLocale()
+    public function get_locale()
     {
         return $this->container['locale'];
     }
@@ -1356,7 +1356,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setLocale($locale)
+    public function set_locale($locale)
     {
         if (is_null($locale)) {
             throw new \InvalidArgumentException('non-nullable locale cannot be null');
@@ -1371,7 +1371,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getPhoneNumber()
+    public function get_phone_number()
     {
         return $this->container['phone_number'];
     }
@@ -1383,7 +1383,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPhoneNumber($phone_number)
+    public function set_phone_number($phone_number)
     {
         if (is_null($phone_number)) {
             throw new \InvalidArgumentException('non-nullable phone_number cannot be null');
@@ -1398,7 +1398,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getPhoneNumberVerified()
+    public function get_phone_number_verified()
     {
         return $this->container['phone_number_verified'];
     }
@@ -1410,7 +1410,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPhoneNumberVerified($phone_number_verified)
+    public function set_phone_number_verified($phone_number_verified)
     {
         if (is_null($phone_number_verified)) {
             throw new \InvalidArgumentException('non-nullable phone_number_verified cannot be null');
@@ -1425,7 +1425,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\AddressClaimSet|null
      */
-    public function getAddress()
+    public function get_address()
     {
         return $this->container['address'];
     }
@@ -1437,7 +1437,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAddress($address)
+    public function set_address($address)
     {
         if (is_null($address)) {
             throw new \InvalidArgumentException('non-nullable address cannot be null');
@@ -1452,7 +1452,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return int|null
      */
-    public function getUpdatedAt()
+    public function get_updated_at()
     {
         return $this->container['updated_at'];
     }
@@ -1464,7 +1464,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setUpdatedAt($updated_at)
+    public function set_updated_at($updated_at)
     {
         if (is_null($updated_at)) {
             throw new \InvalidArgumentException('non-nullable updated_at cannot be null');
@@ -1479,7 +1479,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getClaimsLocales()
+    public function get_claims_locales()
     {
         return $this->container['claims_locales'];
     }
@@ -1491,7 +1491,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setClaimsLocales($claims_locales)
+    public function set_claims_locales($claims_locales)
     {
         if (is_null($claims_locales)) {
             throw new \InvalidArgumentException('non-nullable claims_locales cannot be null');
@@ -1506,7 +1506,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getAcr()
+    public function get_acr()
     {
         return $this->container['acr'];
     }
@@ -1518,7 +1518,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAcr($acr)
+    public function set_acr($acr)
     {
         if (is_null($acr)) {
             throw new \InvalidArgumentException('non-nullable acr cannot be null');
@@ -1533,7 +1533,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getSHash()
+    public function get_s_hash()
     {
         return $this->container['s_hash'];
     }
@@ -1545,7 +1545,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setSHash($s_hash)
+    public function set_s_hash($s_hash)
     {
         if (is_null($s_hash)) {
             throw new \InvalidArgumentException('non-nullable s_hash cannot be null');
@@ -1560,7 +1560,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]|null
      */
-    public function getTrustedCerts()
+    public function get_trusted_certs()
     {
         return $this->container['trusted_certs'];
     }
@@ -1572,7 +1572,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setTrustedCerts($trusted_certs)
+    public function set_trusted_certs($trusted_certs)
     {
         if (is_null($trusted_certs)) {
             throw new \InvalidArgumentException('non-nullable trusted_certs cannot be null');
@@ -1589,7 +1589,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]|null
      */
-    public function getAllowedOrigins()
+    public function get_allowed_origins()
     {
         return $this->container['allowed_origins'];
     }
@@ -1601,7 +1601,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAllowedOrigins($allowed_origins)
+    public function set_allowed_origins($allowed_origins)
     {
         if (is_null($allowed_origins)) {
             throw new \InvalidArgumentException('non-nullable allowed_origins cannot be null');
@@ -1618,7 +1618,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\Access|null
      */
-    public function getRealmAccess()
+    public function get_realm_access()
     {
         return $this->container['realm_access'];
     }
@@ -1630,7 +1630,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRealmAccess($realm_access)
+    public function set_realm_access($realm_access)
     {
         if (is_null($realm_access)) {
             throw new \InvalidArgumentException('non-nullable realm_access cannot be null');
@@ -1645,7 +1645,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\Access>|null
      */
-    public function getResourceAccess()
+    public function get_resource_access()
     {
         return $this->container['resource_access'];
     }
@@ -1657,7 +1657,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setResourceAccess($resource_access)
+    public function set_resource_access($resource_access)
     {
         if (is_null($resource_access)) {
             throw new \InvalidArgumentException('non-nullable resource_access cannot be null');
@@ -1672,7 +1672,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\Authorization|null
      */
-    public function getAuthorization()
+    public function get_authorization()
     {
         return $this->container['authorization'];
     }
@@ -1684,7 +1684,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAuthorization($authorization)
+    public function set_authorization($authorization)
     {
         if (is_null($authorization)) {
             throw new \InvalidArgumentException('non-nullable authorization cannot be null');
@@ -1699,7 +1699,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\Confirmation|null
      */
-    public function getCnf()
+    public function get_cnf()
     {
         return $this->container['cnf'];
     }
@@ -1711,7 +1711,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setCnf($cnf)
+    public function set_cnf($cnf)
     {
         if (is_null($cnf)) {
             throw new \InvalidArgumentException('non-nullable cnf cannot be null');
@@ -1726,7 +1726,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getScope()
+    public function get_scope()
     {
         return $this->container['scope'];
     }
@@ -1738,7 +1738,7 @@ class AccessToken implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setScope($scope)
+    public function set_scope($scope)
     {
         if (is_null($scope)) {
             throw new \InvalidArgumentException('non-nullable scope cannot be null');

@@ -179,8 +179,8 @@ class KeysMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'active' => 'setActive',
-        'keys' => 'setKeys'
+        'active' => 'set_active',
+        'keys' => 'set_keys'
     ];
 
     /**
@@ -189,8 +189,8 @@ class KeysMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'active' => 'getActive',
-        'keys' => 'getKeys'
+        'active' => 'get_active',
+        'keys' => 'get_keys'
     ];
 
     /**
@@ -301,7 +301,7 @@ class KeysMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return array<string,string>|null
      */
-    public function getActive()
+    public function get_active()
     {
         return $this->container['active'];
     }
@@ -313,7 +313,7 @@ class KeysMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setActive($active)
+    public function set_active($active)
     {
         if (is_null($active)) {
             throw new \InvalidArgumentException('non-nullable active cannot be null');
@@ -328,7 +328,7 @@ class KeysMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\KeyMetadataRepresentation[]|null
      */
-    public function getKeys()
+    public function get_keys()
     {
         return $this->container['keys'];
     }
@@ -340,7 +340,7 @@ class KeysMetadataRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setKeys($keys)
+    public function set_keys($keys)
     {
         if (is_null($keys)) {
             throw new \InvalidArgumentException('non-nullable keys cannot be null');

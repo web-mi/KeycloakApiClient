@@ -243,24 +243,24 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'type' => 'setType',
-        'user_label' => 'setUserLabel',
-        'created_date' => 'setCreatedDate',
-        'secret_data' => 'setSecretData',
-        'credential_data' => 'setCredentialData',
-        'priority' => 'setPriority',
-        'value' => 'setValue',
-        'temporary' => 'setTemporary',
-        'device' => 'setDevice',
-        'hashed_salted_value' => 'setHashedSaltedValue',
-        'salt' => 'setSalt',
-        'hash_iterations' => 'setHashIterations',
-        'counter' => 'setCounter',
-        'algorithm' => 'setAlgorithm',
-        'digits' => 'setDigits',
-        'period' => 'setPeriod',
-        'config' => 'setConfig'
+        'id' => 'set_id',
+        'type' => 'set_type',
+        'user_label' => 'set_user_label',
+        'created_date' => 'set_created_date',
+        'secret_data' => 'set_secret_data',
+        'credential_data' => 'set_credential_data',
+        'priority' => 'set_priority',
+        'value' => 'set_value',
+        'temporary' => 'set_temporary',
+        'device' => 'set_device',
+        'hashed_salted_value' => 'set_hashed_salted_value',
+        'salt' => 'set_salt',
+        'hash_iterations' => 'set_hash_iterations',
+        'counter' => 'set_counter',
+        'algorithm' => 'set_algorithm',
+        'digits' => 'set_digits',
+        'period' => 'set_period',
+        'config' => 'set_config'
     ];
 
     /**
@@ -269,24 +269,24 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'type' => 'getType',
-        'user_label' => 'getUserLabel',
-        'created_date' => 'getCreatedDate',
-        'secret_data' => 'getSecretData',
-        'credential_data' => 'getCredentialData',
-        'priority' => 'getPriority',
-        'value' => 'getValue',
-        'temporary' => 'getTemporary',
-        'device' => 'getDevice',
-        'hashed_salted_value' => 'getHashedSaltedValue',
-        'salt' => 'getSalt',
-        'hash_iterations' => 'getHashIterations',
-        'counter' => 'getCounter',
-        'algorithm' => 'getAlgorithm',
-        'digits' => 'getDigits',
-        'period' => 'getPeriod',
-        'config' => 'getConfig'
+        'id' => 'get_id',
+        'type' => 'get_type',
+        'user_label' => 'get_user_label',
+        'created_date' => 'get_created_date',
+        'secret_data' => 'get_secret_data',
+        'credential_data' => 'get_credential_data',
+        'priority' => 'get_priority',
+        'value' => 'get_value',
+        'temporary' => 'get_temporary',
+        'device' => 'get_device',
+        'hashed_salted_value' => 'get_hashed_salted_value',
+        'salt' => 'get_salt',
+        'hash_iterations' => 'get_hash_iterations',
+        'counter' => 'get_counter',
+        'algorithm' => 'get_algorithm',
+        'digits' => 'get_digits',
+        'period' => 'get_period',
+        'config' => 'get_config'
     ];
 
     /**
@@ -413,7 +413,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -425,7 +425,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -440,7 +440,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -452,7 +452,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -467,7 +467,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getUserLabel()
+    public function get_user_label()
     {
         return $this->container['user_label'];
     }
@@ -479,7 +479,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setUserLabel($user_label)
+    public function set_user_label($user_label)
     {
         if (is_null($user_label)) {
             throw new \InvalidArgumentException('non-nullable user_label cannot be null');
@@ -494,7 +494,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return int|null
      */
-    public function getCreatedDate()
+    public function get_created_date()
     {
         return $this->container['created_date'];
     }
@@ -506,7 +506,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setCreatedDate($created_date)
+    public function set_created_date($created_date)
     {
         if (is_null($created_date)) {
             throw new \InvalidArgumentException('non-nullable created_date cannot be null');
@@ -521,7 +521,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getSecretData()
+    public function get_secret_data()
     {
         return $this->container['secret_data'];
     }
@@ -533,7 +533,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setSecretData($secret_data)
+    public function set_secret_data($secret_data)
     {
         if (is_null($secret_data)) {
             throw new \InvalidArgumentException('non-nullable secret_data cannot be null');
@@ -548,7 +548,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getCredentialData()
+    public function get_credential_data()
     {
         return $this->container['credential_data'];
     }
@@ -560,7 +560,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setCredentialData($credential_data)
+    public function set_credential_data($credential_data)
     {
         if (is_null($credential_data)) {
             throw new \InvalidArgumentException('non-nullable credential_data cannot be null');
@@ -575,7 +575,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return int|null
      */
-    public function getPriority()
+    public function get_priority()
     {
         return $this->container['priority'];
     }
@@ -587,7 +587,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setPriority($priority)
+    public function set_priority($priority)
     {
         if (is_null($priority)) {
             throw new \InvalidArgumentException('non-nullable priority cannot be null');
@@ -602,7 +602,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getValue()
+    public function get_value()
     {
         return $this->container['value'];
     }
@@ -614,7 +614,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setValue($value)
+    public function set_value($value)
     {
         if (is_null($value)) {
             throw new \InvalidArgumentException('non-nullable value cannot be null');
@@ -629,7 +629,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return bool|null
      */
-    public function getTemporary()
+    public function get_temporary()
     {
         return $this->container['temporary'];
     }
@@ -641,7 +641,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setTemporary($temporary)
+    public function set_temporary($temporary)
     {
         if (is_null($temporary)) {
             throw new \InvalidArgumentException('non-nullable temporary cannot be null');
@@ -657,7 +657,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return string|null
      * @deprecated
      */
-    public function getDevice()
+    public function get_device()
     {
         return $this->container['device'];
     }
@@ -670,7 +670,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setDevice($device)
+    public function set_device($device)
     {
         if (is_null($device)) {
             throw new \InvalidArgumentException('non-nullable device cannot be null');
@@ -686,7 +686,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return string|null
      * @deprecated
      */
-    public function getHashedSaltedValue()
+    public function get_hashed_salted_value()
     {
         return $this->container['hashed_salted_value'];
     }
@@ -699,7 +699,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setHashedSaltedValue($hashed_salted_value)
+    public function set_hashed_salted_value($hashed_salted_value)
     {
         if (is_null($hashed_salted_value)) {
             throw new \InvalidArgumentException('non-nullable hashed_salted_value cannot be null');
@@ -715,7 +715,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return string|null
      * @deprecated
      */
-    public function getSalt()
+    public function get_salt()
     {
         return $this->container['salt'];
     }
@@ -728,7 +728,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setSalt($salt)
+    public function set_salt($salt)
     {
         if (is_null($salt)) {
             throw new \InvalidArgumentException('non-nullable salt cannot be null');
@@ -744,7 +744,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return int|null
      * @deprecated
      */
-    public function getHashIterations()
+    public function get_hash_iterations()
     {
         return $this->container['hash_iterations'];
     }
@@ -757,7 +757,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setHashIterations($hash_iterations)
+    public function set_hash_iterations($hash_iterations)
     {
         if (is_null($hash_iterations)) {
             throw new \InvalidArgumentException('non-nullable hash_iterations cannot be null');
@@ -773,7 +773,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return int|null
      * @deprecated
      */
-    public function getCounter()
+    public function get_counter()
     {
         return $this->container['counter'];
     }
@@ -786,7 +786,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setCounter($counter)
+    public function set_counter($counter)
     {
         if (is_null($counter)) {
             throw new \InvalidArgumentException('non-nullable counter cannot be null');
@@ -802,7 +802,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return string|null
      * @deprecated
      */
-    public function getAlgorithm()
+    public function get_algorithm()
     {
         return $this->container['algorithm'];
     }
@@ -815,7 +815,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setAlgorithm($algorithm)
+    public function set_algorithm($algorithm)
     {
         if (is_null($algorithm)) {
             throw new \InvalidArgumentException('non-nullable algorithm cannot be null');
@@ -831,7 +831,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return int|null
      * @deprecated
      */
-    public function getDigits()
+    public function get_digits()
     {
         return $this->container['digits'];
     }
@@ -844,7 +844,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setDigits($digits)
+    public function set_digits($digits)
     {
         if (is_null($digits)) {
             throw new \InvalidArgumentException('non-nullable digits cannot be null');
@@ -860,7 +860,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return int|null
      * @deprecated
      */
-    public function getPeriod()
+    public function get_period()
     {
         return $this->container['period'];
     }
@@ -873,7 +873,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setPeriod($period)
+    public function set_period($period)
     {
         if (is_null($period)) {
             throw new \InvalidArgumentException('non-nullable period cannot be null');
@@ -889,7 +889,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return array<string,string[]>|null
      * @deprecated
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -902,7 +902,7 @@ class CredentialRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @return self
      * @deprecated
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

@@ -219,18 +219,18 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'realm' => 'setRealm',
-        'realm_public_key' => 'setRealmPublicKey',
-        'auth_server_url' => 'setAuthServerUrl',
-        'ssl_required' => 'setSslRequired',
-        'bearer_only' => 'setBearerOnly',
-        'resource' => 'setResource',
-        'public_client' => 'setPublicClient',
-        'verify_token_audience' => 'setVerifyTokenAudience',
-        'credentials' => 'setCredentials',
-        'use_resource_role_mappings' => 'setUseResourceRoleMappings',
-        'confidential_port' => 'setConfidentialPort',
-        'policy_enforcer' => 'setPolicyEnforcer'
+        'realm' => 'set_realm',
+        'realm_public_key' => 'set_realm_public_key',
+        'auth_server_url' => 'set_auth_server_url',
+        'ssl_required' => 'set_ssl_required',
+        'bearer_only' => 'set_bearer_only',
+        'resource' => 'set_resource',
+        'public_client' => 'set_public_client',
+        'verify_token_audience' => 'set_verify_token_audience',
+        'credentials' => 'set_credentials',
+        'use_resource_role_mappings' => 'set_use_resource_role_mappings',
+        'confidential_port' => 'set_confidential_port',
+        'policy_enforcer' => 'set_policy_enforcer'
     ];
 
     /**
@@ -239,18 +239,18 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'realm' => 'getRealm',
-        'realm_public_key' => 'getRealmPublicKey',
-        'auth_server_url' => 'getAuthServerUrl',
-        'ssl_required' => 'getSslRequired',
-        'bearer_only' => 'getBearerOnly',
-        'resource' => 'getResource',
-        'public_client' => 'getPublicClient',
-        'verify_token_audience' => 'getVerifyTokenAudience',
-        'credentials' => 'getCredentials',
-        'use_resource_role_mappings' => 'getUseResourceRoleMappings',
-        'confidential_port' => 'getConfidentialPort',
-        'policy_enforcer' => 'getPolicyEnforcer'
+        'realm' => 'get_realm',
+        'realm_public_key' => 'get_realm_public_key',
+        'auth_server_url' => 'get_auth_server_url',
+        'ssl_required' => 'get_ssl_required',
+        'bearer_only' => 'get_bearer_only',
+        'resource' => 'get_resource',
+        'public_client' => 'get_public_client',
+        'verify_token_audience' => 'get_verify_token_audience',
+        'credentials' => 'get_credentials',
+        'use_resource_role_mappings' => 'get_use_resource_role_mappings',
+        'confidential_port' => 'get_confidential_port',
+        'policy_enforcer' => 'get_policy_enforcer'
     ];
 
     /**
@@ -371,7 +371,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getRealm()
+    public function get_realm()
     {
         return $this->container['realm'];
     }
@@ -383,7 +383,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setRealm($realm)
+    public function set_realm($realm)
     {
         if (is_null($realm)) {
             throw new \InvalidArgumentException('non-nullable realm cannot be null');
@@ -398,7 +398,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getRealmPublicKey()
+    public function get_realm_public_key()
     {
         return $this->container['realm_public_key'];
     }
@@ -410,7 +410,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setRealmPublicKey($realm_public_key)
+    public function set_realm_public_key($realm_public_key)
     {
         if (is_null($realm_public_key)) {
             throw new \InvalidArgumentException('non-nullable realm_public_key cannot be null');
@@ -425,7 +425,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getAuthServerUrl()
+    public function get_auth_server_url()
     {
         return $this->container['auth_server_url'];
     }
@@ -437,7 +437,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setAuthServerUrl($auth_server_url)
+    public function set_auth_server_url($auth_server_url)
     {
         if (is_null($auth_server_url)) {
             throw new \InvalidArgumentException('non-nullable auth_server_url cannot be null');
@@ -452,7 +452,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getSslRequired()
+    public function get_ssl_required()
     {
         return $this->container['ssl_required'];
     }
@@ -464,7 +464,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setSslRequired($ssl_required)
+    public function set_ssl_required($ssl_required)
     {
         if (is_null($ssl_required)) {
             throw new \InvalidArgumentException('non-nullable ssl_required cannot be null');
@@ -479,7 +479,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return bool|null
      */
-    public function getBearerOnly()
+    public function get_bearer_only()
     {
         return $this->container['bearer_only'];
     }
@@ -491,7 +491,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setBearerOnly($bearer_only)
+    public function set_bearer_only($bearer_only)
     {
         if (is_null($bearer_only)) {
             throw new \InvalidArgumentException('non-nullable bearer_only cannot be null');
@@ -506,7 +506,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getResource()
+    public function get_resource()
     {
         return $this->container['resource'];
     }
@@ -518,7 +518,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setResource($resource)
+    public function set_resource($resource)
     {
         if (is_null($resource)) {
             throw new \InvalidArgumentException('non-nullable resource cannot be null');
@@ -533,7 +533,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return bool|null
      */
-    public function getPublicClient()
+    public function get_public_client()
     {
         return $this->container['public_client'];
     }
@@ -545,7 +545,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setPublicClient($public_client)
+    public function set_public_client($public_client)
     {
         if (is_null($public_client)) {
             throw new \InvalidArgumentException('non-nullable public_client cannot be null');
@@ -560,7 +560,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return bool|null
      */
-    public function getVerifyTokenAudience()
+    public function get_verify_token_audience()
     {
         return $this->container['verify_token_audience'];
     }
@@ -572,7 +572,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setVerifyTokenAudience($verify_token_audience)
+    public function set_verify_token_audience($verify_token_audience)
     {
         if (is_null($verify_token_audience)) {
             throw new \InvalidArgumentException('non-nullable verify_token_audience cannot be null');
@@ -587,7 +587,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return array<string,mixed>|null
      */
-    public function getCredentials()
+    public function get_credentials()
     {
         return $this->container['credentials'];
     }
@@ -599,7 +599,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setCredentials($credentials)
+    public function set_credentials($credentials)
     {
         if (is_null($credentials)) {
             throw new \InvalidArgumentException('non-nullable credentials cannot be null');
@@ -614,7 +614,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return bool|null
      */
-    public function getUseResourceRoleMappings()
+    public function get_use_resource_role_mappings()
     {
         return $this->container['use_resource_role_mappings'];
     }
@@ -626,7 +626,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setUseResourceRoleMappings($use_resource_role_mappings)
+    public function set_use_resource_role_mappings($use_resource_role_mappings)
     {
         if (is_null($use_resource_role_mappings)) {
             throw new \InvalidArgumentException('non-nullable use_resource_role_mappings cannot be null');
@@ -641,7 +641,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return int|null
      */
-    public function getConfidentialPort()
+    public function get_confidential_port()
     {
         return $this->container['confidential_port'];
     }
@@ -653,7 +653,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setConfidentialPort($confidential_port)
+    public function set_confidential_port($confidential_port)
     {
         if (is_null($confidential_port)) {
             throw new \InvalidArgumentException('non-nullable confidential_port cannot be null');
@@ -668,7 +668,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PolicyEnforcerConfig|null
      */
-    public function getPolicyEnforcer()
+    public function get_policy_enforcer()
     {
         return $this->container['policy_enforcer'];
     }
@@ -680,7 +680,7 @@ class InstallationAdapterConfig implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setPolicyEnforcer($policy_enforcer)
+    public function set_policy_enforcer($policy_enforcer)
     {
         if (is_null($policy_enforcer)) {
             throw new \InvalidArgumentException('non-nullable policy_enforcer cannot be null');

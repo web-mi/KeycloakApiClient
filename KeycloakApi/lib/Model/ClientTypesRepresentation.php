@@ -179,8 +179,8 @@ class ClientTypesRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'client_types' => 'setClientTypes',
-        'global_client_types' => 'setGlobalClientTypes'
+        'client_types' => 'set_client_types',
+        'global_client_types' => 'set_global_client_types'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ClientTypesRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'client_types' => 'getClientTypes',
-        'global_client_types' => 'getGlobalClientTypes'
+        'client_types' => 'get_client_types',
+        'global_client_types' => 'get_global_client_types'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ClientTypesRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientTypeRepresentation[]|null
      */
-    public function getClientTypes()
+    public function get_client_types()
     {
         return $this->container['client_types'];
     }
@@ -313,7 +313,7 @@ class ClientTypesRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setClientTypes($client_types)
+    public function set_client_types($client_types)
     {
         if (is_null($client_types)) {
             throw new \InvalidArgumentException('non-nullable client_types cannot be null');
@@ -328,7 +328,7 @@ class ClientTypesRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientTypeRepresentation[]|null
      */
-    public function getGlobalClientTypes()
+    public function get_global_client_types()
     {
         return $this->container['global_client_types'];
     }
@@ -340,7 +340,7 @@ class ClientTypesRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setGlobalClientTypes($global_client_types)
+    public function set_global_client_types($global_client_types)
     {
         if (is_null($global_client_types)) {
             throw new \InvalidArgumentException('non-nullable global_client_types cannot be null');

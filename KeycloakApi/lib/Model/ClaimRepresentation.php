@@ -211,16 +211,16 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'username' => 'setUsername',
-        'profile' => 'setProfile',
-        'picture' => 'setPicture',
-        'website' => 'setWebsite',
-        'email' => 'setEmail',
-        'gender' => 'setGender',
-        'locale' => 'setLocale',
-        'address' => 'setAddress',
-        'phone' => 'setPhone'
+        'name' => 'set_name',
+        'username' => 'set_username',
+        'profile' => 'set_profile',
+        'picture' => 'set_picture',
+        'website' => 'set_website',
+        'email' => 'set_email',
+        'gender' => 'set_gender',
+        'locale' => 'set_locale',
+        'address' => 'set_address',
+        'phone' => 'set_phone'
     ];
 
     /**
@@ -229,16 +229,16 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'username' => 'getUsername',
-        'profile' => 'getProfile',
-        'picture' => 'getPicture',
-        'website' => 'getWebsite',
-        'email' => 'getEmail',
-        'gender' => 'getGender',
-        'locale' => 'getLocale',
-        'address' => 'getAddress',
-        'phone' => 'getPhone'
+        'name' => 'get_name',
+        'username' => 'get_username',
+        'profile' => 'get_profile',
+        'picture' => 'get_picture',
+        'website' => 'get_website',
+        'email' => 'get_email',
+        'gender' => 'get_gender',
+        'locale' => 'get_locale',
+        'address' => 'get_address',
+        'phone' => 'get_phone'
     ];
 
     /**
@@ -357,7 +357,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -369,7 +369,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -384,7 +384,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getUsername()
+    public function get_username()
     {
         return $this->container['username'];
     }
@@ -396,7 +396,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setUsername($username)
+    public function set_username($username)
     {
         if (is_null($username)) {
             throw new \InvalidArgumentException('non-nullable username cannot be null');
@@ -411,7 +411,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getProfile()
+    public function get_profile()
     {
         return $this->container['profile'];
     }
@@ -423,7 +423,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setProfile($profile)
+    public function set_profile($profile)
     {
         if (is_null($profile)) {
             throw new \InvalidArgumentException('non-nullable profile cannot be null');
@@ -438,7 +438,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getPicture()
+    public function get_picture()
     {
         return $this->container['picture'];
     }
@@ -450,7 +450,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setPicture($picture)
+    public function set_picture($picture)
     {
         if (is_null($picture)) {
             throw new \InvalidArgumentException('non-nullable picture cannot be null');
@@ -465,7 +465,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getWebsite()
+    public function get_website()
     {
         return $this->container['website'];
     }
@@ -477,7 +477,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setWebsite($website)
+    public function set_website($website)
     {
         if (is_null($website)) {
             throw new \InvalidArgumentException('non-nullable website cannot be null');
@@ -492,7 +492,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getEmail()
+    public function get_email()
     {
         return $this->container['email'];
     }
@@ -504,7 +504,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setEmail($email)
+    public function set_email($email)
     {
         if (is_null($email)) {
             throw new \InvalidArgumentException('non-nullable email cannot be null');
@@ -519,7 +519,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getGender()
+    public function get_gender()
     {
         return $this->container['gender'];
     }
@@ -531,7 +531,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setGender($gender)
+    public function set_gender($gender)
     {
         if (is_null($gender)) {
             throw new \InvalidArgumentException('non-nullable gender cannot be null');
@@ -546,7 +546,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getLocale()
+    public function get_locale()
     {
         return $this->container['locale'];
     }
@@ -558,7 +558,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setLocale($locale)
+    public function set_locale($locale)
     {
         if (is_null($locale)) {
             throw new \InvalidArgumentException('non-nullable locale cannot be null');
@@ -573,7 +573,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getAddress()
+    public function get_address()
     {
         return $this->container['address'];
     }
@@ -585,7 +585,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAddress($address)
+    public function set_address($address)
     {
         if (is_null($address)) {
             throw new \InvalidArgumentException('non-nullable address cannot be null');
@@ -600,7 +600,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return bool|null
      */
-    public function getPhone()
+    public function get_phone()
     {
         return $this->container['phone'];
     }
@@ -612,7 +612,7 @@ class ClaimRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setPhone($phone)
+    public function set_phone($phone)
     {
         if (is_null($phone)) {
             throw new \InvalidArgumentException('non-nullable phone cannot be null');

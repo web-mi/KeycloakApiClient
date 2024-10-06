@@ -179,8 +179,8 @@ class ClientPoliciesRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'policies' => 'setPolicies',
-        'global_policies' => 'setGlobalPolicies'
+        'policies' => 'set_policies',
+        'global_policies' => 'set_global_policies'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ClientPoliciesRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'policies' => 'getPolicies',
-        'global_policies' => 'getGlobalPolicies'
+        'policies' => 'get_policies',
+        'global_policies' => 'get_global_policies'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ClientPoliciesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientPolicyRepresentation[]|null
      */
-    public function getPolicies()
+    public function get_policies()
     {
         return $this->container['policies'];
     }
@@ -313,7 +313,7 @@ class ClientPoliciesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setPolicies($policies)
+    public function set_policies($policies)
     {
         if (is_null($policies)) {
             throw new \InvalidArgumentException('non-nullable policies cannot be null');
@@ -328,7 +328,7 @@ class ClientPoliciesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientPolicyRepresentation[]|null
      */
-    public function getGlobalPolicies()
+    public function get_global_policies()
     {
         return $this->container['global_policies'];
     }
@@ -340,7 +340,7 @@ class ClientPoliciesRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setGlobalPolicies($global_policies)
+    public function set_global_policies($global_policies)
     {
         if (is_null($global_policies)) {
             throw new \InvalidArgumentException('non-nullable global_policies cannot be null');

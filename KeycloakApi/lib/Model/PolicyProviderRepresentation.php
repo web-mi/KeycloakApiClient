@@ -183,9 +183,9 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'type' => 'setType',
-        'name' => 'setName',
-        'group' => 'setGroup'
+        'type' => 'set_type',
+        'name' => 'set_name',
+        'group' => 'set_group'
     ];
 
     /**
@@ -194,9 +194,9 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'type' => 'getType',
-        'name' => 'getName',
-        'group' => 'getGroup'
+        'type' => 'get_type',
+        'name' => 'get_name',
+        'group' => 'get_group'
     ];
 
     /**
@@ -308,7 +308,7 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -320,7 +320,7 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -335,7 +335,7 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -347,7 +347,7 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -362,7 +362,7 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getGroup()
+    public function get_group()
     {
         return $this->container['group'];
     }
@@ -374,7 +374,7 @@ class PolicyProviderRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setGroup($group)
+    public function set_group($group)
     {
         if (is_null($group)) {
             throw new \InvalidArgumentException('non-nullable group cannot be null');

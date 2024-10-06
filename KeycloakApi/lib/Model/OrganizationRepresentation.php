@@ -211,16 +211,16 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'alias' => 'setAlias',
-        'enabled' => 'setEnabled',
-        'description' => 'setDescription',
-        'redirect_url' => 'setRedirectUrl',
-        'attributes' => 'setAttributes',
-        'domains' => 'setDomains',
-        'members' => 'setMembers',
-        'identity_providers' => 'setIdentityProviders'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'alias' => 'set_alias',
+        'enabled' => 'set_enabled',
+        'description' => 'set_description',
+        'redirect_url' => 'set_redirect_url',
+        'attributes' => 'set_attributes',
+        'domains' => 'set_domains',
+        'members' => 'set_members',
+        'identity_providers' => 'set_identity_providers'
     ];
 
     /**
@@ -229,16 +229,16 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'alias' => 'getAlias',
-        'enabled' => 'getEnabled',
-        'description' => 'getDescription',
-        'redirect_url' => 'getRedirectUrl',
-        'attributes' => 'getAttributes',
-        'domains' => 'getDomains',
-        'members' => 'getMembers',
-        'identity_providers' => 'getIdentityProviders'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'alias' => 'get_alias',
+        'enabled' => 'get_enabled',
+        'description' => 'get_description',
+        'redirect_url' => 'get_redirect_url',
+        'attributes' => 'get_attributes',
+        'domains' => 'get_domains',
+        'members' => 'get_members',
+        'identity_providers' => 'get_identity_providers'
     ];
 
     /**
@@ -357,7 +357,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -369,7 +369,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -384,7 +384,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -396,7 +396,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -411,7 +411,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getAlias()
+    public function get_alias()
     {
         return $this->container['alias'];
     }
@@ -423,7 +423,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setAlias($alias)
+    public function set_alias($alias)
     {
         if (is_null($alias)) {
             throw new \InvalidArgumentException('non-nullable alias cannot be null');
@@ -438,7 +438,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -450,7 +450,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -465,7 +465,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -477,7 +477,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -492,7 +492,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getRedirectUrl()
+    public function get_redirect_url()
     {
         return $this->container['redirect_url'];
     }
@@ -504,7 +504,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setRedirectUrl($redirect_url)
+    public function set_redirect_url($redirect_url)
     {
         if (is_null($redirect_url)) {
             throw new \InvalidArgumentException('non-nullable redirect_url cannot be null');
@@ -519,7 +519,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return array<string,string[]>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -531,7 +531,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -546,7 +546,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationDomainRepresentation[]|null
      */
-    public function getDomains()
+    public function get_domains()
     {
         return $this->container['domains'];
     }
@@ -558,7 +558,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setDomains($domains)
+    public function set_domains($domains)
     {
         if (is_null($domains)) {
             throw new \InvalidArgumentException('non-nullable domains cannot be null');
@@ -575,7 +575,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]|null
      */
-    public function getMembers()
+    public function get_members()
     {
         return $this->container['members'];
     }
@@ -587,7 +587,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setMembers($members)
+    public function set_members($members)
     {
         if (is_null($members)) {
             throw new \InvalidArgumentException('non-nullable members cannot be null');
@@ -602,7 +602,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]|null
      */
-    public function getIdentityProviders()
+    public function get_identity_providers()
     {
         return $this->container['identity_providers'];
     }
@@ -614,7 +614,7 @@ class OrganizationRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setIdentityProviders($identity_providers)
+    public function set_identity_providers($identity_providers)
     {
         if (is_null($identity_providers)) {
             throw new \InvalidArgumentException('non-nullable identity_providers cannot be null');

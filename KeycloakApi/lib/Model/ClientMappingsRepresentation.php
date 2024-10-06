@@ -183,9 +183,9 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'client' => 'setClient',
-        'mappings' => 'setMappings'
+        'id' => 'set_id',
+        'client' => 'set_client',
+        'mappings' => 'set_mappings'
     ];
 
     /**
@@ -194,9 +194,9 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'client' => 'getClient',
-        'mappings' => 'getMappings'
+        'id' => 'get_id',
+        'client' => 'get_client',
+        'mappings' => 'get_mappings'
     ];
 
     /**
@@ -308,7 +308,7 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -320,7 +320,7 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -335,7 +335,7 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getClient()
+    public function get_client()
     {
         return $this->container['client'];
     }
@@ -347,7 +347,7 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setClient($client)
+    public function set_client($client)
     {
         if (is_null($client)) {
             throw new \InvalidArgumentException('non-nullable client cannot be null');
@@ -362,7 +362,7 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\RoleRepresentation[]|null
      */
-    public function getMappings()
+    public function get_mappings()
     {
         return $this->container['mappings'];
     }
@@ -374,7 +374,7 @@ class ClientMappingsRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setMappings($mappings)
+    public function set_mappings($mappings)
     {
         if (is_null($mappings)) {
             throw new \InvalidArgumentException('non-nullable mappings cannot be null');

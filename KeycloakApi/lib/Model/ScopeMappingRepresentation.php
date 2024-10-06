@@ -191,11 +191,11 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'self' => 'setSelf',
-        'client' => 'setClient',
-        'client_template' => 'setClientTemplate',
-        'client_scope' => 'setClientScope',
-        'roles' => 'setRoles'
+        'self' => 'set_self',
+        'client' => 'set_client',
+        'client_template' => 'set_client_template',
+        'client_scope' => 'set_client_scope',
+        'roles' => 'set_roles'
     ];
 
     /**
@@ -204,11 +204,11 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'self' => 'getSelf',
-        'client' => 'getClient',
-        'client_template' => 'getClientTemplate',
-        'client_scope' => 'getClientScope',
-        'roles' => 'getRoles'
+        'self' => 'get_self',
+        'client' => 'get_client',
+        'client_template' => 'get_client_template',
+        'client_scope' => 'get_client_scope',
+        'roles' => 'get_roles'
     ];
 
     /**
@@ -322,7 +322,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getSelf()
+    public function get_self()
     {
         return $this->container['self'];
     }
@@ -334,7 +334,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setSelf($self)
+    public function set_self($self)
     {
         if (is_null($self)) {
             throw new \InvalidArgumentException('non-nullable self cannot be null');
@@ -349,7 +349,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getClient()
+    public function get_client()
     {
         return $this->container['client'];
     }
@@ -361,7 +361,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setClient($client)
+    public function set_client($client)
     {
         if (is_null($client)) {
             throw new \InvalidArgumentException('non-nullable client cannot be null');
@@ -377,7 +377,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @return string|null
      * @deprecated
      */
-    public function getClientTemplate()
+    public function get_client_template()
     {
         return $this->container['client_template'];
     }
@@ -390,7 +390,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @return self
      * @deprecated
      */
-    public function setClientTemplate($client_template)
+    public function set_client_template($client_template)
     {
         if (is_null($client_template)) {
             throw new \InvalidArgumentException('non-nullable client_template cannot be null');
@@ -405,7 +405,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getClientScope()
+    public function get_client_scope()
     {
         return $this->container['client_scope'];
     }
@@ -417,7 +417,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setClientScope($client_scope)
+    public function set_client_scope($client_scope)
     {
         if (is_null($client_scope)) {
             throw new \InvalidArgumentException('non-nullable client_scope cannot be null');
@@ -432,7 +432,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string[]|null
      */
-    public function getRoles()
+    public function get_roles()
     {
         return $this->container['roles'];
     }
@@ -444,7 +444,7 @@ class ScopeMappingRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setRoles($roles)
+    public function set_roles($roles)
     {
         if (is_null($roles)) {
             throw new \InvalidArgumentException('non-nullable roles cannot be null');

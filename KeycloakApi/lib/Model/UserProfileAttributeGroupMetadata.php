@@ -187,10 +187,10 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'display_header' => 'setDisplayHeader',
-        'display_description' => 'setDisplayDescription',
-        'annotations' => 'setAnnotations'
+        'name' => 'set_name',
+        'display_header' => 'set_display_header',
+        'display_description' => 'set_display_description',
+        'annotations' => 'set_annotations'
     ];
 
     /**
@@ -199,10 +199,10 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'display_header' => 'getDisplayHeader',
-        'display_description' => 'getDisplayDescription',
-        'annotations' => 'getAnnotations'
+        'name' => 'get_name',
+        'display_header' => 'get_display_header',
+        'display_description' => 'get_display_description',
+        'annotations' => 'get_annotations'
     ];
 
     /**
@@ -315,7 +315,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -327,7 +327,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -342,7 +342,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return string|null
      */
-    public function getDisplayHeader()
+    public function get_display_header()
     {
         return $this->container['display_header'];
     }
@@ -354,7 +354,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return self
      */
-    public function setDisplayHeader($display_header)
+    public function set_display_header($display_header)
     {
         if (is_null($display_header)) {
             throw new \InvalidArgumentException('non-nullable display_header cannot be null');
@@ -369,7 +369,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return string|null
      */
-    public function getDisplayDescription()
+    public function get_display_description()
     {
         return $this->container['display_description'];
     }
@@ -381,7 +381,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return self
      */
-    public function setDisplayDescription($display_description)
+    public function set_display_description($display_description)
     {
         if (is_null($display_description)) {
             throw new \InvalidArgumentException('non-nullable display_description cannot be null');
@@ -396,7 +396,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return array<string,mixed>|null
      */
-    public function getAnnotations()
+    public function get_annotations()
     {
         return $this->container['annotations'];
     }
@@ -408,7 +408,7 @@ class UserProfileAttributeGroupMetadata implements ModelInterface, ArrayAccess, 
      *
      * @return self
      */
-    public function setAnnotations($annotations)
+    public function set_annotations($annotations)
     {
         if (is_null($annotations)) {
             throw new \InvalidArgumentException('non-nullable annotations cannot be null');

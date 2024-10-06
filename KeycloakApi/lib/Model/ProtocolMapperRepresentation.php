@@ -199,13 +199,13 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'protocol' => 'setProtocol',
-        'protocol_mapper' => 'setProtocolMapper',
-        'consent_required' => 'setConsentRequired',
-        'consent_text' => 'setConsentText',
-        'config' => 'setConfig'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'protocol' => 'set_protocol',
+        'protocol_mapper' => 'set_protocol_mapper',
+        'consent_required' => 'set_consent_required',
+        'consent_text' => 'set_consent_text',
+        'config' => 'set_config'
     ];
 
     /**
@@ -214,13 +214,13 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'protocol' => 'getProtocol',
-        'protocol_mapper' => 'getProtocolMapper',
-        'consent_required' => 'getConsentRequired',
-        'consent_text' => 'getConsentText',
-        'config' => 'getConfig'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'protocol' => 'get_protocol',
+        'protocol_mapper' => 'get_protocol_mapper',
+        'consent_required' => 'get_consent_required',
+        'consent_text' => 'get_consent_text',
+        'config' => 'get_config'
     ];
 
     /**
@@ -336,7 +336,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -348,7 +348,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -363,7 +363,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -375,7 +375,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -390,7 +390,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getProtocol()
+    public function get_protocol()
     {
         return $this->container['protocol'];
     }
@@ -402,7 +402,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setProtocol($protocol)
+    public function set_protocol($protocol)
     {
         if (is_null($protocol)) {
             throw new \InvalidArgumentException('non-nullable protocol cannot be null');
@@ -417,7 +417,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getProtocolMapper()
+    public function get_protocol_mapper()
     {
         return $this->container['protocol_mapper'];
     }
@@ -429,7 +429,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setProtocolMapper($protocol_mapper)
+    public function set_protocol_mapper($protocol_mapper)
     {
         if (is_null($protocol_mapper)) {
             throw new \InvalidArgumentException('non-nullable protocol_mapper cannot be null');
@@ -445,7 +445,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      * @return bool|null
      * @deprecated
      */
-    public function getConsentRequired()
+    public function get_consent_required()
     {
         return $this->container['consent_required'];
     }
@@ -458,7 +458,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      * @return self
      * @deprecated
      */
-    public function setConsentRequired($consent_required)
+    public function set_consent_required($consent_required)
     {
         if (is_null($consent_required)) {
             throw new \InvalidArgumentException('non-nullable consent_required cannot be null');
@@ -474,7 +474,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      * @return string|null
      * @deprecated
      */
-    public function getConsentText()
+    public function get_consent_text()
     {
         return $this->container['consent_text'];
     }
@@ -487,7 +487,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      * @return self
      * @deprecated
      */
-    public function setConsentText($consent_text)
+    public function set_consent_text($consent_text)
     {
         if (is_null($consent_text)) {
             throw new \InvalidArgumentException('non-nullable consent_text cannot be null');
@@ -502,7 +502,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -514,7 +514,7 @@ class ProtocolMapperRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

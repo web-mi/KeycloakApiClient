@@ -195,12 +195,12 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'token' => 'setToken',
-        'timestamp' => 'setTimestamp',
-        'expiration' => 'setExpiration',
-        'count' => 'setCount',
-        'remaining_count' => 'setRemainingCount'
+        'id' => 'set_id',
+        'token' => 'set_token',
+        'timestamp' => 'set_timestamp',
+        'expiration' => 'set_expiration',
+        'count' => 'set_count',
+        'remaining_count' => 'set_remaining_count'
     ];
 
     /**
@@ -209,12 +209,12 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'token' => 'getToken',
-        'timestamp' => 'getTimestamp',
-        'expiration' => 'getExpiration',
-        'count' => 'getCount',
-        'remaining_count' => 'getRemainingCount'
+        'id' => 'get_id',
+        'token' => 'get_token',
+        'timestamp' => 'get_timestamp',
+        'expiration' => 'get_expiration',
+        'count' => 'get_count',
+        'remaining_count' => 'get_remaining_count'
     ];
 
     /**
@@ -329,7 +329,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -341,7 +341,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -356,7 +356,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return string|null
      */
-    public function getToken()
+    public function get_token()
     {
         return $this->container['token'];
     }
@@ -368,7 +368,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setToken($token)
+    public function set_token($token)
     {
         if (is_null($token)) {
             throw new \InvalidArgumentException('non-nullable token cannot be null');
@@ -383,7 +383,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return int|null
      */
-    public function getTimestamp()
+    public function get_timestamp()
     {
         return $this->container['timestamp'];
     }
@@ -395,7 +395,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setTimestamp($timestamp)
+    public function set_timestamp($timestamp)
     {
         if (is_null($timestamp)) {
             throw new \InvalidArgumentException('non-nullable timestamp cannot be null');
@@ -410,7 +410,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return int|null
      */
-    public function getExpiration()
+    public function get_expiration()
     {
         return $this->container['expiration'];
     }
@@ -422,7 +422,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setExpiration($expiration)
+    public function set_expiration($expiration)
     {
         if (is_null($expiration)) {
             throw new \InvalidArgumentException('non-nullable expiration cannot be null');
@@ -437,7 +437,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return int|null
      */
-    public function getCount()
+    public function get_count()
     {
         return $this->container['count'];
     }
@@ -449,7 +449,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setCount($count)
+    public function set_count($count)
     {
         if (is_null($count)) {
             throw new \InvalidArgumentException('non-nullable count cannot be null');
@@ -464,7 +464,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return int|null
      */
-    public function getRemainingCount()
+    public function get_remaining_count()
     {
         return $this->container['remaining_count'];
     }
@@ -476,7 +476,7 @@ class ClientInitialAccessPresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setRemainingCount($remaining_count)
+    public function set_remaining_count($remaining_count)
     {
         if (is_null($remaining_count)) {
             throw new \InvalidArgumentException('non-nullable remaining_count cannot be null');

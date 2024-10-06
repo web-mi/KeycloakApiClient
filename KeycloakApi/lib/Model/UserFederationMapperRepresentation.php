@@ -191,11 +191,11 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'federation_provider_display_name' => 'setFederationProviderDisplayName',
-        'federation_mapper_type' => 'setFederationMapperType',
-        'config' => 'setConfig'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'federation_provider_display_name' => 'set_federation_provider_display_name',
+        'federation_mapper_type' => 'set_federation_mapper_type',
+        'config' => 'set_config'
     ];
 
     /**
@@ -204,11 +204,11 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'federation_provider_display_name' => 'getFederationProviderDisplayName',
-        'federation_mapper_type' => 'getFederationMapperType',
-        'config' => 'getConfig'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'federation_provider_display_name' => 'get_federation_provider_display_name',
+        'federation_mapper_type' => 'get_federation_mapper_type',
+        'config' => 'get_config'
     ];
 
     /**
@@ -322,7 +322,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -334,7 +334,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -349,7 +349,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -361,7 +361,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -376,7 +376,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return string|null
      */
-    public function getFederationProviderDisplayName()
+    public function get_federation_provider_display_name()
     {
         return $this->container['federation_provider_display_name'];
     }
@@ -388,7 +388,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setFederationProviderDisplayName($federation_provider_display_name)
+    public function set_federation_provider_display_name($federation_provider_display_name)
     {
         if (is_null($federation_provider_display_name)) {
             throw new \InvalidArgumentException('non-nullable federation_provider_display_name cannot be null');
@@ -403,7 +403,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return string|null
      */
-    public function getFederationMapperType()
+    public function get_federation_mapper_type()
     {
         return $this->container['federation_mapper_type'];
     }
@@ -415,7 +415,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setFederationMapperType($federation_mapper_type)
+    public function set_federation_mapper_type($federation_mapper_type)
     {
         if (is_null($federation_mapper_type)) {
             throw new \InvalidArgumentException('non-nullable federation_mapper_type cannot be null');
@@ -430,7 +430,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -442,7 +442,7 @@ class UserFederationMapperRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

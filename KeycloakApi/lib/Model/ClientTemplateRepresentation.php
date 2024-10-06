@@ -231,21 +231,21 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'protocol' => 'setProtocol',
-        'full_scope_allowed' => 'setFullScopeAllowed',
-        'bearer_only' => 'setBearerOnly',
-        'consent_required' => 'setConsentRequired',
-        'standard_flow_enabled' => 'setStandardFlowEnabled',
-        'implicit_flow_enabled' => 'setImplicitFlowEnabled',
-        'direct_access_grants_enabled' => 'setDirectAccessGrantsEnabled',
-        'service_accounts_enabled' => 'setServiceAccountsEnabled',
-        'public_client' => 'setPublicClient',
-        'frontchannel_logout' => 'setFrontchannelLogout',
-        'attributes' => 'setAttributes',
-        'protocol_mappers' => 'setProtocolMappers'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'description' => 'set_description',
+        'protocol' => 'set_protocol',
+        'full_scope_allowed' => 'set_full_scope_allowed',
+        'bearer_only' => 'set_bearer_only',
+        'consent_required' => 'set_consent_required',
+        'standard_flow_enabled' => 'set_standard_flow_enabled',
+        'implicit_flow_enabled' => 'set_implicit_flow_enabled',
+        'direct_access_grants_enabled' => 'set_direct_access_grants_enabled',
+        'service_accounts_enabled' => 'set_service_accounts_enabled',
+        'public_client' => 'set_public_client',
+        'frontchannel_logout' => 'set_frontchannel_logout',
+        'attributes' => 'set_attributes',
+        'protocol_mappers' => 'set_protocol_mappers'
     ];
 
     /**
@@ -254,21 +254,21 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'protocol' => 'getProtocol',
-        'full_scope_allowed' => 'getFullScopeAllowed',
-        'bearer_only' => 'getBearerOnly',
-        'consent_required' => 'getConsentRequired',
-        'standard_flow_enabled' => 'getStandardFlowEnabled',
-        'implicit_flow_enabled' => 'getImplicitFlowEnabled',
-        'direct_access_grants_enabled' => 'getDirectAccessGrantsEnabled',
-        'service_accounts_enabled' => 'getServiceAccountsEnabled',
-        'public_client' => 'getPublicClient',
-        'frontchannel_logout' => 'getFrontchannelLogout',
-        'attributes' => 'getAttributes',
-        'protocol_mappers' => 'getProtocolMappers'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'description' => 'get_description',
+        'protocol' => 'get_protocol',
+        'full_scope_allowed' => 'get_full_scope_allowed',
+        'bearer_only' => 'get_bearer_only',
+        'consent_required' => 'get_consent_required',
+        'standard_flow_enabled' => 'get_standard_flow_enabled',
+        'implicit_flow_enabled' => 'get_implicit_flow_enabled',
+        'direct_access_grants_enabled' => 'get_direct_access_grants_enabled',
+        'service_accounts_enabled' => 'get_service_accounts_enabled',
+        'public_client' => 'get_public_client',
+        'frontchannel_logout' => 'get_frontchannel_logout',
+        'attributes' => 'get_attributes',
+        'protocol_mappers' => 'get_protocol_mappers'
     ];
 
     /**
@@ -392,7 +392,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -404,7 +404,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -419,7 +419,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -431,7 +431,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -446,7 +446,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -458,7 +458,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -473,7 +473,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getProtocol()
+    public function get_protocol()
     {
         return $this->container['protocol'];
     }
@@ -485,7 +485,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setProtocol($protocol)
+    public function set_protocol($protocol)
     {
         if (is_null($protocol)) {
             throw new \InvalidArgumentException('non-nullable protocol cannot be null');
@@ -500,7 +500,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getFullScopeAllowed()
+    public function get_full_scope_allowed()
     {
         return $this->container['full_scope_allowed'];
     }
@@ -512,7 +512,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setFullScopeAllowed($full_scope_allowed)
+    public function set_full_scope_allowed($full_scope_allowed)
     {
         if (is_null($full_scope_allowed)) {
             throw new \InvalidArgumentException('non-nullable full_scope_allowed cannot be null');
@@ -527,7 +527,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getBearerOnly()
+    public function get_bearer_only()
     {
         return $this->container['bearer_only'];
     }
@@ -539,7 +539,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setBearerOnly($bearer_only)
+    public function set_bearer_only($bearer_only)
     {
         if (is_null($bearer_only)) {
             throw new \InvalidArgumentException('non-nullable bearer_only cannot be null');
@@ -554,7 +554,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getConsentRequired()
+    public function get_consent_required()
     {
         return $this->container['consent_required'];
     }
@@ -566,7 +566,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setConsentRequired($consent_required)
+    public function set_consent_required($consent_required)
     {
         if (is_null($consent_required)) {
             throw new \InvalidArgumentException('non-nullable consent_required cannot be null');
@@ -581,7 +581,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getStandardFlowEnabled()
+    public function get_standard_flow_enabled()
     {
         return $this->container['standard_flow_enabled'];
     }
@@ -593,7 +593,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setStandardFlowEnabled($standard_flow_enabled)
+    public function set_standard_flow_enabled($standard_flow_enabled)
     {
         if (is_null($standard_flow_enabled)) {
             throw new \InvalidArgumentException('non-nullable standard_flow_enabled cannot be null');
@@ -608,7 +608,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getImplicitFlowEnabled()
+    public function get_implicit_flow_enabled()
     {
         return $this->container['implicit_flow_enabled'];
     }
@@ -620,7 +620,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setImplicitFlowEnabled($implicit_flow_enabled)
+    public function set_implicit_flow_enabled($implicit_flow_enabled)
     {
         if (is_null($implicit_flow_enabled)) {
             throw new \InvalidArgumentException('non-nullable implicit_flow_enabled cannot be null');
@@ -635,7 +635,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getDirectAccessGrantsEnabled()
+    public function get_direct_access_grants_enabled()
     {
         return $this->container['direct_access_grants_enabled'];
     }
@@ -647,7 +647,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setDirectAccessGrantsEnabled($direct_access_grants_enabled)
+    public function set_direct_access_grants_enabled($direct_access_grants_enabled)
     {
         if (is_null($direct_access_grants_enabled)) {
             throw new \InvalidArgumentException('non-nullable direct_access_grants_enabled cannot be null');
@@ -662,7 +662,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getServiceAccountsEnabled()
+    public function get_service_accounts_enabled()
     {
         return $this->container['service_accounts_enabled'];
     }
@@ -674,7 +674,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setServiceAccountsEnabled($service_accounts_enabled)
+    public function set_service_accounts_enabled($service_accounts_enabled)
     {
         if (is_null($service_accounts_enabled)) {
             throw new \InvalidArgumentException('non-nullable service_accounts_enabled cannot be null');
@@ -689,7 +689,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getPublicClient()
+    public function get_public_client()
     {
         return $this->container['public_client'];
     }
@@ -701,7 +701,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setPublicClient($public_client)
+    public function set_public_client($public_client)
     {
         if (is_null($public_client)) {
             throw new \InvalidArgumentException('non-nullable public_client cannot be null');
@@ -716,7 +716,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getFrontchannelLogout()
+    public function get_frontchannel_logout()
     {
         return $this->container['frontchannel_logout'];
     }
@@ -728,7 +728,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setFrontchannelLogout($frontchannel_logout)
+    public function set_frontchannel_logout($frontchannel_logout)
     {
         if (is_null($frontchannel_logout)) {
             throw new \InvalidArgumentException('non-nullable frontchannel_logout cannot be null');
@@ -743,7 +743,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return array<string,string>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -755,7 +755,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -770,7 +770,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ProtocolMapperRepresentation[]|null
      */
-    public function getProtocolMappers()
+    public function get_protocol_mappers()
     {
         return $this->container['protocol_mappers'];
     }
@@ -782,7 +782,7 @@ class ClientTemplateRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setProtocolMappers($protocol_mappers)
+    public function set_protocol_mappers($protocol_mappers)
     {
         if (is_null($protocol_mappers)) {
             throw new \InvalidArgumentException('non-nullable protocol_mappers cannot be null');

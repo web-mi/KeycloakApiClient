@@ -195,12 +195,12 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'realm_certificate' => 'setRealmCertificate',
-        'store_password' => 'setStorePassword',
-        'key_password' => 'setKeyPassword',
-        'key_alias' => 'setKeyAlias',
-        'realm_alias' => 'setRealmAlias',
-        'format' => 'setFormat'
+        'realm_certificate' => 'set_realm_certificate',
+        'store_password' => 'set_store_password',
+        'key_password' => 'set_key_password',
+        'key_alias' => 'set_key_alias',
+        'realm_alias' => 'set_realm_alias',
+        'format' => 'set_format'
     ];
 
     /**
@@ -209,12 +209,12 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'realm_certificate' => 'getRealmCertificate',
-        'store_password' => 'getStorePassword',
-        'key_password' => 'getKeyPassword',
-        'key_alias' => 'getKeyAlias',
-        'realm_alias' => 'getRealmAlias',
-        'format' => 'getFormat'
+        'realm_certificate' => 'get_realm_certificate',
+        'store_password' => 'get_store_password',
+        'key_password' => 'get_key_password',
+        'key_alias' => 'get_key_alias',
+        'realm_alias' => 'get_realm_alias',
+        'format' => 'get_format'
     ];
 
     /**
@@ -329,7 +329,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getRealmCertificate()
+    public function get_realm_certificate()
     {
         return $this->container['realm_certificate'];
     }
@@ -341,7 +341,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRealmCertificate($realm_certificate)
+    public function set_realm_certificate($realm_certificate)
     {
         if (is_null($realm_certificate)) {
             throw new \InvalidArgumentException('non-nullable realm_certificate cannot be null');
@@ -356,7 +356,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getStorePassword()
+    public function get_store_password()
     {
         return $this->container['store_password'];
     }
@@ -368,7 +368,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setStorePassword($store_password)
+    public function set_store_password($store_password)
     {
         if (is_null($store_password)) {
             throw new \InvalidArgumentException('non-nullable store_password cannot be null');
@@ -383,7 +383,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getKeyPassword()
+    public function get_key_password()
     {
         return $this->container['key_password'];
     }
@@ -395,7 +395,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setKeyPassword($key_password)
+    public function set_key_password($key_password)
     {
         if (is_null($key_password)) {
             throw new \InvalidArgumentException('non-nullable key_password cannot be null');
@@ -410,7 +410,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getKeyAlias()
+    public function get_key_alias()
     {
         return $this->container['key_alias'];
     }
@@ -422,7 +422,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setKeyAlias($key_alias)
+    public function set_key_alias($key_alias)
     {
         if (is_null($key_alias)) {
             throw new \InvalidArgumentException('non-nullable key_alias cannot be null');
@@ -437,7 +437,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getRealmAlias()
+    public function get_realm_alias()
     {
         return $this->container['realm_alias'];
     }
@@ -449,7 +449,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRealmAlias($realm_alias)
+    public function set_realm_alias($realm_alias)
     {
         if (is_null($realm_alias)) {
             throw new \InvalidArgumentException('non-nullable realm_alias cannot be null');
@@ -464,7 +464,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getFormat()
+    public function get_format()
     {
         return $this->container['format'];
     }
@@ -476,7 +476,7 @@ class KeyStoreConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setFormat($format)
+    public function set_format($format)
     {
         if (is_null($format)) {
             throw new \InvalidArgumentException('non-nullable format cannot be null');

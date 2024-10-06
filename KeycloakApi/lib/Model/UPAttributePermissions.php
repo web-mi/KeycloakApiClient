@@ -179,8 +179,8 @@ class UPAttributePermissions implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $setters = [
-        'view' => 'setView',
-        'edit' => 'setEdit'
+        'view' => 'set_view',
+        'edit' => 'set_edit'
     ];
 
     /**
@@ -189,8 +189,8 @@ class UPAttributePermissions implements ModelInterface, ArrayAccess, \JsonSerial
      * @var string[]
      */
     protected static $getters = [
-        'view' => 'getView',
-        'edit' => 'getEdit'
+        'view' => 'get_view',
+        'edit' => 'get_edit'
     ];
 
     /**
@@ -301,7 +301,7 @@ class UPAttributePermissions implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string[]|null
      */
-    public function getView()
+    public function get_view()
     {
         return $this->container['view'];
     }
@@ -313,7 +313,7 @@ class UPAttributePermissions implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setView($view)
+    public function set_view($view)
     {
         if (is_null($view)) {
             throw new \InvalidArgumentException('non-nullable view cannot be null');
@@ -330,7 +330,7 @@ class UPAttributePermissions implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return string[]|null
      */
-    public function getEdit()
+    public function get_edit()
     {
         return $this->container['edit'];
     }
@@ -342,7 +342,7 @@ class UPAttributePermissions implements ModelInterface, ArrayAccess, \JsonSerial
      *
      * @return self
      */
-    public function setEdit($edit)
+    public function set_edit($edit)
     {
         if (is_null($edit)) {
             throw new \InvalidArgumentException('non-nullable edit cannot be null');

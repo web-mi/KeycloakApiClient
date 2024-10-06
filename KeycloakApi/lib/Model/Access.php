@@ -179,8 +179,8 @@ class Access implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'roles' => 'setRoles',
-        'verify_caller' => 'setVerifyCaller'
+        'roles' => 'set_roles',
+        'verify_caller' => 'set_verify_caller'
     ];
 
     /**
@@ -189,8 +189,8 @@ class Access implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'roles' => 'getRoles',
-        'verify_caller' => 'getVerifyCaller'
+        'roles' => 'get_roles',
+        'verify_caller' => 'get_verify_caller'
     ];
 
     /**
@@ -301,7 +301,7 @@ class Access implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]|null
      */
-    public function getRoles()
+    public function get_roles()
     {
         return $this->container['roles'];
     }
@@ -313,7 +313,7 @@ class Access implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRoles($roles)
+    public function set_roles($roles)
     {
         if (is_null($roles)) {
             throw new \InvalidArgumentException('non-nullable roles cannot be null');
@@ -330,7 +330,7 @@ class Access implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getVerifyCaller()
+    public function get_verify_caller()
     {
         return $this->container['verify_caller'];
     }
@@ -342,7 +342,7 @@ class Access implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setVerifyCaller($verify_caller)
+    public function set_verify_caller($verify_caller)
     {
         if (is_null($verify_caller)) {
             throw new \InvalidArgumentException('non-nullable verify_caller cannot be null');

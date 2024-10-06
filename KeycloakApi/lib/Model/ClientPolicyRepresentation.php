@@ -191,11 +191,11 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'enabled' => 'setEnabled',
-        'conditions' => 'setConditions',
-        'profiles' => 'setProfiles'
+        'name' => 'set_name',
+        'description' => 'set_description',
+        'enabled' => 'set_enabled',
+        'conditions' => 'set_conditions',
+        'profiles' => 'set_profiles'
     ];
 
     /**
@@ -204,11 +204,11 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'enabled' => 'getEnabled',
-        'conditions' => 'getConditions',
-        'profiles' => 'getProfiles'
+        'name' => 'get_name',
+        'description' => 'get_description',
+        'enabled' => 'get_enabled',
+        'conditions' => 'get_conditions',
+        'profiles' => 'get_profiles'
     ];
 
     /**
@@ -322,7 +322,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -334,7 +334,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -349,7 +349,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -361,7 +361,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -376,7 +376,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -388,7 +388,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -403,7 +403,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ClientPolicyConditionRepresentation[]|null
      */
-    public function getConditions()
+    public function get_conditions()
     {
         return $this->container['conditions'];
     }
@@ -415,7 +415,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setConditions($conditions)
+    public function set_conditions($conditions)
     {
         if (is_null($conditions)) {
             throw new \InvalidArgumentException('non-nullable conditions cannot be null');
@@ -430,7 +430,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string[]|null
      */
-    public function getProfiles()
+    public function get_profiles()
     {
         return $this->container['profiles'];
     }
@@ -442,7 +442,7 @@ class ClientPolicyRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setProfiles($profiles)
+    public function set_profiles($profiles)
     {
         if (is_null($profiles)) {
             throw new \InvalidArgumentException('non-nullable profiles cannot be null');

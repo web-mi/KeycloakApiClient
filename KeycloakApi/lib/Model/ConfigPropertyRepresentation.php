@@ -207,15 +207,15 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'label' => 'setLabel',
-        'help_text' => 'setHelpText',
-        'type' => 'setType',
-        'default_value' => 'setDefaultValue',
-        'options' => 'setOptions',
-        'secret' => 'setSecret',
-        'required' => 'setRequired',
-        'read_only' => 'setReadOnly'
+        'name' => 'set_name',
+        'label' => 'set_label',
+        'help_text' => 'set_help_text',
+        'type' => 'set_type',
+        'default_value' => 'set_default_value',
+        'options' => 'set_options',
+        'secret' => 'set_secret',
+        'required' => 'set_required',
+        'read_only' => 'set_read_only'
     ];
 
     /**
@@ -224,15 +224,15 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'label' => 'getLabel',
-        'help_text' => 'getHelpText',
-        'type' => 'getType',
-        'default_value' => 'getDefaultValue',
-        'options' => 'getOptions',
-        'secret' => 'getSecret',
-        'required' => 'getRequired',
-        'read_only' => 'getReadOnly'
+        'name' => 'get_name',
+        'label' => 'get_label',
+        'help_text' => 'get_help_text',
+        'type' => 'get_type',
+        'default_value' => 'get_default_value',
+        'options' => 'get_options',
+        'secret' => 'get_secret',
+        'required' => 'get_required',
+        'read_only' => 'get_read_only'
     ];
 
     /**
@@ -350,7 +350,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -362,7 +362,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -377,7 +377,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getLabel()
+    public function get_label()
     {
         return $this->container['label'];
     }
@@ -389,7 +389,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setLabel($label)
+    public function set_label($label)
     {
         if (is_null($label)) {
             throw new \InvalidArgumentException('non-nullable label cannot be null');
@@ -404,7 +404,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getHelpText()
+    public function get_help_text()
     {
         return $this->container['help_text'];
     }
@@ -416,7 +416,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setHelpText($help_text)
+    public function set_help_text($help_text)
     {
         if (is_null($help_text)) {
             throw new \InvalidArgumentException('non-nullable help_text cannot be null');
@@ -431,7 +431,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -443,7 +443,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -458,7 +458,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return mixed|null
      */
-    public function getDefaultValue()
+    public function get_default_value()
     {
         return $this->container['default_value'];
     }
@@ -470,7 +470,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setDefaultValue($default_value)
+    public function set_default_value($default_value)
     {
         if (is_null($default_value)) {
             array_push($this->openAPINullablesSetToNull, 'default_value');
@@ -492,7 +492,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string[]|null
      */
-    public function getOptions()
+    public function get_options()
     {
         return $this->container['options'];
     }
@@ -504,7 +504,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setOptions($options)
+    public function set_options($options)
     {
         if (is_null($options)) {
             throw new \InvalidArgumentException('non-nullable options cannot be null');
@@ -519,7 +519,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getSecret()
+    public function get_secret()
     {
         return $this->container['secret'];
     }
@@ -531,7 +531,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setSecret($secret)
+    public function set_secret($secret)
     {
         if (is_null($secret)) {
             throw new \InvalidArgumentException('non-nullable secret cannot be null');
@@ -546,7 +546,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getRequired()
+    public function get_required()
     {
         return $this->container['required'];
     }
@@ -558,7 +558,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setRequired($required)
+    public function set_required($required)
     {
         if (is_null($required)) {
             throw new \InvalidArgumentException('non-nullable required cannot be null');
@@ -573,7 +573,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getReadOnly()
+    public function get_read_only()
     {
         return $this->container['read_only'];
     }
@@ -585,7 +585,7 @@ class ConfigPropertyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setReadOnly($read_only)
+    public function set_read_only($read_only)
     {
         if (is_null($read_only)) {
             throw new \InvalidArgumentException('non-nullable read_only cannot be null');

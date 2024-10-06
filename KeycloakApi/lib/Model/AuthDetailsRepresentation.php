@@ -187,10 +187,10 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'realm_id' => 'setRealmId',
-        'client_id' => 'setClientId',
-        'user_id' => 'setUserId',
-        'ip_address' => 'setIpAddress'
+        'realm_id' => 'set_realm_id',
+        'client_id' => 'set_client_id',
+        'user_id' => 'set_user_id',
+        'ip_address' => 'set_ip_address'
     ];
 
     /**
@@ -199,10 +199,10 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'realm_id' => 'getRealmId',
-        'client_id' => 'getClientId',
-        'user_id' => 'getUserId',
-        'ip_address' => 'getIpAddress'
+        'realm_id' => 'get_realm_id',
+        'client_id' => 'get_client_id',
+        'user_id' => 'get_user_id',
+        'ip_address' => 'get_ip_address'
     ];
 
     /**
@@ -315,7 +315,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getRealmId()
+    public function get_realm_id()
     {
         return $this->container['realm_id'];
     }
@@ -327,7 +327,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setRealmId($realm_id)
+    public function set_realm_id($realm_id)
     {
         if (is_null($realm_id)) {
             throw new \InvalidArgumentException('non-nullable realm_id cannot be null');
@@ -342,7 +342,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getClientId()
+    public function get_client_id()
     {
         return $this->container['client_id'];
     }
@@ -354,7 +354,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setClientId($client_id)
+    public function set_client_id($client_id)
     {
         if (is_null($client_id)) {
             throw new \InvalidArgumentException('non-nullable client_id cannot be null');
@@ -369,7 +369,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getUserId()
+    public function get_user_id()
     {
         return $this->container['user_id'];
     }
@@ -381,7 +381,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function set_user_id($user_id)
     {
         if (is_null($user_id)) {
             throw new \InvalidArgumentException('non-nullable user_id cannot be null');
@@ -396,7 +396,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getIpAddress()
+    public function get_ip_address()
     {
         return $this->container['ip_address'];
     }
@@ -408,7 +408,7 @@ class AuthDetailsRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setIpAddress($ip_address)
+    public function set_ip_address($ip_address)
     {
         if (is_null($ip_address)) {
             throw new \InvalidArgumentException('non-nullable ip_address cannot be null');

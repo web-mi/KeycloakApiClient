@@ -195,12 +195,12 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $setters = [
-        'context' => 'setContext',
-        'resources' => 'setResources',
-        'client_id' => 'setClientId',
-        'user_id' => 'setUserId',
-        'role_ids' => 'setRoleIds',
-        'entitlements' => 'setEntitlements'
+        'context' => 'set_context',
+        'resources' => 'set_resources',
+        'client_id' => 'set_client_id',
+        'user_id' => 'set_user_id',
+        'role_ids' => 'set_role_ids',
+        'entitlements' => 'set_entitlements'
     ];
 
     /**
@@ -209,12 +209,12 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      * @var string[]
      */
     protected static $getters = [
-        'context' => 'getContext',
-        'resources' => 'getResources',
-        'client_id' => 'getClientId',
-        'user_id' => 'getUserId',
-        'role_ids' => 'getRoleIds',
-        'entitlements' => 'getEntitlements'
+        'context' => 'get_context',
+        'resources' => 'get_resources',
+        'client_id' => 'get_client_id',
+        'user_id' => 'get_user_id',
+        'role_ids' => 'get_role_ids',
+        'entitlements' => 'get_entitlements'
     ];
 
     /**
@@ -329,7 +329,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return array<string,array<string,string>>|null
      */
-    public function getContext()
+    public function get_context()
     {
         return $this->container['context'];
     }
@@ -341,7 +341,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setContext($context)
+    public function set_context($context)
     {
         if (is_null($context)) {
             throw new \InvalidArgumentException('non-nullable context cannot be null');
@@ -356,7 +356,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ResourceRepresentation[]|null
      */
-    public function getResources()
+    public function get_resources()
     {
         return $this->container['resources'];
     }
@@ -368,7 +368,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setResources($resources)
+    public function set_resources($resources)
     {
         if (is_null($resources)) {
             throw new \InvalidArgumentException('non-nullable resources cannot be null');
@@ -383,7 +383,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getClientId()
+    public function get_client_id()
     {
         return $this->container['client_id'];
     }
@@ -395,7 +395,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setClientId($client_id)
+    public function set_client_id($client_id)
     {
         if (is_null($client_id)) {
             throw new \InvalidArgumentException('non-nullable client_id cannot be null');
@@ -410,7 +410,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string|null
      */
-    public function getUserId()
+    public function get_user_id()
     {
         return $this->container['user_id'];
     }
@@ -422,7 +422,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function set_user_id($user_id)
     {
         if (is_null($user_id)) {
             throw new \InvalidArgumentException('non-nullable user_id cannot be null');
@@ -437,7 +437,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return string[]|null
      */
-    public function getRoleIds()
+    public function get_role_ids()
     {
         return $this->container['role_ids'];
     }
@@ -449,7 +449,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setRoleIds($role_ids)
+    public function set_role_ids($role_ids)
     {
         if (is_null($role_ids)) {
             throw new \InvalidArgumentException('non-nullable role_ids cannot be null');
@@ -464,7 +464,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return bool|null
      */
-    public function getEntitlements()
+    public function get_entitlements()
     {
         return $this->container['entitlements'];
     }
@@ -476,7 +476,7 @@ class PolicyEvaluationRequest implements ModelInterface, ArrayAccess, \JsonSeria
      *
      * @return self
      */
-    public function setEntitlements($entitlements)
+    public function set_entitlements($entitlements)
     {
         if (is_null($entitlements)) {
             throw new \InvalidArgumentException('non-nullable entitlements cannot be null');

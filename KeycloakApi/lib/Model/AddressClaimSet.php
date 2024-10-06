@@ -195,12 +195,12 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'formatted' => 'setFormatted',
-        'street_address' => 'setStreetAddress',
-        'locality' => 'setLocality',
-        'region' => 'setRegion',
-        'postal_code' => 'setPostalCode',
-        'country' => 'setCountry'
+        'formatted' => 'set_formatted',
+        'street_address' => 'set_street_address',
+        'locality' => 'set_locality',
+        'region' => 'set_region',
+        'postal_code' => 'set_postal_code',
+        'country' => 'set_country'
     ];
 
     /**
@@ -209,12 +209,12 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'formatted' => 'getFormatted',
-        'street_address' => 'getStreetAddress',
-        'locality' => 'getLocality',
-        'region' => 'getRegion',
-        'postal_code' => 'getPostalCode',
-        'country' => 'getCountry'
+        'formatted' => 'get_formatted',
+        'street_address' => 'get_street_address',
+        'locality' => 'get_locality',
+        'region' => 'get_region',
+        'postal_code' => 'get_postal_code',
+        'country' => 'get_country'
     ];
 
     /**
@@ -329,7 +329,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getFormatted()
+    public function get_formatted()
     {
         return $this->container['formatted'];
     }
@@ -341,7 +341,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setFormatted($formatted)
+    public function set_formatted($formatted)
     {
         if (is_null($formatted)) {
             throw new \InvalidArgumentException('non-nullable formatted cannot be null');
@@ -356,7 +356,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getStreetAddress()
+    public function get_street_address()
     {
         return $this->container['street_address'];
     }
@@ -368,7 +368,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setStreetAddress($street_address)
+    public function set_street_address($street_address)
     {
         if (is_null($street_address)) {
             throw new \InvalidArgumentException('non-nullable street_address cannot be null');
@@ -383,7 +383,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getLocality()
+    public function get_locality()
     {
         return $this->container['locality'];
     }
@@ -395,7 +395,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setLocality($locality)
+    public function set_locality($locality)
     {
         if (is_null($locality)) {
             throw new \InvalidArgumentException('non-nullable locality cannot be null');
@@ -410,7 +410,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getRegion()
+    public function get_region()
     {
         return $this->container['region'];
     }
@@ -422,7 +422,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRegion($region)
+    public function set_region($region)
     {
         if (is_null($region)) {
             throw new \InvalidArgumentException('non-nullable region cannot be null');
@@ -437,7 +437,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getPostalCode()
+    public function get_postal_code()
     {
         return $this->container['postal_code'];
     }
@@ -449,7 +449,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPostalCode($postal_code)
+    public function set_postal_code($postal_code)
     {
         if (is_null($postal_code)) {
             throw new \InvalidArgumentException('non-nullable postal_code cannot be null');
@@ -464,7 +464,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getCountry()
+    public function get_country()
     {
         return $this->container['country'];
     }
@@ -476,7 +476,7 @@ class AddressClaimSet implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setCountry($country)
+    public function set_country($country)
     {
         if (is_null($country)) {
             throw new \InvalidArgumentException('non-nullable country cannot be null');

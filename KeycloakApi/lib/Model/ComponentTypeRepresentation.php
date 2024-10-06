@@ -187,10 +187,10 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'help_text' => 'setHelpText',
-        'properties' => 'setProperties',
-        'metadata' => 'setMetadata'
+        'id' => 'set_id',
+        'help_text' => 'set_help_text',
+        'properties' => 'set_properties',
+        'metadata' => 'set_metadata'
     ];
 
     /**
@@ -199,10 +199,10 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'help_text' => 'getHelpText',
-        'properties' => 'getProperties',
-        'metadata' => 'getMetadata'
+        'id' => 'get_id',
+        'help_text' => 'get_help_text',
+        'properties' => 'get_properties',
+        'metadata' => 'get_metadata'
     ];
 
     /**
@@ -315,7 +315,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -327,7 +327,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -342,7 +342,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return string|null
      */
-    public function getHelpText()
+    public function get_help_text()
     {
         return $this->container['help_text'];
     }
@@ -354,7 +354,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setHelpText($help_text)
+    public function set_help_text($help_text)
     {
         if (is_null($help_text)) {
             throw new \InvalidArgumentException('non-nullable help_text cannot be null');
@@ -369,7 +369,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ConfigPropertyRepresentation[]|null
      */
-    public function getProperties()
+    public function get_properties()
     {
         return $this->container['properties'];
     }
@@ -381,7 +381,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setProperties($properties)
+    public function set_properties($properties)
     {
         if (is_null($properties)) {
             throw new \InvalidArgumentException('non-nullable properties cannot be null');
@@ -396,7 +396,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return array<string,mixed>|null
      */
-    public function getMetadata()
+    public function get_metadata()
     {
         return $this->container['metadata'];
     }
@@ -408,7 +408,7 @@ class ComponentTypeRepresentation implements ModelInterface, ArrayAccess, \JsonS
      *
      * @return self
      */
-    public function setMetadata($metadata)
+    public function set_metadata($metadata)
     {
         if (is_null($metadata)) {
             throw new \InvalidArgumentException('non-nullable metadata cannot be null');

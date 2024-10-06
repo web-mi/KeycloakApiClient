@@ -179,8 +179,8 @@ class UserProfileMetadata implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'attributes' => 'setAttributes',
-        'groups' => 'setGroups'
+        'attributes' => 'set_attributes',
+        'groups' => 'set_groups'
     ];
 
     /**
@@ -189,8 +189,8 @@ class UserProfileMetadata implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'attributes' => 'getAttributes',
-        'groups' => 'getGroups'
+        'attributes' => 'get_attributes',
+        'groups' => 'get_groups'
     ];
 
     /**
@@ -301,7 +301,7 @@ class UserProfileMetadata implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserProfileAttributeMetadata[]|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -313,7 +313,7 @@ class UserProfileMetadata implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -328,7 +328,7 @@ class UserProfileMetadata implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserProfileAttributeGroupMetadata[]|null
      */
-    public function getGroups()
+    public function get_groups()
     {
         return $this->container['groups'];
     }
@@ -340,7 +340,7 @@ class UserProfileMetadata implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setGroups($groups)
+    public function set_groups($groups)
     {
         if (is_null($groups)) {
             throw new \InvalidArgumentException('non-nullable groups cannot be null');

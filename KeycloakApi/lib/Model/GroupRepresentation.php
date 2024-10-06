@@ -211,16 +211,16 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'path' => 'setPath',
-        'parent_id' => 'setParentId',
-        'sub_group_count' => 'setSubGroupCount',
-        'sub_groups' => 'setSubGroups',
-        'attributes' => 'setAttributes',
-        'realm_roles' => 'setRealmRoles',
-        'client_roles' => 'setClientRoles',
-        'access' => 'setAccess'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'path' => 'set_path',
+        'parent_id' => 'set_parent_id',
+        'sub_group_count' => 'set_sub_group_count',
+        'sub_groups' => 'set_sub_groups',
+        'attributes' => 'set_attributes',
+        'realm_roles' => 'set_realm_roles',
+        'client_roles' => 'set_client_roles',
+        'access' => 'set_access'
     ];
 
     /**
@@ -229,16 +229,16 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'path' => 'getPath',
-        'parent_id' => 'getParentId',
-        'sub_group_count' => 'getSubGroupCount',
-        'sub_groups' => 'getSubGroups',
-        'attributes' => 'getAttributes',
-        'realm_roles' => 'getRealmRoles',
-        'client_roles' => 'getClientRoles',
-        'access' => 'getAccess'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'path' => 'get_path',
+        'parent_id' => 'get_parent_id',
+        'sub_group_count' => 'get_sub_group_count',
+        'sub_groups' => 'get_sub_groups',
+        'attributes' => 'get_attributes',
+        'realm_roles' => 'get_realm_roles',
+        'client_roles' => 'get_client_roles',
+        'access' => 'get_access'
     ];
 
     /**
@@ -357,7 +357,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -369,7 +369,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -384,7 +384,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -396,7 +396,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -411,7 +411,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getPath()
+    public function get_path()
     {
         return $this->container['path'];
     }
@@ -423,7 +423,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setPath($path)
+    public function set_path($path)
     {
         if (is_null($path)) {
             throw new \InvalidArgumentException('non-nullable path cannot be null');
@@ -438,7 +438,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getParentId()
+    public function get_parent_id()
     {
         return $this->container['parent_id'];
     }
@@ -450,7 +450,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setParentId($parent_id)
+    public function set_parent_id($parent_id)
     {
         if (is_null($parent_id)) {
             throw new \InvalidArgumentException('non-nullable parent_id cannot be null');
@@ -465,7 +465,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getSubGroupCount()
+    public function get_sub_group_count()
     {
         return $this->container['sub_group_count'];
     }
@@ -477,7 +477,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSubGroupCount($sub_group_count)
+    public function set_sub_group_count($sub_group_count)
     {
         if (is_null($sub_group_count)) {
             throw new \InvalidArgumentException('non-nullable sub_group_count cannot be null');
@@ -492,7 +492,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\GroupRepresentation[]|null
      */
-    public function getSubGroups()
+    public function get_sub_groups()
     {
         return $this->container['sub_groups'];
     }
@@ -504,7 +504,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSubGroups($sub_groups)
+    public function set_sub_groups($sub_groups)
     {
         if (is_null($sub_groups)) {
             throw new \InvalidArgumentException('non-nullable sub_groups cannot be null');
@@ -519,7 +519,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,string[]>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -531,7 +531,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -546,7 +546,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getRealmRoles()
+    public function get_realm_roles()
     {
         return $this->container['realm_roles'];
     }
@@ -558,7 +558,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRealmRoles($realm_roles)
+    public function set_realm_roles($realm_roles)
     {
         if (is_null($realm_roles)) {
             throw new \InvalidArgumentException('non-nullable realm_roles cannot be null');
@@ -573,7 +573,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,string[]>|null
      */
-    public function getClientRoles()
+    public function get_client_roles()
     {
         return $this->container['client_roles'];
     }
@@ -585,7 +585,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientRoles($client_roles)
+    public function set_client_roles($client_roles)
     {
         if (is_null($client_roles)) {
             throw new \InvalidArgumentException('non-nullable client_roles cannot be null');
@@ -600,7 +600,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,bool>|null
      */
-    public function getAccess()
+    public function get_access()
     {
         return $this->container['access'];
     }
@@ -612,7 +612,7 @@ class GroupRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setAccess($access)
+    public function set_access($access)
     {
         if (is_null($access)) {
             throw new \InvalidArgumentException('non-nullable access cannot be null');

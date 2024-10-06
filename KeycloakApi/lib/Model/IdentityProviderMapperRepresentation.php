@@ -191,11 +191,11 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'identity_provider_alias' => 'setIdentityProviderAlias',
-        'identity_provider_mapper' => 'setIdentityProviderMapper',
-        'config' => 'setConfig'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'identity_provider_alias' => 'set_identity_provider_alias',
+        'identity_provider_mapper' => 'set_identity_provider_mapper',
+        'config' => 'set_config'
     ];
 
     /**
@@ -204,11 +204,11 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'identity_provider_alias' => 'getIdentityProviderAlias',
-        'identity_provider_mapper' => 'getIdentityProviderMapper',
-        'config' => 'getConfig'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'identity_provider_alias' => 'get_identity_provider_alias',
+        'identity_provider_mapper' => 'get_identity_provider_mapper',
+        'config' => 'get_config'
     ];
 
     /**
@@ -322,7 +322,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -334,7 +334,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -349,7 +349,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -361,7 +361,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -376,7 +376,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getIdentityProviderAlias()
+    public function get_identity_provider_alias()
     {
         return $this->container['identity_provider_alias'];
     }
@@ -388,7 +388,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setIdentityProviderAlias($identity_provider_alias)
+    public function set_identity_provider_alias($identity_provider_alias)
     {
         if (is_null($identity_provider_alias)) {
             throw new \InvalidArgumentException('non-nullable identity_provider_alias cannot be null');
@@ -403,7 +403,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getIdentityProviderMapper()
+    public function get_identity_provider_mapper()
     {
         return $this->container['identity_provider_mapper'];
     }
@@ -415,7 +415,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setIdentityProviderMapper($identity_provider_mapper)
+    public function set_identity_provider_mapper($identity_provider_mapper)
     {
         if (is_null($identity_provider_mapper)) {
             throw new \InvalidArgumentException('non-nullable identity_provider_mapper cannot be null');
@@ -430,7 +430,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -442,7 +442,7 @@ class IdentityProviderMapperRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

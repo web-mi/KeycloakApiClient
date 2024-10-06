@@ -283,34 +283,34 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'username' => 'setUsername',
-        'first_name' => 'setFirstName',
-        'last_name' => 'setLastName',
-        'email' => 'setEmail',
-        'email_verified' => 'setEmailVerified',
-        'attributes' => 'setAttributes',
-        'user_profile_metadata' => 'setUserProfileMetadata',
-        'self' => 'setSelf',
-        'origin' => 'setOrigin',
-        'created_timestamp' => 'setCreatedTimestamp',
-        'enabled' => 'setEnabled',
-        'totp' => 'setTotp',
-        'federation_link' => 'setFederationLink',
-        'service_account_client_id' => 'setServiceAccountClientId',
-        'credentials' => 'setCredentials',
-        'disableable_credential_types' => 'setDisableableCredentialTypes',
-        'required_actions' => 'setRequiredActions',
-        'federated_identities' => 'setFederatedIdentities',
-        'realm_roles' => 'setRealmRoles',
-        'client_roles' => 'setClientRoles',
-        'client_consents' => 'setClientConsents',
-        'not_before' => 'setNotBefore',
-        'application_roles' => 'setApplicationRoles',
-        'social_links' => 'setSocialLinks',
-        'groups' => 'setGroups',
-        'access' => 'setAccess',
-        'membership_type' => 'setMembershipType'
+        'id' => 'set_id',
+        'username' => 'set_username',
+        'first_name' => 'set_first_name',
+        'last_name' => 'set_last_name',
+        'email' => 'set_email',
+        'email_verified' => 'set_email_verified',
+        'attributes' => 'set_attributes',
+        'user_profile_metadata' => 'set_user_profile_metadata',
+        'self' => 'set_self',
+        'origin' => 'set_origin',
+        'created_timestamp' => 'set_created_timestamp',
+        'enabled' => 'set_enabled',
+        'totp' => 'set_totp',
+        'federation_link' => 'set_federation_link',
+        'service_account_client_id' => 'set_service_account_client_id',
+        'credentials' => 'set_credentials',
+        'disableable_credential_types' => 'set_disableable_credential_types',
+        'required_actions' => 'set_required_actions',
+        'federated_identities' => 'set_federated_identities',
+        'realm_roles' => 'set_realm_roles',
+        'client_roles' => 'set_client_roles',
+        'client_consents' => 'set_client_consents',
+        'not_before' => 'set_not_before',
+        'application_roles' => 'set_application_roles',
+        'social_links' => 'set_social_links',
+        'groups' => 'set_groups',
+        'access' => 'set_access',
+        'membership_type' => 'set_membership_type'
     ];
 
     /**
@@ -319,34 +319,34 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'username' => 'getUsername',
-        'first_name' => 'getFirstName',
-        'last_name' => 'getLastName',
-        'email' => 'getEmail',
-        'email_verified' => 'getEmailVerified',
-        'attributes' => 'getAttributes',
-        'user_profile_metadata' => 'getUserProfileMetadata',
-        'self' => 'getSelf',
-        'origin' => 'getOrigin',
-        'created_timestamp' => 'getCreatedTimestamp',
-        'enabled' => 'getEnabled',
-        'totp' => 'getTotp',
-        'federation_link' => 'getFederationLink',
-        'service_account_client_id' => 'getServiceAccountClientId',
-        'credentials' => 'getCredentials',
-        'disableable_credential_types' => 'getDisableableCredentialTypes',
-        'required_actions' => 'getRequiredActions',
-        'federated_identities' => 'getFederatedIdentities',
-        'realm_roles' => 'getRealmRoles',
-        'client_roles' => 'getClientRoles',
-        'client_consents' => 'getClientConsents',
-        'not_before' => 'getNotBefore',
-        'application_roles' => 'getApplicationRoles',
-        'social_links' => 'getSocialLinks',
-        'groups' => 'getGroups',
-        'access' => 'getAccess',
-        'membership_type' => 'getMembershipType'
+        'id' => 'get_id',
+        'username' => 'get_username',
+        'first_name' => 'get_first_name',
+        'last_name' => 'get_last_name',
+        'email' => 'get_email',
+        'email_verified' => 'get_email_verified',
+        'attributes' => 'get_attributes',
+        'user_profile_metadata' => 'get_user_profile_metadata',
+        'self' => 'get_self',
+        'origin' => 'get_origin',
+        'created_timestamp' => 'get_created_timestamp',
+        'enabled' => 'get_enabled',
+        'totp' => 'get_totp',
+        'federation_link' => 'get_federation_link',
+        'service_account_client_id' => 'get_service_account_client_id',
+        'credentials' => 'get_credentials',
+        'disableable_credential_types' => 'get_disableable_credential_types',
+        'required_actions' => 'get_required_actions',
+        'federated_identities' => 'get_federated_identities',
+        'realm_roles' => 'get_realm_roles',
+        'client_roles' => 'get_client_roles',
+        'client_consents' => 'get_client_consents',
+        'not_before' => 'get_not_before',
+        'application_roles' => 'get_application_roles',
+        'social_links' => 'get_social_links',
+        'groups' => 'get_groups',
+        'access' => 'get_access',
+        'membership_type' => 'get_membership_type'
     ];
 
     /**
@@ -483,7 +483,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -495,7 +495,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -510,7 +510,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getUsername()
+    public function get_username()
     {
         return $this->container['username'];
     }
@@ -522,7 +522,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setUsername($username)
+    public function set_username($username)
     {
         if (is_null($username)) {
             throw new \InvalidArgumentException('non-nullable username cannot be null');
@@ -537,7 +537,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getFirstName()
+    public function get_first_name()
     {
         return $this->container['first_name'];
     }
@@ -549,7 +549,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setFirstName($first_name)
+    public function set_first_name($first_name)
     {
         if (is_null($first_name)) {
             throw new \InvalidArgumentException('non-nullable first_name cannot be null');
@@ -564,7 +564,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getLastName()
+    public function get_last_name()
     {
         return $this->container['last_name'];
     }
@@ -576,7 +576,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setLastName($last_name)
+    public function set_last_name($last_name)
     {
         if (is_null($last_name)) {
             throw new \InvalidArgumentException('non-nullable last_name cannot be null');
@@ -591,7 +591,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getEmail()
+    public function get_email()
     {
         return $this->container['email'];
     }
@@ -603,7 +603,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setEmail($email)
+    public function set_email($email)
     {
         if (is_null($email)) {
             throw new \InvalidArgumentException('non-nullable email cannot be null');
@@ -618,7 +618,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getEmailVerified()
+    public function get_email_verified()
     {
         return $this->container['email_verified'];
     }
@@ -630,7 +630,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setEmailVerified($email_verified)
+    public function set_email_verified($email_verified)
     {
         if (is_null($email_verified)) {
             throw new \InvalidArgumentException('non-nullable email_verified cannot be null');
@@ -645,7 +645,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,string[]>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -657,7 +657,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -672,7 +672,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserProfileMetadata|null
      */
-    public function getUserProfileMetadata()
+    public function get_user_profile_metadata()
     {
         return $this->container['user_profile_metadata'];
     }
@@ -684,7 +684,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setUserProfileMetadata($user_profile_metadata)
+    public function set_user_profile_metadata($user_profile_metadata)
     {
         if (is_null($user_profile_metadata)) {
             throw new \InvalidArgumentException('non-nullable user_profile_metadata cannot be null');
@@ -699,7 +699,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getSelf()
+    public function get_self()
     {
         return $this->container['self'];
     }
@@ -711,7 +711,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setSelf($self)
+    public function set_self($self)
     {
         if (is_null($self)) {
             throw new \InvalidArgumentException('non-nullable self cannot be null');
@@ -726,7 +726,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getOrigin()
+    public function get_origin()
     {
         return $this->container['origin'];
     }
@@ -738,7 +738,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setOrigin($origin)
+    public function set_origin($origin)
     {
         if (is_null($origin)) {
             throw new \InvalidArgumentException('non-nullable origin cannot be null');
@@ -753,7 +753,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return int|null
      */
-    public function getCreatedTimestamp()
+    public function get_created_timestamp()
     {
         return $this->container['created_timestamp'];
     }
@@ -765,7 +765,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setCreatedTimestamp($created_timestamp)
+    public function set_created_timestamp($created_timestamp)
     {
         if (is_null($created_timestamp)) {
             throw new \InvalidArgumentException('non-nullable created_timestamp cannot be null');
@@ -780,7 +780,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getEnabled()
+    public function get_enabled()
     {
         return $this->container['enabled'];
     }
@@ -792,7 +792,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setEnabled($enabled)
+    public function set_enabled($enabled)
     {
         if (is_null($enabled)) {
             throw new \InvalidArgumentException('non-nullable enabled cannot be null');
@@ -807,7 +807,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getTotp()
+    public function get_totp()
     {
         return $this->container['totp'];
     }
@@ -819,7 +819,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setTotp($totp)
+    public function set_totp($totp)
     {
         if (is_null($totp)) {
             throw new \InvalidArgumentException('non-nullable totp cannot be null');
@@ -834,7 +834,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getFederationLink()
+    public function get_federation_link()
     {
         return $this->container['federation_link'];
     }
@@ -846,7 +846,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setFederationLink($federation_link)
+    public function set_federation_link($federation_link)
     {
         if (is_null($federation_link)) {
             throw new \InvalidArgumentException('non-nullable federation_link cannot be null');
@@ -861,7 +861,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getServiceAccountClientId()
+    public function get_service_account_client_id()
     {
         return $this->container['service_account_client_id'];
     }
@@ -873,7 +873,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setServiceAccountClientId($service_account_client_id)
+    public function set_service_account_client_id($service_account_client_id)
     {
         if (is_null($service_account_client_id)) {
             throw new \InvalidArgumentException('non-nullable service_account_client_id cannot be null');
@@ -888,7 +888,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\CredentialRepresentation[]|null
      */
-    public function getCredentials()
+    public function get_credentials()
     {
         return $this->container['credentials'];
     }
@@ -900,7 +900,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setCredentials($credentials)
+    public function set_credentials($credentials)
     {
         if (is_null($credentials)) {
             throw new \InvalidArgumentException('non-nullable credentials cannot be null');
@@ -915,7 +915,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getDisableableCredentialTypes()
+    public function get_disableable_credential_types()
     {
         return $this->container['disableable_credential_types'];
     }
@@ -927,7 +927,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setDisableableCredentialTypes($disableable_credential_types)
+    public function set_disableable_credential_types($disableable_credential_types)
     {
         if (is_null($disableable_credential_types)) {
             throw new \InvalidArgumentException('non-nullable disableable_credential_types cannot be null');
@@ -944,7 +944,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getRequiredActions()
+    public function get_required_actions()
     {
         return $this->container['required_actions'];
     }
@@ -956,7 +956,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setRequiredActions($required_actions)
+    public function set_required_actions($required_actions)
     {
         if (is_null($required_actions)) {
             throw new \InvalidArgumentException('non-nullable required_actions cannot be null');
@@ -971,7 +971,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\FederatedIdentityRepresentation[]|null
      */
-    public function getFederatedIdentities()
+    public function get_federated_identities()
     {
         return $this->container['federated_identities'];
     }
@@ -983,7 +983,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setFederatedIdentities($federated_identities)
+    public function set_federated_identities($federated_identities)
     {
         if (is_null($federated_identities)) {
             throw new \InvalidArgumentException('non-nullable federated_identities cannot be null');
@@ -998,7 +998,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getRealmRoles()
+    public function get_realm_roles()
     {
         return $this->container['realm_roles'];
     }
@@ -1010,7 +1010,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setRealmRoles($realm_roles)
+    public function set_realm_roles($realm_roles)
     {
         if (is_null($realm_roles)) {
             throw new \InvalidArgumentException('non-nullable realm_roles cannot be null');
@@ -1025,7 +1025,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,string[]>|null
      */
-    public function getClientRoles()
+    public function get_client_roles()
     {
         return $this->container['client_roles'];
     }
@@ -1037,7 +1037,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setClientRoles($client_roles)
+    public function set_client_roles($client_roles)
     {
         if (is_null($client_roles)) {
             throw new \InvalidArgumentException('non-nullable client_roles cannot be null');
@@ -1052,7 +1052,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UserConsentRepresentation[]|null
      */
-    public function getClientConsents()
+    public function get_client_consents()
     {
         return $this->container['client_consents'];
     }
@@ -1064,7 +1064,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setClientConsents($client_consents)
+    public function set_client_consents($client_consents)
     {
         if (is_null($client_consents)) {
             throw new \InvalidArgumentException('non-nullable client_consents cannot be null');
@@ -1079,7 +1079,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return int|null
      */
-    public function getNotBefore()
+    public function get_not_before()
     {
         return $this->container['not_before'];
     }
@@ -1091,7 +1091,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setNotBefore($not_before)
+    public function set_not_before($not_before)
     {
         if (is_null($not_before)) {
             throw new \InvalidArgumentException('non-nullable not_before cannot be null');
@@ -1107,7 +1107,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return array<string,string[]>|null
      * @deprecated
      */
-    public function getApplicationRoles()
+    public function get_application_roles()
     {
         return $this->container['application_roles'];
     }
@@ -1120,7 +1120,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setApplicationRoles($application_roles)
+    public function set_application_roles($application_roles)
     {
         if (is_null($application_roles)) {
             throw new \InvalidArgumentException('non-nullable application_roles cannot be null');
@@ -1136,7 +1136,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\SocialLinkRepresentation[]|null
      * @deprecated
      */
-    public function getSocialLinks()
+    public function get_social_links()
     {
         return $this->container['social_links'];
     }
@@ -1149,7 +1149,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      * @return self
      * @deprecated
      */
-    public function setSocialLinks($social_links)
+    public function set_social_links($social_links)
     {
         if (is_null($social_links)) {
             throw new \InvalidArgumentException('non-nullable social_links cannot be null');
@@ -1164,7 +1164,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string[]|null
      */
-    public function getGroups()
+    public function get_groups()
     {
         return $this->container['groups'];
     }
@@ -1176,7 +1176,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setGroups($groups)
+    public function set_groups($groups)
     {
         if (is_null($groups)) {
             throw new \InvalidArgumentException('non-nullable groups cannot be null');
@@ -1191,7 +1191,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,bool>|null
      */
-    public function getAccess()
+    public function get_access()
     {
         return $this->container['access'];
     }
@@ -1203,7 +1203,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAccess($access)
+    public function set_access($access)
     {
         if (is_null($access)) {
             throw new \InvalidArgumentException('non-nullable access cannot be null');
@@ -1218,7 +1218,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\MembershipType|null
      */
-    public function getMembershipType()
+    public function get_membership_type()
     {
         return $this->container['membership_type'];
     }
@@ -1230,7 +1230,7 @@ class MemberRepresentation implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setMembershipType($membership_type)
+    public function set_membership_type($membership_type)
     {
         if (is_null($membership_type)) {
             throw new \InvalidArgumentException('non-nullable membership_type cannot be null');

@@ -219,18 +219,18 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'type' => 'setType',
-        'policies' => 'setPolicies',
-        'resources' => 'setResources',
-        'scopes' => 'setScopes',
-        'logic' => 'setLogic',
-        'decision_strategy' => 'setDecisionStrategy',
-        'owner' => 'setOwner',
-        'resources_data' => 'setResourcesData',
-        'scopes_data' => 'setScopesData'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'description' => 'set_description',
+        'type' => 'set_type',
+        'policies' => 'set_policies',
+        'resources' => 'set_resources',
+        'scopes' => 'set_scopes',
+        'logic' => 'set_logic',
+        'decision_strategy' => 'set_decision_strategy',
+        'owner' => 'set_owner',
+        'resources_data' => 'set_resources_data',
+        'scopes_data' => 'set_scopes_data'
     ];
 
     /**
@@ -239,18 +239,18 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'type' => 'getType',
-        'policies' => 'getPolicies',
-        'resources' => 'getResources',
-        'scopes' => 'getScopes',
-        'logic' => 'getLogic',
-        'decision_strategy' => 'getDecisionStrategy',
-        'owner' => 'getOwner',
-        'resources_data' => 'getResourcesData',
-        'scopes_data' => 'getScopesData'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'description' => 'get_description',
+        'type' => 'get_type',
+        'policies' => 'get_policies',
+        'resources' => 'get_resources',
+        'scopes' => 'get_scopes',
+        'logic' => 'get_logic',
+        'decision_strategy' => 'get_decision_strategy',
+        'owner' => 'get_owner',
+        'resources_data' => 'get_resources_data',
+        'scopes_data' => 'get_scopes_data'
     ];
 
     /**
@@ -371,7 +371,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -383,7 +383,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -398,7 +398,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -410,7 +410,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -425,7 +425,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -437,7 +437,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -452,7 +452,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -464,7 +464,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -479,7 +479,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string[]|null
      */
-    public function getPolicies()
+    public function get_policies()
     {
         return $this->container['policies'];
     }
@@ -491,7 +491,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setPolicies($policies)
+    public function set_policies($policies)
     {
         if (is_null($policies)) {
             throw new \InvalidArgumentException('non-nullable policies cannot be null');
@@ -508,7 +508,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string[]|null
      */
-    public function getResources()
+    public function get_resources()
     {
         return $this->container['resources'];
     }
@@ -520,7 +520,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setResources($resources)
+    public function set_resources($resources)
     {
         if (is_null($resources)) {
             throw new \InvalidArgumentException('non-nullable resources cannot be null');
@@ -537,7 +537,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -549,7 +549,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
@@ -566,7 +566,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\Logic|null
      */
-    public function getLogic()
+    public function get_logic()
     {
         return $this->container['logic'];
     }
@@ -578,7 +578,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setLogic($logic)
+    public function set_logic($logic)
     {
         if (is_null($logic)) {
             throw new \InvalidArgumentException('non-nullable logic cannot be null');
@@ -593,7 +593,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\DecisionStrategy|null
      */
-    public function getDecisionStrategy()
+    public function get_decision_strategy()
     {
         return $this->container['decision_strategy'];
     }
@@ -605,7 +605,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setDecisionStrategy($decision_strategy)
+    public function set_decision_strategy($decision_strategy)
     {
         if (is_null($decision_strategy)) {
             throw new \InvalidArgumentException('non-nullable decision_strategy cannot be null');
@@ -620,7 +620,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getOwner()
+    public function get_owner()
     {
         return $this->container['owner'];
     }
@@ -632,7 +632,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setOwner($owner)
+    public function set_owner($owner)
     {
         if (is_null($owner)) {
             throw new \InvalidArgumentException('non-nullable owner cannot be null');
@@ -647,7 +647,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ResourceRepresentation[]|null
      */
-    public function getResourcesData()
+    public function get_resources_data()
     {
         return $this->container['resources_data'];
     }
@@ -659,7 +659,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setResourcesData($resources_data)
+    public function set_resources_data($resources_data)
     {
         if (is_null($resources_data)) {
             throw new \InvalidArgumentException('non-nullable resources_data cannot be null');
@@ -676,7 +676,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeRepresentation[]|null
      */
-    public function getScopesData()
+    public function get_scopes_data()
     {
         return $this->container['scopes_data'];
     }
@@ -688,7 +688,7 @@ class AbstractPolicyRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setScopesData($scopes_data)
+    public function set_scopes_data($scopes_data)
     {
         if (is_null($scopes_data)) {
             throw new \InvalidArgumentException('non-nullable scopes_data cannot be null');

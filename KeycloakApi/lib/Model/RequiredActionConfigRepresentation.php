@@ -175,7 +175,7 @@ class RequiredActionConfigRepresentation implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'config' => 'setConfig'
+        'config' => 'set_config'
     ];
 
     /**
@@ -184,7 +184,7 @@ class RequiredActionConfigRepresentation implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'config' => 'getConfig'
+        'config' => 'get_config'
     ];
 
     /**
@@ -294,7 +294,7 @@ class RequiredActionConfigRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -306,7 +306,7 @@ class RequiredActionConfigRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

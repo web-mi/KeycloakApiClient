@@ -207,15 +207,15 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'time' => 'setTime',
-        'type' => 'setType',
-        'realm_id' => 'setRealmId',
-        'client_id' => 'setClientId',
-        'user_id' => 'setUserId',
-        'session_id' => 'setSessionId',
-        'ip_address' => 'setIpAddress',
-        'error' => 'setError',
-        'details' => 'setDetails'
+        'time' => 'set_time',
+        'type' => 'set_type',
+        'realm_id' => 'set_realm_id',
+        'client_id' => 'set_client_id',
+        'user_id' => 'set_user_id',
+        'session_id' => 'set_session_id',
+        'ip_address' => 'set_ip_address',
+        'error' => 'set_error',
+        'details' => 'set_details'
     ];
 
     /**
@@ -224,15 +224,15 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'time' => 'getTime',
-        'type' => 'getType',
-        'realm_id' => 'getRealmId',
-        'client_id' => 'getClientId',
-        'user_id' => 'getUserId',
-        'session_id' => 'getSessionId',
-        'ip_address' => 'getIpAddress',
-        'error' => 'getError',
-        'details' => 'getDetails'
+        'time' => 'get_time',
+        'type' => 'get_type',
+        'realm_id' => 'get_realm_id',
+        'client_id' => 'get_client_id',
+        'user_id' => 'get_user_id',
+        'session_id' => 'get_session_id',
+        'ip_address' => 'get_ip_address',
+        'error' => 'get_error',
+        'details' => 'get_details'
     ];
 
     /**
@@ -350,7 +350,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return int|null
      */
-    public function getTime()
+    public function get_time()
     {
         return $this->container['time'];
     }
@@ -362,7 +362,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setTime($time)
+    public function set_time($time)
     {
         if (is_null($time)) {
             throw new \InvalidArgumentException('non-nullable time cannot be null');
@@ -377,7 +377,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -389,7 +389,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -404,7 +404,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getRealmId()
+    public function get_realm_id()
     {
         return $this->container['realm_id'];
     }
@@ -416,7 +416,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setRealmId($realm_id)
+    public function set_realm_id($realm_id)
     {
         if (is_null($realm_id)) {
             throw new \InvalidArgumentException('non-nullable realm_id cannot be null');
@@ -431,7 +431,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getClientId()
+    public function get_client_id()
     {
         return $this->container['client_id'];
     }
@@ -443,7 +443,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setClientId($client_id)
+    public function set_client_id($client_id)
     {
         if (is_null($client_id)) {
             throw new \InvalidArgumentException('non-nullable client_id cannot be null');
@@ -458,7 +458,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getUserId()
+    public function get_user_id()
     {
         return $this->container['user_id'];
     }
@@ -470,7 +470,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function set_user_id($user_id)
     {
         if (is_null($user_id)) {
             throw new \InvalidArgumentException('non-nullable user_id cannot be null');
@@ -485,7 +485,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getSessionId()
+    public function get_session_id()
     {
         return $this->container['session_id'];
     }
@@ -497,7 +497,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSessionId($session_id)
+    public function set_session_id($session_id)
     {
         if (is_null($session_id)) {
             throw new \InvalidArgumentException('non-nullable session_id cannot be null');
@@ -512,7 +512,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getIpAddress()
+    public function get_ip_address()
     {
         return $this->container['ip_address'];
     }
@@ -524,7 +524,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setIpAddress($ip_address)
+    public function set_ip_address($ip_address)
     {
         if (is_null($ip_address)) {
             throw new \InvalidArgumentException('non-nullable ip_address cannot be null');
@@ -539,7 +539,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getError()
+    public function get_error()
     {
         return $this->container['error'];
     }
@@ -551,7 +551,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setError($error)
+    public function set_error($error)
     {
         if (is_null($error)) {
             throw new \InvalidArgumentException('non-nullable error cannot be null');
@@ -566,7 +566,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return array<string,string>|null
      */
-    public function getDetails()
+    public function get_details()
     {
         return $this->container['details'];
     }
@@ -578,7 +578,7 @@ class EventRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDetails($details)
+    public function set_details($details)
     {
         if (is_null($details)) {
             throw new \InvalidArgumentException('non-nullable details cannot be null');

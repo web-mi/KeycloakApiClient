@@ -227,20 +227,20 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'requirement' => 'setRequirement',
-        'display_name' => 'setDisplayName',
-        'alias' => 'setAlias',
-        'description' => 'setDescription',
-        'requirement_choices' => 'setRequirementChoices',
-        'configurable' => 'setConfigurable',
-        'authentication_flow' => 'setAuthenticationFlow',
-        'provider_id' => 'setProviderId',
-        'authentication_config' => 'setAuthenticationConfig',
-        'flow_id' => 'setFlowId',
-        'level' => 'setLevel',
-        'index' => 'setIndex',
-        'priority' => 'setPriority'
+        'id' => 'set_id',
+        'requirement' => 'set_requirement',
+        'display_name' => 'set_display_name',
+        'alias' => 'set_alias',
+        'description' => 'set_description',
+        'requirement_choices' => 'set_requirement_choices',
+        'configurable' => 'set_configurable',
+        'authentication_flow' => 'set_authentication_flow',
+        'provider_id' => 'set_provider_id',
+        'authentication_config' => 'set_authentication_config',
+        'flow_id' => 'set_flow_id',
+        'level' => 'set_level',
+        'index' => 'set_index',
+        'priority' => 'set_priority'
     ];
 
     /**
@@ -249,20 +249,20 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'requirement' => 'getRequirement',
-        'display_name' => 'getDisplayName',
-        'alias' => 'getAlias',
-        'description' => 'getDescription',
-        'requirement_choices' => 'getRequirementChoices',
-        'configurable' => 'getConfigurable',
-        'authentication_flow' => 'getAuthenticationFlow',
-        'provider_id' => 'getProviderId',
-        'authentication_config' => 'getAuthenticationConfig',
-        'flow_id' => 'getFlowId',
-        'level' => 'getLevel',
-        'index' => 'getIndex',
-        'priority' => 'getPriority'
+        'id' => 'get_id',
+        'requirement' => 'get_requirement',
+        'display_name' => 'get_display_name',
+        'alias' => 'get_alias',
+        'description' => 'get_description',
+        'requirement_choices' => 'get_requirement_choices',
+        'configurable' => 'get_configurable',
+        'authentication_flow' => 'get_authentication_flow',
+        'provider_id' => 'get_provider_id',
+        'authentication_config' => 'get_authentication_config',
+        'flow_id' => 'get_flow_id',
+        'level' => 'get_level',
+        'index' => 'get_index',
+        'priority' => 'get_priority'
     ];
 
     /**
@@ -385,7 +385,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -397,7 +397,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -412,7 +412,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getRequirement()
+    public function get_requirement()
     {
         return $this->container['requirement'];
     }
@@ -424,7 +424,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setRequirement($requirement)
+    public function set_requirement($requirement)
     {
         if (is_null($requirement)) {
             throw new \InvalidArgumentException('non-nullable requirement cannot be null');
@@ -439,7 +439,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -451,7 +451,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
@@ -466,7 +466,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getAlias()
+    public function get_alias()
     {
         return $this->container['alias'];
     }
@@ -478,7 +478,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setAlias($alias)
+    public function set_alias($alias)
     {
         if (is_null($alias)) {
             throw new \InvalidArgumentException('non-nullable alias cannot be null');
@@ -493,7 +493,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -505,7 +505,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -520,7 +520,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string[]|null
      */
-    public function getRequirementChoices()
+    public function get_requirement_choices()
     {
         return $this->container['requirement_choices'];
     }
@@ -532,7 +532,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setRequirementChoices($requirement_choices)
+    public function set_requirement_choices($requirement_choices)
     {
         if (is_null($requirement_choices)) {
             throw new \InvalidArgumentException('non-nullable requirement_choices cannot be null');
@@ -547,7 +547,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return bool|null
      */
-    public function getConfigurable()
+    public function get_configurable()
     {
         return $this->container['configurable'];
     }
@@ -559,7 +559,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setConfigurable($configurable)
+    public function set_configurable($configurable)
     {
         if (is_null($configurable)) {
             throw new \InvalidArgumentException('non-nullable configurable cannot be null');
@@ -574,7 +574,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return bool|null
      */
-    public function getAuthenticationFlow()
+    public function get_authentication_flow()
     {
         return $this->container['authentication_flow'];
     }
@@ -586,7 +586,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setAuthenticationFlow($authentication_flow)
+    public function set_authentication_flow($authentication_flow)
     {
         if (is_null($authentication_flow)) {
             throw new \InvalidArgumentException('non-nullable authentication_flow cannot be null');
@@ -601,7 +601,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -613,7 +613,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -628,7 +628,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getAuthenticationConfig()
+    public function get_authentication_config()
     {
         return $this->container['authentication_config'];
     }
@@ -640,7 +640,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setAuthenticationConfig($authentication_config)
+    public function set_authentication_config($authentication_config)
     {
         if (is_null($authentication_config)) {
             throw new \InvalidArgumentException('non-nullable authentication_config cannot be null');
@@ -655,7 +655,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return string|null
      */
-    public function getFlowId()
+    public function get_flow_id()
     {
         return $this->container['flow_id'];
     }
@@ -667,7 +667,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setFlowId($flow_id)
+    public function set_flow_id($flow_id)
     {
         if (is_null($flow_id)) {
             throw new \InvalidArgumentException('non-nullable flow_id cannot be null');
@@ -682,7 +682,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return int|null
      */
-    public function getLevel()
+    public function get_level()
     {
         return $this->container['level'];
     }
@@ -694,7 +694,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setLevel($level)
+    public function set_level($level)
     {
         if (is_null($level)) {
             throw new \InvalidArgumentException('non-nullable level cannot be null');
@@ -709,7 +709,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return int|null
      */
-    public function getIndex()
+    public function get_index()
     {
         return $this->container['index'];
     }
@@ -721,7 +721,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setIndex($index)
+    public function set_index($index)
     {
         if (is_null($index)) {
             throw new \InvalidArgumentException('non-nullable index cannot be null');
@@ -736,7 +736,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return int|null
      */
-    public function getPriority()
+    public function get_priority()
     {
         return $this->container['priority'];
     }
@@ -748,7 +748,7 @@ class AuthenticationExecutionInfoRepresentation implements ModelInterface, Array
      *
      * @return self
      */
-    public function setPriority($priority)
+    public function set_priority($priority)
     {
         if (is_null($priority)) {
             throw new \InvalidArgumentException('non-nullable priority cannot be null');

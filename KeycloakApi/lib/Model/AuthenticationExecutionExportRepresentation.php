@@ -203,14 +203,14 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      * @var string[]
      */
     protected static $setters = [
-        'authenticator_config' => 'setAuthenticatorConfig',
-        'authenticator' => 'setAuthenticator',
-        'authenticator_flow' => 'setAuthenticatorFlow',
-        'requirement' => 'setRequirement',
-        'priority' => 'setPriority',
-        'autheticator_flow' => 'setAutheticatorFlow',
-        'flow_alias' => 'setFlowAlias',
-        'user_setup_allowed' => 'setUserSetupAllowed'
+        'authenticator_config' => 'set_authenticator_config',
+        'authenticator' => 'set_authenticator',
+        'authenticator_flow' => 'set_authenticator_flow',
+        'requirement' => 'set_requirement',
+        'priority' => 'set_priority',
+        'autheticator_flow' => 'set_autheticator_flow',
+        'flow_alias' => 'set_flow_alias',
+        'user_setup_allowed' => 'set_user_setup_allowed'
     ];
 
     /**
@@ -219,14 +219,14 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      * @var string[]
      */
     protected static $getters = [
-        'authenticator_config' => 'getAuthenticatorConfig',
-        'authenticator' => 'getAuthenticator',
-        'authenticator_flow' => 'getAuthenticatorFlow',
-        'requirement' => 'getRequirement',
-        'priority' => 'getPriority',
-        'autheticator_flow' => 'getAutheticatorFlow',
-        'flow_alias' => 'getFlowAlias',
-        'user_setup_allowed' => 'getUserSetupAllowed'
+        'authenticator_config' => 'get_authenticator_config',
+        'authenticator' => 'get_authenticator',
+        'authenticator_flow' => 'get_authenticator_flow',
+        'requirement' => 'get_requirement',
+        'priority' => 'get_priority',
+        'autheticator_flow' => 'get_autheticator_flow',
+        'flow_alias' => 'get_flow_alias',
+        'user_setup_allowed' => 'get_user_setup_allowed'
     ];
 
     /**
@@ -343,7 +343,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return string|null
      */
-    public function getAuthenticatorConfig()
+    public function get_authenticator_config()
     {
         return $this->container['authenticator_config'];
     }
@@ -355,7 +355,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return self
      */
-    public function setAuthenticatorConfig($authenticator_config)
+    public function set_authenticator_config($authenticator_config)
     {
         if (is_null($authenticator_config)) {
             throw new \InvalidArgumentException('non-nullable authenticator_config cannot be null');
@@ -370,7 +370,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return string|null
      */
-    public function getAuthenticator()
+    public function get_authenticator()
     {
         return $this->container['authenticator'];
     }
@@ -382,7 +382,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return self
      */
-    public function setAuthenticator($authenticator)
+    public function set_authenticator($authenticator)
     {
         if (is_null($authenticator)) {
             throw new \InvalidArgumentException('non-nullable authenticator cannot be null');
@@ -397,7 +397,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return bool|null
      */
-    public function getAuthenticatorFlow()
+    public function get_authenticator_flow()
     {
         return $this->container['authenticator_flow'];
     }
@@ -409,7 +409,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return self
      */
-    public function setAuthenticatorFlow($authenticator_flow)
+    public function set_authenticator_flow($authenticator_flow)
     {
         if (is_null($authenticator_flow)) {
             throw new \InvalidArgumentException('non-nullable authenticator_flow cannot be null');
@@ -424,7 +424,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return string|null
      */
-    public function getRequirement()
+    public function get_requirement()
     {
         return $this->container['requirement'];
     }
@@ -436,7 +436,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return self
      */
-    public function setRequirement($requirement)
+    public function set_requirement($requirement)
     {
         if (is_null($requirement)) {
             throw new \InvalidArgumentException('non-nullable requirement cannot be null');
@@ -451,7 +451,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return int|null
      */
-    public function getPriority()
+    public function get_priority()
     {
         return $this->container['priority'];
     }
@@ -463,7 +463,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return self
      */
-    public function setPriority($priority)
+    public function set_priority($priority)
     {
         if (is_null($priority)) {
             throw new \InvalidArgumentException('non-nullable priority cannot be null');
@@ -479,7 +479,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      * @return bool|null
      * @deprecated
      */
-    public function getAutheticatorFlow()
+    public function get_autheticator_flow()
     {
         return $this->container['autheticator_flow'];
     }
@@ -492,7 +492,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      * @return self
      * @deprecated
      */
-    public function setAutheticatorFlow($autheticator_flow)
+    public function set_autheticator_flow($autheticator_flow)
     {
         if (is_null($autheticator_flow)) {
             throw new \InvalidArgumentException('non-nullable autheticator_flow cannot be null');
@@ -507,7 +507,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return string|null
      */
-    public function getFlowAlias()
+    public function get_flow_alias()
     {
         return $this->container['flow_alias'];
     }
@@ -519,7 +519,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return self
      */
-    public function setFlowAlias($flow_alias)
+    public function set_flow_alias($flow_alias)
     {
         if (is_null($flow_alias)) {
             throw new \InvalidArgumentException('non-nullable flow_alias cannot be null');
@@ -534,7 +534,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return bool|null
      */
-    public function getUserSetupAllowed()
+    public function get_user_setup_allowed()
     {
         return $this->container['user_setup_allowed'];
     }
@@ -546,7 +546,7 @@ class AuthenticationExecutionExportRepresentation implements ModelInterface, Arr
      *
      * @return self
      */
-    public function setUserSetupAllowed($user_setup_allowed)
+    public function set_user_setup_allowed($user_setup_allowed)
     {
         if (is_null($user_setup_allowed)) {
             throw new \InvalidArgumentException('non-nullable user_setup_allowed cannot be null');

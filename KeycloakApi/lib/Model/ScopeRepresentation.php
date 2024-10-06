@@ -195,12 +195,12 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'icon_uri' => 'setIconUri',
-        'policies' => 'setPolicies',
-        'resources' => 'setResources',
-        'display_name' => 'setDisplayName'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'icon_uri' => 'set_icon_uri',
+        'policies' => 'set_policies',
+        'resources' => 'set_resources',
+        'display_name' => 'set_display_name'
     ];
 
     /**
@@ -209,12 +209,12 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'icon_uri' => 'getIconUri',
-        'policies' => 'getPolicies',
-        'resources' => 'getResources',
-        'display_name' => 'getDisplayName'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'icon_uri' => 'get_icon_uri',
+        'policies' => 'get_policies',
+        'resources' => 'get_resources',
+        'display_name' => 'get_display_name'
     ];
 
     /**
@@ -329,7 +329,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -341,7 +341,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -356,7 +356,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -368,7 +368,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -383,7 +383,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getIconUri()
+    public function get_icon_uri()
     {
         return $this->container['icon_uri'];
     }
@@ -395,7 +395,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setIconUri($icon_uri)
+    public function set_icon_uri($icon_uri)
     {
         if (is_null($icon_uri)) {
             throw new \InvalidArgumentException('non-nullable icon_uri cannot be null');
@@ -410,7 +410,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PolicyRepresentation[]|null
      */
-    public function getPolicies()
+    public function get_policies()
     {
         return $this->container['policies'];
     }
@@ -422,7 +422,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setPolicies($policies)
+    public function set_policies($policies)
     {
         if (is_null($policies)) {
             throw new \InvalidArgumentException('non-nullable policies cannot be null');
@@ -437,7 +437,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ResourceRepresentation[]|null
      */
-    public function getResources()
+    public function get_resources()
     {
         return $this->container['resources'];
     }
@@ -449,7 +449,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setResources($resources)
+    public function set_resources($resources)
     {
         if (is_null($resources)) {
             throw new \InvalidArgumentException('non-nullable resources cannot be null');
@@ -464,7 +464,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -476,7 +476,7 @@ class ScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');

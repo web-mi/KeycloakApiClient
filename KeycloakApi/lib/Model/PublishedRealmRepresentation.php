@@ -191,11 +191,11 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'realm' => 'setRealm',
-        'public_key' => 'setPublicKey',
-        'token_service' => 'setTokenService',
-        'account_service' => 'setAccountService',
-        'tokens_not_before' => 'setTokensNotBefore'
+        'realm' => 'set_realm',
+        'public_key' => 'set_public_key',
+        'token_service' => 'set_token_service',
+        'account_service' => 'set_account_service',
+        'tokens_not_before' => 'set_tokens_not_before'
     ];
 
     /**
@@ -204,11 +204,11 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'realm' => 'getRealm',
-        'public_key' => 'getPublicKey',
-        'token_service' => 'getTokenService',
-        'account_service' => 'getAccountService',
-        'tokens_not_before' => 'getTokensNotBefore'
+        'realm' => 'get_realm',
+        'public_key' => 'get_public_key',
+        'token_service' => 'get_token_service',
+        'account_service' => 'get_account_service',
+        'tokens_not_before' => 'get_tokens_not_before'
     ];
 
     /**
@@ -322,7 +322,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getRealm()
+    public function get_realm()
     {
         return $this->container['realm'];
     }
@@ -334,7 +334,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setRealm($realm)
+    public function set_realm($realm)
     {
         if (is_null($realm)) {
             throw new \InvalidArgumentException('non-nullable realm cannot be null');
@@ -349,7 +349,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getPublicKey()
+    public function get_public_key()
     {
         return $this->container['public_key'];
     }
@@ -361,7 +361,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setPublicKey($public_key)
+    public function set_public_key($public_key)
     {
         if (is_null($public_key)) {
             throw new \InvalidArgumentException('non-nullable public_key cannot be null');
@@ -376,7 +376,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getTokenService()
+    public function get_token_service()
     {
         return $this->container['token_service'];
     }
@@ -388,7 +388,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setTokenService($token_service)
+    public function set_token_service($token_service)
     {
         if (is_null($token_service)) {
             throw new \InvalidArgumentException('non-nullable token_service cannot be null');
@@ -403,7 +403,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getAccountService()
+    public function get_account_service()
     {
         return $this->container['account_service'];
     }
@@ -415,7 +415,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setAccountService($account_service)
+    public function set_account_service($account_service)
     {
         if (is_null($account_service)) {
             throw new \InvalidArgumentException('non-nullable account_service cannot be null');
@@ -430,7 +430,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return int|null
      */
-    public function getTokensNotBefore()
+    public function get_tokens_not_before()
     {
         return $this->container['tokens_not_before'];
     }
@@ -442,7 +442,7 @@ class PublishedRealmRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setTokensNotBefore($tokens_not_before)
+    public function set_tokens_not_before($tokens_not_before)
     {
         if (is_null($tokens_not_before)) {
             throw new \InvalidArgumentException('non-nullable tokens_not_before cannot be null');

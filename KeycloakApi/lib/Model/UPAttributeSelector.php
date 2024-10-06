@@ -175,7 +175,7 @@ class UPAttributeSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'scopes' => 'setScopes'
+        'scopes' => 'set_scopes'
     ];
 
     /**
@@ -184,7 +184,7 @@ class UPAttributeSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'scopes' => 'getScopes'
+        'scopes' => 'get_scopes'
     ];
 
     /**
@@ -294,7 +294,7 @@ class UPAttributeSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -306,7 +306,7 @@ class UPAttributeSelector implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');

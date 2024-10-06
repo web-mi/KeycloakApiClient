@@ -203,14 +203,14 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'display_name' => 'setDisplayName',
-        'required' => 'setRequired',
-        'read_only' => 'setReadOnly',
-        'annotations' => 'setAnnotations',
-        'validators' => 'setValidators',
-        'group' => 'setGroup',
-        'multivalued' => 'setMultivalued'
+        'name' => 'set_name',
+        'display_name' => 'set_display_name',
+        'required' => 'set_required',
+        'read_only' => 'set_read_only',
+        'annotations' => 'set_annotations',
+        'validators' => 'set_validators',
+        'group' => 'set_group',
+        'multivalued' => 'set_multivalued'
     ];
 
     /**
@@ -219,14 +219,14 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'display_name' => 'getDisplayName',
-        'required' => 'getRequired',
-        'read_only' => 'getReadOnly',
-        'annotations' => 'getAnnotations',
-        'validators' => 'getValidators',
-        'group' => 'getGroup',
-        'multivalued' => 'getMultivalued'
+        'name' => 'get_name',
+        'display_name' => 'get_display_name',
+        'required' => 'get_required',
+        'read_only' => 'get_read_only',
+        'annotations' => 'get_annotations',
+        'validators' => 'get_validators',
+        'group' => 'get_group',
+        'multivalued' => 'get_multivalued'
     ];
 
     /**
@@ -343,7 +343,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -355,7 +355,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -370,7 +370,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -382,7 +382,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
@@ -397,7 +397,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getRequired()
+    public function get_required()
     {
         return $this->container['required'];
     }
@@ -409,7 +409,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setRequired($required)
+    public function set_required($required)
     {
         if (is_null($required)) {
             throw new \InvalidArgumentException('non-nullable required cannot be null');
@@ -424,7 +424,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getReadOnly()
+    public function get_read_only()
     {
         return $this->container['read_only'];
     }
@@ -436,7 +436,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setReadOnly($read_only)
+    public function set_read_only($read_only)
     {
         if (is_null($read_only)) {
             throw new \InvalidArgumentException('non-nullable read_only cannot be null');
@@ -451,7 +451,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return array<string,mixed>|null
      */
-    public function getAnnotations()
+    public function get_annotations()
     {
         return $this->container['annotations'];
     }
@@ -463,7 +463,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setAnnotations($annotations)
+    public function set_annotations($annotations)
     {
         if (is_null($annotations)) {
             throw new \InvalidArgumentException('non-nullable annotations cannot be null');
@@ -478,7 +478,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return array<string,array<string,mixed>>|null
      */
-    public function getValidators()
+    public function get_validators()
     {
         return $this->container['validators'];
     }
@@ -490,7 +490,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setValidators($validators)
+    public function set_validators($validators)
     {
         if (is_null($validators)) {
             throw new \InvalidArgumentException('non-nullable validators cannot be null');
@@ -505,7 +505,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getGroup()
+    public function get_group()
     {
         return $this->container['group'];
     }
@@ -517,7 +517,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setGroup($group)
+    public function set_group($group)
     {
         if (is_null($group)) {
             throw new \InvalidArgumentException('non-nullable group cannot be null');
@@ -532,7 +532,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getMultivalued()
+    public function get_multivalued()
     {
         return $this->container['multivalued'];
     }
@@ -544,7 +544,7 @@ class UserProfileAttributeMetadata implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setMultivalued($multivalued)
+    public function set_multivalued($multivalued)
     {
         if (is_null($multivalued)) {
             throw new \InvalidArgumentException('non-nullable multivalued cannot be null');

@@ -183,9 +183,9 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'method' => 'setMethod',
-        'scopes' => 'setScopes',
-        'scopes_enforcement_mode' => 'setScopesEnforcementMode'
+        'method' => 'set_method',
+        'scopes' => 'set_scopes',
+        'scopes_enforcement_mode' => 'set_scopes_enforcement_mode'
     ];
 
     /**
@@ -194,9 +194,9 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'method' => 'getMethod',
-        'scopes' => 'getScopes',
-        'scopes_enforcement_mode' => 'getScopesEnforcementMode'
+        'method' => 'get_method',
+        'scopes' => 'get_scopes',
+        'scopes_enforcement_mode' => 'get_scopes_enforcement_mode'
     ];
 
     /**
@@ -308,7 +308,7 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getMethod()
+    public function get_method()
     {
         return $this->container['method'];
     }
@@ -320,7 +320,7 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setMethod($method)
+    public function set_method($method)
     {
         if (is_null($method)) {
             throw new \InvalidArgumentException('non-nullable method cannot be null');
@@ -335,7 +335,7 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -347,7 +347,7 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
@@ -362,7 +362,7 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeEnforcementMode|null
      */
-    public function getScopesEnforcementMode()
+    public function get_scopes_enforcement_mode()
     {
         return $this->container['scopes_enforcement_mode'];
     }
@@ -374,7 +374,7 @@ class MethodConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setScopesEnforcementMode($scopes_enforcement_mode)
+    public function set_scopes_enforcement_mode($scopes_enforcement_mode)
     {
         if (is_null($scopes_enforcement_mode)) {
             throw new \InvalidArgumentException('non-nullable scopes_enforcement_mode cannot be null');

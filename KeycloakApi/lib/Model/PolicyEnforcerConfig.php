@@ -219,18 +219,18 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $setters = [
-        'enforcement_mode' => 'setEnforcementMode',
-        'paths' => 'setPaths',
-        'path_cache' => 'setPathCache',
-        'lazy_load_paths' => 'setLazyLoadPaths',
-        'on_deny_redirect_to' => 'setOnDenyRedirectTo',
-        'user_managed_access' => 'setUserManagedAccess',
-        'claim_information_point' => 'setClaimInformationPoint',
-        'http_method_as_scope' => 'setHttpMethodAsScope',
-        'realm' => 'setRealm',
-        'auth_server_url' => 'setAuthServerUrl',
-        'credentials' => 'setCredentials',
-        'resource' => 'setResource'
+        'enforcement_mode' => 'set_enforcement_mode',
+        'paths' => 'set_paths',
+        'path_cache' => 'set_path_cache',
+        'lazy_load_paths' => 'set_lazy_load_paths',
+        'on_deny_redirect_to' => 'set_on_deny_redirect_to',
+        'user_managed_access' => 'set_user_managed_access',
+        'claim_information_point' => 'set_claim_information_point',
+        'http_method_as_scope' => 'set_http_method_as_scope',
+        'realm' => 'set_realm',
+        'auth_server_url' => 'set_auth_server_url',
+        'credentials' => 'set_credentials',
+        'resource' => 'set_resource'
     ];
 
     /**
@@ -239,18 +239,18 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      * @var string[]
      */
     protected static $getters = [
-        'enforcement_mode' => 'getEnforcementMode',
-        'paths' => 'getPaths',
-        'path_cache' => 'getPathCache',
-        'lazy_load_paths' => 'getLazyLoadPaths',
-        'on_deny_redirect_to' => 'getOnDenyRedirectTo',
-        'user_managed_access' => 'getUserManagedAccess',
-        'claim_information_point' => 'getClaimInformationPoint',
-        'http_method_as_scope' => 'getHttpMethodAsScope',
-        'realm' => 'getRealm',
-        'auth_server_url' => 'getAuthServerUrl',
-        'credentials' => 'getCredentials',
-        'resource' => 'getResource'
+        'enforcement_mode' => 'get_enforcement_mode',
+        'paths' => 'get_paths',
+        'path_cache' => 'get_path_cache',
+        'lazy_load_paths' => 'get_lazy_load_paths',
+        'on_deny_redirect_to' => 'get_on_deny_redirect_to',
+        'user_managed_access' => 'get_user_managed_access',
+        'claim_information_point' => 'get_claim_information_point',
+        'http_method_as_scope' => 'get_http_method_as_scope',
+        'realm' => 'get_realm',
+        'auth_server_url' => 'get_auth_server_url',
+        'credentials' => 'get_credentials',
+        'resource' => 'get_resource'
     ];
 
     /**
@@ -371,7 +371,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\EnforcementMode|null
      */
-    public function getEnforcementMode()
+    public function get_enforcement_mode()
     {
         return $this->container['enforcement_mode'];
     }
@@ -383,7 +383,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setEnforcementMode($enforcement_mode)
+    public function set_enforcement_mode($enforcement_mode)
     {
         if (is_null($enforcement_mode)) {
             throw new \InvalidArgumentException('non-nullable enforcement_mode cannot be null');
@@ -398,7 +398,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PathConfig[]|null
      */
-    public function getPaths()
+    public function get_paths()
     {
         return $this->container['paths'];
     }
@@ -410,7 +410,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setPaths($paths)
+    public function set_paths($paths)
     {
         if (is_null($paths)) {
             throw new \InvalidArgumentException('non-nullable paths cannot be null');
@@ -425,7 +425,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PathCacheConfig|null
      */
-    public function getPathCache()
+    public function get_path_cache()
     {
         return $this->container['path_cache'];
     }
@@ -437,7 +437,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setPathCache($path_cache)
+    public function set_path_cache($path_cache)
     {
         if (is_null($path_cache)) {
             throw new \InvalidArgumentException('non-nullable path_cache cannot be null');
@@ -452,7 +452,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getLazyLoadPaths()
+    public function get_lazy_load_paths()
     {
         return $this->container['lazy_load_paths'];
     }
@@ -464,7 +464,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setLazyLoadPaths($lazy_load_paths)
+    public function set_lazy_load_paths($lazy_load_paths)
     {
         if (is_null($lazy_load_paths)) {
             throw new \InvalidArgumentException('non-nullable lazy_load_paths cannot be null');
@@ -479,7 +479,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getOnDenyRedirectTo()
+    public function get_on_deny_redirect_to()
     {
         return $this->container['on_deny_redirect_to'];
     }
@@ -491,7 +491,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setOnDenyRedirectTo($on_deny_redirect_to)
+    public function set_on_deny_redirect_to($on_deny_redirect_to)
     {
         if (is_null($on_deny_redirect_to)) {
             throw new \InvalidArgumentException('non-nullable on_deny_redirect_to cannot be null');
@@ -506,7 +506,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return object|null
      */
-    public function getUserManagedAccess()
+    public function get_user_managed_access()
     {
         return $this->container['user_managed_access'];
     }
@@ -518,7 +518,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setUserManagedAccess($user_managed_access)
+    public function set_user_managed_access($user_managed_access)
     {
         if (is_null($user_managed_access)) {
             throw new \InvalidArgumentException('non-nullable user_managed_access cannot be null');
@@ -533,7 +533,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,array<string,mixed>>|null
      */
-    public function getClaimInformationPoint()
+    public function get_claim_information_point()
     {
         return $this->container['claim_information_point'];
     }
@@ -545,7 +545,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setClaimInformationPoint($claim_information_point)
+    public function set_claim_information_point($claim_information_point)
     {
         if (is_null($claim_information_point)) {
             throw new \InvalidArgumentException('non-nullable claim_information_point cannot be null');
@@ -560,7 +560,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return bool|null
      */
-    public function getHttpMethodAsScope()
+    public function get_http_method_as_scope()
     {
         return $this->container['http_method_as_scope'];
     }
@@ -572,7 +572,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setHttpMethodAsScope($http_method_as_scope)
+    public function set_http_method_as_scope($http_method_as_scope)
     {
         if (is_null($http_method_as_scope)) {
             throw new \InvalidArgumentException('non-nullable http_method_as_scope cannot be null');
@@ -587,7 +587,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getRealm()
+    public function get_realm()
     {
         return $this->container['realm'];
     }
@@ -599,7 +599,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setRealm($realm)
+    public function set_realm($realm)
     {
         if (is_null($realm)) {
             throw new \InvalidArgumentException('non-nullable realm cannot be null');
@@ -614,7 +614,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getAuthServerUrl()
+    public function get_auth_server_url()
     {
         return $this->container['auth_server_url'];
     }
@@ -626,7 +626,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setAuthServerUrl($auth_server_url)
+    public function set_auth_server_url($auth_server_url)
     {
         if (is_null($auth_server_url)) {
             throw new \InvalidArgumentException('non-nullable auth_server_url cannot be null');
@@ -641,7 +641,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return array<string,mixed>|null
      */
-    public function getCredentials()
+    public function get_credentials()
     {
         return $this->container['credentials'];
     }
@@ -653,7 +653,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setCredentials($credentials)
+    public function set_credentials($credentials)
     {
         if (is_null($credentials)) {
             throw new \InvalidArgumentException('non-nullable credentials cannot be null');
@@ -668,7 +668,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return string|null
      */
-    public function getResource()
+    public function get_resource()
     {
         return $this->container['resource'];
     }
@@ -680,7 +680,7 @@ class PolicyEnforcerConfig implements ModelInterface, ArrayAccess, \JsonSerializ
      *
      * @return self
      */
-    public function setResource($resource)
+    public function set_resource($resource)
     {
         if (is_null($resource)) {
             throw new \InvalidArgumentException('non-nullable resource cannot be null');

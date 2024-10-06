@@ -179,8 +179,8 @@ class PropertyConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'applicable' => 'setApplicable',
-        'value' => 'setValue'
+        'applicable' => 'set_applicable',
+        'value' => 'set_value'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PropertyConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'applicable' => 'getApplicable',
-        'value' => 'getValue'
+        'applicable' => 'get_applicable',
+        'value' => 'get_value'
     ];
 
     /**
@@ -301,7 +301,7 @@ class PropertyConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getApplicable()
+    public function get_applicable()
     {
         return $this->container['applicable'];
     }
@@ -313,7 +313,7 @@ class PropertyConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setApplicable($applicable)
+    public function set_applicable($applicable)
     {
         if (is_null($applicable)) {
             throw new \InvalidArgumentException('non-nullable applicable cannot be null');
@@ -328,7 +328,7 @@ class PropertyConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return mixed|null
      */
-    public function getValue()
+    public function get_value()
     {
         return $this->container['value'];
     }
@@ -340,7 +340,7 @@ class PropertyConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setValue($value)
+    public function set_value($value)
     {
         if (is_null($value)) {
             array_push($this->openAPINullablesSetToNull, 'value');

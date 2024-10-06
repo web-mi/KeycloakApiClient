@@ -187,10 +187,10 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'results' => 'setResults',
-        'entitlements' => 'setEntitlements',
-        'status' => 'setStatus',
-        'rpt' => 'setRpt'
+        'results' => 'set_results',
+        'entitlements' => 'set_entitlements',
+        'status' => 'set_status',
+        'rpt' => 'set_rpt'
     ];
 
     /**
@@ -199,10 +199,10 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'results' => 'getResults',
-        'entitlements' => 'getEntitlements',
-        'status' => 'getStatus',
-        'rpt' => 'getRpt'
+        'results' => 'get_results',
+        'entitlements' => 'get_entitlements',
+        'status' => 'get_status',
+        'rpt' => 'get_rpt'
     ];
 
     /**
@@ -315,7 +315,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\EvaluationResultRepresentation[]|null
      */
-    public function getResults()
+    public function get_results()
     {
         return $this->container['results'];
     }
@@ -327,7 +327,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setResults($results)
+    public function set_results($results)
     {
         if (is_null($results)) {
             throw new \InvalidArgumentException('non-nullable results cannot be null');
@@ -342,7 +342,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return bool|null
      */
-    public function getEntitlements()
+    public function get_entitlements()
     {
         return $this->container['entitlements'];
     }
@@ -354,7 +354,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setEntitlements($entitlements)
+    public function set_entitlements($entitlements)
     {
         if (is_null($entitlements)) {
             throw new \InvalidArgumentException('non-nullable entitlements cannot be null');
@@ -369,7 +369,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\DecisionEffect|null
      */
-    public function getStatus()
+    public function get_status()
     {
         return $this->container['status'];
     }
@@ -381,7 +381,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setStatus($status)
+    public function set_status($status)
     {
         if (is_null($status)) {
             throw new \InvalidArgumentException('non-nullable status cannot be null');
@@ -396,7 +396,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\AccessToken|null
      */
-    public function getRpt()
+    public function get_rpt()
     {
         return $this->container['rpt'];
     }
@@ -408,7 +408,7 @@ class PolicyEvaluationResponse implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setRpt($rpt)
+    public function set_rpt($rpt)
     {
         if (is_null($rpt)) {
             throw new \InvalidArgumentException('non-nullable rpt cannot be null');

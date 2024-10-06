@@ -203,14 +203,14 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $setters = [
-        'time' => 'setTime',
-        'realm_id' => 'setRealmId',
-        'auth_details' => 'setAuthDetails',
-        'operation_type' => 'setOperationType',
-        'resource_type' => 'setResourceType',
-        'resource_path' => 'setResourcePath',
-        'representation' => 'setRepresentation',
-        'error' => 'setError'
+        'time' => 'set_time',
+        'realm_id' => 'set_realm_id',
+        'auth_details' => 'set_auth_details',
+        'operation_type' => 'set_operation_type',
+        'resource_type' => 'set_resource_type',
+        'resource_path' => 'set_resource_path',
+        'representation' => 'set_representation',
+        'error' => 'set_error'
     ];
 
     /**
@@ -219,14 +219,14 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      * @var string[]
      */
     protected static $getters = [
-        'time' => 'getTime',
-        'realm_id' => 'getRealmId',
-        'auth_details' => 'getAuthDetails',
-        'operation_type' => 'getOperationType',
-        'resource_type' => 'getResourceType',
-        'resource_path' => 'getResourcePath',
-        'representation' => 'getRepresentation',
-        'error' => 'getError'
+        'time' => 'get_time',
+        'realm_id' => 'get_realm_id',
+        'auth_details' => 'get_auth_details',
+        'operation_type' => 'get_operation_type',
+        'resource_type' => 'get_resource_type',
+        'resource_path' => 'get_resource_path',
+        'representation' => 'get_representation',
+        'error' => 'get_error'
     ];
 
     /**
@@ -343,7 +343,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return int|null
      */
-    public function getTime()
+    public function get_time()
     {
         return $this->container['time'];
     }
@@ -355,7 +355,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setTime($time)
+    public function set_time($time)
     {
         if (is_null($time)) {
             throw new \InvalidArgumentException('non-nullable time cannot be null');
@@ -370,7 +370,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getRealmId()
+    public function get_realm_id()
     {
         return $this->container['realm_id'];
     }
@@ -382,7 +382,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setRealmId($realm_id)
+    public function set_realm_id($realm_id)
     {
         if (is_null($realm_id)) {
             throw new \InvalidArgumentException('non-nullable realm_id cannot be null');
@@ -397,7 +397,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\AuthDetailsRepresentation|null
      */
-    public function getAuthDetails()
+    public function get_auth_details()
     {
         return $this->container['auth_details'];
     }
@@ -409,7 +409,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setAuthDetails($auth_details)
+    public function set_auth_details($auth_details)
     {
         if (is_null($auth_details)) {
             throw new \InvalidArgumentException('non-nullable auth_details cannot be null');
@@ -424,7 +424,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getOperationType()
+    public function get_operation_type()
     {
         return $this->container['operation_type'];
     }
@@ -436,7 +436,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setOperationType($operation_type)
+    public function set_operation_type($operation_type)
     {
         if (is_null($operation_type)) {
             throw new \InvalidArgumentException('non-nullable operation_type cannot be null');
@@ -451,7 +451,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getResourceType()
+    public function get_resource_type()
     {
         return $this->container['resource_type'];
     }
@@ -463,7 +463,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setResourceType($resource_type)
+    public function set_resource_type($resource_type)
     {
         if (is_null($resource_type)) {
             throw new \InvalidArgumentException('non-nullable resource_type cannot be null');
@@ -478,7 +478,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getResourcePath()
+    public function get_resource_path()
     {
         return $this->container['resource_path'];
     }
@@ -490,7 +490,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setResourcePath($resource_path)
+    public function set_resource_path($resource_path)
     {
         if (is_null($resource_path)) {
             throw new \InvalidArgumentException('non-nullable resource_path cannot be null');
@@ -505,7 +505,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getRepresentation()
+    public function get_representation()
     {
         return $this->container['representation'];
     }
@@ -517,7 +517,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setRepresentation($representation)
+    public function set_representation($representation)
     {
         if (is_null($representation)) {
             throw new \InvalidArgumentException('non-nullable representation cannot be null');
@@ -532,7 +532,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return string|null
      */
-    public function getError()
+    public function get_error()
     {
         return $this->container['error'];
     }
@@ -544,7 +544,7 @@ class AdminEventRepresentation implements ModelInterface, ArrayAccess, \JsonSeri
      *
      * @return self
      */
-    public function setError($error)
+    public function set_error($error)
     {
         if (is_null($error)) {
             throw new \InvalidArgumentException('non-nullable error cannot be null');

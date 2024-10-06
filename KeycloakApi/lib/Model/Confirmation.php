@@ -179,8 +179,8 @@ class Confirmation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'x5t_s256' => 'setX5tS256',
-        'jkt' => 'setJkt'
+        'x5t_s256' => 'set_x5t_s256',
+        'jkt' => 'set_jkt'
     ];
 
     /**
@@ -189,8 +189,8 @@ class Confirmation implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'x5t_s256' => 'getX5tS256',
-        'jkt' => 'getJkt'
+        'x5t_s256' => 'get_x5t_s256',
+        'jkt' => 'get_jkt'
     ];
 
     /**
@@ -301,7 +301,7 @@ class Confirmation implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getX5tS256()
+    public function get_x5t_s256()
     {
         return $this->container['x5t_s256'];
     }
@@ -313,7 +313,7 @@ class Confirmation implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setX5tS256($x5t_s256)
+    public function set_x5t_s256($x5t_s256)
     {
         if (is_null($x5t_s256)) {
             throw new \InvalidArgumentException('non-nullable x5t_s256 cannot be null');
@@ -328,7 +328,7 @@ class Confirmation implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getJkt()
+    public function get_jkt()
     {
         return $this->container['jkt'];
     }
@@ -340,7 +340,7 @@ class Confirmation implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setJkt($jkt)
+    public function set_jkt($jkt)
     {
         if (is_null($jkt)) {
             throw new \InvalidArgumentException('non-nullable jkt cannot be null');

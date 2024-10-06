@@ -203,14 +203,14 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'display_name' => 'setDisplayName',
-        'provider_name' => 'setProviderName',
-        'config' => 'setConfig',
-        'priority' => 'setPriority',
-        'full_sync_period' => 'setFullSyncPeriod',
-        'changed_sync_period' => 'setChangedSyncPeriod',
-        'last_sync' => 'setLastSync'
+        'id' => 'set_id',
+        'display_name' => 'set_display_name',
+        'provider_name' => 'set_provider_name',
+        'config' => 'set_config',
+        'priority' => 'set_priority',
+        'full_sync_period' => 'set_full_sync_period',
+        'changed_sync_period' => 'set_changed_sync_period',
+        'last_sync' => 'set_last_sync'
     ];
 
     /**
@@ -219,14 +219,14 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'display_name' => 'getDisplayName',
-        'provider_name' => 'getProviderName',
-        'config' => 'getConfig',
-        'priority' => 'getPriority',
-        'full_sync_period' => 'getFullSyncPeriod',
-        'changed_sync_period' => 'getChangedSyncPeriod',
-        'last_sync' => 'getLastSync'
+        'id' => 'get_id',
+        'display_name' => 'get_display_name',
+        'provider_name' => 'get_provider_name',
+        'config' => 'get_config',
+        'priority' => 'get_priority',
+        'full_sync_period' => 'get_full_sync_period',
+        'changed_sync_period' => 'get_changed_sync_period',
+        'last_sync' => 'get_last_sync'
     ];
 
     /**
@@ -343,7 +343,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -355,7 +355,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -370,7 +370,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -382,7 +382,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
@@ -397,7 +397,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return string|null
      */
-    public function getProviderName()
+    public function get_provider_name()
     {
         return $this->container['provider_name'];
     }
@@ -409,7 +409,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setProviderName($provider_name)
+    public function set_provider_name($provider_name)
     {
         if (is_null($provider_name)) {
             throw new \InvalidArgumentException('non-nullable provider_name cannot be null');
@@ -424,7 +424,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -436,7 +436,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');
@@ -451,7 +451,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return int|null
      */
-    public function getPriority()
+    public function get_priority()
     {
         return $this->container['priority'];
     }
@@ -463,7 +463,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setPriority($priority)
+    public function set_priority($priority)
     {
         if (is_null($priority)) {
             throw new \InvalidArgumentException('non-nullable priority cannot be null');
@@ -478,7 +478,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return int|null
      */
-    public function getFullSyncPeriod()
+    public function get_full_sync_period()
     {
         return $this->container['full_sync_period'];
     }
@@ -490,7 +490,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setFullSyncPeriod($full_sync_period)
+    public function set_full_sync_period($full_sync_period)
     {
         if (is_null($full_sync_period)) {
             throw new \InvalidArgumentException('non-nullable full_sync_period cannot be null');
@@ -505,7 +505,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return int|null
      */
-    public function getChangedSyncPeriod()
+    public function get_changed_sync_period()
     {
         return $this->container['changed_sync_period'];
     }
@@ -517,7 +517,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setChangedSyncPeriod($changed_sync_period)
+    public function set_changed_sync_period($changed_sync_period)
     {
         if (is_null($changed_sync_period)) {
             throw new \InvalidArgumentException('non-nullable changed_sync_period cannot be null');
@@ -532,7 +532,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return int|null
      */
-    public function getLastSync()
+    public function get_last_sync()
     {
         return $this->container['last_sync'];
     }
@@ -544,7 +544,7 @@ class UserFederationProviderRepresentation implements ModelInterface, ArrayAcces
      *
      * @return self
      */
-    public function setLastSync($last_sync)
+    public function set_last_sync($last_sync)
     {
         if (is_null($last_sync)) {
             throw new \InvalidArgumentException('non-nullable last_sync cannot be null');

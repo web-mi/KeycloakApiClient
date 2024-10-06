@@ -179,8 +179,8 @@ class ClientPolicyConditionRepresentation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'condition' => 'setCondition',
-        'configuration' => 'setConfiguration'
+        'condition' => 'set_condition',
+        'configuration' => 'set_configuration'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ClientPolicyConditionRepresentation implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'condition' => 'getCondition',
-        'configuration' => 'getConfiguration'
+        'condition' => 'get_condition',
+        'configuration' => 'get_configuration'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ClientPolicyConditionRepresentation implements ModelInterface, ArrayAccess
      *
      * @return string|null
      */
-    public function getCondition()
+    public function get_condition()
     {
         return $this->container['condition'];
     }
@@ -313,7 +313,7 @@ class ClientPolicyConditionRepresentation implements ModelInterface, ArrayAccess
      *
      * @return self
      */
-    public function setCondition($condition)
+    public function set_condition($condition)
     {
         if (is_null($condition)) {
             throw new \InvalidArgumentException('non-nullable condition cannot be null');
@@ -328,7 +328,7 @@ class ClientPolicyConditionRepresentation implements ModelInterface, ArrayAccess
      *
      * @return string[]|null
      */
-    public function getConfiguration()
+    public function get_configuration()
     {
         return $this->container['configuration'];
     }
@@ -340,7 +340,7 @@ class ClientPolicyConditionRepresentation implements ModelInterface, ArrayAccess
      *
      * @return self
      */
-    public function setConfiguration($configuration)
+    public function set_configuration($configuration)
     {
         if (is_null($configuration)) {
             throw new \InvalidArgumentException('non-nullable configuration cannot be null');

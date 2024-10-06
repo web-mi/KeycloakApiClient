@@ -195,12 +195,12 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'mapper_id' => 'setMapperId',
-        'mapper_name' => 'setMapperName',
-        'container_id' => 'setContainerId',
-        'container_name' => 'setContainerName',
-        'container_type' => 'setContainerType',
-        'protocol_mapper' => 'setProtocolMapper'
+        'mapper_id' => 'set_mapper_id',
+        'mapper_name' => 'set_mapper_name',
+        'container_id' => 'set_container_id',
+        'container_name' => 'set_container_name',
+        'container_type' => 'set_container_type',
+        'protocol_mapper' => 'set_protocol_mapper'
     ];
 
     /**
@@ -209,12 +209,12 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'mapper_id' => 'getMapperId',
-        'mapper_name' => 'getMapperName',
-        'container_id' => 'getContainerId',
-        'container_name' => 'getContainerName',
-        'container_type' => 'getContainerType',
-        'protocol_mapper' => 'getProtocolMapper'
+        'mapper_id' => 'get_mapper_id',
+        'mapper_name' => 'get_mapper_name',
+        'container_id' => 'get_container_id',
+        'container_name' => 'get_container_name',
+        'container_type' => 'get_container_type',
+        'protocol_mapper' => 'get_protocol_mapper'
     ];
 
     /**
@@ -329,7 +329,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return string|null
      */
-    public function getMapperId()
+    public function get_mapper_id()
     {
         return $this->container['mapper_id'];
     }
@@ -341,7 +341,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return self
      */
-    public function setMapperId($mapper_id)
+    public function set_mapper_id($mapper_id)
     {
         if (is_null($mapper_id)) {
             throw new \InvalidArgumentException('non-nullable mapper_id cannot be null');
@@ -356,7 +356,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return string|null
      */
-    public function getMapperName()
+    public function get_mapper_name()
     {
         return $this->container['mapper_name'];
     }
@@ -368,7 +368,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return self
      */
-    public function setMapperName($mapper_name)
+    public function set_mapper_name($mapper_name)
     {
         if (is_null($mapper_name)) {
             throw new \InvalidArgumentException('non-nullable mapper_name cannot be null');
@@ -383,7 +383,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return string|null
      */
-    public function getContainerId()
+    public function get_container_id()
     {
         return $this->container['container_id'];
     }
@@ -395,7 +395,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return self
      */
-    public function setContainerId($container_id)
+    public function set_container_id($container_id)
     {
         if (is_null($container_id)) {
             throw new \InvalidArgumentException('non-nullable container_id cannot be null');
@@ -410,7 +410,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return string|null
      */
-    public function getContainerName()
+    public function get_container_name()
     {
         return $this->container['container_name'];
     }
@@ -422,7 +422,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return self
      */
-    public function setContainerName($container_name)
+    public function set_container_name($container_name)
     {
         if (is_null($container_name)) {
             throw new \InvalidArgumentException('non-nullable container_name cannot be null');
@@ -437,7 +437,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return string|null
      */
-    public function getContainerType()
+    public function get_container_type()
     {
         return $this->container['container_type'];
     }
@@ -449,7 +449,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return self
      */
-    public function setContainerType($container_type)
+    public function set_container_type($container_type)
     {
         if (is_null($container_type)) {
             throw new \InvalidArgumentException('non-nullable container_type cannot be null');
@@ -464,7 +464,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return string|null
      */
-    public function getProtocolMapper()
+    public function get_protocol_mapper()
     {
         return $this->container['protocol_mapper'];
     }
@@ -476,7 +476,7 @@ class ProtocolMapperEvaluationRepresentation implements ModelInterface, ArrayAcc
      *
      * @return self
      */
-    public function setProtocolMapper($protocol_mapper)
+    public function set_protocol_mapper($protocol_mapper)
     {
         if (is_null($protocol_mapper)) {
             throw new \InvalidArgumentException('non-nullable protocol_mapper cannot be null');

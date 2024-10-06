@@ -183,9 +183,9 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'alias' => 'setAlias',
-        'config' => 'setConfig'
+        'id' => 'set_id',
+        'alias' => 'set_alias',
+        'config' => 'set_config'
     ];
 
     /**
@@ -194,9 +194,9 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'alias' => 'getAlias',
-        'config' => 'getConfig'
+        'id' => 'get_id',
+        'alias' => 'get_alias',
+        'config' => 'get_config'
     ];
 
     /**
@@ -308,7 +308,7 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -320,7 +320,7 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -335,7 +335,7 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      *
      * @return string|null
      */
-    public function getAlias()
+    public function get_alias()
     {
         return $this->container['alias'];
     }
@@ -347,7 +347,7 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      *
      * @return self
      */
-    public function setAlias($alias)
+    public function set_alias($alias)
     {
         if (is_null($alias)) {
             throw new \InvalidArgumentException('non-nullable alias cannot be null');
@@ -362,7 +362,7 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      *
      * @return array<string,string>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -374,7 +374,7 @@ class AuthenticatorConfigRepresentation implements ModelInterface, ArrayAccess, 
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

@@ -191,11 +191,11 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $setters = [
-        'resource' => 'setResource',
-        'scopes' => 'setScopes',
-        'policies' => 'setPolicies',
-        'status' => 'setStatus',
-        'allowed_scopes' => 'setAllowedScopes'
+        'resource' => 'set_resource',
+        'scopes' => 'set_scopes',
+        'policies' => 'set_policies',
+        'status' => 'set_status',
+        'allowed_scopes' => 'set_allowed_scopes'
     ];
 
     /**
@@ -204,11 +204,11 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      * @var string[]
      */
     protected static $getters = [
-        'resource' => 'getResource',
-        'scopes' => 'getScopes',
-        'policies' => 'getPolicies',
-        'status' => 'getStatus',
-        'allowed_scopes' => 'getAllowedScopes'
+        'resource' => 'get_resource',
+        'scopes' => 'get_scopes',
+        'policies' => 'get_policies',
+        'status' => 'get_status',
+        'allowed_scopes' => 'get_allowed_scopes'
     ];
 
     /**
@@ -322,7 +322,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ResourceRepresentation|null
      */
-    public function getResource()
+    public function get_resource()
     {
         return $this->container['resource'];
     }
@@ -334,7 +334,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setResource($resource)
+    public function set_resource($resource)
     {
         if (is_null($resource)) {
             throw new \InvalidArgumentException('non-nullable resource cannot be null');
@@ -349,7 +349,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeRepresentation[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -361,7 +361,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
@@ -376,7 +376,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PolicyResultRepresentation[]|null
      */
-    public function getPolicies()
+    public function get_policies()
     {
         return $this->container['policies'];
     }
@@ -388,7 +388,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setPolicies($policies)
+    public function set_policies($policies)
     {
         if (is_null($policies)) {
             throw new \InvalidArgumentException('non-nullable policies cannot be null');
@@ -403,7 +403,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\DecisionEffect|null
      */
-    public function getStatus()
+    public function get_status()
     {
         return $this->container['status'];
     }
@@ -415,7 +415,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setStatus($status)
+    public function set_status($status)
     {
         if (is_null($status)) {
             throw new \InvalidArgumentException('non-nullable status cannot be null');
@@ -430,7 +430,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeRepresentation[]|null
      */
-    public function getAllowedScopes()
+    public function get_allowed_scopes()
     {
         return $this->container['allowed_scopes'];
     }
@@ -442,7 +442,7 @@ class EvaluationResultRepresentation implements ModelInterface, ArrayAccess, \Js
      *
      * @return self
      */
-    public function setAllowedScopes($allowed_scopes)
+    public function set_allowed_scopes($allowed_scopes)
     {
         if (is_null($allowed_scopes)) {
             throw new \InvalidArgumentException('non-nullable allowed_scopes cannot be null');

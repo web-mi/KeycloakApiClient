@@ -199,13 +199,13 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'alias' => 'setAlias',
-        'description' => 'setDescription',
-        'provider_id' => 'setProviderId',
-        'top_level' => 'setTopLevel',
-        'built_in' => 'setBuiltIn',
-        'authentication_executions' => 'setAuthenticationExecutions'
+        'id' => 'set_id',
+        'alias' => 'set_alias',
+        'description' => 'set_description',
+        'provider_id' => 'set_provider_id',
+        'top_level' => 'set_top_level',
+        'built_in' => 'set_built_in',
+        'authentication_executions' => 'set_authentication_executions'
     ];
 
     /**
@@ -214,13 +214,13 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'alias' => 'getAlias',
-        'description' => 'getDescription',
-        'provider_id' => 'getProviderId',
-        'top_level' => 'getTopLevel',
-        'built_in' => 'getBuiltIn',
-        'authentication_executions' => 'getAuthenticationExecutions'
+        'id' => 'get_id',
+        'alias' => 'get_alias',
+        'description' => 'get_description',
+        'provider_id' => 'get_provider_id',
+        'top_level' => 'get_top_level',
+        'built_in' => 'get_built_in',
+        'authentication_executions' => 'get_authentication_executions'
     ];
 
     /**
@@ -336,7 +336,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -348,7 +348,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -363,7 +363,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return string|null
      */
-    public function getAlias()
+    public function get_alias()
     {
         return $this->container['alias'];
     }
@@ -375,7 +375,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setAlias($alias)
+    public function set_alias($alias)
     {
         if (is_null($alias)) {
             throw new \InvalidArgumentException('non-nullable alias cannot be null');
@@ -390,7 +390,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -402,7 +402,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -417,7 +417,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -429,7 +429,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -444,7 +444,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return bool|null
      */
-    public function getTopLevel()
+    public function get_top_level()
     {
         return $this->container['top_level'];
     }
@@ -456,7 +456,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setTopLevel($top_level)
+    public function set_top_level($top_level)
     {
         if (is_null($top_level)) {
             throw new \InvalidArgumentException('non-nullable top_level cannot be null');
@@ -471,7 +471,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return bool|null
      */
-    public function getBuiltIn()
+    public function get_built_in()
     {
         return $this->container['built_in'];
     }
@@ -483,7 +483,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setBuiltIn($built_in)
+    public function set_built_in($built_in)
     {
         if (is_null($built_in)) {
             throw new \InvalidArgumentException('non-nullable built_in cannot be null');
@@ -498,7 +498,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\AuthenticationExecutionExportRepresentation[]|null
      */
-    public function getAuthenticationExecutions()
+    public function get_authentication_executions()
     {
         return $this->container['authentication_executions'];
     }
@@ -510,7 +510,7 @@ class AuthenticationFlowRepresentation implements ModelInterface, ArrayAccess, \
      *
      * @return self
      */
-    public function setAuthenticationExecutions($authentication_executions)
+    public function set_authentication_executions($authentication_executions)
     {
         if (is_null($authentication_executions)) {
             throw new \InvalidArgumentException('non-nullable authentication_executions cannot be null');

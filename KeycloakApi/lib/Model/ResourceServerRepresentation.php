@@ -207,15 +207,15 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'client_id' => 'setClientId',
-        'name' => 'setName',
-        'allow_remote_resource_management' => 'setAllowRemoteResourceManagement',
-        'policy_enforcement_mode' => 'setPolicyEnforcementMode',
-        'resources' => 'setResources',
-        'policies' => 'setPolicies',
-        'scopes' => 'setScopes',
-        'decision_strategy' => 'setDecisionStrategy'
+        'id' => 'set_id',
+        'client_id' => 'set_client_id',
+        'name' => 'set_name',
+        'allow_remote_resource_management' => 'set_allow_remote_resource_management',
+        'policy_enforcement_mode' => 'set_policy_enforcement_mode',
+        'resources' => 'set_resources',
+        'policies' => 'set_policies',
+        'scopes' => 'set_scopes',
+        'decision_strategy' => 'set_decision_strategy'
     ];
 
     /**
@@ -224,15 +224,15 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'client_id' => 'getClientId',
-        'name' => 'getName',
-        'allow_remote_resource_management' => 'getAllowRemoteResourceManagement',
-        'policy_enforcement_mode' => 'getPolicyEnforcementMode',
-        'resources' => 'getResources',
-        'policies' => 'getPolicies',
-        'scopes' => 'getScopes',
-        'decision_strategy' => 'getDecisionStrategy'
+        'id' => 'get_id',
+        'client_id' => 'get_client_id',
+        'name' => 'get_name',
+        'allow_remote_resource_management' => 'get_allow_remote_resource_management',
+        'policy_enforcement_mode' => 'get_policy_enforcement_mode',
+        'resources' => 'get_resources',
+        'policies' => 'get_policies',
+        'scopes' => 'get_scopes',
+        'decision_strategy' => 'get_decision_strategy'
     ];
 
     /**
@@ -350,7 +350,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -362,7 +362,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -377,7 +377,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getClientId()
+    public function get_client_id()
     {
         return $this->container['client_id'];
     }
@@ -389,7 +389,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setClientId($client_id)
+    public function set_client_id($client_id)
     {
         if (is_null($client_id)) {
             throw new \InvalidArgumentException('non-nullable client_id cannot be null');
@@ -404,7 +404,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -416,7 +416,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -431,7 +431,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return bool|null
      */
-    public function getAllowRemoteResourceManagement()
+    public function get_allow_remote_resource_management()
     {
         return $this->container['allow_remote_resource_management'];
     }
@@ -443,7 +443,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setAllowRemoteResourceManagement($allow_remote_resource_management)
+    public function set_allow_remote_resource_management($allow_remote_resource_management)
     {
         if (is_null($allow_remote_resource_management)) {
             throw new \InvalidArgumentException('non-nullable allow_remote_resource_management cannot be null');
@@ -458,7 +458,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PolicyEnforcementMode|null
      */
-    public function getPolicyEnforcementMode()
+    public function get_policy_enforcement_mode()
     {
         return $this->container['policy_enforcement_mode'];
     }
@@ -470,7 +470,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setPolicyEnforcementMode($policy_enforcement_mode)
+    public function set_policy_enforcement_mode($policy_enforcement_mode)
     {
         if (is_null($policy_enforcement_mode)) {
             throw new \InvalidArgumentException('non-nullable policy_enforcement_mode cannot be null');
@@ -485,7 +485,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ResourceRepresentation[]|null
      */
-    public function getResources()
+    public function get_resources()
     {
         return $this->container['resources'];
     }
@@ -497,7 +497,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setResources($resources)
+    public function set_resources($resources)
     {
         if (is_null($resources)) {
             throw new \InvalidArgumentException('non-nullable resources cannot be null');
@@ -512,7 +512,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PolicyRepresentation[]|null
      */
-    public function getPolicies()
+    public function get_policies()
     {
         return $this->container['policies'];
     }
@@ -524,7 +524,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setPolicies($policies)
+    public function set_policies($policies)
     {
         if (is_null($policies)) {
             throw new \InvalidArgumentException('non-nullable policies cannot be null');
@@ -539,7 +539,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ScopeRepresentation[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -551,7 +551,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
@@ -566,7 +566,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\DecisionStrategy|null
      */
-    public function getDecisionStrategy()
+    public function get_decision_strategy()
     {
         return $this->container['decision_strategy'];
     }
@@ -578,7 +578,7 @@ class ResourceServerRepresentation implements ModelInterface, ArrayAccess, \Json
      *
      * @return self
      */
-    public function setDecisionStrategy($decision_strategy)
+    public function set_decision_strategy($decision_strategy)
     {
         if (is_null($decision_strategy)) {
             throw new \InvalidArgumentException('non-nullable decision_strategy cannot be null');

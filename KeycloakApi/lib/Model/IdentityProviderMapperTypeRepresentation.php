@@ -191,11 +191,11 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'category' => 'setCategory',
-        'help_text' => 'setHelpText',
-        'properties' => 'setProperties'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'category' => 'set_category',
+        'help_text' => 'set_help_text',
+        'properties' => 'set_properties'
     ];
 
     /**
@@ -204,11 +204,11 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'category' => 'getCategory',
-        'help_text' => 'getHelpText',
-        'properties' => 'getProperties'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'category' => 'get_category',
+        'help_text' => 'get_help_text',
+        'properties' => 'get_properties'
     ];
 
     /**
@@ -322,7 +322,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -334,7 +334,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -349,7 +349,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -361,7 +361,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -376,7 +376,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return string|null
      */
-    public function getCategory()
+    public function get_category()
     {
         return $this->container['category'];
     }
@@ -388,7 +388,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return self
      */
-    public function setCategory($category)
+    public function set_category($category)
     {
         if (is_null($category)) {
             throw new \InvalidArgumentException('non-nullable category cannot be null');
@@ -403,7 +403,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return string|null
      */
-    public function getHelpText()
+    public function get_help_text()
     {
         return $this->container['help_text'];
     }
@@ -415,7 +415,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return self
      */
-    public function setHelpText($help_text)
+    public function set_help_text($help_text)
     {
         if (is_null($help_text)) {
             throw new \InvalidArgumentException('non-nullable help_text cannot be null');
@@ -430,7 +430,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ConfigPropertyRepresentation[]|null
      */
-    public function getProperties()
+    public function get_properties()
     {
         return $this->container['properties'];
     }
@@ -442,7 +442,7 @@ class IdentityProviderMapperTypeRepresentation implements ModelInterface, ArrayA
      *
      * @return self
      */
-    public function setProperties($properties)
+    public function set_properties($properties)
     {
         if (is_null($properties)) {
             throw new \InvalidArgumentException('non-nullable properties cannot be null');

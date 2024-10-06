@@ -207,15 +207,15 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'username' => 'setUsername',
-        'user_id' => 'setUserId',
-        'ip_address' => 'setIpAddress',
-        'start' => 'setStart',
-        'last_access' => 'setLastAccess',
-        'remember_me' => 'setRememberMe',
-        'clients' => 'setClients',
-        'transient_user' => 'setTransientUser'
+        'id' => 'set_id',
+        'username' => 'set_username',
+        'user_id' => 'set_user_id',
+        'ip_address' => 'set_ip_address',
+        'start' => 'set_start',
+        'last_access' => 'set_last_access',
+        'remember_me' => 'set_remember_me',
+        'clients' => 'set_clients',
+        'transient_user' => 'set_transient_user'
     ];
 
     /**
@@ -224,15 +224,15 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'username' => 'getUsername',
-        'user_id' => 'getUserId',
-        'ip_address' => 'getIpAddress',
-        'start' => 'getStart',
-        'last_access' => 'getLastAccess',
-        'remember_me' => 'getRememberMe',
-        'clients' => 'getClients',
-        'transient_user' => 'getTransientUser'
+        'id' => 'get_id',
+        'username' => 'get_username',
+        'user_id' => 'get_user_id',
+        'ip_address' => 'get_ip_address',
+        'start' => 'get_start',
+        'last_access' => 'get_last_access',
+        'remember_me' => 'get_remember_me',
+        'clients' => 'get_clients',
+        'transient_user' => 'get_transient_user'
     ];
 
     /**
@@ -350,7 +350,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -362,7 +362,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -377,7 +377,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getUsername()
+    public function get_username()
     {
         return $this->container['username'];
     }
@@ -389,7 +389,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setUsername($username)
+    public function set_username($username)
     {
         if (is_null($username)) {
             throw new \InvalidArgumentException('non-nullable username cannot be null');
@@ -404,7 +404,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getUserId()
+    public function get_user_id()
     {
         return $this->container['user_id'];
     }
@@ -416,7 +416,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setUserId($user_id)
+    public function set_user_id($user_id)
     {
         if (is_null($user_id)) {
             throw new \InvalidArgumentException('non-nullable user_id cannot be null');
@@ -431,7 +431,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getIpAddress()
+    public function get_ip_address()
     {
         return $this->container['ip_address'];
     }
@@ -443,7 +443,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setIpAddress($ip_address)
+    public function set_ip_address($ip_address)
     {
         if (is_null($ip_address)) {
             throw new \InvalidArgumentException('non-nullable ip_address cannot be null');
@@ -458,7 +458,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return int|null
      */
-    public function getStart()
+    public function get_start()
     {
         return $this->container['start'];
     }
@@ -470,7 +470,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setStart($start)
+    public function set_start($start)
     {
         if (is_null($start)) {
             throw new \InvalidArgumentException('non-nullable start cannot be null');
@@ -485,7 +485,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return int|null
      */
-    public function getLastAccess()
+    public function get_last_access()
     {
         return $this->container['last_access'];
     }
@@ -497,7 +497,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setLastAccess($last_access)
+    public function set_last_access($last_access)
     {
         if (is_null($last_access)) {
             throw new \InvalidArgumentException('non-nullable last_access cannot be null');
@@ -512,7 +512,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return bool|null
      */
-    public function getRememberMe()
+    public function get_remember_me()
     {
         return $this->container['remember_me'];
     }
@@ -524,7 +524,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setRememberMe($remember_me)
+    public function set_remember_me($remember_me)
     {
         if (is_null($remember_me)) {
             throw new \InvalidArgumentException('non-nullable remember_me cannot be null');
@@ -539,7 +539,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return array<string,string>|null
      */
-    public function getClients()
+    public function get_clients()
     {
         return $this->container['clients'];
     }
@@ -551,7 +551,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setClients($clients)
+    public function set_clients($clients)
     {
         if (is_null($clients)) {
             throw new \InvalidArgumentException('non-nullable clients cannot be null');
@@ -566,7 +566,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return bool|null
      */
-    public function getTransientUser()
+    public function get_transient_user()
     {
         return $this->container['transient_user'];
     }
@@ -578,7 +578,7 @@ class UserSessionRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setTransientUser($transient_user)
+    public function set_transient_user($transient_user)
     {
         if (is_null($transient_user)) {
             throw new \InvalidArgumentException('non-nullable transient_user cannot be null');

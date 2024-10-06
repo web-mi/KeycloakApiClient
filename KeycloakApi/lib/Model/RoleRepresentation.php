@@ -207,15 +207,15 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'scope_param_required' => 'setScopeParamRequired',
-        'composite' => 'setComposite',
-        'composites' => 'setComposites',
-        'client_role' => 'setClientRole',
-        'container_id' => 'setContainerId',
-        'attributes' => 'setAttributes'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'description' => 'set_description',
+        'scope_param_required' => 'set_scope_param_required',
+        'composite' => 'set_composite',
+        'composites' => 'set_composites',
+        'client_role' => 'set_client_role',
+        'container_id' => 'set_container_id',
+        'attributes' => 'set_attributes'
     ];
 
     /**
@@ -224,15 +224,15 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'scope_param_required' => 'getScopeParamRequired',
-        'composite' => 'getComposite',
-        'composites' => 'getComposites',
-        'client_role' => 'getClientRole',
-        'container_id' => 'getContainerId',
-        'attributes' => 'getAttributes'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'description' => 'get_description',
+        'scope_param_required' => 'get_scope_param_required',
+        'composite' => 'get_composite',
+        'composites' => 'get_composites',
+        'client_role' => 'get_client_role',
+        'container_id' => 'get_container_id',
+        'attributes' => 'get_attributes'
     ];
 
     /**
@@ -350,7 +350,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -362,7 +362,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -377,7 +377,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -389,7 +389,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -404,7 +404,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -416,7 +416,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -432,7 +432,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      * @return bool|null
      * @deprecated
      */
-    public function getScopeParamRequired()
+    public function get_scope_param_required()
     {
         return $this->container['scope_param_required'];
     }
@@ -445,7 +445,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      * @return self
      * @deprecated
      */
-    public function setScopeParamRequired($scope_param_required)
+    public function set_scope_param_required($scope_param_required)
     {
         if (is_null($scope_param_required)) {
             throw new \InvalidArgumentException('non-nullable scope_param_required cannot be null');
@@ -460,7 +460,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return bool|null
      */
-    public function getComposite()
+    public function get_composite()
     {
         return $this->container['composite'];
     }
@@ -472,7 +472,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setComposite($composite)
+    public function set_composite($composite)
     {
         if (is_null($composite)) {
             throw new \InvalidArgumentException('non-nullable composite cannot be null');
@@ -487,7 +487,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\Composites|null
      */
-    public function getComposites()
+    public function get_composites()
     {
         return $this->container['composites'];
     }
@@ -499,7 +499,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setComposites($composites)
+    public function set_composites($composites)
     {
         if (is_null($composites)) {
             throw new \InvalidArgumentException('non-nullable composites cannot be null');
@@ -514,7 +514,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return bool|null
      */
-    public function getClientRole()
+    public function get_client_role()
     {
         return $this->container['client_role'];
     }
@@ -526,7 +526,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setClientRole($client_role)
+    public function set_client_role($client_role)
     {
         if (is_null($client_role)) {
             throw new \InvalidArgumentException('non-nullable client_role cannot be null');
@@ -541,7 +541,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return string|null
      */
-    public function getContainerId()
+    public function get_container_id()
     {
         return $this->container['container_id'];
     }
@@ -553,7 +553,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setContainerId($container_id)
+    public function set_container_id($container_id)
     {
         if (is_null($container_id)) {
             throw new \InvalidArgumentException('non-nullable container_id cannot be null');
@@ -568,7 +568,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return array<string,string[]>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -580,7 +580,7 @@ class RoleRepresentation implements ModelInterface, ArrayAccess, \JsonSerializab
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');

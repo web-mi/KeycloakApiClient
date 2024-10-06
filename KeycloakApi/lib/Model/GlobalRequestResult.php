@@ -179,8 +179,8 @@ class GlobalRequestResult implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $setters = [
-        'success_requests' => 'setSuccessRequests',
-        'failed_requests' => 'setFailedRequests'
+        'success_requests' => 'set_success_requests',
+        'failed_requests' => 'set_failed_requests'
     ];
 
     /**
@@ -189,8 +189,8 @@ class GlobalRequestResult implements ModelInterface, ArrayAccess, \JsonSerializa
      * @var string[]
      */
     protected static $getters = [
-        'success_requests' => 'getSuccessRequests',
-        'failed_requests' => 'getFailedRequests'
+        'success_requests' => 'get_success_requests',
+        'failed_requests' => 'get_failed_requests'
     ];
 
     /**
@@ -301,7 +301,7 @@ class GlobalRequestResult implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getSuccessRequests()
+    public function get_success_requests()
     {
         return $this->container['success_requests'];
     }
@@ -313,7 +313,7 @@ class GlobalRequestResult implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setSuccessRequests($success_requests)
+    public function set_success_requests($success_requests)
     {
         if (is_null($success_requests)) {
             throw new \InvalidArgumentException('non-nullable success_requests cannot be null');
@@ -328,7 +328,7 @@ class GlobalRequestResult implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return string[]|null
      */
-    public function getFailedRequests()
+    public function get_failed_requests()
     {
         return $this->container['failed_requests'];
     }
@@ -340,7 +340,7 @@ class GlobalRequestResult implements ModelInterface, ArrayAccess, \JsonSerializa
      *
      * @return self
      */
-    public function setFailedRequests($failed_requests)
+    public function set_failed_requests($failed_requests)
     {
         if (is_null($failed_requests)) {
             throw new \InvalidArgumentException('non-nullable failed_requests cannot be null');

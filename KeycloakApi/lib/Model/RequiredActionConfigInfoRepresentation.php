@@ -175,7 +175,7 @@ class RequiredActionConfigInfoRepresentation implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $setters = [
-        'properties' => 'setProperties'
+        'properties' => 'set_properties'
     ];
 
     /**
@@ -184,7 +184,7 @@ class RequiredActionConfigInfoRepresentation implements ModelInterface, ArrayAcc
      * @var string[]
      */
     protected static $getters = [
-        'properties' => 'getProperties'
+        'properties' => 'get_properties'
     ];
 
     /**
@@ -294,7 +294,7 @@ class RequiredActionConfigInfoRepresentation implements ModelInterface, ArrayAcc
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ConfigPropertyRepresentation[]|null
      */
-    public function getProperties()
+    public function get_properties()
     {
         return $this->container['properties'];
     }
@@ -306,7 +306,7 @@ class RequiredActionConfigInfoRepresentation implements ModelInterface, ArrayAcc
      *
      * @return self
      */
-    public function setProperties($properties)
+    public function set_properties($properties)
     {
         if (is_null($properties)) {
             throw new \InvalidArgumentException('non-nullable properties cannot be null');

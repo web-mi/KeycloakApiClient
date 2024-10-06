@@ -179,8 +179,8 @@ class ClientPolicyExecutorRepresentation implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $setters = [
-        'executor' => 'setExecutor',
-        'configuration' => 'setConfiguration'
+        'executor' => 'set_executor',
+        'configuration' => 'set_configuration'
     ];
 
     /**
@@ -189,8 +189,8 @@ class ClientPolicyExecutorRepresentation implements ModelInterface, ArrayAccess,
      * @var string[]
      */
     protected static $getters = [
-        'executor' => 'getExecutor',
-        'configuration' => 'getConfiguration'
+        'executor' => 'get_executor',
+        'configuration' => 'get_configuration'
     ];
 
     /**
@@ -301,7 +301,7 @@ class ClientPolicyExecutorRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return string|null
      */
-    public function getExecutor()
+    public function get_executor()
     {
         return $this->container['executor'];
     }
@@ -313,7 +313,7 @@ class ClientPolicyExecutorRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setExecutor($executor)
+    public function set_executor($executor)
     {
         if (is_null($executor)) {
             throw new \InvalidArgumentException('non-nullable executor cannot be null');
@@ -328,7 +328,7 @@ class ClientPolicyExecutorRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return string[]|null
      */
-    public function getConfiguration()
+    public function get_configuration()
     {
         return $this->container['configuration'];
     }
@@ -340,7 +340,7 @@ class ClientPolicyExecutorRepresentation implements ModelInterface, ArrayAccess,
      *
      * @return self
      */
-    public function setConfiguration($configuration)
+    public function set_configuration($configuration)
     {
         if (is_null($configuration)) {
             throw new \InvalidArgumentException('non-nullable configuration cannot be null');

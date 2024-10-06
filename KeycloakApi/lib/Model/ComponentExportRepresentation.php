@@ -195,12 +195,12 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'provider_id' => 'setProviderId',
-        'sub_type' => 'setSubType',
-        'sub_components' => 'setSubComponents',
-        'config' => 'setConfig'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'provider_id' => 'set_provider_id',
+        'sub_type' => 'set_sub_type',
+        'sub_components' => 'set_sub_components',
+        'config' => 'set_config'
     ];
 
     /**
@@ -209,12 +209,12 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'provider_id' => 'getProviderId',
-        'sub_type' => 'getSubType',
-        'sub_components' => 'getSubComponents',
-        'config' => 'getConfig'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'provider_id' => 'get_provider_id',
+        'sub_type' => 'get_sub_type',
+        'sub_components' => 'get_sub_components',
+        'config' => 'get_config'
     ];
 
     /**
@@ -329,7 +329,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -341,7 +341,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -356,7 +356,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -368,7 +368,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -383,7 +383,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return string|null
      */
-    public function getProviderId()
+    public function get_provider_id()
     {
         return $this->container['provider_id'];
     }
@@ -395,7 +395,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setProviderId($provider_id)
+    public function set_provider_id($provider_id)
     {
         if (is_null($provider_id)) {
             throw new \InvalidArgumentException('non-nullable provider_id cannot be null');
@@ -410,7 +410,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return string|null
      */
-    public function getSubType()
+    public function get_sub_type()
     {
         return $this->container['sub_type'];
     }
@@ -422,7 +422,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setSubType($sub_type)
+    public function set_sub_type($sub_type)
     {
         if (is_null($sub_type)) {
             throw new \InvalidArgumentException('non-nullable sub_type cannot be null');
@@ -437,7 +437,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\ComponentExportRepresentation[]>|null
      */
-    public function getSubComponents()
+    public function get_sub_components()
     {
         return $this->container['sub_components'];
     }
@@ -449,7 +449,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setSubComponents($sub_components)
+    public function set_sub_components($sub_components)
     {
         if (is_null($sub_components)) {
             throw new \InvalidArgumentException('non-nullable sub_components cannot be null');
@@ -464,7 +464,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return array<string,string[]>|null
      */
-    public function getConfig()
+    public function get_config()
     {
         return $this->container['config'];
     }
@@ -476,7 +476,7 @@ class ComponentExportRepresentation implements ModelInterface, ArrayAccess, \Jso
      *
      * @return self
      */
-    public function setConfig($config)
+    public function set_config($config)
     {
         if (is_null($config)) {
             throw new \InvalidArgumentException('non-nullable config cannot be null');

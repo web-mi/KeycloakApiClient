@@ -187,10 +187,10 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'policy' => 'setPolicy',
-        'status' => 'setStatus',
-        'associated_policies' => 'setAssociatedPolicies',
-        'scopes' => 'setScopes'
+        'policy' => 'set_policy',
+        'status' => 'set_status',
+        'associated_policies' => 'set_associated_policies',
+        'scopes' => 'set_scopes'
     ];
 
     /**
@@ -199,10 +199,10 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'policy' => 'getPolicy',
-        'status' => 'getStatus',
-        'associated_policies' => 'getAssociatedPolicies',
-        'scopes' => 'getScopes'
+        'policy' => 'get_policy',
+        'status' => 'get_status',
+        'associated_policies' => 'get_associated_policies',
+        'scopes' => 'get_scopes'
     ];
 
     /**
@@ -315,7 +315,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PolicyRepresentation|null
      */
-    public function getPolicy()
+    public function get_policy()
     {
         return $this->container['policy'];
     }
@@ -327,7 +327,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setPolicy($policy)
+    public function set_policy($policy)
     {
         if (is_null($policy)) {
             throw new \InvalidArgumentException('non-nullable policy cannot be null');
@@ -342,7 +342,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\DecisionEffect|null
      */
-    public function getStatus()
+    public function get_status()
     {
         return $this->container['status'];
     }
@@ -354,7 +354,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setStatus($status)
+    public function set_status($status)
     {
         if (is_null($status)) {
             throw new \InvalidArgumentException('non-nullable status cannot be null');
@@ -369,7 +369,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\PolicyResultRepresentation[]|null
      */
-    public function getAssociatedPolicies()
+    public function get_associated_policies()
     {
         return $this->container['associated_policies'];
     }
@@ -381,7 +381,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setAssociatedPolicies($associated_policies)
+    public function set_associated_policies($associated_policies)
     {
         if (is_null($associated_policies)) {
             throw new \InvalidArgumentException('non-nullable associated_policies cannot be null');
@@ -396,7 +396,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return string[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -408,7 +408,7 @@ class PolicyResultRepresentation implements ModelInterface, ArrayAccess, \JsonSe
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');

@@ -179,8 +179,8 @@ class RealmsRealmProtocolOpenidConnectTokenPost400Response implements ModelInter
      * @var string[]
      */
     protected static $setters = [
-        'error' => 'setError',
-        'error_description' => 'setErrorDescription'
+        'error' => 'set_error',
+        'error_description' => 'set_error_description'
     ];
 
     /**
@@ -189,8 +189,8 @@ class RealmsRealmProtocolOpenidConnectTokenPost400Response implements ModelInter
      * @var string[]
      */
     protected static $getters = [
-        'error' => 'getError',
-        'error_description' => 'getErrorDescription'
+        'error' => 'get_error',
+        'error_description' => 'get_error_description'
     ];
 
     /**
@@ -301,7 +301,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost400Response implements ModelInter
      *
      * @return string|null
      */
-    public function getError()
+    public function get_error()
     {
         return $this->container['error'];
     }
@@ -313,7 +313,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost400Response implements ModelInter
      *
      * @return self
      */
-    public function setError($error)
+    public function set_error($error)
     {
         if (is_null($error)) {
             throw new \InvalidArgumentException('non-nullable error cannot be null');
@@ -328,7 +328,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost400Response implements ModelInter
      *
      * @return string|null
      */
-    public function getErrorDescription()
+    public function get_error_description()
     {
         return $this->container['error_description'];
     }
@@ -340,7 +340,7 @@ class RealmsRealmProtocolOpenidConnectTokenPost400Response implements ModelInter
      *
      * @return self
      */
-    public function setErrorDescription($error_description)
+    public function set_error_description($error_description)
     {
         if (is_null($error_description)) {
             throw new \InvalidArgumentException('non-nullable error_description cannot be null');

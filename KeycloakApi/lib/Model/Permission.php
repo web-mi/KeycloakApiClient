@@ -187,10 +187,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'rsid' => 'setRsid',
-        'rsname' => 'setRsname',
-        'scopes' => 'setScopes',
-        'claims' => 'setClaims'
+        'rsid' => 'set_rsid',
+        'rsname' => 'set_rsname',
+        'scopes' => 'set_scopes',
+        'claims' => 'set_claims'
     ];
 
     /**
@@ -199,10 +199,10 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'rsid' => 'getRsid',
-        'rsname' => 'getRsname',
-        'scopes' => 'getScopes',
-        'claims' => 'getClaims'
+        'rsid' => 'get_rsid',
+        'rsname' => 'get_rsname',
+        'scopes' => 'get_scopes',
+        'claims' => 'get_claims'
     ];
 
     /**
@@ -315,7 +315,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getRsid()
+    public function get_rsid()
     {
         return $this->container['rsid'];
     }
@@ -327,7 +327,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRsid($rsid)
+    public function set_rsid($rsid)
     {
         if (is_null($rsid)) {
             throw new \InvalidArgumentException('non-nullable rsid cannot be null');
@@ -342,7 +342,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getRsname()
+    public function get_rsname()
     {
         return $this->container['rsname'];
     }
@@ -354,7 +354,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRsname($rsname)
+    public function set_rsname($rsname)
     {
         if (is_null($rsname)) {
             throw new \InvalidArgumentException('non-nullable rsname cannot be null');
@@ -369,7 +369,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -381,7 +381,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
@@ -398,7 +398,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return array<string,string[]>|null
      */
-    public function getClaims()
+    public function get_claims()
     {
         return $this->container['claims'];
     }
@@ -410,7 +410,7 @@ class Permission implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setClaims($claims)
+    public function set_claims($claims)
     {
         if (is_null($claims)) {
             throw new \InvalidArgumentException('non-nullable claims cannot be null');

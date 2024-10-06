@@ -179,8 +179,8 @@ class PathCacheConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'max_entries' => 'setMaxEntries',
-        'lifespan' => 'setLifespan'
+        'max_entries' => 'set_max_entries',
+        'lifespan' => 'set_lifespan'
     ];
 
     /**
@@ -189,8 +189,8 @@ class PathCacheConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'max_entries' => 'getMaxEntries',
-        'lifespan' => 'getLifespan'
+        'max_entries' => 'get_max_entries',
+        'lifespan' => 'get_lifespan'
     ];
 
     /**
@@ -301,7 +301,7 @@ class PathCacheConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return int|null
      */
-    public function getMaxEntries()
+    public function get_max_entries()
     {
         return $this->container['max_entries'];
     }
@@ -313,7 +313,7 @@ class PathCacheConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setMaxEntries($max_entries)
+    public function set_max_entries($max_entries)
     {
         if (is_null($max_entries)) {
             throw new \InvalidArgumentException('non-nullable max_entries cannot be null');
@@ -328,7 +328,7 @@ class PathCacheConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return int|null
      */
-    public function getLifespan()
+    public function get_lifespan()
     {
         return $this->container['lifespan'];
     }
@@ -340,7 +340,7 @@ class PathCacheConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setLifespan($lifespan)
+    public function set_lifespan($lifespan)
     {
         if (is_null($lifespan)) {
             throw new \InvalidArgumentException('non-nullable lifespan cannot be null');

@@ -207,15 +207,15 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'display_name' => 'setDisplayName',
-        'validations' => 'setValidations',
-        'annotations' => 'setAnnotations',
-        'required' => 'setRequired',
-        'permissions' => 'setPermissions',
-        'selector' => 'setSelector',
-        'group' => 'setGroup',
-        'multivalued' => 'setMultivalued'
+        'name' => 'set_name',
+        'display_name' => 'set_display_name',
+        'validations' => 'set_validations',
+        'annotations' => 'set_annotations',
+        'required' => 'set_required',
+        'permissions' => 'set_permissions',
+        'selector' => 'set_selector',
+        'group' => 'set_group',
+        'multivalued' => 'set_multivalued'
     ];
 
     /**
@@ -224,15 +224,15 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'display_name' => 'getDisplayName',
-        'validations' => 'getValidations',
-        'annotations' => 'getAnnotations',
-        'required' => 'getRequired',
-        'permissions' => 'getPermissions',
-        'selector' => 'getSelector',
-        'group' => 'getGroup',
-        'multivalued' => 'getMultivalued'
+        'name' => 'get_name',
+        'display_name' => 'get_display_name',
+        'validations' => 'get_validations',
+        'annotations' => 'get_annotations',
+        'required' => 'get_required',
+        'permissions' => 'get_permissions',
+        'selector' => 'get_selector',
+        'group' => 'get_group',
+        'multivalued' => 'get_multivalued'
     ];
 
     /**
@@ -350,7 +350,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -362,7 +362,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -377,7 +377,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getDisplayName()
+    public function get_display_name()
     {
         return $this->container['display_name'];
     }
@@ -389,7 +389,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setDisplayName($display_name)
+    public function set_display_name($display_name)
     {
         if (is_null($display_name)) {
             throw new \InvalidArgumentException('non-nullable display_name cannot be null');
@@ -404,7 +404,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return array<string,array<string,mixed>>|null
      */
-    public function getValidations()
+    public function get_validations()
     {
         return $this->container['validations'];
     }
@@ -416,7 +416,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setValidations($validations)
+    public function set_validations($validations)
     {
         if (is_null($validations)) {
             throw new \InvalidArgumentException('non-nullable validations cannot be null');
@@ -431,7 +431,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return array<string,mixed>|null
      */
-    public function getAnnotations()
+    public function get_annotations()
     {
         return $this->container['annotations'];
     }
@@ -443,7 +443,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setAnnotations($annotations)
+    public function set_annotations($annotations)
     {
         if (is_null($annotations)) {
             throw new \InvalidArgumentException('non-nullable annotations cannot be null');
@@ -458,7 +458,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UPAttributeRequired|null
      */
-    public function getRequired()
+    public function get_required()
     {
         return $this->container['required'];
     }
@@ -470,7 +470,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setRequired($required)
+    public function set_required($required)
     {
         if (is_null($required)) {
             throw new \InvalidArgumentException('non-nullable required cannot be null');
@@ -485,7 +485,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UPAttributePermissions|null
      */
-    public function getPermissions()
+    public function get_permissions()
     {
         return $this->container['permissions'];
     }
@@ -497,7 +497,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPermissions($permissions)
+    public function set_permissions($permissions)
     {
         if (is_null($permissions)) {
             throw new \InvalidArgumentException('non-nullable permissions cannot be null');
@@ -512,7 +512,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\UPAttributeSelector|null
      */
-    public function getSelector()
+    public function get_selector()
     {
         return $this->container['selector'];
     }
@@ -524,7 +524,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setSelector($selector)
+    public function set_selector($selector)
     {
         if (is_null($selector)) {
             throw new \InvalidArgumentException('non-nullable selector cannot be null');
@@ -539,7 +539,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getGroup()
+    public function get_group()
     {
         return $this->container['group'];
     }
@@ -551,7 +551,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setGroup($group)
+    public function set_group($group)
     {
         if (is_null($group)) {
             throw new \InvalidArgumentException('non-nullable group cannot be null');
@@ -566,7 +566,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getMultivalued()
+    public function get_multivalued()
     {
         return $this->container['multivalued'];
     }
@@ -578,7 +578,7 @@ class UPAttribute implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setMultivalued($multivalued)
+    public function set_multivalued($multivalued)
     {
         if (is_null($multivalued)) {
             throw new \InvalidArgumentException('non-nullable multivalued cannot be null');

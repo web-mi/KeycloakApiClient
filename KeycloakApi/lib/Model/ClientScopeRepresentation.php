@@ -195,12 +195,12 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'description' => 'setDescription',
-        'protocol' => 'setProtocol',
-        'attributes' => 'setAttributes',
-        'protocol_mappers' => 'setProtocolMappers'
+        'id' => 'set_id',
+        'name' => 'set_name',
+        'description' => 'set_description',
+        'protocol' => 'set_protocol',
+        'attributes' => 'set_attributes',
+        'protocol_mappers' => 'set_protocol_mappers'
     ];
 
     /**
@@ -209,12 +209,12 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'description' => 'getDescription',
-        'protocol' => 'getProtocol',
-        'attributes' => 'getAttributes',
-        'protocol_mappers' => 'getProtocolMappers'
+        'id' => 'get_id',
+        'name' => 'get_name',
+        'description' => 'get_description',
+        'protocol' => 'get_protocol',
+        'attributes' => 'get_attributes',
+        'protocol_mappers' => 'get_protocol_mappers'
     ];
 
     /**
@@ -329,7 +329,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -341,7 +341,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -356,7 +356,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -368,7 +368,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -383,7 +383,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getDescription()
+    public function get_description()
     {
         return $this->container['description'];
     }
@@ -395,7 +395,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setDescription($description)
+    public function set_description($description)
     {
         if (is_null($description)) {
             throw new \InvalidArgumentException('non-nullable description cannot be null');
@@ -410,7 +410,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return string|null
      */
-    public function getProtocol()
+    public function get_protocol()
     {
         return $this->container['protocol'];
     }
@@ -422,7 +422,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setProtocol($protocol)
+    public function set_protocol($protocol)
     {
         if (is_null($protocol)) {
             throw new \InvalidArgumentException('non-nullable protocol cannot be null');
@@ -437,7 +437,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return array<string,string>|null
      */
-    public function getAttributes()
+    public function get_attributes()
     {
         return $this->container['attributes'];
     }
@@ -449,7 +449,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setAttributes($attributes)
+    public function set_attributes($attributes)
     {
         if (is_null($attributes)) {
             throw new \InvalidArgumentException('non-nullable attributes cannot be null');
@@ -464,7 +464,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ProtocolMapperRepresentation[]|null
      */
-    public function getProtocolMappers()
+    public function get_protocol_mappers()
     {
         return $this->container['protocol_mappers'];
     }
@@ -476,7 +476,7 @@ class ClientScopeRepresentation implements ModelInterface, ArrayAccess, \JsonSer
      *
      * @return self
      */
-    public function setProtocolMappers($protocol_mappers)
+    public function set_protocol_mappers($protocol_mappers)
     {
         if (is_null($protocol_mappers)) {
             throw new \InvalidArgumentException('non-nullable protocol_mappers cannot be null');

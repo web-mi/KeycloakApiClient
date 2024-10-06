@@ -195,12 +195,12 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $setters = [
-        'events_enabled' => 'setEventsEnabled',
-        'events_expiration' => 'setEventsExpiration',
-        'events_listeners' => 'setEventsListeners',
-        'enabled_event_types' => 'setEnabledEventTypes',
-        'admin_events_enabled' => 'setAdminEventsEnabled',
-        'admin_events_details_enabled' => 'setAdminEventsDetailsEnabled'
+        'events_enabled' => 'set_events_enabled',
+        'events_expiration' => 'set_events_expiration',
+        'events_listeners' => 'set_events_listeners',
+        'enabled_event_types' => 'set_enabled_event_types',
+        'admin_events_enabled' => 'set_admin_events_enabled',
+        'admin_events_details_enabled' => 'set_admin_events_details_enabled'
     ];
 
     /**
@@ -209,12 +209,12 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      * @var string[]
      */
     protected static $getters = [
-        'events_enabled' => 'getEventsEnabled',
-        'events_expiration' => 'getEventsExpiration',
-        'events_listeners' => 'getEventsListeners',
-        'enabled_event_types' => 'getEnabledEventTypes',
-        'admin_events_enabled' => 'getAdminEventsEnabled',
-        'admin_events_details_enabled' => 'getAdminEventsDetailsEnabled'
+        'events_enabled' => 'get_events_enabled',
+        'events_expiration' => 'get_events_expiration',
+        'events_listeners' => 'get_events_listeners',
+        'enabled_event_types' => 'get_enabled_event_types',
+        'admin_events_enabled' => 'get_admin_events_enabled',
+        'admin_events_details_enabled' => 'get_admin_events_details_enabled'
     ];
 
     /**
@@ -329,7 +329,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return bool|null
      */
-    public function getEventsEnabled()
+    public function get_events_enabled()
     {
         return $this->container['events_enabled'];
     }
@@ -341,7 +341,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setEventsEnabled($events_enabled)
+    public function set_events_enabled($events_enabled)
     {
         if (is_null($events_enabled)) {
             throw new \InvalidArgumentException('non-nullable events_enabled cannot be null');
@@ -356,7 +356,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return int|null
      */
-    public function getEventsExpiration()
+    public function get_events_expiration()
     {
         return $this->container['events_expiration'];
     }
@@ -368,7 +368,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setEventsExpiration($events_expiration)
+    public function set_events_expiration($events_expiration)
     {
         if (is_null($events_expiration)) {
             throw new \InvalidArgumentException('non-nullable events_expiration cannot be null');
@@ -383,7 +383,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return string[]|null
      */
-    public function getEventsListeners()
+    public function get_events_listeners()
     {
         return $this->container['events_listeners'];
     }
@@ -395,7 +395,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setEventsListeners($events_listeners)
+    public function set_events_listeners($events_listeners)
     {
         if (is_null($events_listeners)) {
             throw new \InvalidArgumentException('non-nullable events_listeners cannot be null');
@@ -410,7 +410,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return string[]|null
      */
-    public function getEnabledEventTypes()
+    public function get_enabled_event_types()
     {
         return $this->container['enabled_event_types'];
     }
@@ -422,7 +422,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setEnabledEventTypes($enabled_event_types)
+    public function set_enabled_event_types($enabled_event_types)
     {
         if (is_null($enabled_event_types)) {
             throw new \InvalidArgumentException('non-nullable enabled_event_types cannot be null');
@@ -437,7 +437,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return bool|null
      */
-    public function getAdminEventsEnabled()
+    public function get_admin_events_enabled()
     {
         return $this->container['admin_events_enabled'];
     }
@@ -449,7 +449,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setAdminEventsEnabled($admin_events_enabled)
+    public function set_admin_events_enabled($admin_events_enabled)
     {
         if (is_null($admin_events_enabled)) {
             throw new \InvalidArgumentException('non-nullable admin_events_enabled cannot be null');
@@ -464,7 +464,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return bool|null
      */
-    public function getAdminEventsDetailsEnabled()
+    public function get_admin_events_details_enabled()
     {
         return $this->container['admin_events_details_enabled'];
     }
@@ -476,7 +476,7 @@ class RealmEventsConfigRepresentation implements ModelInterface, ArrayAccess, \J
      *
      * @return self
      */
-    public function setAdminEventsDetailsEnabled($admin_events_details_enabled)
+    public function set_admin_events_details_enabled($admin_events_details_enabled)
     {
         if (is_null($admin_events_details_enabled)) {
             throw new \InvalidArgumentException('non-nullable admin_events_details_enabled cannot be null');

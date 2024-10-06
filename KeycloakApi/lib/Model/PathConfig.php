@@ -215,17 +215,17 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-        'type' => 'setType',
-        'path' => 'setPath',
-        'methods' => 'setMethods',
-        'scopes' => 'setScopes',
-        'id' => 'setId',
-        'enforcement_mode' => 'setEnforcementMode',
-        'claim_information_point' => 'setClaimInformationPoint',
-        'invalidated' => 'setInvalidated',
-        'static_path' => 'setStaticPath',
-        'static' => 'setStatic'
+        'name' => 'set_name',
+        'type' => 'set_type',
+        'path' => 'set_path',
+        'methods' => 'set_methods',
+        'scopes' => 'set_scopes',
+        'id' => 'set_id',
+        'enforcement_mode' => 'set_enforcement_mode',
+        'claim_information_point' => 'set_claim_information_point',
+        'invalidated' => 'set_invalidated',
+        'static_path' => 'set_static_path',
+        'static' => 'set_static'
     ];
 
     /**
@@ -234,17 +234,17 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-        'type' => 'getType',
-        'path' => 'getPath',
-        'methods' => 'getMethods',
-        'scopes' => 'getScopes',
-        'id' => 'getId',
-        'enforcement_mode' => 'getEnforcementMode',
-        'claim_information_point' => 'getClaimInformationPoint',
-        'invalidated' => 'getInvalidated',
-        'static_path' => 'getStaticPath',
-        'static' => 'getStatic'
+        'name' => 'get_name',
+        'type' => 'get_type',
+        'path' => 'get_path',
+        'methods' => 'get_methods',
+        'scopes' => 'get_scopes',
+        'id' => 'get_id',
+        'enforcement_mode' => 'get_enforcement_mode',
+        'claim_information_point' => 'get_claim_information_point',
+        'invalidated' => 'get_invalidated',
+        'static_path' => 'get_static_path',
+        'static' => 'get_static'
     ];
 
     /**
@@ -364,7 +364,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getName()
+    public function get_name()
     {
         return $this->container['name'];
     }
@@ -376,7 +376,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setName($name)
+    public function set_name($name)
     {
         if (is_null($name)) {
             throw new \InvalidArgumentException('non-nullable name cannot be null');
@@ -391,7 +391,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getType()
+    public function get_type()
     {
         return $this->container['type'];
     }
@@ -403,7 +403,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setType($type)
+    public function set_type($type)
     {
         if (is_null($type)) {
             throw new \InvalidArgumentException('non-nullable type cannot be null');
@@ -418,7 +418,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getPath()
+    public function get_path()
     {
         return $this->container['path'];
     }
@@ -430,7 +430,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setPath($path)
+    public function set_path($path)
     {
         if (is_null($path)) {
             throw new \InvalidArgumentException('non-nullable path cannot be null');
@@ -445,7 +445,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\MethodConfig[]|null
      */
-    public function getMethods()
+    public function get_methods()
     {
         return $this->container['methods'];
     }
@@ -457,7 +457,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setMethods($methods)
+    public function set_methods($methods)
     {
         if (is_null($methods)) {
             throw new \InvalidArgumentException('non-nullable methods cannot be null');
@@ -472,7 +472,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string[]|null
      */
-    public function getScopes()
+    public function get_scopes()
     {
         return $this->container['scopes'];
     }
@@ -484,7 +484,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setScopes($scopes)
+    public function set_scopes($scopes)
     {
         if (is_null($scopes)) {
             throw new \InvalidArgumentException('non-nullable scopes cannot be null');
@@ -499,7 +499,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return string|null
      */
-    public function getId()
+    public function get_id()
     {
         return $this->container['id'];
     }
@@ -511,7 +511,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setId($id)
+    public function set_id($id)
     {
         if (is_null($id)) {
             throw new \InvalidArgumentException('non-nullable id cannot be null');
@@ -526,7 +526,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\EnforcementMode|null
      */
-    public function getEnforcementMode()
+    public function get_enforcement_mode()
     {
         return $this->container['enforcement_mode'];
     }
@@ -538,7 +538,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setEnforcementMode($enforcement_mode)
+    public function set_enforcement_mode($enforcement_mode)
     {
         if (is_null($enforcement_mode)) {
             throw new \InvalidArgumentException('non-nullable enforcement_mode cannot be null');
@@ -553,7 +553,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return array<string,array<string,mixed>>|null
      */
-    public function getClaimInformationPoint()
+    public function get_claim_information_point()
     {
         return $this->container['claim_information_point'];
     }
@@ -565,7 +565,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setClaimInformationPoint($claim_information_point)
+    public function set_claim_information_point($claim_information_point)
     {
         if (is_null($claim_information_point)) {
             throw new \InvalidArgumentException('non-nullable claim_information_point cannot be null');
@@ -580,7 +580,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getInvalidated()
+    public function get_invalidated()
     {
         return $this->container['invalidated'];
     }
@@ -592,7 +592,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setInvalidated($invalidated)
+    public function set_invalidated($invalidated)
     {
         if (is_null($invalidated)) {
             throw new \InvalidArgumentException('non-nullable invalidated cannot be null');
@@ -607,7 +607,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getStaticPath()
+    public function get_static_path()
     {
         return $this->container['static_path'];
     }
@@ -619,7 +619,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setStaticPath($static_path)
+    public function set_static_path($static_path)
     {
         if (is_null($static_path)) {
             throw new \InvalidArgumentException('non-nullable static_path cannot be null');
@@ -634,7 +634,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return bool|null
      */
-    public function getStatic()
+    public function get_static()
     {
         return $this->container['static'];
     }
@@ -646,7 +646,7 @@ class PathConfig implements ModelInterface, ArrayAccess, \JsonSerializable
      *
      * @return self
      */
-    public function setStatic($static)
+    public function set_static($static)
     {
         if (is_null($static)) {
             throw new \InvalidArgumentException('non-nullable static cannot be null');
