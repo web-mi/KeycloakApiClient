@@ -31,11 +31,15 @@ Get client-level roles for the client that are in the role's composite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $client_uuid = 'client_uuid_example'; // string
@@ -63,7 +67,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -89,11 +93,15 @@ Remove a set of roles from the role's composite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string | Role id
@@ -120,7 +128,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -146,11 +154,15 @@ Get role's children Returns a set of role's children provided the role is a comp
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string
@@ -182,7 +194,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -208,11 +220,15 @@ Make the role a composite role by associating some child roles
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string
@@ -239,7 +255,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -265,11 +281,15 @@ Get realm-level roles that are in the role's composite
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string
@@ -295,7 +315,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -321,11 +341,15 @@ Delete the role
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string | id of role
@@ -350,7 +374,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -376,11 +400,15 @@ Get a specific role's representation
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string | id of role
@@ -406,7 +434,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -432,11 +460,15 @@ Return object stating whether role Authorization permissions have been initializ
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string
@@ -462,7 +494,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -488,11 +520,15 @@ Return object stating whether role Authorization permissions have been initializ
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string
@@ -520,7 +556,7 @@ try {
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 
@@ -546,11 +582,15 @@ Update the role
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RolesByIDApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 $role_id = 'role_id_example'; // string | id of role
@@ -577,7 +617,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[BearerAuth](../../README.md#BearerAuth)
 
 ### HTTP request headers
 

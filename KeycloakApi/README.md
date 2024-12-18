@@ -49,11 +49,15 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure Bearer authorization: BearerAuth
+$config = WebMI\KeycloakApiClient\KeycloakApi\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
 
 $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\AttackDetectionApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
 
@@ -243,6 +247,24 @@ Class | Method | HTTP request | Description
 *IdentityProvidersApi* | [**adminRealmsRealmIdentityProviderInstancesPost**](docs/Api/IdentityProvidersApi.md#adminrealmsrealmidentityproviderinstancespost) | **POST** /admin/realms/{realm}/identity-provider/instances | Create a new identity provider
 *IdentityProvidersApi* | [**adminRealmsRealmIdentityProviderProvidersProviderIdGet**](docs/Api/IdentityProvidersApi.md#adminrealmsrealmidentityproviderprovidersprovideridget) | **GET** /admin/realms/{realm}/identity-provider/providers/{provider_id} | Get the identity provider factory for that provider id
 *KeyApi* | [**adminRealmsRealmKeysGet**](docs/Api/KeyApi.md#adminrealmsrealmkeysget) | **GET** /admin/realms/{realm}/keys | 
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsget) | **GET** /admin/realms/{realm}/organizations | Returns a paginated list of organizations filtered according to the specified parameters
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdDelete**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsiddelete) | **DELETE** /admin/realms/{realm}/organizations/{id} | Deletes the organization
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidget) | **GET** /admin/realms/{realm}/organizations/{id} | Returns the organization representation
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsididentityprovidersaliasdelete) | **DELETE** /admin/realms/{realm}/organizations/{id}/identity-providers/{alias} | Removes the identity provider with the specified alias from the organization
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsididentityprovidersaliasget) | **GET** /admin/realms/{realm}/organizations/{id}/identity-providers/{alias} | Returns the identity provider associated with the organization that has the specified alias
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdIdentityProvidersGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsididentityprovidersget) | **GET** /admin/realms/{realm}/organizations/{id}/identity-providers | Returns all identity providers associated with the organization
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdIdentityProvidersPost**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsididentityproviderspost) | **POST** /admin/realms/{realm}/organizations/{id}/identity-providers | Adds the identity provider with the specified id to the organization
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersCountGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmemberscountget) | **GET** /admin/realms/{realm}/organizations/{id}/members/count | Returns number of members in the organization.
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmembersget) | **GET** /admin/realms/{realm}/organizations/{id}/members | Returns a paginated list of organization members filtered according to the specified parameters
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersIdDelete**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmembersiddelete) | **DELETE** /admin/realms/{realm}/organizations/{id}/members/{id} | Removes the user with the specified id from the organization
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersIdGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmembersidget) | **GET** /admin/realms/{realm}/organizations/{id}/members/{id} | Returns the member of the organization with the specified id
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmembersidorganizationsget) | **GET** /admin/realms/{realm}/organizations/{id}/members/{id}/organizations | Returns the organizations associated with the user that has the specified id
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmembersinviteexistinguserpost) | **POST** /admin/realms/{realm}/organizations/{id}/members/invite-existing-user | Invites an existing user to the organization, using the specified user id
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersInviteUserPost**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmembersinviteuserpost) | **POST** /admin/realms/{realm}/organizations/{id}/members/invite-user | Invites an existing user or sends a registration link to a new user, based on the provided e-mail address.
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdMembersPost**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidmemberspost) | **POST** /admin/realms/{realm}/organizations/{id}/members | Adds the user with the specified id as a member of the organization
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsIdPut**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsidput) | **PUT** /admin/realms/{realm}/organizations/{id} | Updates the organization
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsMembersIdOrganizationsGet**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationsmembersidorganizationsget) | **GET** /admin/realms/{realm}/organizations/members/{id}/organizations | Returns the organizations associated with the user that has the specified id
+*OrganizationsApi* | [**adminRealmsRealmOrganizationsPost**](docs/Api/OrganizationsApi.md#adminrealmsrealmorganizationspost) | **POST** /admin/realms/{realm}/organizations | Creates a new organization
 *ProtocolMappersApi* | [**adminRealmsRealmClientScopesClientScopeIdProtocolMappersAddModelsPost**](docs/Api/ProtocolMappersApi.md#adminrealmsrealmclientscopesclientscopeidprotocolmappersaddmodelspost) | **POST** /admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/add-models | Create multiple mappers
 *ProtocolMappersApi* | [**adminRealmsRealmClientScopesClientScopeIdProtocolMappersModelsGet**](docs/Api/ProtocolMappersApi.md#adminrealmsrealmclientscopesclientscopeidprotocolmappersmodelsget) | **GET** /admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models | Get mappers
 *ProtocolMappersApi* | [**adminRealmsRealmClientScopesClientScopeIdProtocolMappersModelsIdDelete**](docs/Api/ProtocolMappersApi.md#adminrealmsrealmclientscopesclientscopeidprotocolmappersmodelsiddelete) | **DELETE** /admin/realms/{realm}/client-scopes/{client-scope-id}/protocol-mappers/models/{id} | Delete the mapper
@@ -443,6 +465,7 @@ Class | Method | HTTP request | Description
 - [AuthenticatorConfigInfoRepresentation](docs/Model/AuthenticatorConfigInfoRepresentation.md)
 - [AuthenticatorConfigRepresentation](docs/Model/AuthenticatorConfigRepresentation.md)
 - [Authorization](docs/Model/Authorization.md)
+- [BruteForceStrategy](docs/Model/BruteForceStrategy.md)
 - [CertificateRepresentation](docs/Model/CertificateRepresentation.md)
 - [ClaimRepresentation](docs/Model/ClaimRepresentation.md)
 - [ClientInitialAccessCreatePresentation](docs/Model/ClientInitialAccessCreatePresentation.md)
@@ -537,7 +560,11 @@ Class | Method | HTTP request | Description
 - [UserSessionRepresentation](docs/Model/UserSessionRepresentation.md)
 
 ## Authorization
-Endpoints do not require authorization.
+
+Authentication schemes defined for the API:
+### BearerAuth
+
+- **Type**: Bearer authentication
 
 ## Tests
 
@@ -557,5 +584,5 @@ vendor/bin/phpunit
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
 - API version: `1.0`
-    - Generator version: `7.9.0-SNAPSHOT`
+    - Generator version: `7.10.0-SNAPSHOT`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

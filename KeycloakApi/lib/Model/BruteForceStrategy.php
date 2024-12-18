@@ -1,6 +1,6 @@
 <?php
 /**
- * DecisionEffect
+ * BruteForceStrategy
  *
  * PHP version 7.4
  *
@@ -30,21 +30,21 @@ namespace WebMI\KeycloakApiClient\KeycloakApi\Model;
 use \WebMI\KeycloakApiClient\KeycloakApi\ObjectSerializer;
 
 /**
- * DecisionEffect Class Doc Comment
+ * BruteForceStrategy Class Doc Comment
  *
  * @category Class
  * @package  WebMI\KeycloakApiClient\KeycloakApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class DecisionEffect
+class BruteForceStrategy
 {
     /**
      * Possible values of this enum
      */
-    public const PERMIT = 'PERMIT';
+    public const LINEAR = 'LINEAR';
 
-    public const DENY = 'DENY';
+    public const MULTIPLE = 'MULTIPLE';
 
     /**
      * Gets allowable values of the enum
@@ -53,8 +53,8 @@ class DecisionEffect
     public static function getAllowableEnumValues()
     {
         return [
-            self::PERMIT,
-            self::DENY
+            self::LINEAR,
+            self::MULTIPLE
         ];
     }
 }

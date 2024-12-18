@@ -48,6 +48,7 @@ Name | Type | Description | Notes
 **brute_force_protected** | **bool** |  | [optional]
 **permanent_lockout** | **bool** |  | [optional]
 **max_temporary_lockouts** | **int** |  | [optional]
+**brute_force_strategy** | [**\WebMI\KeycloakApiClient\KeycloakApi\Model\BruteForceStrategy**](BruteForceStrategy.md) |  | [optional]
 **max_failure_wait_seconds** | **int** |  | [optional]
 **minimum_quick_login_wait_seconds** | **int** |  | [optional]
 **wait_increment_seconds** | **int** |  | [optional]

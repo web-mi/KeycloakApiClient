@@ -1,6 +1,6 @@
 <?php
 /**
- * IdentityProvidersApi
+ * OrganizationsApi
  * PHP version 7.4
  *
  * @category Class
@@ -40,14 +40,14 @@ use WebMI\KeycloakApiClient\KeycloakApi\HeaderSelector;
 use WebMI\KeycloakApiClient\KeycloakApi\ObjectSerializer;
 
 /**
- * IdentityProvidersApi Class Doc Comment
+ * OrganizationsApi Class Doc Comment
  *
  * @category Class
  * @package  WebMI\KeycloakApiClient\KeycloakApi
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class IdentityProvidersApi
+class OrganizationsApi
 {
     /**
      * @var ClientInterface
@@ -71,55 +71,58 @@ class IdentityProvidersApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'adminRealmsRealmIdentityProviderImportConfigPost' => [
+        'adminRealmsRealmOrganizationsGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasDelete' => [
+        'adminRealmsRealmOrganizationsIdDelete' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasExportGet' => [
+        'adminRealmsRealmOrganizationsIdGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasGet' => [
+        'adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet' => [
+        'adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut' => [
+        'adminRealmsRealmOrganizationsIdIdentityProvidersGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet' => [
+        'adminRealmsRealmOrganizationsIdIdentityProvidersPost' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasMappersGet' => [
+        'adminRealmsRealmOrganizationsIdMembersCountGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete' => [
+        'adminRealmsRealmOrganizationsIdMembersGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet' => [
+        'adminRealmsRealmOrganizationsIdMembersIdDelete' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut' => [
+        'adminRealmsRealmOrganizationsIdMembersIdGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasMappersPost' => [
+        'adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasPut' => [
+        'adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost' => [
+            'application/x-www-form-urlencoded',
+        ],
+        'adminRealmsRealmOrganizationsIdMembersInviteUserPost' => [
+            'application/x-www-form-urlencoded',
+        ],
+        'adminRealmsRealmOrganizationsIdMembersPost' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet' => [
+        'adminRealmsRealmOrganizationsIdPut' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesGet' => [
+        'adminRealmsRealmOrganizationsMembersIdOrganizationsGet' => [
             'application/json',
         ],
-        'adminRealmsRealmIdentityProviderInstancesPost' => [
-            'application/json',
-        ],
-        'adminRealmsRealmIdentityProviderProvidersProviderIdGet' => [
+        'adminRealmsRealmOrganizationsPost' => [
             'application/json',
         ],
     ];
@@ -171,40 +174,50 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderImportConfigPost
+     * Operation adminRealmsRealmOrganizationsGet
      *
-     * Import identity provider from JSON body
+     * Returns a paginated list of organizations filtered according to the specified parameters
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  array<string,mixed> $request_body request_body (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'] to see the possible values for this operation
+     * @param  bool $brief_representation if true, return the full representation. Otherwise, only the basic fields are returned. (optional, default to false)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned - defaults to 10 (optional)
+     * @param  string $q A query to search for custom attributes, in the format &#39;key1:value2 key2:value2&#39; (optional)
+     * @param  string $search A String representing either an organization name or domain (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array<string,string>
+     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]
      */
-    public function adminRealmsRealmIdentityProviderImportConfigPost($realm, $request_body = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'][0])
+    public function adminRealmsRealmOrganizationsGet($realm, $brief_representation = false, $exact = null, $first = null, $max = null, $q = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsGet'][0])
     {
-        list($response) = $this->adminRealmsRealmIdentityProviderImportConfigPostWithHttpInfo($realm, $request_body, $contentType);
+        list($response) = $this->adminRealmsRealmOrganizationsGetWithHttpInfo($realm, $brief_representation, $exact, $first, $max, $q, $search, $contentType);
         return $response;
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderImportConfigPostWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsGetWithHttpInfo
      *
-     * Import identity provider from JSON body
+     * Returns a paginated list of organizations filtered according to the specified parameters
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  array<string,mixed> $request_body (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'] to see the possible values for this operation
+     * @param  bool $brief_representation if true, return the full representation. Otherwise, only the basic fields are returned. (optional, default to false)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned - defaults to 10 (optional)
+     * @param  string $q A query to search for custom attributes, in the format &#39;key1:value2 key2:value2&#39; (optional)
+     * @param  string $search A String representing either an organization name or domain (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of array<string,string>, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmIdentityProviderImportConfigPostWithHttpInfo($realm, $request_body = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'][0])
+    public function adminRealmsRealmOrganizationsGetWithHttpInfo($realm, $brief_representation = false, $exact = null, $first = null, $max = null, $q = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsGet'][0])
     {
-        $request = $this->adminRealmsRealmIdentityProviderImportConfigPostRequest($realm, $request_body, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsGetRequest($realm, $brief_representation, $exact, $first, $max, $q, $search, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -231,11 +244,11 @@ class IdentityProvidersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('array<string,string>' === '\SplFileObject') {
+                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('array<string,string>' !== 'string') {
+                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -253,7 +266,7 @@ class IdentityProvidersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'array<string,string>', []),
+                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -272,7 +285,7 @@ class IdentityProvidersApi
                 );
             }
 
-            $returnType = 'array<string,string>';
+            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -305,7 +318,7 @@ class IdentityProvidersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'array<string,string>',
+                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -316,20 +329,25 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderImportConfigPostAsync
+     * Operation adminRealmsRealmOrganizationsGetAsync
      *
-     * Import identity provider from JSON body
+     * Returns a paginated list of organizations filtered according to the specified parameters
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  array<string,mixed> $request_body (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'] to see the possible values for this operation
+     * @param  bool $brief_representation if true, return the full representation. Otherwise, only the basic fields are returned. (optional, default to false)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned - defaults to 10 (optional)
+     * @param  string $q A query to search for custom attributes, in the format &#39;key1:value2 key2:value2&#39; (optional)
+     * @param  string $search A String representing either an organization name or domain (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderImportConfigPostAsync($realm, $request_body = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'][0])
+    public function adminRealmsRealmOrganizationsGetAsync($realm, $brief_representation = false, $exact = null, $first = null, $max = null, $q = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsGet'][0])
     {
-        return $this->adminRealmsRealmIdentityProviderImportConfigPostAsyncWithHttpInfo($realm, $request_body, $contentType)
+        return $this->adminRealmsRealmOrganizationsGetAsyncWithHttpInfo($realm, $brief_representation, $exact, $first, $max, $q, $search, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -338,21 +356,26 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderImportConfigPostAsyncWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsGetAsyncWithHttpInfo
      *
-     * Import identity provider from JSON body
+     * Returns a paginated list of organizations filtered according to the specified parameters
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  array<string,mixed> $request_body (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'] to see the possible values for this operation
+     * @param  bool $brief_representation if true, return the full representation. Otherwise, only the basic fields are returned. (optional, default to false)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned - defaults to 10 (optional)
+     * @param  string $q A query to search for custom attributes, in the format &#39;key1:value2 key2:value2&#39; (optional)
+     * @param  string $search A String representing either an organization name or domain (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderImportConfigPostAsyncWithHttpInfo($realm, $request_body = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'][0])
+    public function adminRealmsRealmOrganizationsGetAsyncWithHttpInfo($realm, $brief_representation = false, $exact = null, $first = null, $max = null, $q = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsGet'][0])
     {
-        $returnType = 'array<string,string>';
-        $request = $this->adminRealmsRealmIdentityProviderImportConfigPostRequest($realm, $request_body, $contentType);
+        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]';
+        $request = $this->adminRealmsRealmOrganizationsGetRequest($realm, $brief_representation, $exact, $first, $max, $q, $search, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -391,34 +414,98 @@ class IdentityProvidersApi
     }
 
     /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderImportConfigPost'
+     * Create request for operation 'adminRealmsRealmOrganizationsGet'
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  array<string,mixed> $request_body (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'] to see the possible values for this operation
+     * @param  bool $brief_representation if true, return the full representation. Otherwise, only the basic fields are returned. (optional, default to false)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned - defaults to 10 (optional)
+     * @param  string $q A query to search for custom attributes, in the format &#39;key1:value2 key2:value2&#39; (optional)
+     * @param  string $search A String representing either an organization name or domain (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmIdentityProviderImportConfigPostRequest($realm, $request_body = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderImportConfigPost'][0])
+    public function adminRealmsRealmOrganizationsGetRequest($realm, $brief_representation = false, $exact = null, $first = null, $max = null, $q = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsGet'][0])
     {
 
         // verify the required parameter 'realm' is set
         if ($realm === null || (is_array($realm) && count($realm) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderImportConfigPost'
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsGet'
             );
         }
 
 
 
-        $resourcePath = '/admin/realms/{realm}/identity-provider/import-config';
+
+
+
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $brief_representation,
+            'briefRepresentation', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $exact,
+            'exact', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $first,
+            'first', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $max,
+            'max', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $q,
+            'q', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $search,
+            'search', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
 
 
         // path params
@@ -438,14 +525,7 @@ class IdentityProvidersApi
         );
 
         // for model (json/xml)
-        if (isset($request_body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($request_body));
-            } else {
-                $httpBody = $request_body;
-            }
-        } elseif (count($formParams) > 0) {
+        if (count($formParams) > 0) {
             if ($multipart) {
                 $multipartContents = [];
                 foreach ($formParams as $formParamName => $formParamValue) {
@@ -488,7 +568,7 @@ class IdentityProvidersApi
         $operationHost = $this->config->getHost();
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
-            'POST',
+            'GET',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -496,39 +576,39 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasDelete
+     * Operation adminRealmsRealmOrganizationsIdDelete
      *
-     * Delete the identity provider
+     * Deletes the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'] to see the possible values for this operation
+     * @param  string $id id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdDelete'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasDelete($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'][0])
+    public function adminRealmsRealmOrganizationsIdDelete($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdDelete'][0])
     {
-        $this->adminRealmsRealmIdentityProviderInstancesAliasDeleteWithHttpInfo($realm, $alias, $contentType);
+        $this->adminRealmsRealmOrganizationsIdDeleteWithHttpInfo($realm, $id, $contentType);
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasDeleteWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdDeleteWithHttpInfo
      *
-     * Delete the identity provider
+     * Deletes the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdDelete'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasDeleteWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'][0])
+    public function adminRealmsRealmOrganizationsIdDeleteWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdDelete'][0])
     {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasDeleteRequest($realm, $alias, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdDeleteRequest($realm, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -563,20 +643,20 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasDeleteAsync
+     * Operation adminRealmsRealmOrganizationsIdDeleteAsync
      *
-     * Delete the identity provider
+     * Deletes the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasDeleteAsync($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'][0])
+    public function adminRealmsRealmOrganizationsIdDeleteAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdDelete'][0])
     {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasDeleteAsyncWithHttpInfo($realm, $alias, $contentType)
+        return $this->adminRealmsRealmOrganizationsIdDeleteAsyncWithHttpInfo($realm, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -585,21 +665,21 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasDeleteAsyncWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdDeleteAsyncWithHttpInfo
      *
-     * Delete the identity provider
+     * Deletes the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasDeleteAsyncWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'][0])
+    public function adminRealmsRealmOrganizationsIdDeleteAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdDelete'][0])
     {
         $returnType = '';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasDeleteRequest($realm, $alias, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdDeleteRequest($realm, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -625,34 +705,34 @@ class IdentityProvidersApi
     }
 
     /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasDelete'
+     * Create request for operation 'adminRealmsRealmOrganizationsIdDelete'
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdDelete'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasDeleteRequest($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasDelete'][0])
+    public function adminRealmsRealmOrganizationsIdDeleteRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdDelete'][0])
     {
 
         // verify the required parameter 'realm' is set
         if ($realm === null || (is_array($realm) && count($realm) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasDelete'
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdDelete'
             );
         }
 
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasDelete'
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdDelete'
             );
         }
 
 
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}';
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -666,6 +746,599 @@ class IdentityProvidersApi
             $resourcePath = str_replace(
                 '{' . 'realm' . '}',
                 ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'DELETE',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdGet
+     *
+     * Returns the organization representation
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation
+     */
+    public function adminRealmsRealmOrganizationsIdGet($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdGet'][0])
+    {
+        list($response) = $this->adminRealmsRealmOrganizationsIdGetWithHttpInfo($realm, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdGetWithHttpInfo
+     *
+     * Returns the organization representation
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdGetWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdGet'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdGetRequest($realm, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdGetAsync
+     *
+     * Returns the organization representation
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdGetAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdGet'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdGetAsyncWithHttpInfo($realm, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdGetAsyncWithHttpInfo
+     *
+     * Returns the organization representation
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdGetAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdGet'][0])
+    {
+        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation';
+        $request = $this->adminRealmsRealmOrganizationsIdGetRequest($realm, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdGet'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdGetRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdGet'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdGet'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdGet'
+            );
+        }
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete
+     *
+     * Removes the identity provider with the specified alias from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $alias alias (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'][0])
+    {
+        $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteWithHttpInfo($realm, $id, $alias, $contentType);
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteWithHttpInfo
+     *
+     * Removes the identity provider with the specified alias from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $alias (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteWithHttpInfo($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteRequest($realm, $id, $alias, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteAsync
+     *
+     * Removes the identity provider with the specified alias from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $alias (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteAsync($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteAsyncWithHttpInfo($realm, $id, $alias, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteAsyncWithHttpInfo
+     *
+     * Removes the identity provider with the specified alias from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $alias (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteAsyncWithHttpInfo($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'][0])
+    {
+        $returnType = '';
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteRequest($realm, $id, $alias, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $alias (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasDeleteRequest($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'
+            );
+        }
+
+        // verify the required parameter 'alias' is set
+        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $alias when calling adminRealmsRealmOrganizationsIdIdentityProvidersAliasDelete'
+            );
+        }
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/identity-providers/{alias}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }
@@ -737,296 +1410,42 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasExportGet
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet
      *
-     * Export public broker configuration for identity provider
+     * Returns the identity provider associated with the organization that has the specified alias
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
      * @param  string $alias alias (required)
-     * @param  string $format Format to use (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasExportGet($realm, $alias, $format = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'][0])
-    {
-        $this->adminRealmsRealmIdentityProviderInstancesAliasExportGetWithHttpInfo($realm, $alias, $format, $contentType);
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasExportGetWithHttpInfo
-     *
-     * Export public broker configuration for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $format Format to use (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasExportGetWithHttpInfo($realm, $alias, $format = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasExportGetRequest($realm, $alias, $format, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasExportGetAsync
-     *
-     * Export public broker configuration for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $format Format to use (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasExportGetAsync($realm, $alias, $format = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasExportGetAsyncWithHttpInfo($realm, $alias, $format, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasExportGetAsyncWithHttpInfo
-     *
-     * Export public broker configuration for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $format Format to use (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasExportGetAsyncWithHttpInfo($realm, $alias, $format = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'][0])
-    {
-        $returnType = '';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasExportGetRequest($realm, $alias, $format, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasExportGet'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $format Format to use (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasExportGetRequest($realm, $alias, $format = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasExportGet'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasExportGet'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasExportGet'
-            );
-        }
-
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/export';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $format,
-            'format', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            [],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasGet
-     *
-     * Get the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasGet($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'][0])
     {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesAliasGetWithHttpInfo($realm, $alias, $contentType);
+        list($response) = $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetWithHttpInfo($realm, $id, $alias, $contentType);
         return $response;
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasGetWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetWithHttpInfo
      *
-     * Get the identity provider
+     * Returns the identity provider associated with the organization that has the specified alias
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
      * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation, HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasGetWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetWithHttpInfo($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'][0])
     {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasGetRequest($realm, $alias, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetRequest($realm, $id, $alias, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1138,20 +1557,21 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasGetAsync
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetAsync
      *
-     * Get the identity provider
+     * Returns the identity provider associated with the organization that has the specified alias
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
      * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasGetAsync($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetAsync($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'][0])
     {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasGetAsyncWithHttpInfo($realm, $alias, $contentType)
+        return $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetAsyncWithHttpInfo($realm, $id, $alias, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1160,21 +1580,22 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasGetAsyncWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetAsyncWithHttpInfo
      *
-     * Get the identity provider
+     * Returns the identity provider associated with the organization that has the specified alias
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
      * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasGetAsyncWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetAsyncWithHttpInfo($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'][0])
     {
         $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasGetRequest($realm, $alias, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetRequest($realm, $id, $alias, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1213,1628 +1634,42 @@ class IdentityProvidersApi
     }
 
     /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasGet'
+     * Create request for operation 'adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
      * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmIdentityProviderInstancesAliasGetRequest($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersAliasGetRequest($realm, $id, $alias, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'][0])
     {
 
         // verify the required parameter 'realm' is set
         if ($realm === null || (is_array($realm) && count($realm) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasGet'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasGet'
-            );
-        }
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'][0])
-    {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetWithHttpInfo($realm, $alias, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetWithHttpInfo
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetRequest($realm, $alias, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetAsync
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetAsync($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetAsyncWithHttpInfo($realm, $alias, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetAsyncWithHttpInfo
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetAsyncWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'][0])
-    {
-        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetRequest($realm, $alias, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGetRequest($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsGet'
-            );
-        }
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/management/permissions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference $management_permission_reference management_permission_reference (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut($realm, $alias, $management_permission_reference = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'][0])
-    {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutWithHttpInfo($realm, $alias, $management_permission_reference, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutWithHttpInfo
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference $management_permission_reference (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutWithHttpInfo($realm, $alias, $management_permission_reference = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutRequest($realm, $alias, $management_permission_reference, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutAsync
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference $management_permission_reference (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutAsync($realm, $alias, $management_permission_reference = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutAsyncWithHttpInfo($realm, $alias, $management_permission_reference, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutAsyncWithHttpInfo
-     *
-     * Return object stating whether client Authorization permissions have been initialized or not and a reference
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference $management_permission_reference (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutAsyncWithHttpInfo($realm, $alias, $management_permission_reference = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'][0])
-    {
-        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutRequest($realm, $alias, $management_permission_reference, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\ManagementPermissionReference $management_permission_reference (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPutRequest($realm, $alias, $management_permission_reference = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasManagementPermissionsPut'
-            );
-        }
-
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/management/permissions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($management_permission_reference)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($management_permission_reference));
-            } else {
-                $httpBody = $management_permission_reference;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'PUT',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet
-     *
-     * Get mapper types for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'][0])
-    {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetWithHttpInfo($realm, $alias, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetWithHttpInfo
-     *
-     * Get mapper types for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetRequest($realm, $alias, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    if ('array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            $returnType = 'array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetAsync
-     *
-     * Get mapper types for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetAsync($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetAsyncWithHttpInfo($realm, $alias, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetAsyncWithHttpInfo
-     *
-     * Get mapper types for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetAsyncWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'][0])
-    {
-        $returnType = 'array<string,\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperTypeRepresentation>';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetRequest($realm, $alias, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGetRequest($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasMapperTypesGet'
-            );
-        }
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/mapper-types';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['*/*', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersGet
-     *
-     * Get mappers for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersGet($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'][0])
-    {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersGetWithHttpInfo($realm, $alias, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersGetWithHttpInfo
-     *
-     * Get mappers for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[], HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersGetWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersGetRequest($realm, $alias, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersGetAsync
-     *
-     * Get mappers for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersGetAsync($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasMappersGetAsyncWithHttpInfo($realm, $alias, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersGetAsyncWithHttpInfo
-     *
-     * Get mappers for identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersGetAsyncWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'][0])
-    {
-        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation[]';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersGetRequest($realm, $alias, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasMappersGet'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersGetRequest($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersGet'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasMappersGet'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasMappersGet'
-            );
-        }
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/mappers';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete
-     *
-     * Delete a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'][0])
-    {
-        $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteWithHttpInfo($realm, $alias, $id, $contentType);
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteWithHttpInfo
-     *
-     * Delete a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteWithHttpInfo($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteRequest($realm, $alias, $id, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteAsync
-     *
-     * Delete a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteAsync($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteAsyncWithHttpInfo($realm, $alias, $id, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteAsyncWithHttpInfo
-     *
-     * Delete a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteAsyncWithHttpInfo($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'][0])
-    {
-        $returnType = '';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteRequest($realm, $alias, $id, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdDeleteRequest($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'
             );
         }
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdDelete'
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'
+            );
+        }
+
+        // verify the required parameter 'alias' is set
+        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $alias when calling adminRealmsRealmOrganizationsIdIdentityProvidersAliasGet'
             );
         }
 
 
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/mappers/{id}';
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/identity-providers/{alias}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2848,14 +1683,6 @@ class IdentityProvidersApi
             $resourcePath = str_replace(
                 '{' . 'realm' . '}',
                 ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
                 $resourcePath
             );
         }
@@ -2867,10 +1694,18 @@ class IdentityProvidersApi
                 $resourcePath
             );
         }
+        // path params
+        if ($alias !== null) {
+            $resourcePath = str_replace(
+                '{' . 'alias' . '}',
+                ObjectSerializer::toPathValue($alias),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
-            [],
+            ['application/json', ],
             $contentType,
             $multipart
         );
@@ -2919,7 +1754,7 @@ class IdentityProvidersApi
         $operationHost = $this->config->getHost();
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
-            'DELETE',
+            'GET',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody
@@ -2927,1514 +1762,40 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersGet
      *
-     * Get mapper by id for the identity provider
+     * Returns all identity providers associated with the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
      * @param  string $id id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'][0])
-    {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetWithHttpInfo($realm, $alias, $id, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetWithHttpInfo
-     *
-     * Get mapper by id for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetWithHttpInfo($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetRequest($realm, $alias, $id, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetAsync
-     *
-     * Get mapper by id for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetAsync($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetAsyncWithHttpInfo($realm, $alias, $id, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetAsyncWithHttpInfo
-     *
-     * Get mapper by id for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetAsyncWithHttpInfo($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'][0])
-    {
-        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetRequest($realm, $alias, $id, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdGetRequest($realm, $alias, $id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'
-            );
-        }
-
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdGet'
-            );
-        }
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/mappers/{id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($id),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut
-     *
-     * Update a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut($realm, $alias, $id, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'][0])
-    {
-        $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutWithHttpInfo($realm, $alias, $id, $identity_provider_mapper_representation, $contentType);
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutWithHttpInfo
-     *
-     * Update a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutWithHttpInfo($realm, $alias, $id, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutRequest($realm, $alias, $id, $identity_provider_mapper_representation, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutAsync
-     *
-     * Update a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutAsync($realm, $alias, $id, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutAsyncWithHttpInfo($realm, $alias, $id, $identity_provider_mapper_representation, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutAsyncWithHttpInfo
-     *
-     * Update a mapper for the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutAsyncWithHttpInfo($realm, $alias, $id, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'][0])
-    {
-        $returnType = '';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutRequest($realm, $alias, $id, $identity_provider_mapper_representation, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $id Mapper id (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersIdPutRequest($realm, $alias, $id, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'
-            );
-        }
-
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling adminRealmsRealmIdentityProviderInstancesAliasMappersIdPut'
-            );
-        }
-
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/mappers/{id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($id),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            [],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($identity_provider_mapper_representation)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($identity_provider_mapper_representation));
-            } else {
-                $httpBody = $identity_provider_mapper_representation;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'PUT',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersPost
-     *
-     * Add a mapper to identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersPost($realm, $alias, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'][0])
-    {
-        $this->adminRealmsRealmIdentityProviderInstancesAliasMappersPostWithHttpInfo($realm, $alias, $identity_provider_mapper_representation, $contentType);
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersPostWithHttpInfo
-     *
-     * Add a mapper to identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersPostWithHttpInfo($realm, $alias, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersPostRequest($realm, $alias, $identity_provider_mapper_representation, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersPostAsync
-     *
-     * Add a mapper to identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersPostAsync($realm, $alias, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasMappersPostAsyncWithHttpInfo($realm, $alias, $identity_provider_mapper_representation, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasMappersPostAsyncWithHttpInfo
-     *
-     * Add a mapper to identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersPostAsyncWithHttpInfo($realm, $alias, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'][0])
-    {
-        $returnType = '';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasMappersPostRequest($realm, $alias, $identity_provider_mapper_representation, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasMappersPost'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderMapperRepresentation $identity_provider_mapper_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasMappersPostRequest($realm, $alias, $identity_provider_mapper_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasMappersPost'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasMappersPost'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasMappersPost'
-            );
-        }
-
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/mappers';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            [],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($identity_provider_mapper_representation)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($identity_provider_mapper_representation));
-            } else {
-                $httpBody = $identity_provider_mapper_representation;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasPut
-     *
-     * Update the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return void
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasPut($realm, $alias, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'][0])
-    {
-        $this->adminRealmsRealmIdentityProviderInstancesAliasPutWithHttpInfo($realm, $alias, $identity_provider_representation, $contentType);
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasPutWithHttpInfo
-     *
-     * Update the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of null, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasPutWithHttpInfo($realm, $alias, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasPutRequest($realm, $alias, $identity_provider_representation, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            return [null, $statusCode, $response->getHeaders()];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasPutAsync
-     *
-     * Update the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasPutAsync($realm, $alias, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasPutAsyncWithHttpInfo($realm, $alias, $identity_provider_representation, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasPutAsyncWithHttpInfo
-     *
-     * Update the identity provider
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasPutAsyncWithHttpInfo($realm, $alias, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'][0])
-    {
-        $returnType = '';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasPutRequest($realm, $alias, $identity_provider_representation, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    return [null, $response->getStatusCode(), $response->getHeaders()];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasPut'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasPutRequest($realm, $alias, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasPut'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasPut'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasPut'
-            );
-        }
-
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            [],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($identity_provider_representation)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($identity_provider_representation));
-            } else {
-                $httpBody = $identity_provider_representation;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'PUT',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet
-     *
-     * Reaload keys for the identity provider if the provider supports it, \&quot;true\&quot; is returned if reload was performed, \&quot;false\&quot; if not.
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return bool
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'][0])
-    {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetWithHttpInfo($realm, $alias, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetWithHttpInfo
-     *
-     * Reaload keys for the identity provider if the provider supports it, \&quot;true\&quot; is returned if reload was performed, \&quot;false\&quot; if not.
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'] to see the possible values for this operation
-     *
-     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of bool, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'][0])
-    {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetRequest($realm, $alias, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-
-            switch($statusCode) {
-                case 200:
-                    if ('bool' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('bool' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'bool', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            $returnType = 'bool';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'bool',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetAsync
-     *
-     * Reaload keys for the identity provider if the provider supports it, \&quot;true\&quot; is returned if reload was performed, \&quot;false\&quot; if not.
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetAsync($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'][0])
-    {
-        return $this->adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetAsyncWithHttpInfo($realm, $alias, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetAsyncWithHttpInfo
-     *
-     * Reaload keys for the identity provider if the provider supports it, \&quot;true\&quot; is returned if reload was performed, \&quot;false\&quot; if not.
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetAsyncWithHttpInfo($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'][0])
-    {
-        $returnType = 'bool';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetRequest($realm, $alias, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  string $alias (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGetRequest($realm, $alias, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'][0])
-    {
-
-        // verify the required parameter 'realm' is set
-        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'
-            );
-        }
-
-        // verify the required parameter 'alias' is set
-        if ($alias === null || (is_array($alias) && count($alias) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $alias when calling adminRealmsRealmIdentityProviderInstancesAliasReloadKeysGet'
-            );
-        }
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances/{alias}/reload-keys';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // path params
-        if ($realm !== null) {
-            $resourcePath = str_replace(
-                '{' . 'realm' . '}',
-                ObjectSerializer::toPathValue($realm),
-                $resourcePath
-            );
-        }
-        // path params
-        if ($alias !== null) {
-            $resourcePath = str_replace(
-                '{' . 'alias' . '}',
-                ObjectSerializer::toPathValue($alias),
-                $resourcePath
-            );
-        }
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-        // this endpoint requires Bearer authentication (access token)
-        if (!empty($this->config->getAccessToken())) {
-            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'GET',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation adminRealmsRealmIdentityProviderInstancesGet
-     *
-     * List identity providers
-     *
-     * @param  string $realm realm name (not id!) (required)
-     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
-     * @param  int $first Pagination offset (optional)
-     * @param  int $max Maximum results size (defaults to 100) (optional)
-     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
-     * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]
      */
-    public function adminRealmsRealmIdentityProviderInstancesGet($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersGet($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'][0])
     {
-        list($response) = $this->adminRealmsRealmIdentityProviderInstancesGetWithHttpInfo($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType);
+        list($response) = $this->adminRealmsRealmOrganizationsIdIdentityProvidersGetWithHttpInfo($realm, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesGetWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersGetWithHttpInfo
      *
-     * List identity providers
+     * Returns all identity providers associated with the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
-     * @param  int $first Pagination offset (optional)
-     * @param  int $max Maximum results size (defaults to 100) (optional)
-     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
-     * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetWithHttpInfo($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersGetWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'][0])
     {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersGetRequest($realm, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4546,24 +1907,20 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesGetAsync
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersGetAsync
      *
-     * List identity providers
+     * Returns all identity providers associated with the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
-     * @param  int $first Pagination offset (optional)
-     * @param  int $max Maximum results size (defaults to 100) (optional)
-     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
-     * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetAsync($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersGetAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'][0])
     {
-        return $this->adminRealmsRealmIdentityProviderInstancesGetAsyncWithHttpInfo($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType)
+        return $this->adminRealmsRealmOrganizationsIdIdentityProvidersGetAsyncWithHttpInfo($realm, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4572,25 +1929,21 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesGetAsyncWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersGetAsyncWithHttpInfo
      *
-     * List identity providers
+     * Returns all identity providers associated with the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
-     * @param  int $first Pagination offset (optional)
-     * @param  int $max Maximum results size (defaults to 100) (optional)
-     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
-     * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetAsyncWithHttpInfo($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersGetAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'][0])
     {
         $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation[]';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation, $first, $max, $realm_only, $search, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersGetRequest($realm, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4629,87 +1982,40 @@ class IdentityProvidersApi
     }
 
     /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesGet'
+     * Create request for operation 'adminRealmsRealmOrganizationsIdIdentityProvidersGet'
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  bool $brief_representation Boolean which defines whether brief representations are returned (default: false) (optional)
-     * @param  int $first Pagination offset (optional)
-     * @param  int $max Maximum results size (defaults to 100) (optional)
-     * @param  bool $realm_only Boolean which defines if only realm-level IDPs (not associated with orgs) should be returned (default: false) (optional)
-     * @param  string $search Filter specific providers by name. Search can be prefix (name*), contains (*name*) or exact (\&quot;name\&quot;). Default prefixed. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmIdentityProviderInstancesGetRequest($realm, $brief_representation = null, $first = null, $max = null, $realm_only = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesGet'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersGetRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersGet'][0])
     {
 
         // verify the required parameter 'realm' is set
         if ($realm === null || (is_array($realm) && count($realm) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesGet'
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdIdentityProvidersGet'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdIdentityProvidersGet'
             );
         }
 
 
-
-
-
-
-
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances';
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/identity-providers';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $brief_representation,
-            'briefRepresentation', // param base name
-            'boolean', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $first,
-            'first', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $max,
-            'max', // param base name
-            'integer', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $realm_only,
-            'realmOnly', // param base name
-            'boolean', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
-        // query params
-        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
-            $search,
-            'search', // param base name
-            'string', // openApiType
-            'form', // style
-            true, // explode
-            false // required
-        ) ?? []);
 
 
         // path params
@@ -4717,6 +2023,14 @@ class IdentityProvidersApi
             $resourcePath = str_replace(
                 '{' . 'realm' . '}',
                 ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }
@@ -4780,39 +2094,41 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesPost
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersPost
      *
-     * Create a new identity provider
+     * Adds the identity provider with the specified id to the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'] to see the possible values for this operation
+     * @param  string $id id (required)
+     * @param  string $body body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function adminRealmsRealmIdentityProviderInstancesPost($realm, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersPost($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'][0])
     {
-        $this->adminRealmsRealmIdentityProviderInstancesPostWithHttpInfo($realm, $identity_provider_representation, $contentType);
+        $this->adminRealmsRealmOrganizationsIdIdentityProvidersPostWithHttpInfo($realm, $id, $body, $contentType);
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesPostWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersPostWithHttpInfo
      *
-     * Create a new identity provider
+     * Adds the identity provider with the specified id to the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmIdentityProviderInstancesPostWithHttpInfo($realm, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersPostWithHttpInfo($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'][0])
     {
-        $request = $this->adminRealmsRealmIdentityProviderInstancesPostRequest($realm, $identity_provider_representation, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersPostRequest($realm, $id, $body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4847,20 +2163,21 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesPostAsync
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersPostAsync
      *
-     * Create a new identity provider
+     * Adds the identity provider with the specified id to the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesPostAsync($realm, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersPostAsync($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'][0])
     {
-        return $this->adminRealmsRealmIdentityProviderInstancesPostAsyncWithHttpInfo($realm, $identity_provider_representation, $contentType)
+        return $this->adminRealmsRealmOrganizationsIdIdentityProvidersPostAsyncWithHttpInfo($realm, $id, $body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4869,21 +2186,22 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderInstancesPostAsyncWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdIdentityProvidersPostAsyncWithHttpInfo
      *
-     * Create a new identity provider
+     * Adds the identity provider with the specified id to the organization
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderInstancesPostAsyncWithHttpInfo($realm, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersPostAsyncWithHttpInfo($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'][0])
     {
         $returnType = '';
-        $request = $this->adminRealmsRealmIdentityProviderInstancesPostRequest($realm, $identity_provider_representation, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdIdentityProvidersPostRequest($realm, $id, $body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4909,28 +2227,36 @@ class IdentityProvidersApi
     }
 
     /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderInstancesPost'
+     * Create request for operation 'adminRealmsRealmOrganizationsIdIdentityProvidersPost'
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\IdentityProviderRepresentation $identity_provider_representation (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmIdentityProviderInstancesPostRequest($realm, $identity_provider_representation = null, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderInstancesPost'][0])
+    public function adminRealmsRealmOrganizationsIdIdentityProvidersPostRequest($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdIdentityProvidersPost'][0])
     {
 
         // verify the required parameter 'realm' is set
         if ($realm === null || (is_array($realm) && count($realm) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderInstancesPost'
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdIdentityProvidersPost'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdIdentityProvidersPost'
             );
         }
 
 
 
-        $resourcePath = '/admin/realms/{realm}/identity-provider/instances';
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/identity-providers';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4947,6 +2273,14 @@ class IdentityProvidersApi
                 $resourcePath
             );
         }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
 
 
         $headers = $this->headerSelector->selectHeaders(
@@ -4956,12 +2290,12 @@ class IdentityProvidersApi
         );
 
         // for model (json/xml)
-        if (isset($identity_provider_representation)) {
+        if (isset($body)) {
             if (stripos($headers['Content-Type'], 'application/json') !== false) {
                 # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($identity_provider_representation));
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
             } else {
-                $httpBody = $identity_provider_representation;
+                $httpBody = $body;
             }
         } elseif (count($formParams) > 0) {
             if ($multipart) {
@@ -5014,40 +2348,40 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderProvidersProviderIdGet
+     * Operation adminRealmsRealmOrganizationsIdMembersCountGet
      *
-     * Get the identity provider factory for that provider id
+     * Returns number of members in the organization.
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $provider_id The provider id to get the factory (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'] to see the possible values for this operation
+     * @param  string $id id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return object
+     * @return int
      */
-    public function adminRealmsRealmIdentityProviderProvidersProviderIdGet($realm, $provider_id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'][0])
+    public function adminRealmsRealmOrganizationsIdMembersCountGet($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'][0])
     {
-        list($response) = $this->adminRealmsRealmIdentityProviderProvidersProviderIdGetWithHttpInfo($realm, $provider_id, $contentType);
+        list($response) = $this->adminRealmsRealmOrganizationsIdMembersCountGetWithHttpInfo($realm, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderProvidersProviderIdGetWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdMembersCountGetWithHttpInfo
      *
-     * Get the identity provider factory for that provider id
+     * Returns number of members in the organization.
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $provider_id The provider id to get the factory (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'] to see the possible values for this operation
      *
      * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of object, HTTP status code, HTTP response headers (array of strings)
+     * @return array of int, HTTP status code, HTTP response headers (array of strings)
      */
-    public function adminRealmsRealmIdentityProviderProvidersProviderIdGetWithHttpInfo($realm, $provider_id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'][0])
+    public function adminRealmsRealmOrganizationsIdMembersCountGetWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'][0])
     {
-        $request = $this->adminRealmsRealmIdentityProviderProvidersProviderIdGetRequest($realm, $provider_id, $contentType);
+        $request = $this->adminRealmsRealmOrganizationsIdMembersCountGetRequest($realm, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5074,11 +2408,11 @@ class IdentityProvidersApi
 
             switch($statusCode) {
                 case 200:
-                    if ('object' === '\SplFileObject') {
+                    if ('int' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('object' !== 'string') {
+                        if ('int' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -5096,7 +2430,7 @@ class IdentityProvidersApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, 'object', []),
+                        ObjectSerializer::deserialize($content, 'int', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -5115,7 +2449,7 @@ class IdentityProvidersApi
                 );
             }
 
-            $returnType = 'object';
+            $returnType = 'int';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -5148,7 +2482,7 @@ class IdentityProvidersApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        'object',
+                        'int',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -5159,20 +2493,20 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderProvidersProviderIdGetAsync
+     * Operation adminRealmsRealmOrganizationsIdMembersCountGetAsync
      *
-     * Get the identity provider factory for that provider id
+     * Returns number of members in the organization.
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $provider_id The provider id to get the factory (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderProvidersProviderIdGetAsync($realm, $provider_id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'][0])
+    public function adminRealmsRealmOrganizationsIdMembersCountGetAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'][0])
     {
-        return $this->adminRealmsRealmIdentityProviderProvidersProviderIdGetAsyncWithHttpInfo($realm, $provider_id, $contentType)
+        return $this->adminRealmsRealmOrganizationsIdMembersCountGetAsyncWithHttpInfo($realm, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5181,21 +2515,21 @@ class IdentityProvidersApi
     }
 
     /**
-     * Operation adminRealmsRealmIdentityProviderProvidersProviderIdGetAsyncWithHttpInfo
+     * Operation adminRealmsRealmOrganizationsIdMembersCountGetAsyncWithHttpInfo
      *
-     * Get the identity provider factory for that provider id
+     * Returns number of members in the organization.
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $provider_id The provider id to get the factory (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function adminRealmsRealmIdentityProviderProvidersProviderIdGetAsyncWithHttpInfo($realm, $provider_id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'][0])
+    public function adminRealmsRealmOrganizationsIdMembersCountGetAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'][0])
     {
-        $returnType = 'object';
-        $request = $this->adminRealmsRealmIdentityProviderProvidersProviderIdGetRequest($realm, $provider_id, $contentType);
+        $returnType = 'int';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersCountGetRequest($realm, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5234,34 +2568,34 @@ class IdentityProvidersApi
     }
 
     /**
-     * Create request for operation 'adminRealmsRealmIdentityProviderProvidersProviderIdGet'
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersCountGet'
      *
      * @param  string $realm realm name (not id!) (required)
-     * @param  string $provider_id The provider id to get the factory (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'] to see the possible values for this operation
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function adminRealmsRealmIdentityProviderProvidersProviderIdGetRequest($realm, $provider_id, string $contentType = self::contentTypes['adminRealmsRealmIdentityProviderProvidersProviderIdGet'][0])
+    public function adminRealmsRealmOrganizationsIdMembersCountGetRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersCountGet'][0])
     {
 
         // verify the required parameter 'realm' is set
         if ($realm === null || (is_array($realm) && count($realm) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $realm when calling adminRealmsRealmIdentityProviderProvidersProviderIdGet'
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersCountGet'
             );
         }
 
-        // verify the required parameter 'provider_id' is set
-        if ($provider_id === null || (is_array($provider_id) && count($provider_id) === 0)) {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $provider_id when calling adminRealmsRealmIdentityProviderProvidersProviderIdGet'
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersCountGet'
             );
         }
 
 
-        $resourcePath = '/admin/realms/{realm}/identity-provider/providers/{provider_id}';
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members/count';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5279,10 +2613,10 @@ class IdentityProvidersApi
             );
         }
         // path params
-        if ($provider_id !== null) {
+        if ($id !== null) {
             $resourcePath = str_replace(
-                '{' . 'provider_id' . '}',
-                ObjectSerializer::toPathValue($provider_id),
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
                 $resourcePath
             );
         }
@@ -5339,6 +2673,2914 @@ class IdentityProvidersApi
         $query = ObjectSerializer::buildQuery($queryParams);
         return new Request(
             'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersGet
+     *
+     * Returns a paginated list of organization members filtered according to the specified parameters
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned. Defaults to 10 (optional)
+     * @param  string $membership_type The membership type (optional)
+     * @param  string $search A String representing either a member&#39;s username, e-mail, first name, or last name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]
+     */
+    public function adminRealmsRealmOrganizationsIdMembersGet($realm, $id, $exact = null, $first = null, $max = null, $membership_type = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'][0])
+    {
+        list($response) = $this->adminRealmsRealmOrganizationsIdMembersGetWithHttpInfo($realm, $id, $exact, $first, $max, $membership_type, $search, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersGetWithHttpInfo
+     *
+     * Returns a paginated list of organization members filtered according to the specified parameters
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned. Defaults to 10 (optional)
+     * @param  string $membership_type The membership type (optional)
+     * @param  string $search A String representing either a member&#39;s username, e-mail, first name, or last name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdMembersGetWithHttpInfo($realm, $id, $exact = null, $first = null, $max = null, $membership_type = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdMembersGetRequest($realm, $id, $exact, $first, $max, $membership_type, $search, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersGetAsync
+     *
+     * Returns a paginated list of organization members filtered according to the specified parameters
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned. Defaults to 10 (optional)
+     * @param  string $membership_type The membership type (optional)
+     * @param  string $search A String representing either a member&#39;s username, e-mail, first name, or last name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersGetAsync($realm, $id, $exact = null, $first = null, $max = null, $membership_type = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdMembersGetAsyncWithHttpInfo($realm, $id, $exact, $first, $max, $membership_type, $search, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersGetAsyncWithHttpInfo
+     *
+     * Returns a paginated list of organization members filtered according to the specified parameters
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned. Defaults to 10 (optional)
+     * @param  string $membership_type The membership type (optional)
+     * @param  string $search A String representing either a member&#39;s username, e-mail, first name, or last name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersGetAsyncWithHttpInfo($realm, $id, $exact = null, $first = null, $max = null, $membership_type = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'][0])
+    {
+        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation[]';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersGetRequest($realm, $id, $exact, $first, $max, $membership_type, $search, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersGet'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  bool $exact Boolean which defines whether the param &#39;search&#39; must match exactly or not (optional)
+     * @param  int $first The position of the first result to be processed (pagination offset) (optional)
+     * @param  int $max The maximum number of results to be returned. Defaults to 10 (optional)
+     * @param  string $membership_type The membership type (optional)
+     * @param  string $search A String representing either a member&#39;s username, e-mail, first name, or last name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdMembersGetRequest($realm, $id, $exact = null, $first = null, $max = null, $membership_type = null, $search = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersGet'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersGet'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersGet'
+            );
+        }
+
+
+
+
+
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $exact,
+            'exact', // param base name
+            'boolean', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $first,
+            'first', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $max,
+            'max', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $membership_type,
+            'membershipType', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $search,
+            'search', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdDelete
+     *
+     * Removes the user with the specified id from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdDelete($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'][0])
+    {
+        $this->adminRealmsRealmOrganizationsIdMembersIdDeleteWithHttpInfo($realm, $id, $contentType);
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdDeleteWithHttpInfo
+     *
+     * Removes the user with the specified id from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdDeleteWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdMembersIdDeleteRequest($realm, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdDeleteAsync
+     *
+     * Removes the user with the specified id from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdDeleteAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdMembersIdDeleteAsyncWithHttpInfo($realm, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdDeleteAsyncWithHttpInfo
+     *
+     * Removes the user with the specified id from the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdDeleteAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'][0])
+    {
+        $returnType = '';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersIdDeleteRequest($realm, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersIdDelete'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdDeleteRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdDelete'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersIdDelete'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersIdDelete'
+            );
+        }
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'DELETE',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdGet
+     *
+     * Returns the member of the organization with the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdGet($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'][0])
+    {
+        list($response) = $this->adminRealmsRealmOrganizationsIdMembersIdGetWithHttpInfo($realm, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdGetWithHttpInfo
+     *
+     * Returns the member of the organization with the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdGetWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdMembersIdGetRequest($realm, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdGetAsync
+     *
+     * Returns the member of the organization with the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdGetAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdMembersIdGetAsyncWithHttpInfo($realm, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdGetAsyncWithHttpInfo
+     *
+     * Returns the member of the organization with the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdGetAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'][0])
+    {
+        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\MemberRepresentation';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersIdGetRequest($realm, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersIdGet'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdGetRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdGet'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersIdGet'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersIdGet'
+            );
+        }
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'][0])
+    {
+        list($response) = $this->adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetWithHttpInfo($realm, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetWithHttpInfo
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetRequest($realm, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetAsync
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetAsyncWithHttpInfo($realm, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetAsyncWithHttpInfo
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'][0])
+    {
+        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetRequest($realm, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdMembersIdOrganizationsGetRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersIdOrganizationsGet'
+            );
+        }
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members/{id}/organizations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost
+     *
+     * Invites an existing user to the organization, using the specified user id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $id2 id2 (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost($realm, $id, $id2 = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'][0])
+    {
+        $this->adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostWithHttpInfo($realm, $id, $id2, $contentType);
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostWithHttpInfo
+     *
+     * Invites an existing user to the organization, using the specified user id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $id2 (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostWithHttpInfo($realm, $id, $id2 = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostRequest($realm, $id, $id2, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostAsync
+     *
+     * Invites an existing user to the organization, using the specified user id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $id2 (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostAsync($realm, $id, $id2 = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostAsyncWithHttpInfo($realm, $id, $id2, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostAsyncWithHttpInfo
+     *
+     * Invites an existing user to the organization, using the specified user id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $id2 (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostAsyncWithHttpInfo($realm, $id, $id2 = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'][0])
+    {
+        $returnType = '';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostRequest($realm, $id, $id2, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $id2 (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteExistingUserPostRequest($realm, $id, $id2 = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersInviteExistingUserPost'
+            );
+        }
+
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members/invite-existing-user';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // form params
+        if ($id2 !== null) {
+            $formParams['id'] = ObjectSerializer::toFormValue($id2);
+        }
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteUserPost
+     *
+     * Invites an existing user or sends a registration link to a new user, based on the provided e-mail address.
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $email email (optional)
+     * @param  string $first_name first_name (optional)
+     * @param  string $last_name last_name (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteUserPost($realm, $id, $email = null, $first_name = null, $last_name = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'][0])
+    {
+        $this->adminRealmsRealmOrganizationsIdMembersInviteUserPostWithHttpInfo($realm, $id, $email, $first_name, $last_name, $contentType);
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteUserPostWithHttpInfo
+     *
+     * Invites an existing user or sends a registration link to a new user, based on the provided e-mail address.
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $email (optional)
+     * @param  string $first_name (optional)
+     * @param  string $last_name (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteUserPostWithHttpInfo($realm, $id, $email = null, $first_name = null, $last_name = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdMembersInviteUserPostRequest($realm, $id, $email, $first_name, $last_name, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteUserPostAsync
+     *
+     * Invites an existing user or sends a registration link to a new user, based on the provided e-mail address.
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $email (optional)
+     * @param  string $first_name (optional)
+     * @param  string $last_name (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteUserPostAsync($realm, $id, $email = null, $first_name = null, $last_name = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdMembersInviteUserPostAsyncWithHttpInfo($realm, $id, $email, $first_name, $last_name, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersInviteUserPostAsyncWithHttpInfo
+     *
+     * Invites an existing user or sends a registration link to a new user, based on the provided e-mail address.
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $email (optional)
+     * @param  string $first_name (optional)
+     * @param  string $last_name (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteUserPostAsyncWithHttpInfo($realm, $id, $email = null, $first_name = null, $last_name = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'][0])
+    {
+        $returnType = '';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersInviteUserPostRequest($realm, $id, $email, $first_name, $last_name, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersInviteUserPost'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $email (optional)
+     * @param  string $first_name (optional)
+     * @param  string $last_name (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdMembersInviteUserPostRequest($realm, $id, $email = null, $first_name = null, $last_name = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersInviteUserPost'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersInviteUserPost'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersInviteUserPost'
+            );
+        }
+
+
+
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members/invite-user';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // form params
+        if ($email !== null) {
+            $formParams['email'] = ObjectSerializer::toFormValue($email);
+        }
+        // form params
+        if ($first_name !== null) {
+            $formParams['firstName'] = ObjectSerializer::toFormValue($first_name);
+        }
+        // form params
+        if ($last_name !== null) {
+            $formParams['lastName'] = ObjectSerializer::toFormValue($last_name);
+        }
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersPost
+     *
+     * Adds the user with the specified id as a member of the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $body body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function adminRealmsRealmOrganizationsIdMembersPost($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'][0])
+    {
+        $this->adminRealmsRealmOrganizationsIdMembersPostWithHttpInfo($realm, $id, $body, $contentType);
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersPostWithHttpInfo
+     *
+     * Adds the user with the specified id as a member of the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdMembersPostWithHttpInfo($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdMembersPostRequest($realm, $id, $body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersPostAsync
+     *
+     * Adds the user with the specified id as a member of the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersPostAsync($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdMembersPostAsyncWithHttpInfo($realm, $id, $body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdMembersPostAsyncWithHttpInfo
+     *
+     * Adds the user with the specified id as a member of the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdMembersPostAsyncWithHttpInfo($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'][0])
+    {
+        $returnType = '';
+        $request = $this->adminRealmsRealmOrganizationsIdMembersPostRequest($realm, $id, $body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdMembersPost'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $body (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdMembersPostRequest($realm, $id, $body = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdMembersPost'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdMembersPost'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdMembersPost'
+            );
+        }
+
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}/members';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdPut
+     *
+     * Updates the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdPut'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function adminRealmsRealmOrganizationsIdPut($realm, $id, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdPut'][0])
+    {
+        $this->adminRealmsRealmOrganizationsIdPutWithHttpInfo($realm, $id, $organization_representation, $contentType);
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdPutWithHttpInfo
+     *
+     * Updates the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdPut'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsIdPutWithHttpInfo($realm, $id, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdPut'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsIdPutRequest($realm, $id, $organization_representation, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdPutAsync
+     *
+     * Updates the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdPut'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdPutAsync($realm, $id, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdPut'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsIdPutAsyncWithHttpInfo($realm, $id, $organization_representation, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsIdPutAsyncWithHttpInfo
+     *
+     * Updates the organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdPut'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsIdPutAsyncWithHttpInfo($realm, $id, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdPut'][0])
+    {
+        $returnType = '';
+        $request = $this->adminRealmsRealmOrganizationsIdPutRequest($realm, $id, $organization_representation, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsIdPut'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsIdPut'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsIdPutRequest($realm, $id, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsIdPut'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsIdPut'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsIdPut'
+            );
+        }
+
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($organization_representation)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($organization_representation));
+            } else {
+                $httpBody = $organization_representation;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'PUT',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsMembersIdOrganizationsGet
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]
+     */
+    public function adminRealmsRealmOrganizationsMembersIdOrganizationsGet($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'][0])
+    {
+        list($response) = $this->adminRealmsRealmOrganizationsMembersIdOrganizationsGetWithHttpInfo($realm, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsMembersIdOrganizationsGetWithHttpInfo
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsMembersIdOrganizationsGetWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsMembersIdOrganizationsGetRequest($realm, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            switch($statusCode) {
+                case 200:
+                    if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsMembersIdOrganizationsGetAsync
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsMembersIdOrganizationsGetAsync($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsMembersIdOrganizationsGetAsyncWithHttpInfo($realm, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsMembersIdOrganizationsGetAsyncWithHttpInfo
+     *
+     * Returns the organizations associated with the user that has the specified id
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsMembersIdOrganizationsGetAsyncWithHttpInfo($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'][0])
+    {
+        $returnType = '\WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation[]';
+        $request = $this->adminRealmsRealmOrganizationsMembersIdOrganizationsGetRequest($realm, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsMembersIdOrganizationsGet'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  string $id (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsMembersIdOrganizationsGetRequest($realm, $id, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsMembersIdOrganizationsGet'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsMembersIdOrganizationsGet'
+            );
+        }
+
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling adminRealmsRealmOrganizationsMembersIdOrganizationsGet'
+            );
+        }
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations/members/{id}/organizations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsPost
+     *
+     * Creates a new organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return void
+     */
+    public function adminRealmsRealmOrganizationsPost($realm, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsPost'][0])
+    {
+        $this->adminRealmsRealmOrganizationsPostWithHttpInfo($realm, $organization_representation, $contentType);
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsPostWithHttpInfo
+     *
+     * Creates a new organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsPost'] to see the possible values for this operation
+     *
+     * @throws \WebMI\KeycloakApiClient\KeycloakApi\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of null, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function adminRealmsRealmOrganizationsPostWithHttpInfo($realm, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsPost'][0])
+    {
+        $request = $this->adminRealmsRealmOrganizationsPostRequest($realm, $organization_representation, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+
+            return [null, $statusCode, $response->getHeaders()];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsPostAsync
+     *
+     * Creates a new organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsPostAsync($realm, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsPost'][0])
+    {
+        return $this->adminRealmsRealmOrganizationsPostAsyncWithHttpInfo($realm, $organization_representation, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation adminRealmsRealmOrganizationsPostAsyncWithHttpInfo
+     *
+     * Creates a new organization
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function adminRealmsRealmOrganizationsPostAsyncWithHttpInfo($realm, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsPost'][0])
+    {
+        $returnType = '';
+        $request = $this->adminRealmsRealmOrganizationsPostRequest($realm, $organization_representation, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    return [null, $response->getStatusCode(), $response->getHeaders()];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'adminRealmsRealmOrganizationsPost'
+     *
+     * @param  string $realm realm name (not id!) (required)
+     * @param  \WebMI\KeycloakApiClient\KeycloakApi\Model\OrganizationRepresentation $organization_representation (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['adminRealmsRealmOrganizationsPost'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function adminRealmsRealmOrganizationsPostRequest($realm, $organization_representation = null, string $contentType = self::contentTypes['adminRealmsRealmOrganizationsPost'][0])
+    {
+
+        // verify the required parameter 'realm' is set
+        if ($realm === null || (is_array($realm) && count($realm) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $realm when calling adminRealmsRealmOrganizationsPost'
+            );
+        }
+
+
+
+        $resourcePath = '/admin/realms/{realm}/organizations';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // path params
+        if ($realm !== null) {
+            $resourcePath = str_replace(
+                '{' . 'realm' . '}',
+                ObjectSerializer::toPathValue($realm),
+                $resourcePath
+            );
+        }
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            [],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($organization_representation)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($organization_representation));
+            } else {
+                $httpBody = $organization_representation;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires Bearer authentication (access token)
+        if (!empty($this->config->getAccessToken())) {
+            $headers['Authorization'] = 'Bearer ' . $this->config->getAccessToken();
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
             $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
             $headers,
             $httpBody

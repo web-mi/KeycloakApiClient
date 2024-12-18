@@ -16,6 +16,7 @@ docs/Api/DefaultApi.md
 docs/Api/GroupsApi.md
 docs/Api/IdentityProvidersApi.md
 docs/Api/KeyApi.md
+docs/Api/OrganizationsApi.md
 docs/Api/ProtocolMappersApi.md
 docs/Api/RealmsAdminApi.md
 docs/Api/RoleMapperApi.md
@@ -37,6 +38,7 @@ docs/Model/AuthenticationFlowRepresentation.md
 docs/Model/AuthenticatorConfigInfoRepresentation.md
 docs/Model/AuthenticatorConfigRepresentation.md
 docs/Model/Authorization.md
+docs/Model/BruteForceStrategy.md
 docs/Model/CertificateRepresentation.md
 docs/Model/ClaimRepresentation.md
 docs/Model/ClientInitialAccessCreatePresentation.md
@@ -143,6 +145,7 @@ lib/Api/DefaultApi.php
 lib/Api/GroupsApi.php
 lib/Api/IdentityProvidersApi.php
 lib/Api/KeyApi.php
+lib/Api/OrganizationsApi.php
 lib/Api/ProtocolMappersApi.php
 lib/Api/RealmsAdminApi.php
 lib/Api/RoleMapperApi.php
@@ -167,6 +170,7 @@ lib/Model/AuthenticationFlowRepresentation.php
 lib/Model/AuthenticatorConfigInfoRepresentation.php
 lib/Model/AuthenticatorConfigRepresentation.php
 lib/Model/Authorization.php
+lib/Model/BruteForceStrategy.php
 lib/Model/CertificateRepresentation.php
 lib/Model/ClaimRepresentation.php
 lib/Model/ClientInitialAccessCreatePresentation.php
@@ -262,3 +266,5 @@ lib/Model/UserRepresentation.php
 lib/Model/UserSessionRepresentation.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/OrganizationsApiTest.php
+test/Model/BruteForceStrategyTest.php
