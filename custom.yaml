@@ -23,29 +23,9 @@ paths:
         content:
           multipart/form-data:
             schema:
-              type: object
-              properties:
-                username:
-                  type: string
-                  description: Username
-                  example: username1
-                password:
-                  type: string
-                  description: User Password
-                  example: password1234
-                client_id:
-                  type: string
-                  description: Client id
-                  example: app
-                grant_type:
-                  type: string
-                  description: Grant Type
-                  example: password
-              required:
-                - username
-                - password
-                - client_id
-                - grant_type
+              oneOf:
+                - $ref: '#/components/schemas/UsernamePasswordRequest'
+                - $ref: '#/components/schemas/RefreshRequest'
       responses:
         200:
           description: OK
@@ -54,7 +34,7 @@ paths:
               schema:
                 type: object
                 properties:
-                  accessToken:
+                  access_token:
                     type: string
                   expires_in:
                     type: integer
@@ -118,3 +98,48 @@ paths:
                     error: "invalid_grant"
                     error_description: "Invalid user credentials"
 
+components:
+  schemas:
+    UsernamePasswordRequest:
+      type: object
+      properties:
+        username:
+          type: string
+          description: Username
+          example: username1
+        password:
+          type: string
+          description: User Password
+          example: password1234
+        client_id:
+          type: string
+          description: Client id
+          example: app
+        grant_type:
+          type: string
+          description: Grant Type
+          example: password
+      required:
+        - username
+        - password
+        - client_id
+        - grant_type
+    RefreshRequest:
+      type: object
+      properties:
+        client_id:
+          type: string
+          description: Client id
+          example: app
+        grant_type:
+          type: string
+          description: Grant Type
+          example: refresh_token
+        refresh_token:
+          type: string
+          description: Refresh Token
+          example: "eyJhbGciOiJIUzUxMiIsInR5cC..."
+      required:
+        - refresh_token
+        - client_id
+        - grant_type

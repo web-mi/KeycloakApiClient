@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `realmsRealmProtocolOpenidConnectTokenPost()`
 
 ```php
-realmsRealmProtocolOpenidConnectTokenPost($realm, $username, $password, $client_id, $grant_type): \WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost200Response
+realmsRealmProtocolOpenidConnectTokenPost($realm, $username, $password, $client_id, $grant_type, $refresh_token): \WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost200Response
 ```
 
 Oidc Login
@@ -35,9 +35,10 @@ $username = 'username_example'; // string | Username
 $password = 'password_example'; // string | User Password
 $client_id = 'client_id_example'; // string | Client id
 $grant_type = 'grant_type_example'; // string | Grant Type
+$refresh_token = 'refresh_token_example'; // string | Refresh Token
 
 try {
-    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $username, $password, $client_id, $grant_type);
+    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $username, $password, $client_id, $grant_type, $refresh_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomApi->realmsRealmProtocolOpenidConnectTokenPost: ', $e->getMessage(), PHP_EOL;
@@ -49,10 +50,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **realm** | **string**| realm name (not id!) | |
-| **username** | **string**| Username | |
-| **password** | **string**| User Password | |
-| **client_id** | **string**| Client id | |
-| **grant_type** | **string**| Grant Type | |
+| **username** | **string**| Username | [optional] |
+| **password** | **string**| User Password | [optional] |
+| **client_id** | **string**| Client id | [optional] |
+| **grant_type** | **string**| Grant Type | [optional] |
+| **refresh_token** | **string**| Refresh Token | [optional] |
 
 ### Return type
 
