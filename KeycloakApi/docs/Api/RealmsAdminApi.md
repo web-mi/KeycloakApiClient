@@ -136,7 +136,7 @@ $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RealmsAdminApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = "/path/to/file.txt"; // \SplFileObject
+$body = '/path/to/file.txt'; // \SplFileObject
 
 try {
     $apiInstance->adminRealmsPost($body);
@@ -2368,7 +2368,7 @@ $apiInstance = new WebMI\KeycloakApiClient\KeycloakApi\Api\RealmsAdminApi(
     $config
 );
 $realm = 'realm_example'; // string | realm name (not id!)
-$body = "/path/to/file.txt"; // \SplFileObject
+$body = '/path/to/file.txt'; // \SplFileObject
 
 try {
     $apiInstance->adminRealmsRealmPartialImportPost($realm, $body);

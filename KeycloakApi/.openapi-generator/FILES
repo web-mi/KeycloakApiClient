@@ -266,5 +266,3 @@ lib/Model/UserRepresentation.php
 lib/Model/UserSessionRepresentation.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Api/OrganizationsApiTest.php
-test/Model/BruteForceStrategyTest.php
