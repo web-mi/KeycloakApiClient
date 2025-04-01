@@ -1,4 +1,5 @@
 .gitignore
+.openapi-generator-ignore
 .php-cs-fixer.dist.php
 .travis.yml
 README.md
@@ -16,3 +17,6 @@ lib/Model/RealmsRealmProtocolOpenidConnectTokenPost200Response.php
 lib/Model/RealmsRealmProtocolOpenidConnectTokenPost400Response.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/CustomApiTest.php
+test/Model/RealmsRealmProtocolOpenidConnectTokenPost200ResponseTest.php
+test/Model/RealmsRealmProtocolOpenidConnectTokenPost400ResponseTest.php
