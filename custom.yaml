@@ -21,7 +21,7 @@ paths:
       description: Realm name must be unique.
       requestBody:
         content:
-          multipart/form-data:
+          application/x-www-form-urlencoded:
             schema:
               oneOf:
                 - $ref: '#/components/schemas/UsernamePasswordRequest'
