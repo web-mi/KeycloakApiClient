@@ -55,14 +55,15 @@ $apiInstance = new WebMI\KeycloakApiClient\CustomApi\Api\CustomApi(
     new GuzzleHttp\Client()
 );
 $realm = 'realm_example'; // string | realm name (not id!)
+$authorization = 'authorization_example'; // string | Basic Auth with client_id and client_secret encoded in base64
+$grant_type = 'refresh_token'; // string | Grant Type
 $username = 'username_example'; // string | Username
 $password = 'password_example'; // string | User Password
 $client_id = 'client_id_example'; // string | Client id
-$grant_type = 'grant_type_example'; // string | Grant Type
 $refresh_token = 'refresh_token_example'; // string | Refresh Token
 
 try {
-    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $username, $password, $client_id, $grant_type, $refresh_token);
+    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization, $grant_type, $username, $password, $client_id, $refresh_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomApi->realmsRealmProtocolOpenidConnectTokenPost: ', $e->getMessage(), PHP_EOL;

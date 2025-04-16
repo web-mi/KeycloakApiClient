@@ -128,10 +128,11 @@ class CustomApi
      * Oidc Login
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string|null $authorization Basic Auth with client_id and client_secret encoded in base64 (optional)
+     * @param  string|null $grant_type Grant Type (optional, default to 'refresh_token')
      * @param  string|null $username Username (optional)
      * @param  string|null $password User Password (optional)
      * @param  string|null $client_id Client id (optional)
-     * @param  string|null $grant_type Grant Type (optional)
      * @param  string|null $refresh_token Refresh Token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'] to see the possible values for this operation
      *
@@ -139,9 +140,9 @@ class CustomApi
      * @throws \InvalidArgumentException
      * @return \WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost200Response|\WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost400Response|\WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost400Response
      */
-    public function realmsRealmProtocolOpenidConnectTokenPost($realm, $username = null, $password = null, $client_id = null, $grant_type = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
+    public function realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization = null, $grant_type = 'refresh_token', $username = null, $password = null, $client_id = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
     {
-        list($response) = $this->realmsRealmProtocolOpenidConnectTokenPostWithHttpInfo($realm, $username, $password, $client_id, $grant_type, $refresh_token, $contentType);
+        list($response) = $this->realmsRealmProtocolOpenidConnectTokenPostWithHttpInfo($realm, $authorization, $grant_type, $username, $password, $client_id, $refresh_token, $contentType);
         return $response;
     }
 
@@ -151,10 +152,11 @@ class CustomApi
      * Oidc Login
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string|null $authorization Basic Auth with client_id and client_secret encoded in base64 (optional)
+     * @param  string|null $grant_type Grant Type (optional, default to 'refresh_token')
      * @param  string|null $username Username (optional)
      * @param  string|null $password User Password (optional)
      * @param  string|null $client_id Client id (optional)
-     * @param  string|null $grant_type Grant Type (optional)
      * @param  string|null $refresh_token Refresh Token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'] to see the possible values for this operation
      *
@@ -162,9 +164,9 @@ class CustomApi
      * @throws \InvalidArgumentException
      * @return array of \WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost200Response|\WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost400Response|\WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost400Response, HTTP status code, HTTP response headers (array of strings)
      */
-    public function realmsRealmProtocolOpenidConnectTokenPostWithHttpInfo($realm, $username = null, $password = null, $client_id = null, $grant_type = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
+    public function realmsRealmProtocolOpenidConnectTokenPostWithHttpInfo($realm, $authorization = null, $grant_type = 'refresh_token', $username = null, $password = null, $client_id = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
     {
-        $request = $this->realmsRealmProtocolOpenidConnectTokenPostRequest($realm, $username, $password, $client_id, $grant_type, $refresh_token, $contentType);
+        $request = $this->realmsRealmProtocolOpenidConnectTokenPostRequest($realm, $authorization, $grant_type, $username, $password, $client_id, $refresh_token, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -351,19 +353,20 @@ class CustomApi
      * Oidc Login
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string|null $authorization Basic Auth with client_id and client_secret encoded in base64 (optional)
+     * @param  string|null $grant_type Grant Type (optional, default to 'refresh_token')
      * @param  string|null $username Username (optional)
      * @param  string|null $password User Password (optional)
      * @param  string|null $client_id Client id (optional)
-     * @param  string|null $grant_type Grant Type (optional)
      * @param  string|null $refresh_token Refresh Token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function realmsRealmProtocolOpenidConnectTokenPostAsync($realm, $username = null, $password = null, $client_id = null, $grant_type = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
+    public function realmsRealmProtocolOpenidConnectTokenPostAsync($realm, $authorization = null, $grant_type = 'refresh_token', $username = null, $password = null, $client_id = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
     {
-        return $this->realmsRealmProtocolOpenidConnectTokenPostAsyncWithHttpInfo($realm, $username, $password, $client_id, $grant_type, $refresh_token, $contentType)
+        return $this->realmsRealmProtocolOpenidConnectTokenPostAsyncWithHttpInfo($realm, $authorization, $grant_type, $username, $password, $client_id, $refresh_token, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -377,20 +380,21 @@ class CustomApi
      * Oidc Login
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string|null $authorization Basic Auth with client_id and client_secret encoded in base64 (optional)
+     * @param  string|null $grant_type Grant Type (optional, default to 'refresh_token')
      * @param  string|null $username Username (optional)
      * @param  string|null $password User Password (optional)
      * @param  string|null $client_id Client id (optional)
-     * @param  string|null $grant_type Grant Type (optional)
      * @param  string|null $refresh_token Refresh Token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function realmsRealmProtocolOpenidConnectTokenPostAsyncWithHttpInfo($realm, $username = null, $password = null, $client_id = null, $grant_type = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
+    public function realmsRealmProtocolOpenidConnectTokenPostAsyncWithHttpInfo($realm, $authorization = null, $grant_type = 'refresh_token', $username = null, $password = null, $client_id = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
     {
         $returnType = '\WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost200Response';
-        $request = $this->realmsRealmProtocolOpenidConnectTokenPostRequest($realm, $username, $password, $client_id, $grant_type, $refresh_token, $contentType);
+        $request = $this->realmsRealmProtocolOpenidConnectTokenPostRequest($realm, $authorization, $grant_type, $username, $password, $client_id, $refresh_token, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -432,17 +436,18 @@ class CustomApi
      * Create request for operation 'realmsRealmProtocolOpenidConnectTokenPost'
      *
      * @param  string $realm realm name (not id!) (required)
+     * @param  string|null $authorization Basic Auth with client_id and client_secret encoded in base64 (optional)
+     * @param  string|null $grant_type Grant Type (optional, default to 'refresh_token')
      * @param  string|null $username Username (optional)
      * @param  string|null $password User Password (optional)
      * @param  string|null $client_id Client id (optional)
-     * @param  string|null $grant_type Grant Type (optional)
      * @param  string|null $refresh_token Refresh Token (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function realmsRealmProtocolOpenidConnectTokenPostRequest($realm, $username = null, $password = null, $client_id = null, $grant_type = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
+    public function realmsRealmProtocolOpenidConnectTokenPostRequest($realm, $authorization = null, $grant_type = 'refresh_token', $username = null, $password = null, $client_id = null, $refresh_token = null, string $contentType = self::contentTypes['realmsRealmProtocolOpenidConnectTokenPost'][0])
     {
 
         // verify the required parameter 'realm' is set
@@ -458,6 +463,7 @@ class CustomApi
 
 
 
+
         $resourcePath = '/realms/{realm}/protocol/openid-connect/token';
         $formParams = [];
         $queryParams = [];
@@ -466,6 +472,10 @@ class CustomApi
         $multipart = false;
 
 
+        // header params
+        if ($authorization !== null) {
+            $headerParams['Authorization'] = ObjectSerializer::toHeaderValue($authorization);
+        }
 
         // path params
         if ($realm !== null) {
@@ -477,6 +487,10 @@ class CustomApi
         }
 
         // form params
+        if ($grant_type !== null) {
+            $formParams = array_merge($formParams, ObjectSerializer::toFormValue('grant_type', $grant_type));
+        }
+        // form params
         if ($username !== null) {
             $formParams = array_merge($formParams, ObjectSerializer::toFormValue('username', $username));
         }
@@ -487,10 +501,6 @@ class CustomApi
         // form params
         if ($client_id !== null) {
             $formParams = array_merge($formParams, ObjectSerializer::toFormValue('client_id', $client_id));
-        }
-        // form params
-        if ($grant_type !== null) {
-            $formParams = array_merge($formParams, ObjectSerializer::toFormValue('grant_type', $grant_type));
         }
         // form params
         if ($refresh_token !== null) {

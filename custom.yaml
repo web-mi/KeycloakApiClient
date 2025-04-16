@@ -14,6 +14,12 @@ paths:
         required: true
         schema:
           type: string
+      - name: Authorization
+        in: header
+        description: Basic Auth with client_id and client_secret encoded in base64
+        required: false
+        schema:
+          type: string
     post:
       tags:
         - Custom
@@ -24,6 +30,7 @@ paths:
           application/x-www-form-urlencoded:
             schema:
               oneOf:
+                - $ref: '#/components/schemas/ClientCredentialsRequest'
                 - $ref: '#/components/schemas/UsernamePasswordRequest'
                 - $ref: '#/components/schemas/RefreshRequest'
       responses:
@@ -100,6 +107,16 @@ paths:
 
 components:
   schemas:
+    ClientCredentialsRequest:
+      type: object
+      properties:
+        grant_type:
+          type: string
+          description: Grant Type
+          example: client_credentials
+          default: client_credentials
+      required:
+        - grant_type
     UsernamePasswordRequest:
       type: object
       properties:
@@ -119,6 +136,7 @@ components:
           type: string
           description: Grant Type
           example: password
+          default: password
       required:
         - username
         - password
@@ -135,6 +153,7 @@ components:
           type: string
           description: Grant Type
           example: refresh_token
+          default: refresh_token
         refresh_token:
           type: string
           description: Refresh Token
