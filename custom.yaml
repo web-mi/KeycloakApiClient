@@ -137,6 +137,12 @@ components:
           description: Grant Type
           example: password
           default: password
+        otp:
+          type: string
+          description: App OTP
+        recovery_code:
+          type: string
+          description: Recovery Code
       required:
         - username
         - password

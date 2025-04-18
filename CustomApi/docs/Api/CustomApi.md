@@ -10,7 +10,7 @@ All URIs are relative to http://localhost, except if the operation defines anoth
 ## `realmsRealmProtocolOpenidConnectTokenPost()`
 
 ```php
-realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization, $grant_type, $username, $password, $client_id, $refresh_token): \WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost200Response
+realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization, $grant_type, $username, $password, $client_id, $otp, $recovery_code, $refresh_token): \WebMI\KeycloakApiClient\CustomApi\Model\RealmsRealmProtocolOpenidConnectTokenPost200Response
 ```
 
 Oidc Login
@@ -36,10 +36,12 @@ $grant_type = 'refresh_token'; // string | Grant Type
 $username = 'username_example'; // string | Username
 $password = 'password_example'; // string | User Password
 $client_id = 'client_id_example'; // string | Client id
+$otp = 'otp_example'; // string | App OTP
+$recovery_code = 'recovery_code_example'; // string | Recovery Code
 $refresh_token = 'refresh_token_example'; // string | Refresh Token
 
 try {
-    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization, $grant_type, $username, $password, $client_id, $refresh_token);
+    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization, $grant_type, $username, $password, $client_id, $otp, $recovery_code, $refresh_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomApi->realmsRealmProtocolOpenidConnectTokenPost: ', $e->getMessage(), PHP_EOL;
@@ -56,6 +58,8 @@ try {
 | **username** | **string**| Username | [optional] |
 | **password** | **string**| User Password | [optional] |
 | **client_id** | **string**| Client id | [optional] |
+| **otp** | **string**| App OTP | [optional] |
+| **recovery_code** | **string**| Recovery Code | [optional] |
 | **refresh_token** | **string**| Refresh Token | [optional] |
 
 ### Return type
