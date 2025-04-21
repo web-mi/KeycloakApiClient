@@ -140,6 +140,12 @@ components:
         otp:
           type: string
           description: App OTP
+        mail_otp:
+          type: string
+          description: Mail OTP
+        sms_otp:
+          type: string
+          description: SMS OTP
         recovery_code:
           type: string
           description: Recovery Code

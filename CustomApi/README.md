@@ -61,11 +61,13 @@ $username = 'username_example'; // string | Username
 $password = 'password_example'; // string | User Password
 $client_id = 'client_id_example'; // string | Client id
 $otp = 'otp_example'; // string | App OTP
+$mail_otp = 'mail_otp_example'; // string | Mail OTP
+$sms_otp = 'sms_otp_example'; // string | SMS OTP
 $recovery_code = 'recovery_code_example'; // string | Recovery Code
 $refresh_token = 'refresh_token_example'; // string | Refresh Token
 
 try {
-    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization, $grant_type, $username, $password, $client_id, $otp, $recovery_code, $refresh_token);
+    $result = $apiInstance->realmsRealmProtocolOpenidConnectTokenPost($realm, $authorization, $grant_type, $username, $password, $client_id, $otp, $mail_otp, $sms_otp, $recovery_code, $refresh_token);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CustomApi->realmsRealmProtocolOpenidConnectTokenPost: ', $e->getMessage(), PHP_EOL;
